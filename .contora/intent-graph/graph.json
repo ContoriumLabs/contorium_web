@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "updatedAt": 1780288150168,
+  "nodes": [
+    {
+      "id": "intent_mpuomn4w_ms6zcz",
+      "text": "develop documentation, MCP integration and state engine",
+      "status": "WEAKENING",
+      "confidence": 0.58,
+      "relatedFiles": [
+        "architecture/index.html",
+        "blog/index.html",
+        "docs/index.html",
+        "index.html",
+        "README.md",
+        "修改方案.md",
+        "修改方案2.md",
+        "mcp/index.html"
+      ],
+      "lastUpdated": 1780288150168,
+      "learnedAt": 1780286520992
+    },
+    {
+      "id": "intent_mpuomn4x_0bqur2",
+      "text": "update documentation for recent changes",
+      "status": "PARTIAL",
+      "confidence": 0.35,
+      "relatedFiles": [
+        "architecture/index.html",
+        "blog/index.html",
+        "docs/index.html",
+        "index.html",
+        "README.md",
+        "修改方案.md",
+        "修改方案2.md"
+      ],
+      "lastUpdated": 1780288150168,
+      "learnedAt": 1780286520992
+    },
+    {
+      "id": "intent_mpuomn4x_95gdjs",
+      "text": "verify MCP tools against workspace state",
+      "status": "ARCHIVED",
+      "confidence": 0.11,
+      "relatedFiles": [
+        "architecture/index.html",
+        "blog/index.html",
+        "docs/index.html",
+        "index.html",
+        "README.md",
+        "修改方案.md"
+      ],
+      "lastUpdated": 1780286614712,
+      "learnedAt": 1780286520992
+    },
+    {
+      "id": "intent_mpuomn4x_4lkrpf",
+      "text": "iterate on index.html",
+      "status": "ARCHIVED",
+      "confidence": 0.11,
+      "relatedFiles": [
+        "architecture/index.html",
+        "blog/index.html",
+        "docs/index.html",
+        "index.html",
+        "README.md",
+        "修改方案.md"
+      ],
+      "lastUpdated": 1780286614712,
+      "learnedAt": 1780286520992
+    },
+    {
+      "id": "intent_mpuomx9j_yw4kyz",
+      "text": "review state persistence and lifecycle logic",
+      "status": "PARTIAL",
+      "confidence": 0.35,
+      "relatedFiles": [
+        "architecture/index.html",
+        "blog/index.html",
+        "docs/index.html",
+        "index.html",
+        "README.md",
+        "修改方案.md",
+        "修改方案2.md"
+      ],
+      "lastUpdated": 1780288150168,
+      "learnedAt": 1780286534119
+    },
+    {
+      "id": "intent_mpuoon5s_46m7m6",
+      "text": "iterate on 修改方案2.md",
+      "status": "PARTIAL",
+      "confidence": 0.35,
+      "relatedFiles": [
+        "修改方案2.md",
+        "index.html",
+        "README.md",
+        "修改方案.md",
+        "architecture/index.html",
+        "blog/index.html"
+      ],
+      "lastUpdated": 1780288150168,
+      "learnedAt": 1780286614336
+    }
+  ],
+  "edges": [
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:docs/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpuomn4x_0bqur2",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpuomn4x_95gdjs",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpuomn4x_4lkrpf",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mpuomn4x_95gdjs",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mpuomn4x_4lkrpf",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "intent_mpuomn4x_4lkrpf",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpuomx9j_yw4kyz",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mpuomx9j_yw4kyz",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "intent_mpuomx9j_yw4kyz",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "intent_mpuomx9j_yw4kyz",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpuoon5s_46m7m6",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mpuoon5s_46m7m6",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "intent_mpuoon5s_46m7m6",
+      "type": "RELATED_TO"
+    }
+  ]
+}

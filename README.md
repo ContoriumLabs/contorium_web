@@ -1,42 +1,28 @@
 # Contorium Web
 
-Static marketing site for **Contorium** — FINAL category ownership version. Locks **runtime continuity layer** as the single definition; install and MCP docs unchanged.
+Static site for **Contorium v2** — a shared workspace state system. IDE, MCP, and CLI are peer session views over `.contora/`.
 
 ## Site structure
 
 | Path | Page |
 | ---- | ---- |
-| `index.html` | Home — category claim, category war, core model, before/after, positioning, install, MCP |
-| `mcp/` | MCP setup per [docs/MCP.md](docs/MCP.md) and [mcp/README.md](mcp/README.md) |
-| `architecture/` | Memory engine pipeline and `.contora/` layout |
-| `docs/` | Extension install, MCP quick start, BYOK |
-| `blog/` | Planned articles (runtime continuity, MCP, agent workflows) |
+| `index.html` | Home — problem, solution, architecture, features, install |
+| `docs/` | Install hub + markdown references |
+| `docs/INSTALL.md` | Full three-adapter install / use / uninstall |
+| `docs/MCP.md` | MCP server reference (10 tools, hosts) |
+| `docs/CLI.md` | CLI commands |
+| `docs/IDE_EXTENSION.md` | IDE extension (from upstream repo) |
+| `docs/ARCHITECTURE_V2.md` | v2.2 shared state layer model |
+| `docs/STATE_ENGINE.md` | State engine internals |
+| `mcp/` | Interactive MCP setup |
+| `architecture/` | Architecture overview page |
 
-## Files
-
-| File | Role |
-| ---- | ---- |
-| `index.html` | Home page |
-| `styles.css` | Shared layout and styling |
-| `logo.png` | Favicon and header logo |
-| `contorium.mp4` | Hero demo video |
-| `docs/MCP.md` | MCP reference (tools, build, Claude Code, Cursor) |
-
-No build step required.
-
-## Preview locally
+## Preview
 
 ```bash
 python -m http.server 8080
-# or
-npx --yes serve .
 ```
 
-Visit `http://localhost:8080` — subpages at `/mcp/`, `/architecture/`, `/docs/`, `/blog/`.
+## Links
 
-## Related links
-
-- **Repository:** [github.com/ContoriumLabs/contorium](https://github.com/ContoriumLabs/contorium)
-- **VS Marketplace:** [marketplace.visualstudio.com](https://marketplace.visualstudio.com/search?term=contorium&target=VSCode&category=All%20categories&sortBy=Relevance)
-- **Open VSX:** [open-vsx.org](https://open-vsx.org/?search=contorium&sortBy=relevance&sortOrder=desc)
-- **MCP docs:** [docs/MCP.md](docs/MCP.md)
+- [github.com/ContoriumLabs/contorium](https://github.com/ContoriumLabs/contorium)

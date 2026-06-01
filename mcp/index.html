@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contorium MCP — runtime memory for Codex, Claude Code, and Cursor Agent. store_memory, get_workspace_context, and platform setup."
+      content="Contorium MCP — session view over shared workspace state for Codex, Claude Code, Cursor Agent, and Gemini CLI."
     />
-    <title>Contorium MCP — Codex, Claude Code &amp; Agent Setup</title>
+    <title>Contorium MCP — Session View Setup</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,9 +25,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#category">Category</a>
-          <a href="../index.html#capabilities">Capabilities</a>
-          <a href="../index.html#integrations">Integrations</a>
+          <a href="../index.html#solution">Solution</a>
+          <a href="../index.html#architecture">Architecture</a>
           <a href="../index.html#install">Install</a>
           <a href="index.html" class="nav-active">MCP</a>
           <a href="../architecture/">Architecture</a>
@@ -42,11 +41,12 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <span class="section-badge">stdio MCP server</span>
+          <span class="section-badge">MCP session view · v2.2</span>
           <h1>Contorium MCP Server</h1>
           <p class="page-hero-lead">
-            Runtime memory tools for <strong>Codex</strong>, <strong>Claude Code</strong>, and <strong>Cursor Agent</strong>.
-            Complements the Contorium VSIX—use MCP when the agent runs without the sidebar UI.
+            MCP tools for <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor Agent</strong>, and
+            <strong>Gemini CLI</strong>. A peer session view over the same <code style="color: var(--accent)">.contora/</code>
+            state — can bootstrap without the IDE extension.
           </p>
         </div>
       </header>
@@ -56,24 +56,23 @@
           <h2>Before you start</h2>
           <ol class="steps-list">
             <li>
-              <strong>Install the Contorium extension</strong>
-              <a href="https://marketplace.visualstudio.com/search?term=contorium&target=VSCode&category=All%20categories&sortBy=Relevance" target="_blank" rel="noopener noreferrer">VS Code Marketplace</a>
-              or <a href="https://open-vsx.org/?search=contorium&sortBy=relevance&sortOrder=desc" target="_blank" rel="noopener noreferrer">Open VSX</a>.
-              MCP reads workspace state the extension writes under <code style="color: var(--accent)">.contora/</code>.
-            </li>
-            <li>
-              <strong>Open your project</strong>
-              Contorium begins tracking active files, edits, and Git changes into workspace memory.
-            </li>
-            <li>
-              <strong>Set your current focus (recommended)</strong>
-              Example: <code style="color: var(--accent)">Refactor payment retry system</code> — memory builders rank context
-              around that intent.
-            </li>
-            <li>
-              <strong>Build the MCP server</strong>
-              From the <a href="https://github.com/ContoriumLabs/contorium">Contorium</a> repo. Portable entry:
+              <strong>Build from source</strong>
+              <code style="color: var(--accent)">npm install && npm run compile</code> in the
+              <a href="https://github.com/ContoriumLabs/contorium">Contorium</a> repo. Portable entry:
               <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code>.
+            </li>
+            <li>
+              <strong>Set workspace root</strong>
+              Use <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> env var pointing at your project folder.
+            </li>
+            <li>
+              <strong>IDE extension (optional, recommended)</strong>
+              Adds event-driven precision. MCP alone still bootstraps <code style="color: var(--accent)">.contora/</code> via scan.
+              <a href="../docs/IDE_EXTENSION.md">IDE docs</a>
+            </li>
+            <li>
+              <strong>Configure your agent host</strong>
+              Codex, Claude Code, Cursor, or Gemini — see sections below.
             </li>
           </ol>
         </div>
@@ -230,7 +229,7 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
       <section class="page-section">
         <div class="container">
           <h2>MCP tools</h2>
-          <p>Agents call these tools over stdio—no manual copy-paste of workspace context.</p>
+          <p>Agents call these tools over stdio — shared state, not manual copy-paste.</p>
           <div style="overflow-x: auto; margin-bottom: 32px">
             <table class="compare-table">
               <thead>
@@ -241,24 +240,40 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
               </thead>
               <tbody>
                 <tr>
+                  <td><code>get_workspace_context</code></td>
+                  <td>Read <code>state.json</code> — focus, Git, active files</td>
+                </tr>
+                <tr>
+                  <td><code>get_project_snapshot</code></td>
+                  <td>L4 Markdown project snapshot</td>
+                </tr>
+                <tr>
+                  <td><code>get_project_state</code></td>
+                  <td>L4 structured project state JSON</td>
+                </tr>
+                <tr>
                   <td><code>store_memory</code></td>
-                  <td>Persist key/value memory under <code>.contora/mcp/memories.json</code></td>
+                  <td>Persist key/value under <code>.contora/mcp/memories.json</code></td>
                 </tr>
                 <tr>
                   <td><code>search_memory</code></td>
-                  <td>Keyword search over MCP memory entries</td>
+                  <td>Keyword search MCP memory entries</td>
                 </tr>
                 <tr>
                   <td><code>get_memory</code></td>
                   <td>Fetch one entry by key</td>
                 </tr>
                 <tr>
-                  <td><code>get_workspace_context</code></td>
-                  <td>Read <code>.contora/state.json</code> from the extension (focus, Git, files)</td>
+                  <td><code>get_state_conflicts</code></td>
+                  <td>v2 unresolved conflict audit</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem">
+            Also: <code>get_project_intelligence</code>, <code>get_intent_graph</code>, <code>get_active_intents</code> —
+            see <a href="../docs/MCP.md">docs/MCP.md</a>.
+          </p>
 
           <h3 style="font-size: 1.1rem; margin-bottom: 16px">Tool examples</h3>
           <div class="example-grid example-grid--2">
@@ -324,35 +339,33 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
             <h2>Typical workflow</h2>
             <ol class="steps-list">
               <li>
-                <strong>Open your project</strong>
-                Extension tracks active files, edits, and Git into <code style="color: var(--accent)">.contora/</code>.
+                <strong>Set workspace root</strong>
+                Configure <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> to your project folder.
               </li>
               <li>
-                <strong>Set current focus</strong>
-                e.g. <em>Refactor payment retry system</em> — inferred goals and ranked files update automatically.
+                <strong>Bootstrap or sync state</strong>
+                MCP bootstraps <code style="color: var(--accent)">.contora/</code> on first call; IDE extension adds event-driven precision (optional).
               </li>
               <li>
-                <strong>Work normally</strong>
-                Memory builders run continuously; event history and compression stay within token budgets.
+                <strong>Set current focus (IDE, optional)</strong>
+                e.g. <em>Refactor payment retry system</em> — ranks files and snapshot around that intent.
               </li>
               <li>
-                <strong>Let agents use MCP</strong>
-                Codex / Claude Code agents call <code>get_workspace_context</code> and memory tools—or use sidebar
-                <strong>Copy AI-ready context</strong> for one-click export.
+                <strong>Agents call MCP tools</strong>
+                <code>get_project_snapshot</code>, <code>get_workspace_context</code>, <code>store_memory</code> — or use IDE
+                <strong>Copy AI-ready context</strong> for clipboard export.
               </li>
             </ol>
           </div>
           <div>
             <h2>On-disk layout</h2>
-            <pre class="dir-tree" aria-label="Workspace memory layout"><span class="dir-highlight">&lt;workspace-root&gt;/</span>
-├── .contoraignore
+            <pre class="dir-tree" aria-label="Workspace state layout"><span class="dir-highlight">&lt;workspace-root&gt;/</span>
 └── .contora/
-    ├── state.json       <span class="dir-highlight"># extension snapshot (MCP reads)</span>
-    ├── events/
-    ├── last-intent.json
-    ├── memory/
+    ├── state.json       <span class="dir-highlight"># workspace truth (all views read)</span>
+    ├── events/          <span class="dir-highlight"># IDE session view writes</span>
+    ├── state-builder/
     └── mcp/
-        └── memories.json <span class="dir-highlight"># MCP store_memory</span></pre>
+        └── memories.json <span class="dir-highlight"># store_memory</span></pre>
             <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 16px">
               Export formats (sidebar / settings): <code>markdown</code>, <code>json</code>, <code>cursor</code>,
               <code>claude</code>, <code>openai</code> — see
@@ -364,30 +377,29 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
 
       <section class="page-section section-mcp">
         <div class="container">
-          <h2>Extension vs MCP</h2>
+          <h2>Session views: IDE vs MCP</h2>
           <div class="demo-compare">
             <article class="demo-panel">
-              <div class="demo-panel-label">VS Code / Cursor extension</div>
+              <div class="demo-panel-label">IDE session view</div>
               <ul class="memory-bullets">
-                <li>Sidebar: focus, goals, Git, active files</li>
-                <li>Workspace scanner &amp; memory builder</li>
+                <li>Sidebar: focus, Git, active files</li>
+                <li>Event-driven workspace scanning</li>
                 <li>Session save / restore</li>
                 <li>Copy AI-ready context (clipboard export)</li>
               </ul>
             </article>
             <article class="demo-panel demo-panel--with">
-              <div class="demo-panel-label">MCP server</div>
+              <div class="demo-panel-label">MCP session view</div>
               <ul class="memory-bullets">
-                <li>Agent-callable tools (Codex, Claude Code)</li>
-                <li><code>get_workspace_context</code> from <code>state.json</code></li>
+                <li>Agent-callable tools (Codex, Claude Code, Gemini)</li>
+                <li><code>get_project_snapshot</code> / <code>get_workspace_context</code></li>
                 <li><code>store_memory</code> / <code>search_memory</code> / <code>get_memory</code></li>
-                <li>stdio — no duplicate UI layer</li>
+                <li>Bootstrap + 5s sync — no sidebar required</li>
               </ul>
             </article>
           </div>
           <p style="color: var(--text-muted); font-size: 0.88rem; max-width: 640px; margin-top: 20px">
-            Internal extension command and config IDs remain <code>contora.*</code>; display name is
-            <strong>Contorium</strong>.
+            Both are peer views over the same <code>.contora/</code> state — not separate memory systems.
           </p>
           <p class="section-cta-inline" style="margin-top: 16px">
             <a href="../docs/MCP.md" class="btn btn-ghost btn-sm">docs/MCP.md</a>
@@ -404,8 +416,8 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
       </section>
 
       <section class="cta-band">
-        <h2>Connect your agents to workspace memory</h2>
-        <p>Install the extension, run <code>npm run build:mcp</code>, then wire Claude Code MCP.</p>
+        <h2>Connect agents to shared workspace state</h2>
+        <p>Run <code>npm run compile</code>, configure MCP, then wire Codex or Claude Code.</p>
         <div class="cta-buttons">
           <a href="../docs/" class="btn btn-primary">Installation guide</a>
           <a href="../index.html" class="btn btn-ghost">Back to home</a>
@@ -421,7 +433,7 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
               <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
               Contorium
             </a>
-            <p>Contorium MCP — runtime memory for Codex, Claude Code, and agents.</p>
+            <p>MCP session view — shared workspace state for Codex, Claude Code, and agents.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">

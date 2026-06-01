@@ -1,73 +1,208 @@
-# Contorium MCP (Codex + Claude Code + Cursor)
+# Contorium MCP Server
 
-stdio MCP server exposing Contorium **runtime memory** tools. Works alongside the **VS Code / Cursor extension** (sidebar + scanners); does not replace the extension UI.
+stdio MCP service for **Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI**, and other MCP hosts.
 
-## Tools
+**v2.2 can run standalone:** bootstraps `.contora/` without the IDE; **5s polling + event/git triggers** keep state fresh.  
+Overview: [INSTALL.md](./INSTALL.md) · [Architecture v2.2](./ARCHITECTURE_V2.md) · [MCP setup page](../mcp/)
 
-| Tool | Description |
-|------|-------------|
-| `store_memory` | Persist key/value memory under `.contora/mcp/memories.json` |
-| `search_memory` | Keyword search over MCP memory entries |
-| `get_memory` | Fetch one entry by key |
-| `get_workspace_context` | Read `.contora/state.json` from the extension (focus, Git, files) |
+---
 
-## Build
+## Quick reference
 
-From the repository root (installs `packages/mcp` deps automatically):
+| Phase | Command / action |
+|-------|------------------|
+| **Build** | `git clone … && cd contorium && npm install && npm run compile` |
+| **Verify** | `set CONTORIUM_WORKSPACE=E:\your-project` then `node bin/contorium-mcp-launch.cjs` (expect `ready on stdio`) |
+| **Cursor** | Settings → MCP → enable `contorium` |
+| **Claude Code** | `claude mcp add --scope project contorium -- node …/contorium-mcp-launch.cjs` or `claude --plugin-dir .` |
+| **Codex** | `codex mcp add contorium -- node …/contorium-mcp-launch.cjs` |
+| **Daily use** | Agent calls `get_workspace_context` / `get_project_snapshot` / `store_memory` |
+| **Remove** | `claude mcp remove contorium` · `codex mcp remove contorium` · Cursor Settings → MCP |
+
+---
+
+## Prerequisites
+
+| Requirement | Notes |
+|-------------|-------|
+| Node.js | **18+** |
+| Workspace | Real project directory |
+| Extension (optional) | [IDE extension](./IDE_EXTENSION.md) adds event-driven precision; MCP still bootstraps alone |
+| Build | `npm run compile` or `npm run build:mcp` before first use |
+
+Artifacts:
+
+- Entry: `packages/mcp/dist/server.js`
+- Launcher: `bin/contorium-mcp-launch.cjs` (recommended for absolute paths)
+
+---
+
+## Install
+
+### Build from source
 
 ```bash
-npm run build:mcp
-# or
+git clone https://github.com/ContoriumLabs/contorium.git
+cd contorium
+npm install
 npm run compile
 ```
 
-Portable entry: `bin/contorium-mcp-launch.cjs`  
-stdio entry: `packages/mcp/dist/server.js` (after build)
-
-## Platforms
-
-| Platform | Plugin manifest | MCP config |
-|----------|-----------------|------------|
-| Codex | `.codex-plugin/plugin.json` | `.mcp.json` |
-| Claude Code | `.claude-plugin/plugin.json` | `.mcp.claude.json` |
-| Cursor | `.cursor-plugin/plugin.json` | `mcp.json` |
-
-## Codex
-
-After `npm run build:mcp`:
+Verify:
 
 ```bash
-codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs
+node packages/mcp/dist/server.js
+# [contorium-mcp] ready on stdio — Ctrl+C to exit
 ```
 
-Install as plugin: [Codex plugins](https://developers.openai.com/codex/plugins/build). Local marketplace example: `.agents/plugins/marketplace.example.json` in the repo.
+### Cursor
 
-## Claude Code (plugin)
+Merge into `.cursor/mcp.json` or user MCP settings (**absolute paths**):
 
-After `npm run build:mcp`, load locally:
+```json
+{
+  "mcpServers": {
+    "contorium": {
+      "command": "node",
+      "args": ["E:/path/to/contorium/bin/contorium-mcp-launch.cjs"],
+      "env": {
+        "CONTORIUM_WORKSPACE": "E:/your-actual-workspace"
+      }
+    }
+  }
+}
+```
+
+Settings → MCP → enable `contorium` → Reload Window / restart Agent.
+
+### Claude Code
+
+**Plugin (recommended):**
 
 ```bash
+cd /path/to/contorium
+npm run build:mcp
 claude --plugin-dir .
 ```
 
-Or add MCP only (project scope):
+**MCP only (project scope):**
 
 ```bash
-claude mcp add --scope project contorium -- node ./bin/contorium-mcp-launch.cjs
+claude mcp add --scope project contorium -- node /path/to/contorium/bin/contorium-mcp-launch.cjs
 ```
 
-Plugin MCP config uses `${CLAUDE_PLUGIN_ROOT}` and `${CLAUDE_PROJECT_DIR}` (see `.mcp.claude.json`).
+Env: `CONTORIUM_WORKSPACE`, `CLAUDE_PROJECT_DIR` (injected by Claude Code).
 
-Environment variables:
+### Codex
 
-- `CONTORIUM_WORKSPACE` — workspace root (default: cwd, or walk up to find `.contora/state.json`)
-- `CLAUDE_PROJECT_DIR` — set by Claude Code when spawning MCP (preferred for plugin installs)
-- `CLAUDE_PROJECT_ROOT` — alias accepted by some integrations
+```bash
+npm run build:mcp
+codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs
+```
 
-## Cursor Agent (MCP)
+Or use repo `.mcp.json` + `.codex-plugin/plugin.json`.
 
-Point Cursor MCP to root `mcp.json` (uses `${workspaceFolder}/packages/mcp/dist/server.js`). Requires `npm run build:mcp`. Detailed Cursor Agent docs on the [MCP page](../mcp/) — coming soon.
+### Gemini CLI
 
-## VS Code extension
+In `~/.gemini/settings.json`:
 
-Install the **Contorium** VSIX for sidebar, event tracking, and **Copy AI-ready context**. MCP adds agent-callable tools for Codex, Claude Code, and Cursor Agent without duplicating the UI layer.
+```json
+{
+  "mcpServers": {
+    "contorium": {
+      "command": "node",
+      "args": ["/absolute/path/to/contorium/bin/contorium-mcp-launch.cjs"],
+      "env": {
+        "CONTORIUM_WORKSPACE": "/absolute/path/to/your-workspace"
+      }
+    }
+  }
+}
+```
+
+Restart Gemini CLI session after changes.
+
+---
+
+## Tools (10)
+
+| Tool | R/W | Description |
+|------|-----|-------------|
+| `store_memory` | write | Persist to `.contora/mcp/memories.json` |
+| `search_memory` | read | Keyword search MCP memories |
+| `get_memory` | read | Fetch by key |
+| `get_workspace_context` | read | Extension/state `state.json` (focus, Git, files) |
+| `get_project_intelligence` | read | L5 `intelligence/state-summary.json` |
+| `get_intent_graph` | read | Full intent graph |
+| `get_active_intents` | read | Active intent nodes |
+| `get_project_state` | read | L4 `state-builder/project-state.json` |
+| `get_project_snapshot` | read | L4 Markdown snapshot (`format=json` optional) |
+| `get_state_conflicts` | read | v2 unresolved conflicts (audit only) |
+
+---
+
+## Workflows
+
+**MCP only (no IDE):**
+
+1. Set `CONTORIUM_WORKSPACE`  
+2. Start agent — first call bootstraps `.contora/`  
+3. Use `get_project_snapshot` / `get_workspace_context`  
+
+**IDE + MCP (best precision):**
+
+1. Open project in extension, set **Current focus**  
+2. Enable MCP on same workspace  
+3. Use `store_memory` for cross-session agent notes  
+
+**CLI alternative:**
+
+```bash
+contorium init . && contorium snapshot .
+```
+
+---
+
+## Environment variables
+
+| Variable | Role |
+|----------|------|
+| `CONTORIUM_WORKSPACE` | Explicit workspace root (preferred) |
+| `CODEX_PROJECT_DIR` | Codex injection |
+| `CLAUDE_PROJECT_DIR` | Claude Code injection |
+| `MCP_WORKSPACE_ROOT` | Some hosts |
+
+If unset: walk up from MCP `cwd` to find `.contora/state.json`.
+
+---
+
+## vs Copy AI-ready context
+
+| Method | Use when |
+|--------|----------|
+| **Copy AI-ready context** (IDE) | Paste into any chat — 4-layer Markdown |
+| **get_project_snapshot** (MCP) | Agent pulls structured state automatically |
+| **get_state_conflicts** (MCP) | Audit IDE/MCP decision conflicts |
+
+---
+
+## Uninstall / troubleshooting
+
+See [INSTALL.md](./INSTALL.md) for host-specific removal.
+
+| Issue | Fix |
+|-------|-----|
+| No `state.json` | Set `CONTORIUM_WORKSPACE`; run `contorium init .` |
+| MCP won't start | `npm run compile`, Node 18+, absolute paths |
+| Stale state | IDE: Save session state; MCP: wait 5s or touch events; CLI: `contorium sync .` |
+| Wrong `workspaceRoot` | Set `CONTORIUM_WORKSPACE` to project root |
+
+---
+
+## Related
+
+- [INSTALL.md](./INSTALL.md)
+- [IDE extension](./IDE_EXTENSION.md)
+- [CLI](./CLI.md)
+- [State engine](./STATE_ENGINE.md)
+- [Interactive MCP setup](../mcp/)

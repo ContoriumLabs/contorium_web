@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contorium blog — runtime continuity, context engineering, MCP, and agent workflows for AI coding infrastructure."
+      content="Contorium blog — shared workspace state, session views, MCP, and multi-tool AI coding workflows."
     />
-    <title>Blog — Contorium Runtime Infrastructure</title>
+    <title>Blog — Contorium Shared Workspace State</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,9 +25,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#category">Category</a>
-          <a href="../index.html#capabilities">Capabilities</a>
-          <a href="../index.html#integrations">Integrations</a>
+          <a href="../index.html#solution">Solution</a>
+          <a href="../index.html#architecture">Architecture</a>
           <a href="../index.html#install">Install</a>
           <a href="../mcp/">MCP</a>
           <a href="../architecture/">Architecture</a>
@@ -42,10 +41,10 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <h1>Runtime continuity &amp; agent workflows</h1>
+          <h1>Shared workspace state &amp; agent workflows</h1>
           <p class="page-hero-lead">
-            Notes on runtime continuity, context engineering, MCP integration, and long-running agent workflows—how to
-            build software when AI agents can maintain workspace state across sessions.
+            Notes on shared workspace state, session views, MCP integration, and cross-tool AI coding — how project
+            state persists when IDEs, agents, and CLI share the same <code style="color: var(--accent)">.contora/</code>.
           </p>
         </div>
       </header>
@@ -54,37 +53,37 @@
         <div class="container">
           <div class="blog-coming">
             <p><strong style="color: var(--text)">Posts coming soon.</strong></p>
-            <p>We are preparing articles on runtime continuity, MCP tooling, and long-running agent workflows.</p>
+            <p>We are preparing articles on shared workspace state, session views, and MCP tooling.</p>
           </div>
 
           <h2 style="margin-top: 48px">Planned topics</h2>
           <ul class="blog-list">
             <li>
-              <span class="blog-tag">Runtime continuity</span>
-              <h3>Why AI coding agents lose runtime state</h3>
-              <p>Context windows vs. workspace runtime continuity—and what changes when agents can continue instead of restart.</p>
+              <span class="blog-tag">Workspace state</span>
+              <h3>Why AI tools rebuild context on every switch</h3>
+              <p>Single-tool sessions vs. shared state across Cursor, Claude Code, and CLI.</p>
             </li>
             <li>
-              <span class="blog-tag">Context engineering</span>
-              <h3>Lifecycle-aware compression without losing intent</h3>
-              <p>Ranking activity, evolving runtime state, and token budgets for large codebases.</p>
+              <span class="blog-tag">Session views</span>
+              <h3>IDE, MCP, and CLI as views — not adapters</h3>
+              <p>One `.contora/` truth; multiple clients observing the same project state.</p>
             </li>
             <li>
               <span class="blog-tag">MCP</span>
               <h3>Contorium MCP tools in practice</h3>
-              <p>Connecting Claude Code and MCP clients to structured workspace runtime state.</p>
+              <p>Connecting Claude Code and Codex to structured workspace snapshots.</p>
             </li>
             <li>
-              <span class="blog-tag">Agent workflows</span>
-              <h3>Long-running coding workflows across sessions</h3>
-              <p>Agent continuity, model switches, and Git-aware runtime tracking.</p>
+              <span class="blog-tag">Cross-tool</span>
+              <h3>Portable project state across models and IDEs</h3>
+              <p>Switch tools without re-explaining goals, changes, and decisions.</p>
             </li>
           </ul>
         </div>
       </section>
 
       <section class="cta-band">
-        <h2>Build with runtime continuity</h2>
+        <h2>Build with shared workspace state</h2>
         <div class="cta-buttons">
           <a href="../docs/" class="btn btn-primary">Read the docs</a>
           <a href="../index.html" class="btn btn-ghost">Back to home</a>
@@ -100,7 +99,7 @@
               <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
               Contorium
             </a>
-            <p>Runtime continuity infrastructure for developers who pair with agents daily.</p>
+            <p>Shared workspace state for developers who pair with agents across multiple tools.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">
@@ -122,7 +121,7 @@
         </div>
         <div class="footer-bottom">
           <span>© Contorium. MIT License.</span>
-          <span>Runtime continuity · MCP · Agents</span>
+          <span>Shared workspace state · MCP · Session views</span>
         </div>
       </div>
     </footer>

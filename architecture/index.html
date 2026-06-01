@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contorium runtime memory architecture — workspace scanner, compression, lifecycle-aware state, and MCP interface."
+      content="Contorium v2.2 architecture — shared workspace state layer with IDE, MCP, and CLI session views."
     />
-    <title>Architecture — Contorium Runtime Memory Engine</title>
+    <title>Architecture — Contorium Shared Workspace State</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,14 +25,12 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#category">Category</a>
-          <a href="../index.html#capabilities">Capabilities</a>
-          <a href="../index.html#integrations">Integrations</a>
+          <a href="../index.html#solution">Solution</a>
+          <a href="../index.html#architecture">Architecture</a>
           <a href="../index.html#install">Install</a>
           <a href="../mcp/">MCP</a>
           <a href="index.html" class="nav-active">Architecture</a>
           <a href="../docs/">Docs</a>
-          <a href="../blog/">Blog</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="../docs/" class="btn btn-primary btn-sm">Get started</a>
         </div>
@@ -42,48 +40,57 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <span class="section-badge">Runtime infrastructure</span>
-          <h1>Runtime memory engine</h1>
+          <span class="section-badge">v2.2 · state-core</span>
+          <h1>Shared workspace state layer</h1>
           <p class="page-hero-lead">
-            Contorium is AI runtime infrastructure—not a chat UI. A local pipeline turns workspace activity into evolving
-            runtime state your agents can use across Codex, Claude Code, and IDE workflows.
+            One state system in <code style="color: var(--accent)">.contora/</code>. IDE, MCP, and CLI are peer session
+            views — not separate memory stores or integration adapters.
           </p>
         </div>
       </header>
 
       <section class="page-section">
         <div class="container">
-          <h2>Pipeline</h2>
-          <p>From raw editor and Git events to agent-ready context.</p>
-          <div class="arch-diagram">
-            <span class="arch-box">Workspace activity</span>
-            <span class="arch-arrow" aria-hidden="true">→</span>
-            <span class="arch-box">Workspace scanner</span>
-            <span class="arch-arrow" aria-hidden="true">→</span>
-            <span class="arch-box">Memory builder</span>
-            <span class="arch-arrow" aria-hidden="true">→</span>
-            <span class="arch-box">Memory compression</span>
-            <span class="arch-arrow" aria-hidden="true">→</span>
-            <span class="arch-box" style="border-color: var(--border-accent); background: var(--accent-soft)">Structured workspace memory</span>
-            <span class="arch-arrow" aria-hidden="true">→</span>
-            <span class="arch-box" style="border-color: rgba(109, 92, 230, 0.25); background: rgba(109, 92, 230, 0.06)">Codex · Claude Code · Cursor · MCP</span>
+          <h2>Architecture model</h2>
+          <div class="arch-stack" style="margin-top: 24px">
+            <span class="arch-stack-box">Workspace (filesystem)</span>
+            <span class="arch-stack-arrow" aria-hidden="true">↓</span>
+            <span class="arch-stack-box arch-stack-box--highlight">Contorium State Layer (.contora/)</span>
+            <span class="arch-stack-divider">Session views (multi-client)</span>
+            <div class="arch-stack-row">
+              <span class="arch-stack-box arch-stack-box--small">IDE windows</span>
+              <span class="arch-stack-box arch-stack-box--small">MCP agents</span>
+              <span class="arch-stack-box arch-stack-box--small">CLI processes</span>
+              <span class="arch-stack-box arch-stack-box--small">AI tools</span>
+            </div>
           </div>
+          <p style="color: var(--text-muted); max-width: 640px; margin: 24px auto 0; text-align: center">
+            <code style="color: var(--accent)">state.json</code> is workspace truth. Each client observes the same state
+            from a different perspective.
+          </p>
         </div>
       </section>
 
       <section class="page-section section-mcp">
         <div class="container two-col">
           <div>
-            <h2>Workspace scanner</h2>
-            <p>Continuously observes editors, saves, focus changes, and Git events. Respects ignore rules and repo size budgets so large monorepos stay usable.</p>
-            <h2 style="margin-top: 32px">Memory builder</h2>
-            <p>Ranks active files, infers goals, attaches Git context, and writes structured blocks—not raw file dumps—for downstream compression and export.</p>
+            <h2>Dual-mode state engine</h2>
+            <ul class="memory-bullets">
+              <li><strong style="color: var(--text)">Event-driven</strong> — IDE writes <code style="color: var(--accent)">events/*.jsonl</code></li>
+              <li><strong style="color: var(--text)">Scan-driven</strong> — MCP/CLI bootstrap from workspace scan</li>
+              <li><strong style="color: var(--text)">Merged</strong> — scan supplements git/paths; does not overwrite task/notes</li>
+            </ul>
+            <h2 style="margin-top: 32px">v2.2 source metadata</h2>
+            <p style="color: var(--text-muted)">Optional <code style="color: var(--accent)">source</code> block in <code style="color: var(--accent)">state.json</code> records mode, last writer, and timestamp.</p>
           </div>
           <div>
-            <h2>Memory compression</h2>
-            <p>Semantic summaries, ranked paths, and token-aware exports keep long-running AI workflows within budget without losing what matters.</p>
-            <h2 style="margin-top: 32px">Export &amp; restore</h2>
-            <p>One action produces markdown or JSON context for agents—or restores session state, editors, and memory blocks after a restart.</p>
+            <h2>Package layout</h2>
+            <pre class="dir-tree"><span class="dir-highlight">packages/state-core/</span>
+  scanner/ bootstrap/
+  state-builder/ dualMode.ts
+<span class="dir-highlight">packages/cli/</span>     CLI view
+<span class="dir-highlight">packages/mcp/</span>     MCP view + sync
+<span class="dir-highlight">src/adapters/</span>   IDE view bridge</pre>
           </div>
         </div>
       </section>
@@ -92,36 +99,42 @@
         <div class="container two-col">
           <div>
             <h2>Local-first: <code style="color: var(--accent)">.contora/</code></h2>
-            <p>All state lives in your workspace. No hidden cloud memory store—you control retention, sharing, and optional BYOK analysis keys.</p>
-            <pre class="dir-tree" aria-label=".contora directory layout"><span class="dir-highlight">&lt;workspace-root&gt;/</span>
-├── .contoraignore
+            <pre class="dir-tree"><span class="dir-highlight">&lt;workspace-root&gt;/</span>
 └── .contora/
-    ├── state.json       <span class="dir-highlight"># extension snapshot (MCP reads)</span>
+    ├── state.json
     ├── events/
-    ├── last-intent.json
-    ├── memory/
-    └── mcp/
-        └── memories.json <span class="dir-highlight"># MCP store_memory</span></pre>
+    ├── state-builder/
+    ├── intelligence/
+    ├── intent-graph/
+    ├── state-engine/
+    └── mcp/</pre>
           </div>
           <div>
-            <h2>Design principles</h2>
-            <ul class="memory-bullets">
-              <li><strong style="color: var(--text)">AI-triggered retrieval</strong> — agents pull memory via MCP or export, not manual paste</li>
-              <li><strong style="color: var(--text)">Cross-session restore</strong> — memory survives chat switches and IDE restarts</li>
-              <li><strong style="color: var(--text)">Git-aware summaries</strong> — staged and modified paths drive ranking</li>
-              <li><strong style="color: var(--text)">Agent export formats</strong> — markdown, json, cursor, claude, openai</li>
-              <li><strong style="color: var(--text)">Standalone runtime</strong> — future headless mode beyond the editor</li>
-            </ul>
+            <h2>Concept map</h2>
+            <table class="compare-table">
+              <thead>
+                <tr><th>Term</th><th>v2 meaning</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>IDE / MCP / CLI</td><td>session view</td></tr>
+                <tr><td>Window / Agent</td><td>session view</td></tr>
+                <tr><td><code>state.json</code></td><td>workspace truth</td></tr>
+                <tr><td><code>.contora/</code></td><td>system root</td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 20px">
+              <a href="../docs/ARCHITECTURE_V2.md">Full architecture doc (Markdown) →</a>
+            </p>
           </div>
         </div>
       </section>
 
       <section class="cta-band">
-        <h2>See it in action</h2>
-        <p>Connect agents via MCP or install the extension to start building workspace memory.</p>
+        <h2>Install a session view</h2>
+        <p>IDE extension, MCP server, or CLI — all read the same workspace state.</p>
         <div class="cta-buttons">
-          <a href="../mcp/" class="btn btn-primary">MCP integration</a>
-          <a href="../docs/" class="btn btn-ghost">Install docs</a>
+          <a href="../docs/" class="btn btn-primary">Documentation</a>
+          <a href="../index.html#install" class="btn btn-ghost">Install</a>
         </div>
       </section>
     </main>
@@ -134,30 +147,21 @@
               <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
               Contorium
             </a>
-            <p>Workspace memory runtime for AI agents—local, structured, session-aware.</p>
+            <p>Workspace state infrastructure — local, structured, multi-view.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">
-              <h4>Product</h4>
+              <h4>Docs</h4>
               <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="index.html">Architecture</a></li>
-                <li><a href="../mcp/">MCP</a></li>
-                <li><a href="../docs/">Docs</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Resources</h4>
-              <ul>
-                <li><a href="../blog/">Blog</a></li>
-                <li><a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="../docs/ARCHITECTURE_V2.md">ARCHITECTURE_V2.md</a></li>
+                <li><a href="../docs/STATE_ENGINE.md">STATE_ENGINE.md</a></li>
+                <li><a href="../docs/INSTALL.md">INSTALL.md</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
           <span>© Contorium. MIT License.</span>
-          <span>Memory Engine · Local-first · Agents</span>
         </div>
       </div>
     </footer>
