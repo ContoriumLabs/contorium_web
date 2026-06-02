@@ -3,16 +3,17 @@
   "currentTask": "build loadingpage",
   "openFiles": [
     "index.html",
-    "docs/index.html",
-    "docs/IDE_EXTENSION.md",
-    "styles.css",
     "修改方案.md",
     "README.md",
+    "docs/index.html",
+    "docs/IDE_EXTENSION.md",
     "mcp/index.html",
     "blog/index.html",
     "architecture/index.html"
   ],
   "recentFiles": [
+    "index.html",
+    "修改方案.md",
     "修",
     "修改方案2.md",
     "architecture/index.html",
@@ -27,10 +28,8 @@
     ".contora/state-builder/project-snapshot.md",
     ".contora/state-builder/project-state.json",
     ".contora/state.json",
-    "index.html",
-    "styles.css",
-    "修改方案.md"
+    "index.html"
   ],
   "notes": "",
-  "lastUpdated": 1780382239322
+  "lastUpdated": 1780383043550
 }

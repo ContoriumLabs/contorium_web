@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": 1780382246371,
+  "updatedAt": 1780383050706,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
       "text": "develop documentation, MCP integration and state engine",
       "status": "WEAKENING",
-      "confidence": 0.58,
+      "confidence": 0.56,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -20,7 +20,7 @@
         "styles.css",
         "docs/IDE_EXTENSION.md"
       ],
-      "lastUpdated": 1780382246371,
+      "lastUpdated": 1780383050706,
       "learnedAt": 1780286520992
     },
     {
@@ -37,9 +37,11 @@
         "修改方案.md",
         "修改方案2.md",
         "修",
-        "styles.css"
+        "styles.css",
+        "docs/IDE_EXTENSION.md",
+        "mcp/index.html"
       ],
-      "lastUpdated": 1780382246371,
+      "lastUpdated": 1780383050706,
       "learnedAt": 1780286520992
     },
     {
@@ -56,9 +58,11 @@
         "修改方案.md",
         "修",
         "styles.css",
-        "修改方案2.md"
+        "修改方案2.md",
+        "docs/IDE_EXTENSION.md",
+        "mcp/index.html"
       ],
-      "lastUpdated": 1780382018465,
+      "lastUpdated": 1780382316204,
       "learnedAt": 1780286520992
     },
     {
@@ -75,9 +79,11 @@
         "修改方案.md",
         "styles.css",
         "修",
-        "修改方案2.md"
+        "修改方案2.md",
+        "docs/IDE_EXTENSION.md",
+        "mcp/index.html"
       ],
-      "lastUpdated": 1780382246371,
+      "lastUpdated": 1780383050706,
       "learnedAt": 1780286520992
     },
     {
@@ -94,9 +100,11 @@
         "修改方案.md",
         "修改方案2.md",
         "修",
-        "styles.css"
+        "styles.css",
+        "docs/IDE_EXTENSION.md",
+        "mcp/index.html"
       ],
-      "lastUpdated": 1780382246371,
+      "lastUpdated": 1780383050706,
       "learnedAt": 1780286534119
     },
     {
@@ -116,6 +124,24 @@
       ],
       "lastUpdated": 1780382246371,
       "learnedAt": 1780286614336
+    },
+    {
+      "id": "intent_mpw9npi0_qygppg",
+      "text": "develop documentation and MCP integration",
+      "status": "ARCHIVED",
+      "confidence": 0.11,
+      "relatedFiles": [
+        "architecture/index.html",
+        "blog/index.html",
+        "docs/IDE_EXTENSION.md",
+        "docs/index.html",
+        "mcp/index.html",
+        "index.html",
+        "README.md",
+        "styles.css"
+      ],
+      "lastUpdated": 1780382370227,
+      "learnedAt": 1780382308824
     }
   ],
   "edges": [
@@ -458,6 +484,95 @@
       "from": "intent_mpuomn4x_4lkrpf",
       "to": "file:修改方案2.md",
       "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:docs/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpw9npi0_qygppg",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mpw9npi0_qygppg",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
     }
   ]
-}

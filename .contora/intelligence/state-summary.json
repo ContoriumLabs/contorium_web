@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1780382246341,
+  "generatedAt": 1780383050673,
   "project_intent": "develop documentation, state engine and MCP integration",
   "current_focus": "work in project root",
   "active_domains": [
@@ -16,13 +16,12 @@
       "cluster": "project root",
       "files": [
         "index.html",
-        "styles.css",
-        "修改方案.md",
         "README.md",
+        "修改方案.md",
         "修",
         "修改方案2.md"
       ],
-      "weight": 0.48
+      "weight": 0.42
     },
     {
       "cluster": "architecture",
@@ -57,8 +56,7 @@
   "next_likely_actions": [
     "update documentation for recent changes",
     "review state persistence and lifecycle logic",
-    "iterate on index.html",
-    "iterate on styles.css"
+    "iterate on index.html"
   ],
-  "confidence": 0.73
+  "confidence": 0.71
 }
