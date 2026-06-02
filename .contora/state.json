@@ -27,9 +27,8 @@
     ".contora/intent-graph/graph.json",
     ".contora/state-builder/project-snapshot.md",
     ".contora/state-builder/project-state.json",
-    ".contora/state.json",
-    "index.html"
+    ".contora/state.json"
   ],
   "notes": "",
-  "lastUpdated": 1780383043550
+  "lastUpdated": 1780383141735
 }

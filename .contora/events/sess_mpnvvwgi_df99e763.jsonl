@@ -115,3 +115,5 @@
 {"type":"file_focus","file":"index.html","timestamp":1780383033707}
 {"type":"file_save","file":"index.html","timestamp":1780383035627}
 {"type":"git_change","modified":[".contora/events/sess_mpnvvwgi_df99e763.jsonl",".contora/intelligence/state-summary.json",".contora/intent-graph/graph.json",".contora/state-builder/project-snapshot.md",".contora/state-builder/project-state.json",".contora/state.json","index.html"],"staged":[],"timestamp":1780383042589}
+{"type":"git_change","modified":[".contora/intent-graph/graph.json",".contora/state-builder/project-snapshot.md",".contora/state-builder/project-state.json"],"staged":[],"timestamp":1780383073885}
+{"type":"git_change","modified":[".contora/events/sess_mpnvvwgi_df99e763.jsonl",".contora/intelligence/state-summary.json",".contora/intent-graph/graph.json",".contora/state-builder/project-snapshot.md",".contora/state-builder/project-state.json",".contora/state.json"],"staged":[],"timestamp":1780383086966}

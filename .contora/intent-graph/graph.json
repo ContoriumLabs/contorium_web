@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": 1780383050706,
+  "updatedAt": 1780383094033,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
       "text": "develop documentation, MCP integration and state engine",
-      "status": "WEAKENING",
-      "confidence": 0.56,
+      "status": "PARTIAL",
+      "confidence": 0.44,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -20,7 +20,7 @@
         "styles.css",
         "docs/IDE_EXTENSION.md"
       ],
-      "lastUpdated": 1780383050706,
+      "lastUpdated": 1780383094033,
       "learnedAt": 1780286520992
     },
     {
@@ -41,7 +41,7 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html"
       ],
-      "lastUpdated": 1780383050706,
+      "lastUpdated": 1780383094033,
       "learnedAt": 1780286520992
     },
     {
@@ -62,7 +62,7 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html"
       ],
-      "lastUpdated": 1780382316204,
+      "lastUpdated": 1780383081290,
       "learnedAt": 1780286520992
     },
     {
@@ -83,7 +83,7 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html"
       ],
-      "lastUpdated": 1780383050706,
+      "lastUpdated": 1780383094033,
       "learnedAt": 1780286520992
     },
     {
@@ -104,7 +104,7 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html"
       ],
-      "lastUpdated": 1780383050706,
+      "lastUpdated": 1780383094033,
       "learnedAt": 1780286534119
     },
     {
@@ -576,3 +576,4 @@
       "type": "AFFECTS"
     }
   ]
+}
