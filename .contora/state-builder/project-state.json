@@ -1,22 +1,23 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1780288150197,
+  "generatedAt": 1780382246389,
   "project_goal": "develop documentation, state engine and MCP integration",
   "current_stage": "documentation + state engine development",
   "active_modules": [
-    "修改方案2 (from IDE)",
     "index.html (from IDE)",
-    "README (from IDE)",
+    "styles.css (from IDE)",
     "修改方案 (from IDE)",
-    "修改方案2 (from events)",
+    "IDE_EXTENSION (from IDE)",
     "index.html (from events)",
-    "README (from events)",
-    "修改方案 (from events)"
+    "styles.css (from events)",
+    "修改方案 (from events)",
+    "README (from events)"
   ],
   "recent_decisions": [],
   "open_problems": [
-    "uncommitted changes in documentation module (from events)"
+    "uncommitted changes in documentation module (from events)",
+    "9 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [

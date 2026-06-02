@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contorium is a shared workspace state system that keeps AI tools synchronized — IDEs, MCP agents, and CLI as session views over the same project state."
+      content="Contorium — Git for AI collaboration. Make AI tools share the same project memory across IDEs, CLI, and agents without rebuilding context."
     />
-    <title>Contorium — Shared Workspace State System for AI Tools</title>
+    <title>Contorium — Git for AI Collaboration</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,8 +31,9 @@
           Contorium
         </a>
         <div class="nav-links">
+          <a href="#problem">Problem</a>
           <a href="#solution">Solution</a>
-          <a href="#architecture">Architecture</a>
+          <a href="#how">How it works</a>
           <a href="#features">Features</a>
           <a href="#integrations">Integrations</a>
           <a href="#install">Install</a>
@@ -49,14 +50,15 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="hero-eyebrow">Shared Workspace State System</p>
-            <h1>Shared workspace state for AI tools</h1>
+            <p class="hero-eyebrow">Git for AI collaboration</p>
+            <h1>Make AI tools share the same project memory</h1>
             <p class="hero-lead">
-              Your project state persists across IDEs, MCP agents, CLI tools, and AI models.
+              Across IDEs, CLI, and agents — switch between Cursor, Claude Code, Gemini CLI, VS Code, Codex, or any
+              MCP-compatible tool without losing project context.
             </p>
             <p class="hero-impact">
-              Not chat memory. Not prompt injection. Not an AI agent.<br />
-              A shared workspace state layer with multi-session views.
+              Not chat memory. Not prompt stuffing. Not orchestration.<br />
+              A Git-like state layer for AI collaboration.
             </p>
             <div class="hero-ctas">
               <a href="#install" class="btn btn-primary">Install extension</a>
@@ -84,16 +86,18 @@
       <!-- Problem -->
       <section class="section section-strip" id="problem">
         <div class="container">
-          <h2 class="section-title section-title--center">AI coding tools lose your project context when you switch tools</h2>
-          <p class="section-lead section-lead--center">
-            Cursor → Claude Code → Gemini CLI → VS Code — each system rebuilds understanding from scratch:
-          </p>
-          <ul class="problem-grid">
-            <li>What are you working on?</li>
-            <li>What changed?</li>
-            <li>What is the current goal?</li>
-            <li>What decisions were made?</li>
+          <h2 class="section-title section-title--center">AI coding tools are powerful — but disconnected</h2>
+          <p class="section-lead section-lead--center">Every time you switch:</p>
+          <ul class="problem-grid problem-grid--flows">
+            <li>Cursor → Claude Code</li>
+            <li>Claude Code → Gemini CLI</li>
+            <li>IDE → Terminal → Another agent</li>
+            <li>VS Code → Codex → MCP agent</li>
           </ul>
+          <p class="problem-closer">
+            <strong>The model forgets your project.</strong> You rebuild context again and again.<br />
+            Context fragmentation is the real bottleneck of AI development.
+          </p>
         </div>
       </section>
 
@@ -102,7 +106,10 @@
         <div class="container two-col">
           <div>
             <h2 class="section-title">A shared workspace state layer</h2>
-            <p class="section-lead">Contorium lives inside your repository and continuously maintains project understanding.</p>
+            <p class="section-lead">
+              Contorium introduces persistent, structured project memory inside your repository — that all AI tools can
+              read and update. Instead of chat history or prompt injection.
+            </p>
             <pre class="dir-tree" aria-label=".contora layout"><span class="dir-highlight">.contora/</span>
 ├── state.json
 ├── events/
@@ -118,121 +125,157 @@
           <div class="example-card">
             <h3>Project snapshot example</h3>
             <pre><code>Goal:
-  Build authentication system
-Current Stage:
-  Documentation work
+  Build documentation and authentication system
+Stage:
+  Documentation
 Active Modules:
   - app
-  - stream_session
+  - auth
+  - state-engine
 Open Problems:
-  - documentation consistency
+  - inconsistent docs structure
 Next Actions:
-  - update documentation
-  - fix auth flow</code></pre>
+  - unify documentation format
+  - validate auth flow</code></pre>
           </div>
         </div>
       </section>
 
-      <!-- Architecture -->
-      <section class="section section-strip" id="architecture">
+      <!-- How it works -->
+      <section class="section section-strip" id="how">
         <div class="container">
-          <h2 class="section-title section-title--center">One state system, multiple session views</h2>
-          <p class="section-lead section-lead--center">
-            IDE, MCP, and CLI are not separate memory systems — they are views over the same workspace state.
-          </p>
-          <div class="arch-stack" aria-label="Architecture diagram">
-            <span class="arch-stack-box">Workspace (filesystem)</span>
+          <h2 class="section-title section-title--center">How it works</h2>
+          <p class="section-lead section-lead--center">All tools interact with the same persistent project state.</p>
+          <div class="arch-stack" aria-label="How Contorium works">
+            <span class="arch-stack-box">Workspace (source of truth)</span>
             <span class="arch-stack-arrow" aria-hidden="true">↓</span>
-            <span class="arch-stack-box arch-stack-box--highlight">Contorium State Layer (.contora/)</span>
-            <span class="arch-stack-divider">Session views (multi-client)</span>
-            <div class="arch-stack-row">
-              <span class="arch-stack-box arch-stack-box--small">IDE windows</span>
-              <span class="arch-stack-box arch-stack-box--small">MCP agents</span>
-              <span class="arch-stack-box arch-stack-box--small">CLI processes</span>
-              <span class="arch-stack-box arch-stack-box--small">AI tools</span>
+            <span class="arch-stack-box arch-stack-box--highlight">.contora/ state layer</span>
+            <span class="arch-stack-divider">Three ways in — same state out</span>
+            <div class="arch-stack-row arch-stack-row--labeled">
+              <div class="arch-stack-col">
+                <span class="arch-stack-box arch-stack-box--small">IDE extension</span>
+                <span class="arch-stack-sublabel">Cursor / VS Code</span>
+              </div>
+              <div class="arch-stack-col">
+                <span class="arch-stack-box arch-stack-box--small">MCP server</span>
+                <span class="arch-stack-sublabel">Claude / Gemini / Codex</span>
+              </div>
+              <div class="arch-stack-col">
+                <span class="arch-stack-box arch-stack-box--small">CLI</span>
+                <span class="arch-stack-sublabel">Terminal / CI</span>
+              </div>
             </div>
           </div>
-          <div class="session-view-note">
-            <p>
-              <strong>Session view</strong> — Each IDE window or AI agent is a view over the same underlying workspace
-              state. They do not maintain separate memory. They observe different perspectives of the same state.
-            </p>
-          </div>
+        </div>
+      </section>
+
+      <!-- Core idea -->
+      <section class="section" id="core-idea">
+        <div class="container category-lock-inner">
+          <h2 class="section-title section-title--center">Every AI agent sees the same structured reality</h2>
+          <p class="category-lock-desc" style="text-align: center; margin-bottom: 24px">
+            Instead of long prompts or memory windows, Contorium tracks what actually matters:
+          </p>
+          <ul class="problem-grid" style="max-width: 720px">
+            <li>Project goal</li>
+            <li>Active modules</li>
+            <li>Open problems</li>
+            <li>Recent changes</li>
+            <li>Next actions</li>
+          </ul>
         </div>
       </section>
 
       <!-- Features -->
       <section class="section" id="features">
         <div class="container">
-          <div class="capability-grid capability-grid--5">
+          <div class="capability-grid capability-grid--6">
             <article class="capability-card capability-card--compact">
               <div class="capability-icon" aria-hidden="true">◎</div>
-              <h2 class="capability-title">Shared Workspace State</h2>
-              <p class="capability-desc">Persistent project understanding across tools.</p>
+              <h2 class="capability-title">Shared project state</h2>
+              <p class="capability-desc">Persistent, structured understanding stored inside your workspace.</p>
             </article>
             <article class="capability-card capability-card--compact">
               <div class="capability-icon" aria-hidden="true">⇄</div>
-              <h2 class="capability-title">Cross-Tool Continuity</h2>
-              <p class="capability-desc">Switch between Cursor, Claude Code, Gemini CLI, VS Code without losing context.</p>
+              <h2 class="capability-title">Cross-tool continuity</h2>
+              <p class="capability-desc">Move seamlessly between Cursor, Claude Code, Gemini CLI, Codex, and VS Code.</p>
             </article>
             <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">◫</div>
-              <h2 class="capability-title">Multi-Session Views</h2>
-              <p class="capability-desc">Multiple IDE windows or AI agents share the same workspace state.</p>
-            </article>
-            <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">▣</div>
-              <h2 class="capability-title">Structured State Layer</h2>
-              <p class="capability-desc">Not chat history — a deterministic project snapshot.</p>
+              <div class="capability-icon" aria-hidden="true">⎘</div>
+              <h2 class="capability-title">AI-ready context export</h2>
+              <p class="capability-desc">Clean snapshots optimized for any AI model — one-click from the IDE.</p>
             </article>
             <article class="capability-card capability-card--compact">
               <div class="capability-icon" aria-hidden="true">◈</div>
-              <h2 class="capability-title">Tool-Agnostic Design</h2>
-              <p class="capability-desc">IDE, MCP, and CLI are equal views over the same system.</p>
+              <h2 class="capability-title">Tool-agnostic design</h2>
+              <p class="capability-desc">IDE, CLI, MCP servers, and autonomous agents — equal peers.</p>
+            </article>
+            <article class="capability-card capability-card--compact">
+              <div class="capability-icon" aria-hidden="true">⎇</div>
+              <h2 class="capability-title">Workspace awareness</h2>
+              <p class="capability-desc">Git changes, file activity, modules, and project evolution.</p>
+            </article>
+            <article class="capability-card capability-card--compact">
+              <div class="capability-icon" aria-hidden="true">▣</div>
+              <h2 class="capability-title">Deterministic snapshots</h2>
+              <p class="capability-desc">No messy chat logs — only structured, reproducible state.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- What it is NOT -->
-      <section class="section section-strip" id="not">
-        <div class="container not-section">
-          <h2 class="section-title section-title--center">Contorium is not</h2>
-          <ul class="not-list">
-            <li>A chat memory system</li>
-            <li>A prompt engineering tool</li>
-            <li>An AI agent framework</li>
-            <li>A tool integration layer</li>
-          </ul>
-          <p class="not-closer">It is a <strong>workspace state system</strong>.</p>
+      <!-- Why Contorium -->
+      <section class="section section-strip" id="why">
+        <div class="container category-lock-inner">
+          <h2 class="section-title section-title--center">Why Contorium</h2>
+          <p class="category-lock-desc" style="text-align: center; font-size: 1.15rem; color: var(--text)">
+            AI tools don't fail at generation.<br />
+            <strong style="color: var(--accent)">They fail at continuity.</strong>
+          </p>
+          <p class="category-lock-desc" style="text-align: center; margin-top: 20px">
+            Contorium makes project context <strong>portable</strong>, <strong>persistent</strong>,
+            <strong>tool-independent</strong>, and <strong>model-agnostic</strong>.
+          </p>
         </div>
       </section>
 
-      <!-- Why it matters -->
-      <section class="section" id="why">
-        <div class="container category-lock-inner">
-          <h2 class="section-title section-title--center">Why it matters</h2>
-          <p class="category-lock-desc" style="text-align: center">
-            AI tools will continue to evolve. But project state should not depend on a single IDE, a single AI model, or a
-            single session. Contorium makes project state portable across all tools and models.
-          </p>
+      <!-- Design principles -->
+      <section class="section" id="principles">
+        <div class="container">
+          <h2 class="section-title section-title--center">Design principles</h2>
+          <div class="principles-grid">
+            <article class="principle-card">
+              <h3>Workspace first</h3>
+              <p>The repository is the source of truth.</p>
+            </article>
+            <article class="principle-card">
+              <h3>No hidden state</h3>
+              <p>Everything is explicit and inspectable in <code style="color: var(--accent)">.contora/</code>.</p>
+            </article>
+            <article class="principle-card">
+              <h3>Tool independence</h3>
+              <p>No vendor lock-in. No agent lock-in.</p>
+            </article>
+            <article class="principle-card">
+              <h3>Deterministic output</h3>
+              <p>Same input → same structured state.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <!-- Integrations -->
       <section class="section section-strip" id="integrations">
         <div class="container integrations-centered">
-          <h2 class="section-title section-title--center">Session views over the same state</h2>
-          <p class="section-lead section-lead--center">
-            IDE, MCP, and CLI adapters are peer-level — each can run independently or together on <code style="color: var(--accent)">.contora/</code>.
-          </p>
+          <h2 class="section-title section-title--center">Works with</h2>
+          <p class="section-lead section-lead--center">Any MCP-compatible agent can read the same project state.</p>
           <div class="compat-grid" aria-label="Compatible platforms">
-            <span class="compat-item" title="IDE session view">VS Code</span>
-            <span class="compat-item" title="IDE session view">Cursor</span>
-            <span class="compat-item" title="MCP session view">Claude Code</span>
-            <span class="compat-item" title="MCP session view">Codex</span>
-            <span class="compat-item" title="MCP session view">Gemini CLI</span>
-            <span class="compat-item" title="CLI session view">Terminal / CI</span>
+            <span class="compat-item">Cursor</span>
+            <span class="compat-item">Claude Code</span>
+            <span class="compat-item">Gemini CLI</span>
+            <span class="compat-item">VS Code</span>
+            <span class="compat-item">Codex</span>
+            <span class="compat-item">MCP agents</span>
           </div>
         </div>
       </section>
@@ -352,12 +395,17 @@ npx contorium init .</code></pre>
       <!-- Final CTA -->
       <section class="cta-band">
         <div class="container cta-band-inner">
+          <p class="cta-tagline">Contorium = Git for AI collaboration</p>
           <p class="oneliner-lock">
-            Contorium is a shared workspace state system that keeps AI tools synchronized by treating IDEs, MCP agents,
-            and CLI tools as different views over the same project state.
+            Build once. Switch tools freely. Keep the same mind across all AI agents.
           </p>
+          <ul class="cta-bullets">
+            <li>Start building with persistent AI context</li>
+            <li>Stop rebuilding prompts every time you switch tools</li>
+            <li>Make your repository AI-native</li>
+          </ul>
           <div class="cta-buttons">
-            <a href="#install" class="btn btn-primary">Install extension</a>
+            <a href="#install" class="btn btn-primary">Get started</a>
             <a href="docs/" class="btn btn-ghost">Read the docs</a>
           </div>
         </div>
@@ -378,8 +426,7 @@ npx contorium init .</code></pre>
             Contorium
           </a>
           <p class="footer-oneliner">
-            Contorium is a shared workspace state system that keeps AI tools synchronized by treating IDEs, MCP agents,
-            and CLI tools as different views over the same project state.
+            Git for AI collaboration — shared project memory across IDEs, CLI, and agents.
           </p>
           <ul class="footer-trust">
             <li>Local-first</li>

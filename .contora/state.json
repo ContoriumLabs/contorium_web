@@ -3,15 +3,17 @@
   "currentTask": "build loadingpage",
   "openFiles": [
     "index.html",
-    "README.md",
-    "修改方案.md",
     "docs/index.html",
-    "修改方案2.md",
+    "docs/IDE_EXTENSION.md",
+    "styles.css",
+    "修改方案.md",
+    "README.md",
     "mcp/index.html",
     "blog/index.html",
     "architecture/index.html"
   ],
   "recentFiles": [
+    "修",
     "修改方案2.md",
     "architecture/index.html",
     ".contora/events/sess_mp487yx1_2450523b.jsonl",
@@ -20,13 +22,15 @@
   "gitStaged": [],
   "gitWorking": [
     ".contora/events/sess_mpnvvwgi_df99e763.jsonl",
-    ".contora/state.json",
-    "修改方案2.md",
     ".contora/intelligence/state-summary.json",
     ".contora/intent-graph/graph.json",
     ".contora/state-builder/project-snapshot.md",
-    ".contora/state-builder/project-state.json"
+    ".contora/state-builder/project-state.json",
+    ".contora/state.json",
+    "index.html",
+    "styles.css",
+    "修改方案.md"
   ],
   "notes": "",
-  "lastUpdated": 1780288143010
+  "lastUpdated": 1780382239322
 }

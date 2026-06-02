@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1780288150168,
+  "updatedAt": 1780382246371,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -15,9 +15,12 @@
         "README.md",
         "修改方案.md",
         "修改方案2.md",
-        "mcp/index.html"
+        "mcp/index.html",
+        "修",
+        "styles.css",
+        "docs/IDE_EXTENSION.md"
       ],
-      "lastUpdated": 1780288150168,
+      "lastUpdated": 1780382246371,
       "learnedAt": 1780286520992
     },
     {
@@ -32,41 +35,49 @@
         "index.html",
         "README.md",
         "修改方案.md",
-        "修改方案2.md"
+        "修改方案2.md",
+        "修",
+        "styles.css"
       ],
-      "lastUpdated": 1780288150168,
+      "lastUpdated": 1780382246371,
       "learnedAt": 1780286520992
     },
     {
       "id": "intent_mpuomn4x_95gdjs",
       "text": "verify MCP tools against workspace state",
       "status": "ARCHIVED",
-      "confidence": 0.11,
+      "confidence": 0.5,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
         "docs/index.html",
         "index.html",
         "README.md",
-        "修改方案.md"
+        "修改方案.md",
+        "修",
+        "styles.css",
+        "修改方案2.md"
       ],
-      "lastUpdated": 1780286614712,
+      "lastUpdated": 1780382018465,
       "learnedAt": 1780286520992
     },
     {
       "id": "intent_mpuomn4x_4lkrpf",
       "text": "iterate on index.html",
       "status": "ARCHIVED",
-      "confidence": 0.11,
+      "confidence": 0.5,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
         "docs/index.html",
         "index.html",
         "README.md",
-        "修改方案.md"
+        "修改方案.md",
+        "styles.css",
+        "修",
+        "修改方案2.md"
       ],
-      "lastUpdated": 1780286614712,
+      "lastUpdated": 1780382246371,
       "learnedAt": 1780286520992
     },
     {
@@ -81,25 +92,29 @@
         "index.html",
         "README.md",
         "修改方案.md",
-        "修改方案2.md"
+        "修改方案2.md",
+        "修",
+        "styles.css"
       ],
-      "lastUpdated": 1780288150168,
+      "lastUpdated": 1780382246371,
       "learnedAt": 1780286534119
     },
     {
       "id": "intent_mpuoon5s_46m7m6",
       "text": "iterate on 修改方案2.md",
-      "status": "PARTIAL",
-      "confidence": 0.35,
+      "status": "ARCHIVED",
+      "confidence": 0.05,
       "relatedFiles": [
         "修改方案2.md",
         "index.html",
         "README.md",
         "修改方案.md",
         "architecture/index.html",
-        "blog/index.html"
+        "blog/index.html",
+        "修",
+        "styles.css"
       ],
-      "lastUpdated": 1780288150168,
+      "lastUpdated": 1780382246371,
       "learnedAt": 1780286614336
     }
   ],
@@ -368,6 +383,81 @@
       "from": "intent_mpuomx9j_yw4kyz",
       "to": "intent_mpuoon5s_46m7m6",
       "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
     }
   ]
 }

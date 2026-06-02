@@ -7,20 +7,21 @@ Current Stage:
 documentation + state engine development
 
 Active Modules:
-- 修改方案2 (from IDE)
 - index.html (from IDE)
-- README (from IDE)
+- styles.css (from IDE)
 - 修改方案 (from IDE)
-- 修改方案2 (from events)
+- IDE_EXTENSION (from IDE)
 - index.html (from events)
-- README (from events)
+- styles.css (from events)
 - 修改方案 (from events)
+- README (from events)
 
 Recent Decisions:
 (none yet)
 
 Open Problems:
 - uncommitted changes in documentation module (from events)
+- 9 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)
