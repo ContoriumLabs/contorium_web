@@ -25,10 +25,10 @@
     ".contora/events/sess_mpnvvwgi_df99e763.jsonl",
     ".contora/intelligence/state-summary.json",
     ".contora/intent-graph/graph.json",
-    ".contora/state-builder/project-snapshot.md",
     ".contora/state-builder/project-state.json",
-    ".contora/state.json"
+    ".contora/state.json",
+    "index.html"
   ],
   "notes": "",
-  "lastUpdated": 1780383141735
+  "lastUpdated": 1780384782784
 }

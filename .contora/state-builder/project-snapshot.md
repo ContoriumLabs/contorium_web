@@ -12,6 +12,9 @@ Active Modules:
 - README (from IDE)
 - 修改方案 (from IDE)
 - index.html (from events)
+- README (from events)
+- 修改方案 (from events)
+- 修改方案2 (from events)
 
 Recent Decisions:
 (none yet)
