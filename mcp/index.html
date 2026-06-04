@@ -25,8 +25,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#solution">Solution</a>
-          <a href="../index.html#architecture">Architecture</a>
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#how">How it works</a>
           <a href="../index.html#install">Install</a>
           <a href="index.html" class="nav-active">MCP</a>
           <a href="../architecture/">Architecture</a>
@@ -41,7 +41,7 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <span class="section-badge">MCP session view · v2.2</span>
+          <span class="section-badge">MCP session view · V3.1 · 18 tools</span>
           <h1>Contorium MCP Server</h1>
           <p class="page-hero-lead">
             MCP tools for <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor Agent</strong>, and
@@ -228,51 +228,94 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
 
       <section class="page-section">
         <div class="container">
-          <h2>MCP tools</h2>
-          <p>Agents call these tools over stdio — shared state, not manual copy-paste.</p>
+          <h2>MCP tools (V3.1)</h2>
+          <p>Agents call these tools over stdio. Recommended execution entry: <code>get_project_handoff</code>. Cognitive summary: <code>get_project_graph_snapshot</code>.</p>
           <div style="overflow-x: auto; margin-bottom: 32px">
             <table class="compare-table">
               <thead>
                 <tr>
                   <th>Tool</th>
+                  <th>R/W</th>
                   <th>Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><code>get_workspace_context</code></td>
-                  <td>Read <code>state.json</code> — focus, Git, active files</td>
+                  <td><code>get_project_handoff</code></td>
+                  <td>R</td>
+                  <td><strong>V3.1 recommended AI execution entry</strong> — <code>.contora/handoff.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_project_graph_snapshot</code></td>
+                  <td>R</td>
+                  <td><strong>V3.1 cognitive summary</strong> — <code>.contora/graph/snapshot.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_project_knowledge_graph</code></td>
+                  <td>R</td>
+                  <td>Full cognitive graph; default <code>minConfidence</code> 0.7</td>
                 </tr>
                 <tr>
                   <td><code>get_project_snapshot</code></td>
-                  <td>L4 Markdown project snapshot</td>
+                  <td>R</td>
+                  <td>L4 Markdown snapshot; optional <code>format=json</code></td>
                 </tr>
                 <tr>
-                  <td><code>get_project_state</code></td>
-                  <td>L4 structured project state JSON</td>
+                  <td><code>get_workspace_context</code></td>
+                  <td>R</td>
+                  <td><code>state.json</code> — focus, Git, active files</td>
+                </tr>
+                <tr>
+                  <td><code>get_project_change</code></td>
+                  <td>R</td>
+                  <td>V3.1 change semantics — <code>.contora/change.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_project_graph</code></td>
+                  <td>R</td>
+                  <td>Change neighborhood — <code>.contora/graph.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_project_timeline</code></td>
+                  <td>R</td>
+                  <td>Code evolution — <code>.contora/timeline.json</code></td>
                 </tr>
                 <tr>
                   <td><code>store_memory</code></td>
-                  <td>Persist key/value under <code>.contora/mcp/memories.json</code></td>
+                  <td>W</td>
+                  <td>Persist to <code>.contora/mcp/memories.json</code></td>
                 </tr>
                 <tr>
-                  <td><code>search_memory</code></td>
-                  <td>Keyword search MCP memory entries</td>
+                  <td><code>search_memory</code> / <code>get_memory</code></td>
+                  <td>R</td>
+                  <td>MCP memory search and fetch</td>
                 </tr>
                 <tr>
-                  <td><code>get_memory</code></td>
-                  <td>Fetch one entry by key</td>
+                  <td><code>get_project_intelligence</code></td>
+                  <td>R</td>
+                  <td>L5 <code>intelligence/state-summary.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_intent_graph</code> / <code>get_active_intents</code></td>
+                  <td>R</td>
+                  <td>L5 intent graph (sidebar preview; not in main copy export)</td>
+                </tr>
+                <tr>
+                  <td><code>get_project_state</code></td>
+                  <td>R</td>
+                  <td>L4 <code>state-builder/project-state.json</code></td>
                 </tr>
                 <tr>
                   <td><code>get_state_conflicts</code></td>
-                  <td>v2 unresolved conflict audit</td>
+                  <td>R</td>
+                  <td>v2 unresolved conflicts (audit only)</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
-            Also: <code>get_project_intelligence</code>, <code>get_intent_graph</code>, <code>get_active_intents</code> —
-            see <a href="../docs/MCP.md">docs/MCP.md</a>.
+            Deprecated: <code>get_project_impact</code>, <code>get_project_intent</code> — use <code>get_project_handoff</code> instead.
+            Full reference: <a href="../docs/MCP.md">docs/MCP.md</a>.
           </p>
 
           <h3 style="font-size: 1.1rem; margin-bottom: 16px">Tool examples</h3>
@@ -352,6 +395,7 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
               </li>
               <li>
                 <strong>Agents call MCP tools</strong>
+                Prefer <code>get_project_handoff</code> or <code>get_project_graph_snapshot</code>; also
                 <code>get_project_snapshot</code>, <code>get_workspace_context</code>, <code>store_memory</code> — or use IDE
                 <strong>Copy AI-ready context</strong> for clipboard export.
               </li>
@@ -362,6 +406,8 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
             <pre class="dir-tree" aria-label="Workspace state layout"><span class="dir-highlight">&lt;workspace-root&gt;/</span>
 └── .contora/
     ├── state.json       <span class="dir-highlight"># workspace truth (all views read)</span>
+    ├── graph/           <span class="dir-highlight"># V3.1 knowledge + snapshot + hotspots</span>
+    ├── handoff.json     <span class="dir-highlight"># AI execution entry</span>
     ├── events/          <span class="dir-highlight"># IDE session view writes</span>
     ├── state-builder/
     └── mcp/

@@ -1,12 +1,11 @@
 # Contorium IDE Extension (VS Code / Cursor)
 
-> Overview: [INSTALL.md](./INSTALL.md) · Architecture: [ARCHITECTURE_V2.md](./ARCHITECTURE_V2.md)
-
 Extension ID: `franklee-dev.contorium`  
 Display name: **Contorium**  
-Requires VS Code / Cursor **1.85+** and a **folder workspace** (single-file windows are limited).
+Requires: VS Code / Cursor **1.85+**, **folder workspace** (single-file windows are limited)
 
-The IDE is a **session view** over shared `.contora/` state — peer-level with [MCP](./MCP.md) and [CLI](./CLI.md). It provides sidebar UI, file/Git scanning, `state.json`, State Engine artifacts, and **Copy AI-ready context**.
+The extension provides: sidebar UI, file/Git scanning, `.contora/state.json`, State Engine artifacts, and **one-click Copy AI-ready context**.  
+Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTALL.md).
 
 ---
 
@@ -14,30 +13,28 @@ The IDE is a **session view** over shared `.contora/` state — peer-level with 
 
 | Phase | Action |
 |-------|--------|
-| **Install (VSIX)** | `npm run vsix` → Extensions → **Install from VSIX…** → **Developer: Reload Window** |
-| **Install (dev)** | `npm install && npm run compile` → **F5** → open project folder in Extension Development Host |
+| **Install (VSIX)** | `npm run vsix` → **Install from VSIX** → **Developer: Reload Window** |
+| **Install (dev)** | `npm install && npm run compile` → **F5** → open project folder in new window |
 | **Verify** | Activity bar **Contorium** → sidebar shows Current focus / Copy button |
-| **Daily use** | Sidebar **Copy AI-ready context**; `Ctrl+Shift+P` → `Contorium:` commands |
-| **Uninstall** | Extensions → Contorium → **Uninstall** → Reload |
+| **Daily use** | **Copy AI-ready context**; `Ctrl+Shift+P` → `Contorium:` commands |
+| **Uninstall** | Extensions → Contorium → Uninstall → Reload |
 | **Clear data (optional)** | Project root: `Remove-Item -Recurse -Force .contora` (PowerShell) |
 
 ---
 
 ## Install
 
-### Option A — From VSIX (recommended)
+### Option A: VSIX (recommended)
 
-For release packages or local builds.
-
-1. Get `contorium-0.7.0.vsix`:
+1. Get `contorium-0.8.1.vsix` (or current version):
    - [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases), or
-   - Run `npm run vsix` at repo root (Node.js 18+)
+   - Repo root: `npm run vsix` (Node.js 18+)
 2. Open **VS Code** or **Cursor**
 3. **Extensions** → `…` → **Install from VSIX…**
 4. Select the `.vsix` file
-5. Run **Developer: Reload Window**
+5. **Developer: Reload Window**
 
-### Option B — From source (development)
+### Option B: Run from source (development)
 
 ```bash
 git clone https://github.com/ContoriumLabs/contorium.git
@@ -46,22 +43,22 @@ npm install
 npm run compile
 ```
 
-Open the repo in VS Code/Cursor → **F5** (Run Extension) → open your project folder in the new Extension Development Host window.
+Open the repo in VS Code/Cursor → **F5** → open your project folder in the Extension Development Host window.
 
-### Option C — Marketplace
+### Option C: Marketplace (if published)
 
-Search **Contorium**, publisher **franklee-dev**, install, then Reload Window.
+Search **Contorium**, publisher **franklee-dev**, then Reload Window.
 
 ---
 
 ## Verify installation
 
-1. **Contorium** icon appears in the activity bar
-2. Open a project with **File → Open Folder** (not single file only)
-3. Open the Contorium sidebar — you should see:
+1. **Contorium** icon appears in the activity bar  
+2. **File → Open Folder** (not single file only)  
+3. Sidebar shows:
    - Current focus input
    - **Copy AI-ready context** button
-   - Workspace snapshot / Git areas
+   - Workspace snapshot / Git sections  
 
 If the sidebar stays blank, see [Troubleshooting](#troubleshooting).
 
@@ -73,14 +70,15 @@ If the sidebar stays blank, see [Troubleshooting](#troubleshooting).
 
 | Action | Description |
 |--------|-------------|
-| **Current focus** | L0 task anchor — written to `state.json`, not auto-inferred |
+| **Current focus** | L0 task anchor → `state.json`; not auto-inferred |
 | **Context notes** | Local notes included in export |
-| **Copy AI-ready context** | Copy converged 4-layer context to clipboard |
+| **Copy AI-ready context** | V3.1 canonical context to clipboard |
+| **AI Cortex** | Collapsible: Knowledge Graph, Hotspots, Function graph, Impact, Reason trace |
 | **Sync state to disk** | Persist `state.json` immediately |
-| **Restore editors** | Reopen editors from last saved state |
-| **Project state** | L4 snapshot preview (full content via copy button) |
-| **State conflicts** | Shown when unresolved (v2 audit, no auto-resolution) |
-| **Intent graph** | L5 weak inference preview — not in main copy export |
+| **Restore editors** | Reopen editors from saved state |
+| **Project state** | L4 snapshot preview (full body via Copy) |
+| **State conflicts** | Unresolved v2 audit conflicts (display only) |
+| **Intent graph** | L5 weak inference preview — **not** in main copy |
 
 ### Command palette
 
@@ -90,49 +88,65 @@ If the sidebar stays blank, see [Troubleshooting](#troubleshooting).
 |---------|---------|
 | Copy AI-ready context (clipboard) | One-click export |
 | Save session state now | Persist immediately |
-| Restore editors from saved state | Restore editor layout |
-| Configure API key… (BYOK) | Optional cloud model key |
+| Restore editors from saved state | Restore editors |
+| Configure API key… (BYOK) | Optional cloud model keys |
 | Observe workspace (AI summary) | BYOK workspace summary |
 | Learn workspace intent (AI) | BYOK intent learning |
-| Tighten context preview (AI) | BYOK compression preview |
-| Start fresh AI context session | Clear session events + cognition artifacts |
+| Tighten context preview (AI) | BYOK compress preview |
+| Start fresh AI context session | Clear session events + derived cognition |
 
-### Copy export structure (v2.1)
+### Copy AI-ready context structure (V3.1 canonical)
+
+Same as `contorium export` / `formatCanonicalAiMarkdown` (sections appear when data exists):
 
 ```text
 # TASK ANCHOR
-# PROJECT SNAPSHOT      (pure project state)
-# WORKING CONTEXT       (active files + recent work)
-# INSIGHTS              (max 3 lightweight hints, optional)
-# NOTES / INSTRUCTION   (when set)
+# PROJECT SNAPSHOT          (L4 pure project state)
+# WORKING CONTEXT           (active files + recent Git)
+# COGNITIVE SNAPSHOT        (graph/snapshot.json)
+# CHANGE SET                (handoff modified symbols)
+# IMPACT SET                (affected functions)
+# AI HANDOFF (V3.1)         (goal / focus / risk / next)
+# CODE EVOLUTION            (timeline recent commits)
+# INSIGHTS                  (up to 4 weak hints, optional)
+# NOTES / INSTRUCTION
 ```
 
-### Local data (`.contora/`)
+JSON export (`contora.exportFormat: json`) includes `cognitiveSnapshot` when the knowledge graph exists.
 
-All data stays in the project — **not uploaded by default**:
+**Not in main copy:** full Intent graph, State conflict details, full `knowledge.json` (use COGNITIVE SNAPSHOT instead).
+
+### Local data layout
+
+All data stays in the project; **not uploaded by default**:
 
 ```text
 .contora/
-├── state.json                 # runtime state (focus, files, Git, notes)
-├── events/<sessionId>.jsonl   # event log (can disable)
+├── state.json
+├── events/<sessionId>.jsonl
 ├── intelligence/              # L5 semantic summary
 ├── intent-graph/              # L5 intent graph
 ├── state-builder/             # L4 project state + snapshot.md
 ├── state-engine/              # v2 conflict audit
-└── mcp/                       # MCP store_memory (if using MCP)
+├── graph/                     # V3.1 cognitive graph
+│   ├── knowledge.json
+│   ├── snapshot.json
+│   ├── hotspots.json
+│   └── metadata.json
+└── mcp/                       # MCP store_memory (if used)
 ```
 
 Add `.contora/` to `.gitignore` (example provided in repo).
 
-### With MCP / CLI (optional)
+### Working with MCP / CLI (optional)
 
-All three adapters are **peer-level** — the extension is not a prerequisite for MCP or CLI.
+Adapters are **peers** — the extension is not required for MCP/CLI.
 
-| Scenario | Description |
-|----------|-------------|
-| IDE only | Sidebar + copy — enough for daily use |
-| IDE + MCP | IDE writes events; agents read snapshot via MCP |
-| No IDE | MCP or `contorium init` can bootstrap alone |
+| Scenario | Notes |
+|----------|-------|
+| Extension only | Sidebar + copy is enough for daily use |
+| Extension + MCP | Extension writes events; Agent reads via MCP |
+| No extension | MCP or `contorium init` can bootstrap alone |
 
 Same `.contora/` directory. See [INSTALL.md](./INSTALL.md).
 
@@ -142,50 +156,28 @@ Same `.contora/` directory. See [INSTALL.md](./INSTALL.md).
 
 ### Remove extension (keep project data)
 
-**UI:**
+1. **Extensions** → **Contorium** → **Uninstall**
+2. **Developer: Reload Window**
 
-1. **Extensions** → search **Contorium**
-2. **Uninstall**
-3. **Developer: Reload Window**
-
-**Manual removal (if corrupted):**
-
-Windows PowerShell:
+Manual removal if corrupted:
 
 ```powershell
 Remove-Item -Recurse -Force "$env:USERPROFILE\.cursor\extensions\franklee-dev.contorium-*" -ErrorAction SilentlyContinue
 Remove-Item -Recurse -Force "$env:USERPROFILE\.vscode\extensions\franklee-dev.contorium-*" -ErrorAction SilentlyContinue
 ```
 
-macOS / Linux:
+### Clear workspace Contorium data (optional)
 
-```bash
-rm -rf ~/.cursor/extensions/franklee-dev.contorium-*
-rm -rf ~/.vscode/extensions/franklee-dev.contorium-*
-```
-
-Restart the IDE.
-
-### Clear workspace data (optional)
-
-Uninstalling the extension does **not** delete `.contora/`.
-
-**PowerShell (project root):**
+Uninstalling the extension does **not** remove `.contora/`:
 
 ```powershell
 Remove-Item -Recurse -Force .contora -ErrorAction SilentlyContinue
 Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
 ```
 
-**macOS / Linux:**
-
-```bash
-rm -rf .contora .context-recall
-```
-
 ### Clear BYOK keys (optional)
 
-API keys use VS Code **SecretStorage**. They may persist after uninstall depending on IDE behavior. Use **Configure API key** while installed to clear or overwrite.
+API keys use VS Code **SecretStorage**; may persist after uninstall depending on IDE behavior.
 
 ---
 
@@ -193,11 +185,11 @@ API keys use VS Code **SecretStorage**. They may persist after uninstall dependi
 
 | Symptom | Fix |
 |---------|-----|
-| Sidebar loading / blank | Usually **`@contora/state-core` not built**: run `npm run compile` → Reload; compile before F5; reinstall VSIX from `npm run vsix`. Check **Output → Extension Host** for `state-core` |
-| Cursor "installation corrupt" | Remove extension dirs manually (see Uninstall), reinstall VSIX; reinstall Cursor if needed |
-| Copy content empty or stale | Edit/save files, wait ~7s or run **Save session state now**, then copy |
-| No `.contora` folder | Open a folder workspace; trigger save or **Sync state to disk** |
-| VSIX install fails | Confirm `npm run vsix` succeeds; package ~350–400KB; avoid broken symlink packages |
+| Sidebar loading/blank | Usually **`@contora/state-core` not installed correctly**: repo root `npm run compile` → Reload; compile before F5; reinstall VSIX after `npm run vsix`. Check **Output → Extension Host** for `state-core` |
+| Cursor "installation corrupt" | Remove extension dirs manually, reinstall VSIX; reinstall Cursor if needed |
+| Copy empty or stale | Edit/save files, wait ~7s or **Save session state now**, then copy |
+| No `.contora` | Open folder; save once or **Sync state to disk** |
+| VSIX install fails | Confirm `npm run vsix` succeeds (~350–400KB); avoid broken symlink packages |
 
 **Logs:** `Ctrl+Shift+P` → **Developer: Show Logs** → **Extension Host**, filter `Contorium`.
 
@@ -205,8 +197,11 @@ API keys use VS Code **SecretStorage**. They may persist after uninstall dependi
 
 ## Related docs
 
-- [INSTALL.md](./INSTALL.md)
-- [MCP.md](./MCP.md)
-- [CLI.md](./CLI.md)
-- [STATE_ENGINE.md](./STATE_ENGINE.md)
-- [ARCHITECTURE_V2.md](./ARCHITECTURE_V2.md)
+- [README](../index.html)
+- [Install / use / uninstall](./INSTALL.md)
+- [MCP](./MCP.md)
+- [CLI](./CLI.md)
+- [State Engine](./STATE_ENGINE.md)
+- [Architecture V3.1](./ARCHITECTURE_V3.md)
+- [Engineering Closure](./ENGINEERING_CLOSURE.md)
+- [Runtime package](./RUNTIME.md)

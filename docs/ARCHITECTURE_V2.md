@@ -1,4 +1,4 @@
-# Contorium v2.2 — Shared Workspace State Layer
+# Contorium v2.2 �?Shared Workspace State Layer
 
 Contorium is a **shared workspace state layer** for AI tools. **IDE, MCP, and CLI are peer session views** over the same `.contora/` artifacts. `state-core` is the single state engine; state-builder, normalization, and snapshot live inside state-core.
 
@@ -8,13 +8,13 @@ Contorium is a **shared workspace state layer** for AI tools. **IDE, MCP, and CL
 
 ## Principles
 
-1. **State first** — `state.json` stays backward compatible; v2.2 adds optional `source` (writer + mode).
+1. **State first** �?`state.json` stays backward compatible; v2.2 adds optional `source` (writer + mode).
 2. **Dual-mode state engine**
-   - **Mode A (event-driven)** — IDE `events/*.jsonl`
-   - **Mode B (scan-driven)** — workspace scan
-   - **Merged** — when events exist, scan only supplements git/paths; does not overwrite task/notes
-3. **Three peer views** — IDE / MCP / CLI are equal; not “CLI optional”
-4. **Public interface unchanged** — MCP tool names, extension command IDs, existing `state.json` fields
+   - **Mode A (event-driven)** �?IDE `events/*.jsonl`
+   - **Mode B (scan-driven)** �?workspace scan
+   - **Merged** �?when events exist, scan only supplements git/paths; does not overwrite task/notes
+3. **Three peer views** �?IDE / MCP / CLI are equal; not “CLI optional�?
+4. **Public interface unchanged** �?MCP tool names, extension command IDs, existing `state.json` fields
 
 ---
 
@@ -22,9 +22,9 @@ Contorium is a **shared workspace state layer** for AI tools. **IDE, MCP, and CL
 
 ```text
                 Workspace (filesystem)
-                      ↓
+                      �?
         Contorium State Layer (.contora/)
-                      ↓
+                      �?
 ──────────────────────────────────
  Session views (NOT separate memory)
 ──────────────────────────────────
@@ -40,7 +40,7 @@ Contorium is a **shared workspace state layer** for AI tools. **IDE, MCP, and CL
 | `state.json` | workspace truth |
 | `.contora/` | system root |
 
-Each session is a **view** over the same workspace state — not independent memory.
+Each session is a **view** over the same workspace state �?not independent memory.
 
 ---
 

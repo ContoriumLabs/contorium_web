@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": 1780546880467,
+  "generatedAt": 1780548430728,
   "project_intent": "develop documentation, state engine and MCP integration",
-  "current_focus": "work in project root",
+  "current_focus": "work in docs",
   "active_domains": [
     "docs",
     "state-engine",
@@ -13,15 +13,30 @@
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
     {
+      "cluster": "docs",
+      "files": [
+        "docs/IDE_EXTENSION.md",
+        "docs/STATE_ENGINE.md"
+      ],
+      "weight": 0.62
+    },
+    {
+      "cluster": "mcp",
+      "files": [
+        "mcp/index.html"
+      ],
+      "weight": 0.62
+    },
+    {
       "cluster": "project root",
       "files": [
         "index.html",
-        "修改方案.md",
         "README.md",
+        "修改方案.md",
         "修",
         "修改方案2.md"
       ],
-      "weight": 0.46
+      "weight": 0.42
     },
     {
       "cluster": "architecture",
@@ -36,27 +51,13 @@
         "blog/index.html"
       ],
       "weight": 0.42
-    },
-    {
-      "cluster": "docs",
-      "files": [
-        "docs/IDE_EXTENSION.md"
-      ],
-      "weight": 0.42
-    },
-    {
-      "cluster": "mcp",
-      "files": [
-        "mcp/index.html"
-      ],
-      "weight": 0.42
     }
   ],
   "next_likely_actions": [
     "update documentation for recent changes",
     "review state persistence and lifecycle logic",
-    "iterate on index.html",
-    "iterate on 修改方案.md"
+    "iterate on IDE_EXTENSION.md",
+    "iterate on STATE_ENGINE.md"
   ],
-  "confidence": 0.73
+  "confidence": 0.77
 }

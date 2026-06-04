@@ -4,13 +4,15 @@
   "openFiles": [
     "index.html",
     "修改方案.md",
-    "README.md",
     "docs/IDE_EXTENSION.md",
+    "docs/STATE_ENGINE.md",
+    "README.md",
     "mcp/index.html",
     "blog/index.html",
     "architecture/index.html"
   ],
   "recentFiles": [
+    "docs/STATE_ENGINE.md",
     "修改方案.md",
     "index.html",
     "修",
@@ -21,17 +23,27 @@
   ],
   "gitStaged": [],
   "gitWorking": [
-    ".contora/events/sess_mpnvvwgi_df99e763.jsonl",
+    ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
     ".contora/intelligence/state-summary.json",
     ".contora/intent-graph/graph.json",
     ".contora/state-builder/project-snapshot.md",
     ".contora/state-builder/project-state.json",
     ".contora/state.json",
+    "docs/ARCHITECTURE_V2.md",
+    "docs/CLI.md",
+    "docs/IDE_EXTENSION.md",
+    "docs/INSTALL.md",
+    "docs/MCP.md",
+    "docs/STATE_ENGINE.md",
+    "docs/index.html",
     "index.html",
-    "styles.css",
-    "修改方案.md",
-    ".contora/events/sess_mpy90eav_6b7acb2e.jsonl"
+    "mcp/README.md",
+    "mcp/index.html",
+    "docs/ARCHITECTURE_V2_2.md",
+    "docs/ARCHITECTURE_V3.md",
+    "docs/ENGINEERING_CLOSURE.md",
+    "docs/RUNTIME.md"
   ],
   "notes": "",
-  "lastUpdated": 1780546873090
+  "lastUpdated": 1780548439451
 }

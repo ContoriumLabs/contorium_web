@@ -1,23 +1,22 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1780546880609,
+  "generatedAt": 1780548430925,
   "project_goal": "develop documentation, state engine and MCP integration",
   "current_stage": "documentation + state engine development",
   "active_modules": [
-    "index.html (from IDE)",
-    "修改方案 (from IDE)",
     "IDE_EXTENSION (from IDE)",
+    "STATE_ENGINE (from IDE)",
+    "index.html (from IDE)",
     "README (from IDE)",
-    "sess_mp487yx1_2450523b.jsonl (from IDE)",
-    "index.html (from events)",
-    "修改方案 (from events)",
-    "README (from events)"
+    "修改方案 (from IDE)",
+    "IDE_EXTENSION (from events)",
+    "STATE_ENGINE (from events)"
   ],
   "recent_decisions": [],
   "open_problems": [
     "uncommitted changes in documentation module (from events)",
-    "10 paths with uncommitted changes — integration risk (from Git)"
+    "20 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [
@@ -26,6 +25,6 @@
     "review state persistence paths",
     "verify MCP tools against workspace"
   ],
-  "confidence": 0.92,
+  "confidence": 0.93,
   "task_anchor": "创建落地页"
 }

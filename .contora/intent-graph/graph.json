@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": 1780546880584,
+  "updatedAt": 1780548430901,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
       "text": "develop documentation, MCP integration and state engine",
       "status": "WEAKENING",
-      "confidence": 0.58,
+      "confidence": 0.62,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -18,9 +18,10 @@
         "mcp/index.html",
         "修",
         "styles.css",
-        "docs/IDE_EXTENSION.md"
+        "docs/IDE_EXTENSION.md",
+        "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780546880584,
+      "lastUpdated": 1780548430901,
       "learnedAt": 1780286520992
     },
     {
@@ -39,9 +40,10 @@
         "修",
         "styles.css",
         "docs/IDE_EXTENSION.md",
-        "mcp/index.html"
+        "mcp/index.html",
+        "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780546880584,
+      "lastUpdated": 1780548430901,
       "learnedAt": 1780286520992
     },
     {
@@ -62,7 +64,7 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html"
       ],
-      "lastUpdated": 1780384836276,
+      "lastUpdated": 1780548293247,
       "learnedAt": 1780286520992
     },
     {
@@ -83,7 +85,7 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html"
       ],
-      "lastUpdated": 1780546880584,
+      "lastUpdated": 1780547994588,
       "learnedAt": 1780286520992
     },
     {
@@ -102,9 +104,10 @@
         "修",
         "styles.css",
         "docs/IDE_EXTENSION.md",
-        "mcp/index.html"
+        "mcp/index.html",
+        "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780546880584,
+      "lastUpdated": 1780548430901,
       "learnedAt": 1780286534119
     },
     {
@@ -142,6 +145,26 @@
       ],
       "lastUpdated": 1780382370227,
       "learnedAt": 1780382308824
+    },
+    {
+      "id": "intent_mpz0c7tp_4eyp79",
+      "text": "iterate on IDE_EXTENSION.md",
+      "status": "PARTIAL",
+      "confidence": 0.35,
+      "relatedFiles": [
+        "docs/IDE_EXTENSION.md",
+        "architecture/index.html",
+        "blog/index.html",
+        "mcp/index.html",
+        "index.html",
+        "README.md",
+        "修改方案.md",
+        "修",
+        "修改方案2.md",
+        "docs/STATE_ENGINE.md"
+      ],
+      "lastUpdated": 1780548430901,
+      "learnedAt": 1780548054684
     }
   ],
   "edges": [
@@ -573,6 +596,86 @@
     {
       "from": "intent_mpuomx9j_yw4kyz",
       "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:architecture/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mpz0c7tp_4eyp79",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mpz0c7tp_4eyp79",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "intent_mpz0c7tp_4eyp79",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:修改方案2.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/STATE_ENGINE.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/STATE_ENGINE.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/STATE_ENGINE.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/STATE_ENGINE.md",
       "type": "AFFECTS"
     }
   ]
