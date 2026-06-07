@@ -1,7 +1,7 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1780841372580,
+  "generatedAt": 1780841736469,
   "project_goal": "develop documentation, state engine and MCP integration",
   "current_stage": "documentation + state engine development",
   "active_modules": [
@@ -15,7 +15,7 @@
   "recent_decisions": [],
   "open_problems": [
     "uncommitted changes in documentation module (from events)",
-    "47 paths with uncommitted changes — integration risk (from Git)"
+    "42 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [

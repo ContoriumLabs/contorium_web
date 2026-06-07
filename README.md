@@ -13,9 +13,7 @@ Static site for **Contorium** — persistent project memory for AI development. 
 | `docs/cli.html` | CLI — handoff, dashboard, export |
 | `docs/dashboard.html` | Runtime dashboard (CRBP) |
 | `docs/ide-extension.html` | IDE extension |
-| `docs/architecture-v3.html` | Architecture V3.1 |
 | `mcp/` | Interactive MCP setup |
-| `architecture/` | Architecture overview page |
 
 ## Documentation build
 

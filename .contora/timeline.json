@@ -1,6 +1,123 @@
 {
   "version": 1,
-  "generatedAt": 1780841375184,
-  "files": [],
-  "recent": []
+  "generatedAt": 1780841742321,
+  "files": [
+    {
+      "file": "scripts/build-docs.py",
+      "history": [
+        {
+          "commit": "f0333b0",
+          "timestamp": 1780841441000,
+          "type": "add",
+          "file": "scripts/build-docs.py",
+          "changes": [
+            {
+              "symbol": "scripts/build-docs.py",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "slug_for_href",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "rewrite_links",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "repl_md",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "render_sidebar",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "breadcrumb",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "md_to_html",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "page",
+              "change": "logic_modified"
+            },
+            {
+              "symbol": "main",
+              "change": "logic_modified"
+            }
+          ],
+          "impact_level": "high",
+          "linked_graph_nodes": [
+            "module:scripts/build-docs.py",
+            "function:slug_for_href",
+            "function:rewrite_links",
+            "function:repl_md",
+            "function:render_sidebar",
+            "function:breadcrumb",
+            "function:md_to_html",
+            "function:page"
+          ]
+        }
+      ]
+    }
+  ],
+  "recent": [
+    {
+      "commit": "f0333b0",
+      "timestamp": 1780841441000,
+      "type": "add",
+      "file": "scripts/build-docs.py",
+      "changes": [
+        {
+          "symbol": "scripts/build-docs.py",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "slug_for_href",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "rewrite_links",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "repl_md",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "render_sidebar",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "breadcrumb",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "md_to_html",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "page",
+          "change": "logic_modified"
+        },
+        {
+          "symbol": "main",
+          "change": "logic_modified"
+        }
+      ],
+      "impact_level": "high",
+      "linked_graph_nodes": [
+        "module:scripts/build-docs.py",
+        "function:slug_for_href",
+        "function:rewrite_links",
+        "function:repl_md",
+        "function:render_sidebar",
+        "function:breadcrumb",
+        "function:md_to_html",
+        "function:page"
+      ]
+    }
+  ]
 }

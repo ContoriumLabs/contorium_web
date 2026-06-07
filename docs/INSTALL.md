@@ -288,7 +288,4 @@ First-time init: `created: true`, `mode: scan-driven`.
 - [IDE Extension](./IDE_EXTENSION.md)
 - [MCP Server](./MCP.md)
 - [CLI](./CLI.md)
-- [Architecture V3.1](./ARCHITECTURE_V3.md)
-- [Engineering Closure (frozen)](./ENGINEERING_CLOSURE.md)
 - [Runtime Dashboard (CRBP)](./DASHBOARD.md)
-- [State Engine](./STATE_ENGINE.md)

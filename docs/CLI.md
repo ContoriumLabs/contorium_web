@@ -236,6 +236,3 @@ Remove-Item -Recurse -Force .contora
 - [IDE Extension](./IDE_EXTENSION.md)
 - [MCP Server](./MCP.md)
 - [Runtime Dashboard (CRBP)](./DASHBOARD.md)
-- [Architecture V3.1](./ARCHITECTURE_V3.md)
-- [Engineering Closure](./ENGINEERING_CLOSURE.md)
-- [State Engine](./STATE_ENGINE.md)

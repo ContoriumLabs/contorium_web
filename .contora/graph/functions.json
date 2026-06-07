@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1780841375184,
-  "graphBuildId": "graph_mq3uz3dc",
+  "generatedAt": 1780841742321,
+  "graphBuildId": "graph_mq3v6ynl",
   "nodes": [
     {
       "id": "scripts/build-docs.py::function::slug_for_href",
@@ -9,9 +9,9 @@
       "name": "slug_for_href",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 163
+        "line": 140
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::rewrite_links",
@@ -19,9 +19,9 @@
       "name": "rewrite_links",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 176
+        "line": 153
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::repl_md",
@@ -29,9 +29,9 @@
       "name": "repl_md",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 177
+        "line": 154
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::render_sidebar",
@@ -39,9 +39,9 @@
       "name": "render_sidebar",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 186
+        "line": 163
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::breadcrumb",
@@ -49,9 +49,9 @@
       "name": "breadcrumb",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 197
+        "line": 174
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::md_to_html",
@@ -59,9 +59,9 @@
       "name": "md_to_html",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 204
+        "line": 181
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::page",
@@ -69,9 +69,9 @@
       "name": "page",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 213
+        "line": 190
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::main",
@@ -79,9 +79,9 @@
       "name": "main",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 223
+        "line": 200
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     }
   ]
 }

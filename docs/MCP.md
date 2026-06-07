@@ -433,4 +433,3 @@ contorium-mcp bootstrap --workspace E:/your-project
 - [Runtime Dashboard (CRBP)](./DASHBOARD.md)
 - [CLI](./CLI.md)
 - [IDE Extension](./IDE_EXTENSION.md)
-- [Architecture V3.1](./ARCHITECTURE_V3.md)

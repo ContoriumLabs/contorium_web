@@ -3,104 +3,105 @@
     "version": "3.1.0",
     "schemaVersion": "1",
     "closureVersion": "1",
-    "generatedAt": 1780841375184,
+    "generatedAt": 1780841742321,
     "workspaceId": "70995f99",
-    "graphBuildId": "graph_mq3uz3dc",
+    "graphBuildId": "graph_mq3v6ynl",
     "sourceVersion": "0.9.1",
-    "rebuildTrigger": "change"
+    "rebuildTrigger": "intent_change",
+    "lastCommitHash": "f0333b0"
   },
   "nodes": [
     {
       "id": "intent_0_develop_documentation_s",
       "type": "intent",
       "name": "develop documentation, state engine and MCP integration",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "intent_1_index_html_from_IDE_in",
       "type": "intent",
       "name": "index.html (from IDE) integration",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "intent_2_IDE_EXTENSION_from_IDE_",
       "type": "intent",
       "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "intent_3_STATE_ENGINE_from_IDE_",
       "type": "intent",
       "name": "STATE_ENGINE (from IDE) integration",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "intent_4_README_from_IDE_integr",
       "type": "intent",
       "name": "README (from IDE) integration",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "intent_5__from_IDE_integrat",
       "type": "intent",
       "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::scripts",
       "type": "module",
       "name": "scripts",
       "path": "scripts",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::index.html (from IDE)",
       "type": "module",
       "name": "index.html (from IDE)",
       "path": "index.html (from IDE)",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::IDE_EXTENSION (from IDE)",
       "type": "module",
       "name": "IDE_EXTENSION (from IDE)",
       "path": "IDE_EXTENSION (from IDE)",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::STATE_ENGINE (from IDE)",
       "type": "module",
       "name": "STATE_ENGINE (from IDE)",
       "path": "STATE_ENGINE (from IDE)",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::README (from IDE)",
       "type": "module",
       "name": "README (from IDE)",
       "path": "README (from IDE)",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::修改方案 (from IDE)",
       "type": "module",
       "name": "修改方案 (from IDE)",
       "path": "修改方案 (from IDE)",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "mod::index.html (from events)",
       "type": "module",
       "name": "index.html (from events)",
       "path": "index.html (from events)",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "file::scripts/build-docs.py",
       "type": "file",
       "name": "build-docs.py",
       "path": "scripts/build-docs.py",
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::slug_for_href",
@@ -108,9 +109,9 @@
       "name": "slug_for_href",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 163
+        "line": 140
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::rewrite_links",
@@ -118,9 +119,9 @@
       "name": "rewrite_links",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 176
+        "line": 153
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::repl_md",
@@ -128,9 +129,9 @@
       "name": "repl_md",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 177
+        "line": 154
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::render_sidebar",
@@ -138,9 +139,9 @@
       "name": "render_sidebar",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 186
+        "line": 163
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::breadcrumb",
@@ -148,9 +149,9 @@
       "name": "breadcrumb",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 197
+        "line": 174
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::md_to_html",
@@ -158,9 +159,9 @@
       "name": "md_to_html",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 204
+        "line": 181
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::page",
@@ -168,9 +169,9 @@
       "name": "page",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 213
+        "line": 190
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     },
     {
       "id": "scripts/build-docs.py::function::main",
@@ -178,9 +179,9 @@
       "name": "main",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 223
+        "line": 200
       },
-      "updatedAt": 1780841375184
+      "updatedAt": 1780841742321
     }
   ],
   "edges": [
@@ -1248,7 +1249,7 @@
   "intentTrees": [],
   "hotspots": [],
   "snapshot": {
-    "generatedAt": 1780841375184,
+    "generatedAt": 1780841742321,
     "topIntents": [],
     "topHotspots": [],
     "topFunctions": [],

@@ -16,13 +16,6 @@ SLUG_MAP = {
     "MCP.md": "mcp.html",
     "CLI.md": "cli.html",
     "DASHBOARD.md": "dashboard.html",
-    "ARCHITECTURE_V3.md": "architecture-v3.html",
-    "ARCHITECTURE_V2_2.md": "architecture-v2-2.html",
-    "ARCHITECTURE_V2.md": "architecture-v2.html",
-    "STATE_ENGINE.md": "state-engine.html",
-    "ENGINEERING_CLOSURE.md": "engineering-closure.html",
-    "RUNTIME.md": "runtime.html",
-    "UPGRADE_PLAN_2.x.md": "upgrade-plan.html",
 }
 
 NAV = [
@@ -35,17 +28,6 @@ NAV = [
         ("MCP server", "mcp.html"),
         ("CLI", "cli.html"),
         ("Runtime dashboard", "dashboard.html"),
-    ]),
-    ("Architecture", [
-        ("Architecture V3.1", "architecture-v3.html"),
-        ("Architecture V2.2", "architecture-v2-2.html"),
-        ("State engine", "state-engine.html"),
-        ("Engineering closure", "engineering-closure.html"),
-        ("Runtime package", "runtime.html"),
-    ]),
-    ("Reference", [
-        ("Architecture V2 (legacy)", "architecture-v2.html"),
-        ("Upgrade plan 2.x", "upgrade-plan.html"),
     ]),
 ]
 
@@ -101,8 +83,8 @@ HUB_CONTENT = """
 <div class="docs-hub-hero">
   <h1>Documentation</h1>
   <p>
-    Install guides, adapter references, and architecture notes for Contorium — IDE extension,
-    <code>@contorium/mcp</code>, and CLI over shared <code>.contora/</code> state.
+    Install and use Contorium — IDE extension, <code>@contorium/mcp</code>, and CLI over shared
+    <code>.contora/</code> state.
   </p>
 </div>
 
@@ -133,11 +115,6 @@ HUB_CONTENT = """
       <span class="docs-card-tag">IDE</span>
       <h3>IDE extension</h3>
       <p>VSIX install, sidebar, Copy AI-ready context, status bar.</p>
-    </a>
-    <a class="docs-card" href="architecture-v3.html">
-      <span class="docs-card-tag">Architecture</span>
-      <h3>Architecture V3.1</h3>
-      <p>Cognitive graph, handoff.json, pipeline, MCP/CLI mirrors.</p>
     </a>
   </div>
 </section>
@@ -229,13 +206,6 @@ def main() -> None:
         "mcp.html": ("MCP server", "Contorium MCP server — @contorium/mcp setup and tools."),
         "cli.html": ("CLI", "Contorium CLI commands — handoff, dashboard, export."),
         "dashboard.html": ("Runtime dashboard", "CRBP runtime dashboard — Passive and Expanded views."),
-        "architecture-v3.html": ("Architecture V3.1", "Contorium V3.1 project understanding layer."),
-        "architecture-v2-2.html": ("Architecture V2.2", "Three peer adapters and dual-mode state."),
-        "architecture-v2.html": ("Architecture V2", "Legacy v2.2 shared workspace state layer."),
-        "state-engine.html": ("State engine", "Contorium L0–L5 state engine model."),
-        "engineering-closure.html": ("Engineering closure", "Frozen V3.1 engineering boundary rules."),
-        "runtime.html": ("Runtime package", "Contorium @contora/runtime package."),
-        "upgrade-plan.html": ("Upgrade plan 2.x", "Contorium 2.x upgrade notes."),
     }
 
     for md_name, html_name in SLUG_MAP.items():
@@ -252,7 +222,7 @@ def main() -> None:
 
     hub = page(
         "Documentation",
-        "Contorium documentation — install, MCP, CLI, dashboard, and architecture.",
+        "Contorium documentation — install, MCP, CLI, and runtime dashboard.",
         "index.html",
         HUB_CONTENT,
     )
