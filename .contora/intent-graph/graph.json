@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1780548430901,
+  "updatedAt": 1780841372551,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -21,7 +21,7 @@
         "docs/IDE_EXTENSION.md",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780548430901,
+      "lastUpdated": 1780841372551,
       "learnedAt": 1780286520992
     },
     {
@@ -43,7 +43,7 @@
         "mcp/index.html",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780548430901,
+      "lastUpdated": 1780841372551,
       "learnedAt": 1780286520992
     },
     {
@@ -83,9 +83,10 @@
         "修",
         "修改方案2.md",
         "docs/IDE_EXTENSION.md",
-        "mcp/index.html"
+        "mcp/index.html",
+        "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780547994588,
+      "lastUpdated": 1780841372551,
       "learnedAt": 1780286520992
     },
     {
@@ -107,7 +108,7 @@
         "mcp/index.html",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780548430901,
+      "lastUpdated": 1780841372551,
       "learnedAt": 1780286534119
     },
     {
@@ -149,8 +150,8 @@
     {
       "id": "intent_mpz0c7tp_4eyp79",
       "text": "iterate on IDE_EXTENSION.md",
-      "status": "PARTIAL",
-      "confidence": 0.35,
+      "status": "ARCHIVED",
+      "confidence": 0.5,
       "relatedFiles": [
         "docs/IDE_EXTENSION.md",
         "architecture/index.html",
@@ -163,7 +164,7 @@
         "修改方案2.md",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780548430901,
+      "lastUpdated": 1780841192125,
       "learnedAt": 1780548054684
     }
   ],
@@ -675,6 +676,11 @@
     },
     {
       "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/STATE_ENGINE.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
       "to": "file:docs/STATE_ENGINE.md",
       "type": "AFFECTS"
     }

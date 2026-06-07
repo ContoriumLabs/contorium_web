@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "generatedAt": 1780841375184,
+  "changed_files": [
+    "scripts/build-docs.py"
+  ],
+  "key_changes": [
+    {
+      "symbol": "scripts/build-docs.py",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::slug_for_href",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::rewrite_links",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::repl_md",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::render_sidebar",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::breadcrumb",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::md_to_html",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::page",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::main",
+      "kind": "function",
+      "change_type": "modified"
+    }
+  ]
+}

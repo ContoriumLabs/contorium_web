@@ -1,0 +1,1268 @@
+{
+  "meta": {
+    "version": "3.1.0",
+    "schemaVersion": "1",
+    "closureVersion": "1",
+    "generatedAt": 1780841375184,
+    "workspaceId": "70995f99",
+    "graphBuildId": "graph_mq3uz3dc",
+    "sourceVersion": "0.9.1",
+    "rebuildTrigger": "change"
+  },
+  "nodes": [
+    {
+      "id": "intent_0_develop_documentation_s",
+      "type": "intent",
+      "name": "develop documentation, state engine and MCP integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_1_index_html_from_IDE_in",
+      "type": "intent",
+      "name": "index.html (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_2_IDE_EXTENSION_from_IDE_",
+      "type": "intent",
+      "name": "IDE_EXTENSION (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_3_STATE_ENGINE_from_IDE_",
+      "type": "intent",
+      "name": "STATE_ENGINE (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_4_README_from_IDE_integr",
+      "type": "intent",
+      "name": "README (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_5__from_IDE_integrat",
+      "type": "intent",
+      "name": "修改方案 (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::scripts",
+      "type": "module",
+      "name": "scripts",
+      "path": "scripts",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::index.html (from IDE)",
+      "type": "module",
+      "name": "index.html (from IDE)",
+      "path": "index.html (from IDE)",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::IDE_EXTENSION (from IDE)",
+      "type": "module",
+      "name": "IDE_EXTENSION (from IDE)",
+      "path": "IDE_EXTENSION (from IDE)",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::STATE_ENGINE (from IDE)",
+      "type": "module",
+      "name": "STATE_ENGINE (from IDE)",
+      "path": "STATE_ENGINE (from IDE)",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::README (from IDE)",
+      "type": "module",
+      "name": "README (from IDE)",
+      "path": "README (from IDE)",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::修改方案 (from IDE)",
+      "type": "module",
+      "name": "修改方案 (from IDE)",
+      "path": "修改方案 (from IDE)",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "mod::index.html (from events)",
+      "type": "module",
+      "name": "index.html (from events)",
+      "path": "index.html (from events)",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "file::scripts/build-docs.py",
+      "type": "file",
+      "name": "build-docs.py",
+      "path": "scripts/build-docs.py",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::slug_for_href",
+      "type": "function",
+      "name": "slug_for_href",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 163
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::rewrite_links",
+      "type": "function",
+      "name": "rewrite_links",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 176
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::repl_md",
+      "type": "function",
+      "name": "repl_md",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 177
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::render_sidebar",
+      "type": "function",
+      "name": "render_sidebar",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 186
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::breadcrumb",
+      "type": "function",
+      "name": "breadcrumb",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 197
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::md_to_html",
+      "type": "function",
+      "name": "md_to_html",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 204
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::page",
+      "type": "function",
+      "name": "page",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 213
+      },
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "scripts/build-docs.py::function::main",
+      "type": "function",
+      "name": "main",
+      "path": "scripts/build-docs.py",
+      "metadata": {
+        "line": 223
+      },
+      "updatedAt": 1780841375184
+    }
+  ],
+  "edges": [
+    {
+      "source": "mod::scripts",
+      "target": "file::scripts/build-docs.py",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    }
+  ],
+  "intentMappings": [],
+  "inferenceMappings": [
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::slug_for_href",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::rewrite_links",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::repl_md",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::render_sidebar",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::breadcrumb",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::md_to_html",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::page",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_1_index_html_from_IDE_in",
+      "functionId": "scripts/build-docs.py::function::main",
+      "score": 0.542,
+      "confidence": 0.542,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::slug_for_href",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::rewrite_links",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::repl_md",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::render_sidebar",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::breadcrumb",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::md_to_html",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::page",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_0_develop_documentation_s",
+      "functionId": "scripts/build-docs.py::function::main",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::slug_for_href",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::rewrite_links",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::repl_md",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::render_sidebar",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::breadcrumb",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::md_to_html",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::page",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::main",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::slug_for_href",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::rewrite_links",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::repl_md",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::render_sidebar",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::breadcrumb",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::md_to_html",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::page",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "functionId": "scripts/build-docs.py::function::main",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::slug_for_href",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::rewrite_links",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::repl_md",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::render_sidebar",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::breadcrumb",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::md_to_html",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::page",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_4_README_from_IDE_integr",
+      "functionId": "scripts/build-docs.py::function::main",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::slug_for_href",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::rewrite_links",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::repl_md",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::render_sidebar",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::breadcrumb",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::md_to_html",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::page",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    },
+    {
+      "intentId": "intent_5__from_IDE_integrat",
+      "functionId": "scripts/build-docs.py::function::main",
+      "score": 0.5,
+      "confidence": 0.5,
+      "signals": [
+        "recent edit",
+        "git activity"
+      ]
+    }
+  ],
+  "reasonTraces": [
+    {
+      "targetId": "scripts/build-docs.py::function::slug_for_href",
+      "targetName": "slug_for_href",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::rewrite_links",
+      "targetName": "rewrite_links",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::repl_md",
+      "targetName": "repl_md",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::render_sidebar",
+      "targetName": "render_sidebar",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::breadcrumb",
+      "targetName": "breadcrumb",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::md_to_html",
+      "targetName": "md_to_html",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::page",
+      "targetName": "page",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    },
+    {
+      "targetId": "scripts/build-docs.py::function::main",
+      "targetName": "main",
+      "targetType": "function",
+      "reasons": [
+        "recently edited file",
+        "linked to active intent (confidence 54%)",
+        "recent edit, git activity",
+        "high dependency count (14)"
+      ],
+      "editCount": 2,
+      "dependencyCount": 14,
+      "linkedIntent": "index.html (from IDE) integration",
+      "confidence": 0.542
+    }
+  ],
+  "intentTrees": [],
+  "hotspots": [],
+  "snapshot": {
+    "generatedAt": 1780841375184,
+    "topIntents": [],
+    "topHotspots": [],
+    "topFunctions": [],
+    "nextActions": [
+      "review and commit pending changes",
+      "continue documentation updates",
+      "review state persistence paths",
+      "verify MCP tools against workspace"
+    ],
+    "graphSummary": {
+      "nodeCount": 22,
+      "edgeCount": 65,
+      "mappingCount": 0,
+      "avgConfidence": 0
+    }
+  }
+}

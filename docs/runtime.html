@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contorium @contora/runtime package." />
+    <title>Runtime package — Contorium Docs</title>
+    <link rel="icon" href="../logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body class="docs-body">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a href="../index.html" class="logo">
+          <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
+          Contorium
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#features">Product</a>
+          <a href="../index.html#install">Install</a>
+          <a href="../mcp/">MCP setup</a>
+          <a href="index.html" class="nav-active">Docs</a>
+          <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+    <div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation">
+        <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
+<li><a href="index.html">Overview</a></li>
+<li><a href="install.html">Install & use</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Adapters</p><ul class="docs-nav">
+<li><a href="ide-extension.html">IDE extension</a></li>
+<li><a href="mcp.html">MCP server</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="dashboard.html">Runtime dashboard</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Architecture</p><ul class="docs-nav">
+<li><a href="architecture-v3.html">Architecture V3.1</a></li>
+<li><a href="architecture-v2-2.html">Architecture V2.2</a></li>
+<li><a href="state-engine.html">State engine</a></li>
+<li><a href="engineering-closure.html">Engineering closure</a></li>
+<li><a href="runtime.html" class="is-active">Runtime package</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Reference</p><ul class="docs-nav">
+<li><a href="architecture-v2.html">Architecture V2 (legacy)</a></li>
+<li><a href="upgrade-plan.html">Upgrade plan 2.x</a></li>
+</ul></div>
+      </aside>
+      <main class="docs-main">
+        <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / Runtime package</nav>
+        <article class="docs-prose">
+          <h1><code>@contora/runtime</code> (packages/runtime)</h1>
+<p>End-user install: <a href="ide-extension.html">IDE_EXTENSION.md</a> · <a href="mcp.html">MCP.md</a></p>
+<p>The extension depends on a <strong>single</strong> workspace package, <strong><code>@contora/runtime</code></strong>, for:</p>
+<ul>
+<li>
+<p><strong><code>RuntimeProvider</code></strong> — default implementation <strong><code>ContoraRuntime</code></strong> (<code>createRuntime()</code>).</p>
+</li>
+<li>
+<p><strong>BYOK prompt pairs</strong> — <code>buildIntentPromptPair</code>, <code>buildSemanticSummaryPromptPair</code>, <code>buildCompressionPromptPair</code>.</p>
+</li>
+<li>
+<p><strong>Ranking hooks</strong> — <code>RANKING_FACTORS</code>, <code>rankingScoreMultiplier</code>, <code>enrichPromptForProvider</code>, plus <strong><code>getContoraHooks()</code></strong> for a stable aggregate API.</p>
+</li>
+</ul>
+<p>The VS Code extension imports these through <strong><code>src/runtime/index.ts</code></strong>, which re-exports <strong><code>@contora/runtime</code></strong>.</p>
+<hr>
+<h2>Layout</h2>
+<pre><code class="language-text">
+packages/runtime/
+
+├── package.json
+
+├── tsconfig.json
+
+└── src/
+
+    ├── index.ts              # public exports
+
+    ├── factory.ts            # createRuntime()
+
+    ├── contoraHooks.ts       # bundled hook implementations
+
+    ├── ContoraRuntime.ts     # RuntimeProvider
+
+    ├── promptBuilders.ts
+
+    ├── promptTypes.ts
+
+    ├── rankingFactors.ts
+
+    └── core/interfaces.ts
+
+</code></pre>
+<hr>
+<h2>Scripts</h2>
+<p>| Script | Command | Purpose |</p>
+<p>|--------|---------|---------|</p>
+<p>| <code>build:runtime</code> | <code>npm --prefix packages/runtime run build</code> | <code>tsc</code> → <code>dist/</code>. |</p>
+<p>Root <strong><code>vscode:prepublish</code></strong> runs <strong><code>npm run compile</code></strong>, which builds the runtime package then compiles the extension host (<code>tsc -p ./</code>).</p>
+<hr>
+<h2>Historical note</h2>
+<p>Earlier revisions used multiple runtime packages or release-only obfuscation steps. The tree is now <strong>one</strong> <strong><code>@contora/runtime</code></strong> package with a plain TypeScript build.</p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

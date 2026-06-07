@@ -1,27 +1,37 @@
 # Contorium Web
 
-Static site for **Contorium v2** — a shared workspace state system. IDE, MCP, and CLI are peer session views over `.contora/`.
+Static site for **Contorium** — persistent project memory for AI development. IDE, MCP, and CLI are peer adapters over `.contora/`.
 
 ## Site structure
 
 | Path | Page |
 | ---- | ---- |
-| `index.html` | Home — problem, solution, architecture, features, install |
-| `docs/` | Install hub + markdown references |
-| `docs/INSTALL.md` | Full three-adapter install / use / uninstall |
-| `docs/MCP.md` | MCP server reference (10 tools, hosts) |
-| `docs/CLI.md` | CLI commands |
-| `docs/IDE_EXTENSION.md` | IDE extension (from upstream repo) |
-| `docs/ARCHITECTURE_V2.md` | v2.2 shared state layer model |
-| `docs/STATE_ENGINE.md` | State engine internals |
+| `index.html` | Home — product story, features, install |
+| `docs/` | **Documentation hub** (sidebar navigation, readable HTML) |
+| `docs/install.html` | Install & use — three adapters, command matrix |
+| `docs/mcp.html` | MCP server — `@contorium/mcp`, CHP v1 tools |
+| `docs/cli.html` | CLI — handoff, dashboard, export |
+| `docs/dashboard.html` | Runtime dashboard (CRBP) |
+| `docs/ide-extension.html` | IDE extension |
+| `docs/architecture-v3.html` | Architecture V3.1 |
 | `mcp/` | Interactive MCP setup |
 | `architecture/` | Architecture overview page |
+
+## Documentation build
+
+Markdown sources live in `docs/*.md`. Regenerate HTML after edits:
+
+```bash
+python scripts/build-docs.py
+```
 
 ## Preview
 
 ```bash
 python -m http.server 8080
 ```
+
+Open `http://localhost:8080/docs/` for the documentation hub.
 
 ## Links
 

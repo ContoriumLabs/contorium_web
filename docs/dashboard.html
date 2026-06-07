@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CRBP runtime dashboard — Passive and Expanded views." />
+    <title>Runtime dashboard — Contorium Docs</title>
+    <link rel="icon" href="../logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body class="docs-body">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a href="../index.html" class="logo">
+          <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
+          Contorium
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#features">Product</a>
+          <a href="../index.html#install">Install</a>
+          <a href="../mcp/">MCP setup</a>
+          <a href="index.html" class="nav-active">Docs</a>
+          <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+    <div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation">
+        <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
+<li><a href="index.html">Overview</a></li>
+<li><a href="install.html">Install & use</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Adapters</p><ul class="docs-nav">
+<li><a href="ide-extension.html">IDE extension</a></li>
+<li><a href="mcp.html">MCP server</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="dashboard.html" class="is-active">Runtime dashboard</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Architecture</p><ul class="docs-nav">
+<li><a href="architecture-v3.html">Architecture V3.1</a></li>
+<li><a href="architecture-v2-2.html">Architecture V2.2</a></li>
+<li><a href="state-engine.html">State engine</a></li>
+<li><a href="engineering-closure.html">Engineering closure</a></li>
+<li><a href="runtime.html">Runtime package</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Reference</p><ul class="docs-nav">
+<li><a href="architecture-v2.html">Architecture V2 (legacy)</a></li>
+<li><a href="upgrade-plan.html">Upgrade plan 2.x</a></li>
+</ul></div>
+      </aside>
+      <main class="docs-main">
+        <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / Runtime dashboard</nav>
+        <article class="docs-prose">
+          <h1>Contorium Runtime Dashboard (CRBP)</h1>
+<p>Low-presence <strong>Passive</strong> status line + on-demand <strong>Expanded</strong> panels. Shared across <strong>IDE</strong>, <strong>CLI</strong>, and <strong>MCP</strong> via the same <code>.contora/</code> artifacts.</p>
+<p>Overview: <a href="install.html">INSTALL.md</a> · <a href="cli.html">CLI</a> · <a href="mcp.html">MCP</a></p>
+<hr>
+<h2>Design principles</h2>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zero commands (normal use)</strong></td>
+<td>Bootstrap + Passive + inject prompt are automatic</td>
+</tr>
+<tr>
+<td><strong>Single source of truth</strong></td>
+<td><code>handoff.json</code> + <code>state.json</code> — not <code>dashboard.status.json</code></td>
+</tr>
+<tr>
+<td><strong>Dashboard is a view</strong></td>
+<td>Worker reads artifacts; does not own business state</td>
+</tr>
+<tr>
+<td><strong>CHP v1 handoff</strong></td>
+<td>Compact line: <code>task \| last \| agent</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>runtime_id</code> lives in <code>.contora/runtime.bootstrap.json</code> only — not in handoff/CHP state.</p>
+<hr>
+<h2>Normal use (no commands)</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>See runtime status</td>
+<td>Passive line appears automatically (terminal + IDE status bar)</td>
+</tr>
+<tr>
+<td>Expand full dashboard</td>
+<td><strong>Space</strong> in Contorium dashboard terminal</td>
+</tr>
+<tr>
+<td>New AI chat inject</td>
+<td>Auto <code>[?]</code> when runtime active → <strong>Enter/i</strong> · <strong>n</strong> · or IDE/Agent dialog</td>
+</tr>
+<tr>
+<td>Copy handoff</td>
+<td><strong>c</strong> in terminal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do not use</strong> <code>contorium handoff --show</code> or <code>--prompt-new-chat</code> in daily workflow — those are debug-only.</p>
+<h2>State machine</h2>
+<pre><code class="language-text">Idle ──(runtime bootstrap)──► Passive ──(Space)──► Expanded
+  ▲                              │                      │
+  └──────── session end ─────────┴──── Space / q ──────┘
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Display</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Idle</strong></td>
+<td><code>[○] Contorium waiting for IDE session…</code></td>
+</tr>
+<tr>
+<td><strong>Passive</strong></td>
+<td><code>[●] [Contorium] task: … \| last: … \| agent: …</code> + optional <strong>mini-graph</strong> (<code>⤷ a→b→c</code>)</td>
+</tr>
+<tr>
+<td><strong>Expanded</strong></td>
+<td>Full panels + <strong>fullscreen</strong> (CLI alternate screen / IDE Webview) · <strong>LIVE</strong> refresh</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Automatic triggers (no manual attach)</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>When</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MCP initialize</strong></td>
+<td>Codex / Claude / Cursor starts MCP</td>
+<td><code>bootstrap --source mcp</code></td>
+</tr>
+<tr>
+<td><strong>IDE workspace open</strong></td>
+<td>Extension loads folder</td>
+<td><code>bootstrap --source ide</code></td>
+</tr>
+<tr>
+<td><strong>CLI init</strong></td>
+<td><code>contorium init</code></td>
+<td><code>bootstrap --source cli</code></td>
+</tr>
+<tr>
+<td><strong>File / git change</strong></td>
+<td>Save, sync, MCP reactive sync</td>
+<td><code>wake</code> → refresh Passive / Expanded (artifact watch)</td>
+</tr>
+</tbody>
+</table>
+<p>Users do <strong>not</strong> run <code>contorium attach</code> or <code>dashboard show</code> in normal workflows.</p>
+<hr>
+<h2>Passive compact line (CHP v1)</h2>
+<p>Example (with mini-graph and pending injection):</p>
+<pre><code class="language-text">[●] [Contorium] task: fix MCP bootstrap | last: calculateRisk() | agent: mcp · ⤷ calculateRisk→updateGraph · [?] Enter/i inject · n skip
+</code></pre>
+<p>When no injection pending:</p>
+<pre><code class="language-text">[●] [Contorium] task: fix MCP bootstrap | last: calculateRisk() | agent: mcp · ⤷ calculateRisk→updateGraph · Space toggle · c Copy To AI · q quit
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>task</code></td>
+<td><code>state.json</code> → <code>currentTask</code> or <code>handoff.current_focus</code></td>
+</tr>
+<tr>
+<td><code>last</code></td>
+<td>Most recent symbol in <code>handoff.key_changes</code></td>
+</tr>
+<tr>
+<td><code>agent</code></td>
+<td><code>state.source.lastWriter</code> (<code>ide</code> / <code>mcp</code> / <code>cli</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IDE status bar</strong> reads <code>handoff.json</code> + <code>state.json</code> directly (survives if dashboard worker stops).<br>
+<strong>Expanded mode indicator</strong> may still read <code>dashboard.status.json</code> for view mode only.</p>
+<hr>
+<h2>Expanded panels (fullscreen)</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CLI</strong></td>
+<td>Alternate-screen TTY · wide layout dual-column · <strong>LIVE</strong> badge on artifact change · call-chain tree</td>
+</tr>
+<tr>
+<td><strong>IDE</strong></td>
+<td><strong>Webview panel</strong> beside editor — live refresh from <code>dashboard.status.json.frame</code> (~700ms)</td>
+</tr>
+</tbody>
+</table>
+<p>Expanded stays open until <strong>Space</strong> or <strong>q</strong> (CLI default <code>--timeout 0</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Data source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Updates</td>
+<td><code>handoff.json</code> / <code>change.json</code></td>
+</tr>
+<tr>
+<td>Agent Timeline</td>
+<td><code>.contora/events/*.jsonl</code></td>
+</tr>
+<tr>
+<td>Impact Graph</td>
+<td><strong><code>understanding_graph.json</code></strong> (preferred) or <code>graph.json</code></td>
+</tr>
+<tr>
+<td>Structure View</td>
+<td><code>graph.json</code> / cognitive snapshot</td>
+</tr>
+<tr>
+<td>Project Status</td>
+<td>handoff risk, git counts</td>
+</tr>
+<tr>
+<td><strong>Copy To AI</strong></td>
+<td>CHP commands + semi-auto injection hint</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Keyboard (CLI dashboard terminal)</h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enter</strong> / <strong>i</strong></td>
+<td>Confirm semi-auto runtime injection (when pending)</td>
+</tr>
+<tr>
+<td><strong>n</strong></td>
+<td>Skip injection for this runtime session</td>
+</tr>
+<tr>
+<td><strong>Space</strong></td>
+<td>Toggle Passive ↔ Expanded</td>
+</tr>
+<tr>
+<td><strong>c</strong></td>
+<td><strong>Copy To AI</strong> — handoff markdown to clipboard</td>
+</tr>
+<tr>
+<td><strong>q</strong></td>
+<td>Quit dashboard worker</td>
+</tr>
+<tr>
+<td><strong>v</strong> / <strong>m</strong></td>
+<td>Legacy expand / minimize (still supported)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>IDE controls</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expand dashboard</td>
+<td>Status bar click · <strong>Ctrl+Shift+C</strong> → <strong>Webview panel</strong> (live Expanded view)</td>
+</tr>
+<tr>
+<td>Semi-auto inject</td>
+<td>Status bar <strong><code>[?] Inject runtime?</code></strong> → <strong>Inject</strong> / <strong>Skip</strong> → clipboard</td>
+</tr>
+<tr>
+<td>Minimize</td>
+<td><strong>Ctrl+Shift+M</strong> · close Webview panel</td>
+</tr>
+<tr>
+<td>Disable auto-attach</td>
+<td>Setting: <code>contora.autoAttachDashboard</code> = <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>Terminal tab name: <strong>Contorium Dashboard</strong> (background worker; optional).</p>
+<hr>
+<h2>CLI commands (debug only)</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contorium handoff --show</code></td>
+<td>Force expand (prefer <strong>Space</strong>)</td>
+</tr>
+<tr>
+<td><code>contorium handoff --prompt-new-chat</code></td>
+<td>Force inject prompt (normally automatic)</td>
+</tr>
+<tr>
+<td><code>contorium handoff --copy-to-ai</code></td>
+<td>Manual clipboard</td>
+</tr>
+<tr>
+<td><code>contorium attach . --auto</code></td>
+<td>Manual worker</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Artifact files</h2>
+<pre><code class="language-text">.contora/
+├── handoff.json              # AI handoff (source of truth for task/changes)
+├── state.json                # Task anchor, source.lastWriter
+├── change.json               # Recent file/symbol changes
+├── graph.json                # Change-neighborhood graph
+├── understanding_graph.json  # Call chains + impact (Runtime Understanding Graph)
+├── runtime.bootstrap.json    # runtime_id, bootstrap metadata (session-level)
+├── mcp.auto-context.md       # written after user confirms semi-auto injection
+├── mcp.handoff-injection.json # pending / injected / skipped per runtime_id
+├── dashboard.status.json     # View mode only (not business state)
+├── dashboard.signal.json     # expand / minimize / filter signals
+└── dashboard.session.json    # IDE/MCP session marker
+</code></pre>
+<hr>
+<h2>Worker internals (maintainers)</h2>
+<ul>
+<li><strong>Refresh:</strong> <code>fs.watch</code> on <code>.contora/</code> (not tight polling on large repos)</li>
+<li><strong>Package:</strong> <code>packages/cli/src/dashboard/</code></li>
+<li><strong>Bootstrap:</strong> <code>packages/cli/src/runtime/bootstrap.ts</code></li>
+</ul>
+<hr>
+<h2>Related docs</h2>
+<ul>
+<li><a href="cli.html">CLI handoff &amp; dashboard commands</a></li>
+<li><a href="mcp.html">MCP bootstrap on initialize</a></li>
+<li><a href="ide-extension.html">IDE Extension status bar</a></li>
+</ul>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

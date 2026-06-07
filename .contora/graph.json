@@ -1,0 +1,391 @@
+{
+  "version": 2,
+  "generatedAt": 1780841375184,
+  "scope": "change-neighborhood",
+  "nodes": [
+    {
+      "id": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "kind": "module",
+      "name": "scripts/build-docs.py",
+      "file": "scripts/build-docs.py"
+    },
+    {
+      "id": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "function",
+      "name": "slug_for_href",
+      "file": "scripts/build-docs.py",
+      "line": 163
+    },
+    {
+      "id": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "function",
+      "name": "rewrite_links",
+      "file": "scripts/build-docs.py",
+      "line": 176
+    },
+    {
+      "id": "scripts/build-docs.py::function::repl_md",
+      "kind": "function",
+      "name": "repl_md",
+      "file": "scripts/build-docs.py",
+      "line": 177
+    },
+    {
+      "id": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "function",
+      "name": "render_sidebar",
+      "file": "scripts/build-docs.py",
+      "line": 186
+    },
+    {
+      "id": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "function",
+      "name": "breadcrumb",
+      "file": "scripts/build-docs.py",
+      "line": 197
+    },
+    {
+      "id": "scripts/build-docs.py::function::md_to_html",
+      "kind": "function",
+      "name": "md_to_html",
+      "file": "scripts/build-docs.py",
+      "line": 204
+    },
+    {
+      "id": "scripts/build-docs.py::function::page",
+      "kind": "function",
+      "name": "page",
+      "file": "scripts/build-docs.py",
+      "line": 213
+    },
+    {
+      "id": "scripts/build-docs.py::function::main",
+      "kind": "function",
+      "name": "main",
+      "file": "scripts/build-docs.py",
+      "line": 223
+    }
+  ],
+  "edges": [
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::module::scripts/build-docs.py",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "contains"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::slug_for_href",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::rewrite_links",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::repl_md",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::render_sidebar",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::breadcrumb",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::md_to_html",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::main",
+      "to": "scripts/build-docs.py::function::page",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::slug_for_href",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::rewrite_links",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::repl_md",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::render_sidebar",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::breadcrumb",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::md_to_html",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    },
+    {
+      "from": "scripts/build-docs.py::function::page",
+      "to": "scripts/build-docs.py::function::main",
+      "kind": "calls"
+    }
+  ]
+}

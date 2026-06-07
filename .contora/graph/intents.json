@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1",
+  "generatedAt": 1780841375184,
+  "graphBuildId": "graph_mq3uz3dc",
+  "nodes": [
+    {
+      "id": "intent_0_develop_documentation_s",
+      "type": "intent",
+      "name": "develop documentation, state engine and MCP integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_1_index_html_from_IDE_in",
+      "type": "intent",
+      "name": "index.html (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_2_IDE_EXTENSION_from_IDE_",
+      "type": "intent",
+      "name": "IDE_EXTENSION (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_3_STATE_ENGINE_from_IDE_",
+      "type": "intent",
+      "name": "STATE_ENGINE (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_4_README_from_IDE_integr",
+      "type": "intent",
+      "name": "README (from IDE) integration",
+      "updatedAt": 1780841375184
+    },
+    {
+      "id": "intent_5__from_IDE_integrat",
+      "type": "intent",
+      "name": "修改方案 (from IDE) integration",
+      "updatedAt": 1780841375184
+    }
+  ]
+}

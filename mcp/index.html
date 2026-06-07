@@ -41,12 +41,12 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <span class="section-badge">MCP session view · V3.1 · 18 tools</span>
+          <span class="section-badge">@contorium/mcp · CHP v1 · auto-spawn</span>
           <h1>Contorium MCP Server</h1>
           <p class="page-hero-lead">
-            MCP tools for <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor Agent</strong>, and
-            <strong>Gemini CLI</strong>. A peer session view over the same <code style="color: var(--accent)">.contora/</code>
-            state — can bootstrap without the IDE extension.
+            Configure once — <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor Agent</strong>, and
+            <strong>Gemini CLI</strong> spawn MCP automatically. Primary tool: <code style="color: var(--accent)">get_project_handoff</code>.
+            Semi-auto handoff injection on new chats. See <a href="../docs/dashboard.html">Runtime dashboard</a>.
           </p>
         </div>
       </header>
@@ -58,21 +58,22 @@
             <li>
               <strong>Build from source</strong>
               <code style="color: var(--accent)">npm install && npm run compile</code> in the
-              <a href="https://github.com/ContoriumLabs/contorium">Contorium</a> repo. Portable entry:
-              <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code>.
+              <a href="https://github.com/ContoriumLabs/contorium">Contorium</a> repo. Standard entry:
+              <code style="color: var(--accent)">packages/mcp/bin/contorium-mcp.js</code> (or legacy
+              <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code>).
             </li>
             <li>
-              <strong>Set workspace root</strong>
-              Use <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> env var pointing at your project folder.
+              <strong>Configure MCP once</strong>
+              Set <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> to your <strong>project</strong> root in host MCP settings.
             </li>
             <li>
-              <strong>IDE extension (optional, recommended)</strong>
-              Adds event-driven precision. MCP alone still bootstraps <code style="color: var(--accent)">.contora/</code> via scan.
-              <a href="../docs/IDE_EXTENSION.md">IDE docs</a>
+              <strong>Open your AI host</strong>
+              Codex / Claude / Cursor spawns MCP — you do <em>not</em> run MCP in a terminal in normal use.
             </li>
             <li>
-              <strong>Configure your agent host</strong>
-              Codex, Claude Code, Cursor, or Gemini — see sections below.
+              <strong>Runtime dashboard (automatic)</strong>
+              Passive line appears on bootstrap. <strong>Space</strong> → Expanded. New chat → auto <code>[?]</code> inject prompt.
+              <a href="../docs/dashboard.html">Dashboard guide</a>
             </li>
           </ol>
         </div>
@@ -125,16 +126,16 @@ npm install
 npm run build:mcp
 # or: npm run compile
 
-# First-time optional:
-npm run install:mcp</code></pre>
+# Verify (debug — Ctrl+C to exit):
+npx contorium-mcp --workspace E:/your-project</code></pre>
           </div>
           <ul class="memory-bullets" style="margin-top: 20px">
-            <li><strong style="color: var(--text)">Portable entry:</strong> <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code></li>
-            <li><strong style="color: var(--text)">stdio entry:</strong> <code style="color: var(--accent)">packages/mcp/dist/server.js</code> (after build)</li>
-            <li><strong style="color: var(--text)">Also runs via:</strong> <code style="color: var(--accent)">npm run compile</code> (sync + runtime + MCP + extension)</li>
+            <li><strong style="color: var(--text)">Standard bin:</strong> <code style="color: var(--accent)">packages/mcp/bin/contorium-mcp.js</code></li>
+            <li><strong style="color: var(--text)">Legacy launcher:</strong> <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code></li>
+            <li><strong style="color: var(--text)">npm package:</strong> <code style="color: var(--accent)">npm install -g @contorium/mcp</code> · <code style="color: var(--accent)">contorium-mcp bootstrap --workspace .</code></li>
           </ul>
           <p class="section-cta-inline">
-            <a href="../docs/MCP.md" class="btn btn-ghost btn-sm">docs/MCP.md</a>
+            <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">docs/mcp.html</a>
             <a href="../index.html#install" class="btn btn-ghost btn-sm">Install extensions</a>
           </p>
         </div>
@@ -164,7 +165,7 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
         <div class="container">
           <h2>Claude Code</h2>
           <p>
-            See <a href="../docs/MCP.md">docs/MCP.md</a>. Uses
+            See <a href="../docs/mcp.html">docs/mcp.html</a>. Uses
             <code style="color: var(--accent)">.claude-plugin/plugin.json</code> and
             <code style="color: var(--accent)">.mcp.claude.json</code>. After <a href="#build"><code>npm run build:mcp</code></a>:
           </p>
@@ -228,8 +229,8 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
 
       <section class="page-section">
         <div class="container">
-          <h2>MCP tools (V3.1)</h2>
-          <p>Agents call these tools over stdio. Recommended execution entry: <code>get_project_handoff</code>. Cognitive summary: <code>get_project_graph_snapshot</code>.</p>
+          <h2>MCP tools (CHP v1 + legacy)</h2>
+          <p>Recommended: <code>get_project_handoff</code>, injection tools, <code>get_understanding_graph</code>, <code>get_recent_changes</code>. Full list in <a href="../docs/mcp.html">docs/mcp.html</a>.</p>
           <div style="overflow-x: auto; margin-bottom: 32px">
             <table class="compare-table">
               <thead>
@@ -243,79 +244,53 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
                 <tr>
                   <td><code>get_project_handoff</code></td>
                   <td>R</td>
-                  <td><strong>V3.1 recommended AI execution entry</strong> — <code>.contora/handoff.json</code></td>
+                  <td><strong>CHP v1 — primary AI execution entry</strong></td>
                 </tr>
                 <tr>
-                  <td><code>get_project_graph_snapshot</code></td>
+                  <td><code>get_handoff_injection_status</code></td>
                   <td>R</td>
-                  <td><strong>V3.1 cognitive summary</strong> — <code>.contora/graph/snapshot.json</code></td>
+                  <td>Semi-auto new-chat inject state</td>
                 </tr>
                 <tr>
-                  <td><code>get_project_knowledge_graph</code></td>
+                  <td><code>confirm_handoff_injection</code> / <code>skip_handoff_injection</code></td>
+                  <td>W</td>
+                  <td>User Y/n → writes <code>.contora/mcp.auto-context.md</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_understanding_graph</code></td>
                   <td>R</td>
-                  <td>Full cognitive graph; default <code>minConfidence</code> 0.7</td>
+                  <td>Call chains + impact — <code>understanding_graph.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_recent_changes</code></td>
+                  <td>R</td>
+                  <td>File &amp; symbol updates — <code>change.json</code></td>
+                </tr>
+                <tr>
+                  <td><code>get_runtime_state</code></td>
+                  <td>R</td>
+                  <td>Bootstrap / dashboard / session (read-only)</td>
                 </tr>
                 <tr>
                   <td><code>get_project_snapshot</code></td>
                   <td>R</td>
-                  <td>L4 Markdown snapshot; optional <code>format=json</code></td>
+                  <td>L4 Markdown snapshot (legacy)</td>
                 </tr>
                 <tr>
                   <td><code>get_workspace_context</code></td>
                   <td>R</td>
-                  <td><code>state.json</code> — focus, Git, active files</td>
-                </tr>
-                <tr>
-                  <td><code>get_project_change</code></td>
-                  <td>R</td>
-                  <td>V3.1 change semantics — <code>.contora/change.json</code></td>
-                </tr>
-                <tr>
-                  <td><code>get_project_graph</code></td>
-                  <td>R</td>
-                  <td>Change neighborhood — <code>.contora/graph.json</code></td>
-                </tr>
-                <tr>
-                  <td><code>get_project_timeline</code></td>
-                  <td>R</td>
-                  <td>Code evolution — <code>.contora/timeline.json</code></td>
+                  <td><code>state.json</code></td>
                 </tr>
                 <tr>
                   <td><code>store_memory</code></td>
                   <td>W</td>
-                  <td>Persist to <code>.contora/mcp/memories.json</code></td>
-                </tr>
-                <tr>
-                  <td><code>search_memory</code> / <code>get_memory</code></td>
-                  <td>R</td>
-                  <td>MCP memory search and fetch</td>
-                </tr>
-                <tr>
-                  <td><code>get_project_intelligence</code></td>
-                  <td>R</td>
-                  <td>L5 <code>intelligence/state-summary.json</code></td>
-                </tr>
-                <tr>
-                  <td><code>get_intent_graph</code> / <code>get_active_intents</code></td>
-                  <td>R</td>
-                  <td>L5 intent graph (sidebar preview; not in main copy export)</td>
-                </tr>
-                <tr>
-                  <td><code>get_project_state</code></td>
-                  <td>R</td>
-                  <td>L4 <code>state-builder/project-state.json</code></td>
-                </tr>
-                <tr>
-                  <td><code>get_state_conflicts</code></td>
-                  <td>R</td>
-                  <td>v2 unresolved conflicts (audit only)</td>
+                  <td><code>.contora/mcp/memories.json</code></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
-            Deprecated: <code>get_project_impact</code>, <code>get_project_intent</code> — use <code>get_project_handoff</code> instead.
-            Full reference: <a href="../docs/MCP.md">docs/MCP.md</a>.
+            Also: <code>get_project_knowledge_graph</code>, <code>get_project_graph_snapshot</code>, <code>get_project_change</code>, <code>get_intent_graph</code>, … — see <a href="../docs/mcp.html">docs/mcp.html</a>.
           </p>
 
           <h3 style="font-size: 1.1rem; margin-bottom: 16px">Tool examples</h3>
@@ -405,13 +380,19 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
             <h2>On-disk layout</h2>
             <pre class="dir-tree" aria-label="Workspace state layout"><span class="dir-highlight">&lt;workspace-root&gt;/</span>
 └── .contora/
-    ├── state.json       <span class="dir-highlight"># workspace truth (all views read)</span>
-    ├── graph/           <span class="dir-highlight"># V3.1 knowledge + snapshot + hotspots</span>
-    ├── handoff.json     <span class="dir-highlight"># AI execution entry</span>
-    ├── events/          <span class="dir-highlight"># IDE session view writes</span>
+    ├── handoff.json              <span class="dir-highlight"># CHP v1 AI handoff</span>
+    ├── understanding_graph.json  <span class="dir-highlight"># call chains + impact</span>
+    ├── state.json
+    ├── change.json / graph.json / timeline.json
+    ├── runtime.bootstrap.json
+    ├── mcp.auto-context.md
+    ├── mcp.handoff-injection.json
+    ├── dashboard.*.json
+    ├── graph/                    <span class="dir-highlight"># V3.1 cognitive graph</span>
+    ├── events/
     ├── state-builder/
     └── mcp/
-        └── memories.json <span class="dir-highlight"># store_memory</span></pre>
+        └── memories.json</pre>
             <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 16px">
               Export formats (sidebar / settings): <code>markdown</code>, <code>json</code>, <code>cursor</code>,
               <code>claude</code>, <code>openai</code> — see
@@ -448,10 +429,10 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
             Both are peer views over the same <code>.contora/</code> state — not separate memory systems.
           </p>
           <p class="section-cta-inline" style="margin-top: 16px">
-            <a href="../docs/MCP.md" class="btn btn-ghost btn-sm">docs/MCP.md</a>
+            <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">docs/mcp.html</a>
             <a href="README.md" class="btn btn-ghost btn-sm">Product README</a>
             <a
-              href="https://github.com/ContoriumLabs/contorium/blob/main/docs/MCP.md"
+              href="https://github.com/ContoriumLabs/contorium/blob/main/docs/mcp.html"
               class="btn btn-ghost btn-sm"
               target="_blank"
               rel="noopener noreferrer"
@@ -495,7 +476,7 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
               <h4>Resources</h4>
               <ul>
                 <li><a href="../blog/">Blog</a></li>
-                <li><a href="../docs/MCP.md">docs/MCP.md</a></li>
+                <li><a href="../docs/mcp.html">docs/mcp.html</a></li>
                 <li><a href="README.md">Product README</a></li>
                 <li><a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a></li>
               </ul>

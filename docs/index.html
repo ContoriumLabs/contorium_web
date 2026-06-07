@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Install Contorium V3.1 — IDE, MCP, and CLI peer adapters over shared .contora/ workspace state with cognitive graph and AI handoff."
-    />
-    <title>Docs — Install &amp; Use Contorium</title>
+    <meta name="description" content="Contorium documentation — install, MCP, CLI, dashboard, and architecture." />
+    <title>Documentation — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +13,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="docs.css" />
   </head>
-  <body>
+  <body class="docs-body">
     <header class="site-header">
       <nav class="nav-inner" aria-label="Primary">
         <a href="../index.html" class="logo">
@@ -25,258 +23,104 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#features">Features</a>
-          <a href="../index.html#how">How it works</a>
+          <a href="../index.html#features">Product</a>
           <a href="../index.html#install">Install</a>
-          <a href="../mcp/">MCP</a>
+          <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="../index.html#install" class="btn btn-primary btn-sm">Install</a>
         </div>
       </nav>
     </header>
+    <div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation">
+        <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
+<li><a href="index.html" class="is-active">Overview</a></li>
+<li><a href="install.html">Install & use</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Adapters</p><ul class="docs-nav">
+<li><a href="ide-extension.html">IDE extension</a></li>
+<li><a href="mcp.html">MCP server</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="dashboard.html">Runtime dashboard</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Architecture</p><ul class="docs-nav">
+<li><a href="architecture-v3.html">Architecture V3.1</a></li>
+<li><a href="architecture-v2-2.html">Architecture V2.2</a></li>
+<li><a href="state-engine.html">State engine</a></li>
+<li><a href="engineering-closure.html">Engineering closure</a></li>
+<li><a href="runtime.html">Runtime package</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Reference</p><ul class="docs-nav">
+<li><a href="architecture-v2.html">Architecture V2 (legacy)</a></li>
+<li><a href="upgrade-plan.html">Upgrade plan 2.x</a></li>
+</ul></div>
+      </aside>
+      <main class="docs-main">
+        
+        <article class="docs-prose">
+          
+<div class="docs-hub-hero">
+  <h1>Documentation</h1>
+  <p>
+    Install guides, adapter references, and architecture notes for Contorium — IDE extension,
+    <code>@contorium/mcp</code>, and CLI over shared <code>.contora/</code> state.
+  </p>
+</div>
 
-    <main class="page-main">
-      <header class="page-hero">
-        <div class="container">
-          <span class="section-badge">V3.1 · three peer adapters</span>
-          <h1>Install &amp; use</h1>
-          <p class="page-hero-lead">
-            IDE, MCP, and CLI are peer Runtime Adapters over the same <code style="color: var(--accent)">.contora/</code>
-            directory — any adapter can bootstrap alone; combined use merges via <code style="color: var(--accent)">source.mode: merged</code>.
-          </p>
-        </div>
-      </header>
+<section>
+  <p class="docs-sidebar-title" style="padding-left:0">Quick paths</p>
+  <div class="docs-card-grid">
+    <a class="docs-card" href="install.html">
+      <span class="docs-card-tag">Start here</span>
+      <h3>Install &amp; use</h3>
+      <p>Three peer adapters, command matrix, npm install, uninstall.</p>
+    </a>
+    <a class="docs-card" href="mcp.html">
+      <span class="docs-card-tag">Agents</span>
+      <h3>MCP server</h3>
+      <p>Host auto-spawn, CHP v1 tools, semi-auto handoff injection.</p>
+    </a>
+    <a class="docs-card" href="cli.html">
+      <span class="docs-card-tag">Terminal</span>
+      <h3>CLI reference</h3>
+      <p><code>handoff</code>, dashboard keys, export, debug commands.</p>
+    </a>
+    <a class="docs-card" href="dashboard.html">
+      <span class="docs-card-tag">Runtime</span>
+      <h3>Runtime dashboard</h3>
+      <p>Passive line, Expanded view, keyboard shortcuts, artifacts.</p>
+    </a>
+    <a class="docs-card" href="ide-extension.html">
+      <span class="docs-card-tag">IDE</span>
+      <h3>IDE extension</h3>
+      <p>VSIX install, sidebar, Copy AI-ready context, status bar.</p>
+    </a>
+    <a class="docs-card" href="architecture-v3.html">
+      <span class="docs-card-tag">Architecture</span>
+      <h3>Architecture V3.1</h3>
+      <p>Cognitive graph, handoff.json, pipeline, MCP/CLI mirrors.</p>
+    </a>
+  </div>
+</section>
 
-      <section class="page-section">
-        <div class="container">
-          <h2>Documentation</h2>
-          <div class="install-grid install-grid--3" style="margin-top: 0">
-            <div class="install-col">
-              <h3>Getting started</h3>
-              <ul class="install-links">
-                <li><a href="INSTALL.md">Full install guide <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="ARCHITECTURE_V3.md">Architecture V3.1 <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="ARCHITECTURE_V2_2.md">Architecture V2.2 <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="ENGINEERING_CLOSURE.md">Engineering closure <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="STATE_ENGINE.md">State engine <span class="install-arrow" aria-hidden="true">→</span></a></li>
-              </ul>
-            </div>
-            <div class="install-col">
-              <h3>Per adapter</h3>
-              <ul class="install-links">
-                <li><a href="IDE_EXTENSION.md">IDE extension <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="MCP.md">MCP server (18 tools) <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="CLI.md">CLI reference <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="../mcp/">Interactive MCP setup <span class="install-arrow" aria-hidden="true">→</span></a></li>
-              </ul>
-            </div>
-            <div class="install-col">
-              <h3>Quick start</h3>
-              <div class="code-block">
-                <pre><code># Build (repo root)
-npm install && npm run compile
+<section style="margin-top:40px">
+  <h2>What's automatic</h2>
+  <ul>
+    <li><strong>MCP spawn</strong> — Codex / Claude / Cursor starts <code>@contorium/mcp</code> after one-time config</li>
+    <li><strong>Passive dashboard</strong> — compact <code>task | last | agent</code> line on bootstrap</li>
+    <li><strong>Expanded view</strong> — press <strong>Space</strong> in the Contorium terminal</li>
+    <li><strong>New chat inject</strong> — auto <code>[?]</code> prompt → Enter/i · n</li>
+  </ul>
+</section>
 
-# IDE: npm run vsix → Install from VSIX
+<p class="docs-footer-note">
+  Markdown sources remain in <code>docs/*.md</code> for editing.
+  Regenerate HTML with <code>python scripts/build-docs.py</code>.
+  Interactive MCP wiring: <a href="../mcp/">mcp/</a>.
+</p>
 
-# MCP: set CONTORIUM_WORKSPACE, enable in host
-
-# CLI (project root)
-npx contorium init .
-npx contorium sync .
-npx contorium handoff .
-npx contorium graph-snapshot .
-npx contorium export .</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section section-mcp" id="install">
-        <div class="container">
-          <h2>Command matrix (V3.1)</h2>
-          <div style="overflow-x: auto; margin-bottom: 32px">
-            <table class="compare-table">
-              <thead>
-                <tr>
-                  <th>Capability</th>
-                  <th>IDE</th>
-                  <th>MCP</th>
-                  <th>CLI</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Bootstrap <code>.contora/</code></td>
-                  <td>Open folder</td>
-                  <td>Bootstrap on start</td>
-                  <td><code>contorium init</code></td>
-                </tr>
-                <tr>
-                  <td>Refresh git / paths</td>
-                  <td>Auto scan</td>
-                  <td>5s + events/git watch</td>
-                  <td><code>contorium sync</code></td>
-                </tr>
-                <tr>
-                  <td>AI execution entry</td>
-                  <td>Copy includes handoff</td>
-                  <td><code>get_project_handoff</code></td>
-                  <td><code>contorium handoff</code></td>
-                </tr>
-                <tr>
-                  <td>Cognitive summary</td>
-                  <td># COGNITIVE SNAPSHOT</td>
-                  <td><code>get_project_graph_snapshot</code></td>
-                  <td><code>contorium graph-snapshot</code></td>
-                </tr>
-                <tr>
-                  <td>Knowledge graph</td>
-                  <td>AI Cortex sidebar</td>
-                  <td><code>get_project_knowledge_graph</code></td>
-                  <td><code>contorium knowledge</code></td>
-                </tr>
-                <tr>
-                  <td>Canonical export</td>
-                  <td>Copy AI-ready context</td>
-                  <td>—</td>
-                  <td><code>contorium export</code></td>
-                </tr>
-                <tr>
-                  <td>Agent memory</td>
-                  <td>—</td>
-                  <td><code>store_memory</code></td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2>Install links</h2>
-          <div class="install-grid" style="margin-top: 0; margin-bottom: 32px">
-            <div class="install-col">
-              <h3>IDE extension</h3>
-              <ul class="install-links">
-                <li>
-                  <a href="https://marketplace.visualstudio.com/search?term=contorium&target=VSCode&category=All%20categories&sortBy=Relevance" target="_blank" rel="noopener noreferrer">VS Code <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
-                <li>
-                  <a href="https://marketplace.visualstudio.com/search?term=contorium&target=VSCode&category=All%20categories&sortBy=Relevance" target="_blank" rel="noopener noreferrer">Cursor (VSIX) <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
-                <li>
-                  <a href="https://open-vsx.org/?search=contorium&sortBy=relevance&sortOrder=desc" target="_blank" rel="noopener noreferrer">Open VSX <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
-                <li><a href="IDE_EXTENSION.md">IDE docs <span class="install-arrow" aria-hidden="true">→</span></a></li>
-              </ul>
-            </div>
-            <div class="install-col">
-              <h3>MCP / CLI</h3>
-              <ul class="install-links">
-                <li><a href="../mcp/#codex">Codex <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="../mcp/#claude-code">Claude Code <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="MCP.md">MCP docs <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="CLI.md">CLI docs <span class="install-arrow" aria-hidden="true">→</span></a></li>
-              </ul>
-            </div>
-          </div>
-
-          <h2>Standalone vs combined</h2>
-          <ul class="memory-bullets">
-            <li><strong style="color: var(--text)">IDE only</strong> — sidebar, events, Copy AI-ready context (V3.1 canonical export)</li>
-            <li><strong style="color: var(--text)">MCP only</strong> — bootstrap + 18 tools; call <code>get_project_handoff</code> for execution entry</li>
-            <li><strong style="color: var(--text)">CLI only</strong> — <code>init</code> / <code>sync</code> / <code>handoff</code> / <code>graph-snapshot</code> / <code>export</code> for terminal and CI</li>
-            <li><strong style="color: var(--text)">Combined</strong> — merged mode; <code>source.lastWriter</code> tracks last writer; task/notes are not overwritten</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="page-section">
-        <div class="container two-col">
-          <div>
-            <h2>Build from source</h2>
-            <div class="code-block">
-              <pre><code>git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile</code></pre>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 12px">
-              F5 for Extension Development Host. Package VSIX with <code>npm run vsix</code>. MCP build: <code>npm run build:mcp</code>.
-            </p>
-          </div>
-          <div>
-            <h2>Verify</h2>
-            <ul class="memory-bullets">
-              <li><code style="color: var(--accent)">.contora/state.json</code> after <code>init</code> or opening a folder</li>
-              <li>IDE: set focus → AI Cortex shows Knowledge Graph / Hotspots</li>
-              <li>MCP: <code>get_project_handoff</code> or <code>get_project_graph_snapshot</code></li>
-              <li>CLI: <code>npx contorium status .</code> shows mode and <code>source</code> metadata</li>
-              <li><code>init</code> with <code>created: false</code> is normal when state already exists</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section section-mcp">
-        <div class="container">
-          <h2>On-disk layout (V3.1)</h2>
-          <pre class="dir-tree" aria-label=".contora layout"><span class="dir-highlight">.contora/</span>
-├── state.json               # + source { mode, lastWriter, lastUpdated }
-├── state-builder/           # L4 snapshot
-├── graph/                   # V3.1 cognitive graph
-│   ├── knowledge.json
-│   ├── snapshot.json
-│   └── hotspots.json
-├── events/                  # IDE events
-└── mcp/                     # store_memory (optional)</pre>
-        </div>
-      </section>
-
-      <section class="cta-band">
-        <h2>Shared workspace memory for every tool</h2>
-        <div class="cta-buttons">
-          <a href="../index.html#install" class="btn btn-primary">Install</a>
-          <a href="INSTALL.md" class="btn btn-ghost">Full guide (Markdown)</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <a href="../index.html" class="logo">
-              <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
-              Contorium
-            </a>
-            <p>IDE, MCP, and CLI — peer adapters over the same project memory layer.</p>
-          </div>
-          <div class="footer-links">
-            <div class="footer-col">
-              <h4>Docs</h4>
-              <ul>
-                <li><a href="INSTALL.md">INSTALL.md</a></li>
-                <li><a href="IDE_EXTENSION.md">IDE</a></li>
-                <li><a href="MCP.md">MCP</a></li>
-                <li><a href="CLI.md">CLI</a></li>
-                <li><a href="ARCHITECTURE_V3.md">Architecture V3.1</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Product</h4>
-              <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../mcp/">MCP setup</a></li>
-                <li><a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>© Contorium. MIT License.</span>
-        </div>
-      </div>
-    </footer>
+        </article>
+      </main>
+    </div>
   </body>
 </html>

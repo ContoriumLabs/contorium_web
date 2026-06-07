@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "generatedAt": 1780841375909,
+  "recent_change": {
+    "name": "scripts/build-docs.py::slug_for_href()",
+    "change_type": "modified"
+  },
+  "call_chain": [
+    "scripts/build-docs.py::slug_for_href()"
+  ],
+  "affected": [
+    "scripts/build-docs.py::rewrite_links",
+    "scripts/build-docs.py::repl_md",
+    "scripts/build-docs.py::render_sidebar",
+    "scripts/build-docs.py::breadcrumb",
+    "scripts/build-docs.py::md_to_html",
+    "scripts/build-docs.py::page",
+    "scripts/build-docs.py::main",
+    "scripts/build-docs.py::slug_for_href",
+    "scripts/build-docs.py::slug_for_href()"
+  ],
+  "agent": "runtime"
+}

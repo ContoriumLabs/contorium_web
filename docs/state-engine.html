@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contorium L0–L5 state engine model." />
+    <title>State engine — Contorium Docs</title>
+    <link rel="icon" href="../logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body class="docs-body">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a href="../index.html" class="logo">
+          <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
+          Contorium
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#features">Product</a>
+          <a href="../index.html#install">Install</a>
+          <a href="../mcp/">MCP setup</a>
+          <a href="index.html" class="nav-active">Docs</a>
+          <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+    <div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation">
+        <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
+<li><a href="index.html">Overview</a></li>
+<li><a href="install.html">Install & use</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Adapters</p><ul class="docs-nav">
+<li><a href="ide-extension.html">IDE extension</a></li>
+<li><a href="mcp.html">MCP server</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="dashboard.html">Runtime dashboard</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Architecture</p><ul class="docs-nav">
+<li><a href="architecture-v3.html">Architecture V3.1</a></li>
+<li><a href="architecture-v2-2.html">Architecture V2.2</a></li>
+<li><a href="state-engine.html" class="is-active">State engine</a></li>
+<li><a href="engineering-closure.html">Engineering closure</a></li>
+<li><a href="runtime.html">Runtime package</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Reference</p><ul class="docs-nav">
+<li><a href="architecture-v2.html">Architecture V2 (legacy)</a></li>
+<li><a href="upgrade-plan.html">Upgrade plan 2.x</a></li>
+</ul></div>
+      </aside>
+      <main class="docs-main">
+        <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / State engine</nav>
+        <article class="docs-prose">
+          <h1>Contorium State Engine (v1 + v2 Safe)</h1>
+<p>Install and daily use: <a href="ide-extension.html">IDE_EXTENSION.md</a> · <a href="mcp.html">MCP.md</a> · <a href="install.html">INSTALL.md</a></p>
+<h2>v2 Safe State Engine (current)</h2>
+<p>v2 adds <strong>conflict audit</strong> and <strong>source tagging</strong> without auto-resolution:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>v1</th>
+<th>v2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>State generation</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Normalization / Task isolation</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Source tags <code>(from IDE/MCP/…)</code></td>
+<td>—</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Conflict detection</td>
+<td>—</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Auto decision</td>
+<td>—</td>
+<td>❌ (forbidden)</td>
+</tr>
+</tbody>
+</table>
+<h3>v2 pipeline</h3>
+<pre><code>L2 State Builder (tagged entries)
+  → L3 Normalization
+  → Conflict Detector (UNRESOLVED only)
+  → L4 Snapshot (+ conflicts block when present)
+  → L5 Intent (sidebar / export, no backflow)
+</code></pre>
+<h3>v2 artifacts</h3>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.contora/state-engine/conflicts.json</code></td>
+<td>Unresolved conflicts for MCP + sidebar</td>
+</tr>
+<tr>
+<td><code>project-state.json</code> <code>engine_version: 2</code></td>
+<td>Tagged module/decision lines</td>
+</tr>
+</tbody>
+</table>
+<h3>Principles (v2)</h3>
+<ol>
+<li><strong>No Auto Decision</strong> — system surfaces conflicts, never picks truth  </li>
+<li><strong>Conflict Transparency</strong> — shown in snapshot, export, sidebar, MCP  </li>
+<li><strong>Snapshot Stability</strong> — Intent cannot change L4  </li>
+</ol>
+<h3>MCP (additive)</h3>
+<ul>
+<li><code>get_state_conflicts</code> — read conflict audit artifact  </li>
+</ul>
+<hr>
+<h1>Contorium State Engine v1.0</h1>
+<p>Contorium is a <strong>Project State Operating System</strong> — not a chat memory or prompt concatenation tool.</p>
+<h2>Layer model (strict separation)</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Source in repo</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L0</strong></td>
+<td>Task Anchor</td>
+<td><code>state.currentTask</code> → <code>extractTaskAnchor()</code></td>
+<td>User alignment only. No inference, no intents, no next actions.</td>
+</tr>
+<tr>
+<td><strong>L1</strong></td>
+<td>Event Layer</td>
+<td><code>EventStore</code>, scanner, git</td>
+<td>Facts only (<code>file_edit</code>, <code>file_save</code>, …).</td>
+</tr>
+<tr>
+<td><strong>L2</strong></td>
+<td>State Builder</td>
+<td><code>src/state-builder/builder.ts</code></td>
+<td>Describes what happened (modules, problems, milestones). <strong>No Task, no Intent graph input.</strong></td>
+</tr>
+<tr>
+<td><strong>L3</strong></td>
+<td>Normalization</td>
+<td><code>src/state-engine/normalization.ts</code></td>
+<td>Dedupe, strip Task echo, compress similar next actions.</td>
+</tr>
+<tr>
+<td><strong>L4</strong></td>
+<td>Snapshot</td>
+<td><code>src/state-builder/snapshot.ts</code> → <code>.contora/state-builder/project-snapshot.md</code></td>
+<td>Output for AI: goal, stage, modules, problems, milestones, next actions (gap-based).</td>
+</tr>
+<tr>
+<td><strong>L5</strong></td>
+<td>Intent (weak)</td>
+<td><code>src/intelligence/</code>, <code>src/intent-graph/</code></td>
+<td>Auxiliary only. <strong>Cannot modify L4.</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>Pipeline (stable order)</h2>
+<pre><code>L0 Task Anchor (sidebar &quot;Current focus&quot;)
+        ↓ (isolated)
+L1 Events
+        ↓
+L2 State Builder (events + summary, no task)
+        ↓
+L3 Normalization
+        ↓
+L4 Snapshot (.contora/state-builder/)
+        ↓
+L5 Intent graph + intelligence (sidebar / optional export section)
+</code></pre>
+<p>Implemented in <code>CognitionPipeline.runUpdate()</code>:</p>
+<ol>
+<li><code>buildStateSummary</code> — events only (no <code>currentTask</code> in intent derivation)</li>
+<li><code>buildIntentGraph</code> — parallel L5 artifact</li>
+<li><code>rebuildProjectStateArtifacts</code> — L2 → L3 → L4 (graph <strong>not</strong> passed in)</li>
+</ol>
+<h2>Module map</h2>
+<pre><code>extension.ts
+  ├─ Scanner / EventStore          → L1
+  ├─ state.json (unchanged schema) → runtime continuity
+  └─ CognitionPipeline
+        ├─ intelligence/           → L5 summary (state-summary.json)
+        ├─ intent-graph/           → L5 graph (graph.json)
+        └─ state-builder/          → L2 raw state
+              └─ state-engine/     → L3 normalize + L0 anchor + gap next-actions
+</code></pre>
+<h2>Copy AI-ready context (v2.1 converged)</h2>
+<p>Markdown section order:</p>
+<ol>
+<li><strong>TASK ANCHOR</strong> — user focus only (no meta)</li>
+<li><strong>PROJECT SNAPSHOT</strong> — pure facts (source tags stripped at export)</li>
+<li><strong>WORKING CONTEXT</strong> — active files + recent work (merged)</li>
+<li><strong>INSIGHTS</strong> — max 3 lightweight lines (no weights / intent graph)</li>
+<li><strong>NOTES</strong> / <strong>INSTRUCTION</strong> — when set</li>
+</ol>
+<p>Removed from export: <code>INFERRED BEHAVIOR</code>, <code>STATE CONFLICTS</code>, <code>(from IDE/MCP)</code> tags, layer meta comments.</p>
+<p>Conflicts remain in sidebar + MCP (<code>get_state_conflicts</code>); not copied into AI handoff.</p>
+<h2>Core rules</h2>
+<ol>
+<li><strong>Task isolation</strong> — <code>TASK ≠ input to inference</code></li>
+<li><strong>Intent no backflow</strong> — Intent graph does not feed <code>buildProjectBuiltState</code></li>
+<li><strong>Next actions</strong> — <code>deriveNextActionsFromGaps()</code> only; never copy Task or intent graph lines</li>
+<li><strong>Traceability</strong> — modules ← file events; problems ← git/MCP; milestones ← creates/commits</li>
+</ol>
+<h2>Artifacts</h2>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.contora/state.json</code></td>
+<td>Runtime (unchanged)</td>
+</tr>
+<tr>
+<td><code>.contora/intelligence/state-summary.json</code></td>
+<td>L5</td>
+</tr>
+<tr>
+<td><code>.contora/intent-graph/graph.json</code></td>
+<td>L5</td>
+</tr>
+<tr>
+<td><code>.contora/state-builder/project-state.json</code></td>
+<td>L2+L3 (+ <code>task_anchor</code> metadata)</td>
+</tr>
+<tr>
+<td><code>.contora/state-builder/project-snapshot.md</code></td>
+<td>L4</td>
+</tr>
+</tbody>
+</table>
+<h2>MCP</h2>
+<p>Existing tools unchanged. <code>get_project_snapshot</code> / <code>get_project_state</code> return L4 artifacts after normalization.</p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

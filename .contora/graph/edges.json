@@ -1,0 +1,462 @@
+{
+  "schemaVersion": "1",
+  "generatedAt": 1780841375184,
+  "graphBuildId": "graph_mq3uz3dc",
+  "edges": [
+    {
+      "source": "mod::scripts",
+      "target": "file::scripts/build-docs.py",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/build-docs.py",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::slug_for_href",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::rewrite_links",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::repl_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::render_sidebar",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::breadcrumb",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::md_to_html",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::main",
+      "target": "scripts/build-docs.py::function::page",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::slug_for_href",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::rewrite_links",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::repl_md",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::render_sidebar",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::breadcrumb",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::md_to_html",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/build-docs.py::function::page",
+      "target": "scripts/build-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    }
+  ]
+}

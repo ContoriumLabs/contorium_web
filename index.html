@@ -249,7 +249,7 @@
                   >
                 </li>
                 <li>
-                  <a href="docs/IDE_EXTENSION.md">IDE docs <span class="install-arrow" aria-hidden="true">→</span></a>
+                  <a href="docs/ide-extension.html">IDE docs <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
               </ul>
             </div>
@@ -269,7 +269,7 @@
                   <a href="mcp/#build">Local MCP server <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
                 <li>
-                  <a href="docs/MCP.md">MCP docs <span class="install-arrow" aria-hidden="true">→</span></a>
+                  <a href="docs/mcp.html">MCP docs <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
               </ul>
             </div>
@@ -277,19 +277,22 @@
               <h3>CLI</h3>
               <ul class="install-links">
                 <li>
-                  <a href="docs/CLI.md">CLI reference <span class="install-arrow" aria-hidden="true">→</span></a>
+                  <a href="docs/cli.html">CLI reference <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
                 <li>
-                  <a href="docs/INSTALL.md">Full install guide <span class="install-arrow" aria-hidden="true">→</span></a>
+                  <a href="docs/install.html">Full install guide <span class="install-arrow" aria-hidden="true">→</span></a>
+                </li>
+                <li>
+                  <a href="docs/dashboard.html">Runtime dashboard <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
               </ul>
               <div class="code-block" style="margin-top: 12px">
                 <pre><code style="font-size: 0.78rem">npm run compile
 npx contorium init .
-npx contorium sync .
-npx contorium handoff .
-npx contorium graph-snapshot .
-npx contorium export .</code></pre>
+npx contorium handoff
+npx contorium handoff --copy-to-ai
+# Passive dashboard: Space · Enter/i inject · c copy
+# MCP: host auto-spawns @contorium/mcp</code></pre>
               </div>
             </div>
           </div>
@@ -337,7 +340,7 @@ npx contorium export .</code></pre>
           </ul>
           <div class="footer-minimal-links">
             <a href="docs/">Docs</a>
-            <a href="docs/INSTALL.md">Install</a>
+            <a href="docs/install.html">Install</a>
             <a href="mcp/">MCP</a>
             <a href="architecture/">Architecture</a>
             <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>

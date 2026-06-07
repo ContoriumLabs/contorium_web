@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contorium VS Code / Cursor extension guide." />
+    <title>IDE extension — Contorium Docs</title>
+    <link rel="icon" href="../logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body class="docs-body">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a href="../index.html" class="logo">
+          <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
+          Contorium
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#features">Product</a>
+          <a href="../index.html#install">Install</a>
+          <a href="../mcp/">MCP setup</a>
+          <a href="index.html" class="nav-active">Docs</a>
+          <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+    <div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation">
+        <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
+<li><a href="index.html">Overview</a></li>
+<li><a href="install.html">Install & use</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Adapters</p><ul class="docs-nav">
+<li><a href="ide-extension.html" class="is-active">IDE extension</a></li>
+<li><a href="mcp.html">MCP server</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="dashboard.html">Runtime dashboard</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Architecture</p><ul class="docs-nav">
+<li><a href="architecture-v3.html">Architecture V3.1</a></li>
+<li><a href="architecture-v2-2.html">Architecture V2.2</a></li>
+<li><a href="state-engine.html">State engine</a></li>
+<li><a href="engineering-closure.html">Engineering closure</a></li>
+<li><a href="runtime.html">Runtime package</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Reference</p><ul class="docs-nav">
+<li><a href="architecture-v2.html">Architecture V2 (legacy)</a></li>
+<li><a href="upgrade-plan.html">Upgrade plan 2.x</a></li>
+</ul></div>
+      </aside>
+      <main class="docs-main">
+        <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / IDE extension</nav>
+        <article class="docs-prose">
+          <h1>Contorium IDE Extension (VS Code / Cursor)</h1>
+<p>Extension ID: <code>franklee-dev.contorium</code><br>
+Display name: <strong>Contorium</strong><br>
+Requires: VS Code / Cursor <strong>1.85+</strong>, <strong>folder workspace</strong> (single-file windows are limited)</p>
+<p>The extension provides: sidebar UI, file/Git scanning, <code>.contora/state.json</code>, State Engine artifacts, and <strong>one-click Copy AI-ready context</strong>.<br>
+Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview: <a href="install.html">INSTALL.md</a>.</p>
+<hr>
+<h2>Command cheat sheet</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Install (VSIX)</strong></td>
+<td><code>npm run vsix</code> → <strong>Install from VSIX</strong> → <strong>Developer: Reload Window</strong></td>
+</tr>
+<tr>
+<td><strong>Install (dev)</strong></td>
+<td><code>npm install &amp;&amp; npm run compile</code> → <strong>F5</strong> → open project folder in new window</td>
+</tr>
+<tr>
+<td><strong>Verify</strong></td>
+<td>Activity bar <strong>Contorium</strong> → sidebar shows Current focus / Copy button</td>
+</tr>
+<tr>
+<td><strong>Daily use</strong></td>
+<td><strong>Copy AI-ready context</strong>; auto Passive line + mini-graph; <strong>Space</strong> → Expanded in terminal</td>
+</tr>
+<tr>
+<td><strong>New AI chat</strong></td>
+<td>Auto inject prompt (notification + status bar <code>[?]</code>) — <strong>no command</strong></td>
+</tr>
+<tr>
+<td><strong>Settings</strong></td>
+<td><code>contora.autoAttachDashboard</code> (default <code>true</code>) — auto-start dashboard worker</td>
+</tr>
+<tr>
+<td><strong>Uninstall</strong></td>
+<td>Extensions → Contorium → Uninstall → Reload</td>
+</tr>
+<tr>
+<td><strong>Clear data (optional)</strong></td>
+<td>Project root: <code>Remove-Item -Recurse -Force .contora</code> (PowerShell)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Install</h2>
+<h3>Option A: VSIX (recommended)</h3>
+<ol>
+<li>Get <code>contorium-0.9.1.vsix</code> (or current version):<br>
+   - <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a>, or<br>
+   - Repo root: <code>npm run vsix</code> (Node.js 18+)</li>
+<li>Open <strong>VS Code</strong> or <strong>Cursor</strong></li>
+<li><strong>Extensions</strong> → <code>…</code> → <strong>Install from VSIX…</strong></li>
+<li>Select the <code>.vsix</code> file</li>
+<li><strong>Developer: Reload Window</strong></li>
+</ol>
+<h3>Option B: Run from source (development)</h3>
+<pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
+cd contorium
+npm install
+npm run compile
+</code></pre>
+<p>Open the repo in VS Code/Cursor → <strong>F5</strong> → open your project folder in the Extension Development Host window.</p>
+<h3>Option C: Marketplace (if published)</h3>
+<p>Search <strong>Contorium</strong>, publisher <strong>franklee-dev</strong>, then Reload Window.</p>
+<hr>
+<h2>Verify installation</h2>
+<ol>
+<li><strong>Contorium</strong> icon appears in the activity bar  </li>
+<li><strong>File → Open Folder</strong> (not single file only)  </li>
+<li>Sidebar shows:<br>
+   - Current focus input<br>
+   - <strong>Copy AI-ready context</strong> button<br>
+   - Workspace snapshot / Git sections  </li>
+</ol>
+<p>If the sidebar stays blank, see <a href="#troubleshooting">Troubleshooting</a>.</p>
+<hr>
+<h2>Usage</h2>
+<h3>Sidebar (main UI)</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Current focus</strong></td>
+<td>L0 task anchor → <code>state.json</code>; not auto-inferred</td>
+</tr>
+<tr>
+<td><strong>Context notes</strong></td>
+<td>Local notes included in export</td>
+</tr>
+<tr>
+<td><strong>Copy AI-ready context</strong></td>
+<td>V3.1 canonical context to clipboard (legacy full export)</td>
+</tr>
+<tr>
+<td><strong>Runtime dashboard (status bar)</strong></td>
+<td>CHP compact line from <code>handoff.json</code> + optional <code>⤷</code> mini-graph — click to expand</td>
+</tr>
+<tr>
+<td><strong>AI Cortex</strong></td>
+<td>Collapsible: Knowledge Graph, Hotspots, Function graph, Impact, Reason trace</td>
+</tr>
+<tr>
+<td><strong>Sync state to disk</strong></td>
+<td>Persist <code>state.json</code> immediately</td>
+</tr>
+<tr>
+<td><strong>Restore editors</strong></td>
+<td>Reopen editors from saved state</td>
+</tr>
+<tr>
+<td><strong>Project state</strong></td>
+<td>L4 snapshot preview (full body via Copy)</td>
+</tr>
+<tr>
+<td><strong>State conflicts</strong></td>
+<td>Unresolved v2 audit conflicts (display only)</td>
+</tr>
+<tr>
+<td><strong>Intent graph</strong></td>
+<td>L5 weak inference preview — <strong>not</strong> in main copy</td>
+</tr>
+</tbody>
+</table>
+<h3>Command palette</h3>
+<p><code>Ctrl+Shift+P</code> (macOS: <code>Cmd+Shift+P</code>), search <strong>Contorium</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Copy AI-ready context (clipboard)</td>
+<td>One-click export</td>
+</tr>
+<tr>
+<td>Save session state now</td>
+<td>Persist immediately</td>
+</tr>
+<tr>
+<td>Restore editors from saved state</td>
+<td>Restore editors</td>
+</tr>
+<tr>
+<td>Configure API key… (BYOK)</td>
+<td>Optional cloud model keys</td>
+</tr>
+<tr>
+<td>Observe workspace (AI summary)</td>
+<td>BYOK workspace summary</td>
+</tr>
+<tr>
+<td>Learn workspace intent (AI)</td>
+<td>BYOK intent learning</td>
+</tr>
+<tr>
+<td>Tighten context preview (AI)</td>
+<td>BYOK compress preview</td>
+</tr>
+<tr>
+<td>Start fresh AI context session</td>
+<td>Clear session events + derived cognition</td>
+</tr>
+<tr>
+<td>Show Runtime Dashboard</td>
+<td>Expand live Webview panel (<code>Ctrl+Shift+C</code>)</td>
+</tr>
+<tr>
+<td>Hide Runtime Dashboard</td>
+<td>Minimize dashboard (<code>Ctrl+Shift+M</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>When runtime handoff is pending, the status bar shows <strong><code>[?] Inject runtime?</code></strong> — click to inject context for your next AI chat (semi-auto; appears automatically on new chat when runtime is active).</p>
+<h3>Runtime dashboard (CRBP — automatic)</h3>
+<p>When <code>contora.autoAttachDashboard</code> is enabled (default):</p>
+<ol>
+<li>Opening a folder → <strong>bootstrap</strong> runs automatically.</li>
+<li><strong>Passive line</strong> on status bar (from <code>handoff.json</code> + mini-graph).</li>
+<li><strong>New AI chat</strong> → auto notification: <em>Inject context?</em> + status bar <strong><code>[?]</code></strong> (no command).</li>
+<li><strong>Expanded dashboard</strong> → <strong>Space</strong> in Contorium terminal tab (not <code>--show</code>).</li>
+<li>Terminal keys: <strong>Space</strong> toggle · <strong>c</strong> copy · <strong>Enter/i</strong> inject · <strong>n</strong> skip · <strong>q</strong> quit.</li>
+</ol>
+<p>Optional: <strong>Ctrl+Shift+C</strong> opens IDE Webview panel (secondary view).</p>
+<p>See <a href="dashboard.html">Runtime dashboard</a>.</p>
+<h3>Copy AI-ready context structure (V3.1 canonical)</h3>
+<p>Same as <code>contorium export</code> / <code>formatCanonicalAiMarkdown</code> (sections appear when data exists):</p>
+<pre><code class="language-text"># TASK ANCHOR
+# PROJECT SNAPSHOT          (L4 pure project state)
+# WORKING CONTEXT           (active files + recent Git)
+# COGNITIVE SNAPSHOT        (graph/snapshot.json)
+# CHANGE SET                (handoff modified symbols)
+# IMPACT SET                (affected functions)
+# AI HANDOFF (V3.1)         (goal / focus / risk / next)
+# CODE EVOLUTION            (timeline recent commits)
+# INSIGHTS                  (up to 4 weak hints, optional)
+# NOTES / INSTRUCTION
+</code></pre>
+<p>JSON export (<code>contora.exportFormat: json</code>) includes <code>cognitiveSnapshot</code> when the knowledge graph exists.</p>
+<p><strong>Not in main copy:</strong> full Intent graph, State conflict details, full <code>knowledge.json</code> (use COGNITIVE SNAPSHOT instead).</p>
+<h3>Local data layout</h3>
+<p>All data stays in the project; <strong>not uploaded by default</strong>:</p>
+<pre><code class="language-text">.contora/
+├── state.json
+├── events/&lt;sessionId&gt;.jsonl
+├── intelligence/              # L5 semantic summary
+├── intent-graph/              # L5 intent graph
+├── state-builder/             # L4 project state + snapshot.md
+├── state-engine/              # v2 conflict audit
+├── handoff.json               # CHP v1 AI handoff
+├── understanding_graph.json   # call chains + impact
+├── change.json / graph.json / timeline.json
+├── runtime.bootstrap.json     # runtime_id (session-level)
+├── mcp.auto-context.md        # after user confirms semi-auto injection
+├── mcp.handoff-injection.json
+├── dashboard.status.json      # view mode only (not state source)
+├── dashboard.signal.json
+├── dashboard.session.json
+├── graph/                     # V3.1 cognitive graph
+│   ├── knowledge.json
+│   ├── snapshot.json
+│   ├── hotspots.json
+│   └── metadata.json
+└── mcp/                       # MCP store_memory (if used)
+</code></pre>
+<p>Add <code>.contora/</code> to <code>.gitignore</code> (example provided in repo).</p>
+<h3>Working with MCP / CLI (optional)</h3>
+<p>Adapters are <strong>peers</strong> — the extension is not required for MCP/CLI.</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extension only</td>
+<td>Sidebar + copy is enough for daily use</td>
+</tr>
+<tr>
+<td>Extension + MCP</td>
+<td>Extension writes events; Agent reads via MCP</td>
+</tr>
+<tr>
+<td>No extension</td>
+<td>MCP or <code>contorium init</code> can bootstrap alone</td>
+</tr>
+</tbody>
+</table>
+<p>Same <code>.contora/</code> directory. See <a href="install.html">INSTALL.md</a>.</p>
+<hr>
+<h2>Uninstall</h2>
+<h3>Remove extension (keep project data)</h3>
+<ol>
+<li><strong>Extensions</strong> → <strong>Contorium</strong> → <strong>Uninstall</strong></li>
+<li><strong>Developer: Reload Window</strong></li>
+</ol>
+<p>Manual removal if corrupted:</p>
+<pre><code class="language-powershell">Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.cursor\extensions\franklee-dev.contorium-*&quot; -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.vscode\extensions\franklee-dev.contorium-*&quot; -ErrorAction SilentlyContinue
+</code></pre>
+<h3>Clear workspace Contorium data (optional)</h3>
+<p>Uninstalling the extension does <strong>not</strong> remove <code>.contora/</code>:</p>
+<pre><code class="language-powershell">Remove-Item -Recurse -Force .contora -ErrorAction SilentlyContinue
+Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
+</code></pre>
+<h3>Clear BYOK keys (optional)</h3>
+<p>API keys use VS Code <strong>SecretStorage</strong>; may persist after uninstall depending on IDE behavior.</p>
+<hr>
+<h2>Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sidebar loading/blank</td>
+<td>Usually <strong><code>@contora/state-core</code> not installed correctly</strong>: repo root <code>npm run compile</code> → Reload; compile before F5; reinstall VSIX after <code>npm run vsix</code>. Check <strong>Output → Extension Host</strong> for <code>state-core</code></td>
+</tr>
+<tr>
+<td>Cursor "installation corrupt"</td>
+<td>Remove extension dirs manually, reinstall VSIX; reinstall Cursor if needed</td>
+</tr>
+<tr>
+<td>Copy empty or stale</td>
+<td>Edit/save files, wait ~7s or <strong>Save session state now</strong>, then copy</td>
+</tr>
+<tr>
+<td>No <code>.contora</code></td>
+<td>Open folder; save once or <strong>Sync state to disk</strong></td>
+</tr>
+<tr>
+<td>VSIX install fails</td>
+<td>Confirm <code>npm run vsix</code> succeeds (~350–400KB); avoid broken symlink packages</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logs:</strong> <code>Ctrl+Shift+P</code> → <strong>Developer: Show Logs</strong> → <strong>Extension Host</strong>, filter <code>Contorium</code>.</p>
+<hr>
+<h2>Related docs</h2>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="install.html">Install / use / uninstall</a></li>
+<li><a href="dashboard.html">Runtime Dashboard (CRBP)</a></li>
+<li><a href="mcp.html">MCP</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="state-engine.html">State Engine</a></li>
+<li><a href="architecture-v3.html">Architecture V3.1</a></li>
+<li><a href="engineering-closure.html">Engineering Closure</a></li>
+<li><a href="runtime.html">Runtime package</a></li>
+</ul>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

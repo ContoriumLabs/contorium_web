@@ -93,25 +93,19 @@ extension.ts
               └─ state-engine/     → L3 normalize + L0 anchor + gap next-actions
 ```
 
-## Copy AI-ready context (V3.1 canonical)
+## Copy AI-ready context (v2.1 converged)
 
-Markdown section order (when data exists):
+Markdown section order:
 
 1. **TASK ANCHOR** — user focus only (no meta)
 2. **PROJECT SNAPSHOT** — pure facts (source tags stripped at export)
 3. **WORKING CONTEXT** — active files + recent work (merged)
-4. **COGNITIVE SNAPSHOT** — from `graph/snapshot.json` (V3.1)
-5. **CHANGE SET** / **IMPACT SET** — handoff-derived (V3.1)
-6. **AI HANDOFF (V3.1)** — goal / focus / risk / next actions
-7. **CODE EVOLUTION** — timeline recent commits
-8. **INSIGHTS** — up to 4 lightweight lines (optional)
-9. **NOTES** / **INSTRUCTION** — when set
+4. **INSIGHTS** — max 3 lightweight lines (no weights / intent graph)
+5. **NOTES** / **INSTRUCTION** — when set
 
-Removed from main export: full Intent graph, `STATE CONFLICTS` blocks, `(from IDE/MCP)` tags, layer meta comments.
+Removed from export: `INFERRED BEHAVIOR`, `STATE CONFLICTS`, `(from IDE/MCP)` tags, layer meta comments.
 
-Conflicts remain in sidebar + MCP (`get_state_conflicts`); not copied into AI handoff by default.
-
-See also: [IDE_EXTENSION.md](./IDE_EXTENSION.md) · [ARCHITECTURE_V3.md](./ARCHITECTURE_V3.md)
+Conflicts remain in sidebar + MCP (`get_state_conflicts`); not copied into AI handoff.
 
 ## Core rules
 
@@ -129,12 +123,7 @@ See also: [IDE_EXTENSION.md](./IDE_EXTENSION.md) · [ARCHITECTURE_V3.md](./ARCHI
 | `.contora/intent-graph/graph.json` | L5 |
 | `.contora/state-builder/project-state.json` | L2+L3 (+ `task_anchor` metadata) |
 | `.contora/state-builder/project-snapshot.md` | L4 |
-| `.contora/graph/knowledge.json` | V3.1 cognitive graph |
-| `.contora/graph/snapshot.json` | V3.1 cognitive summary |
-| `.contora/handoff.json` | V3.1 AI execution entry |
 
 ## MCP
 
 Existing tools unchanged. `get_project_snapshot` / `get_project_state` return L4 artifacts after normalization.
-
-V3.1 additions: `get_project_handoff`, `get_project_graph_snapshot`, `get_project_knowledge_graph` — see [MCP.md](./MCP.md).

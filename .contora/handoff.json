@@ -1,0 +1,106 @@
+{
+  "version": 2,
+  "generatedAt": 1780841375184,
+  "goal": "develop documentation, state engine and MCP integration",
+  "current_focus": "develop documentation, state engine and MCP integration — editing build-docs.py",
+  "key_changes": [
+    {
+      "symbol": "scripts/build-docs.py",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::slug_for_href",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::rewrite_links",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::repl_md",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::render_sidebar",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::breadcrumb",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::md_to_html",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::page",
+      "kind": "function",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "scripts/build-docs.py::main",
+      "kind": "function",
+      "change_type": "modified"
+    }
+  ],
+  "impact_summary": {
+    "risk": "high",
+    "affected_modules": [
+      "scripts/build-docs.py"
+    ],
+    "affected_functions": [
+      "scripts/build-docs.py::rewrite_links",
+      "scripts/build-docs.py::repl_md",
+      "scripts/build-docs.py::render_sidebar",
+      "scripts/build-docs.py::breadcrumb",
+      "scripts/build-docs.py::md_to_html",
+      "scripts/build-docs.py::page",
+      "scripts/build-docs.py::main",
+      "scripts/build-docs.py::slug_for_href"
+    ],
+    "details": [
+      "Changed functions: scripts/build-docs.py::slug_for_href, scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb, scripts/build-docs.py::md_to_html, scripts/build-docs.py::page, scripts/build-docs.py::main",
+      "Direct callers: scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb, scripts/build-docs.py::md_to_html, scripts/build-docs.py::page, scripts/build-docs.py::main, scripts/build-docs.py::slug_for_href"
+    ]
+  },
+  "next_actions": [
+    {
+      "action": "review",
+      "target": "review and commit pending changes",
+      "reason": ""
+    },
+    {
+      "action": "continue",
+      "target": "continue documentation updates",
+      "reason": ""
+    },
+    {
+      "action": "review",
+      "target": "review state persistence paths",
+      "reason": ""
+    },
+    {
+      "action": "review",
+      "target": "verify MCP tools against workspace",
+      "reason": ""
+    }
+  ],
+  "context_graph_refs": [
+    "fn:slug_for_href",
+    "fn:rewrite_links",
+    "fn:repl_md",
+    "fn:render_sidebar",
+    "fn:breadcrumb",
+    "fn:md_to_html",
+    "fn:page",
+    "fn:main"
+  ],
+  "summary": "Goal: develop documentation, state engine and MCP integration | Focus: develop documentation, state engine and MCP integration — editing build-docs.py | Changed: scripts/build-docs.py::slug_for_href, scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb | Impact (high): scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb"
+}
