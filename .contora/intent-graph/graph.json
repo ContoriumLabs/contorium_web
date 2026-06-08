@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1780841736428,
+  "updatedAt": 1780884240593,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -21,7 +21,7 @@
         "docs/IDE_EXTENSION.md",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780841736428,
+      "lastUpdated": 1780884240593,
       "learnedAt": 1780286520992
     },
     {
@@ -43,7 +43,7 @@
         "mcp/index.html",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780841736428,
+      "lastUpdated": 1780884240593,
       "learnedAt": 1780286520992
     },
     {
@@ -62,9 +62,10 @@
         "styles.css",
         "修改方案2.md",
         "docs/IDE_EXTENSION.md",
-        "mcp/index.html"
+        "mcp/index.html",
+        "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780548293247,
+      "lastUpdated": 1780884240593,
       "learnedAt": 1780286520992
     },
     {
@@ -86,14 +87,14 @@
         "mcp/index.html",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780841736428,
+      "lastUpdated": 1780884101659,
       "learnedAt": 1780286520992
     },
     {
       "id": "intent_mpuomx9j_yw4kyz",
       "text": "review state persistence and lifecycle logic",
-      "status": "PARTIAL",
-      "confidence": 0.35,
+      "status": "STALE",
+      "confidence": 0.2,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -108,7 +109,7 @@
         "mcp/index.html",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780841736428,
+      "lastUpdated": 1780884240593,
       "learnedAt": 1780286534119
     },
     {
@@ -164,7 +165,7 @@
         "修改方案2.md",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1780841192125,
+      "lastUpdated": 1780884240593,
       "learnedAt": 1780548054684
     }
   ],
@@ -681,6 +682,11 @@
     },
     {
       "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:docs/STATE_ENGINE.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
       "to": "file:docs/STATE_ENGINE.md",
       "type": "AFFECTS"
     }

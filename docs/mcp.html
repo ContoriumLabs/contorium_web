@@ -49,7 +49,7 @@
         <article class="docs-prose">
           <h1>Contorium MCP Server (<code>@contorium/mcp</code>)</h1>
 <p>stdio MCP server for <strong>Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI</strong>, and other MCP-compatible hosts.</p>
-<p><strong>You do not start MCP manually in normal use.</strong> After one-time configuration, the AI host (Codex, Claude, Cursor, etc.) <strong>spawns</strong> <code>contorium-mcp</code> automatically when a session starts.</p>
+<p><strong>You do not start MCP manually in normal use.</strong> After one-time configuration, the AI host (Codex, Claude, Cursor, etc.) <strong>spawns</strong> <code>@contorium/mcp</code> automatically when a session starts.</p>
 <p>Overview: <a href="install.html">INSTALL.md</a> · <a href="dashboard.html">Dashboard</a> · <a href="cli.html">CLI</a> · <a href="../index.html">Home</a></p>
 <hr>
 <h2>Quick reference</h2>
@@ -62,16 +62,12 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Build (from source)</strong></td>
-<td>Repo root: <code>npm install &amp;&amp; npm run compile</code></td>
-</tr>
-<tr>
-<td><strong>Verify (debug only)</strong></td>
-<td><code>npx contorium-mcp --workspace /path/to/project</code> → expect <code>ready on stdio</code>, then Ctrl+C</td>
-</tr>
-<tr>
-<td><strong>Published (npm)</strong></td>
+<td><strong>Install</strong></td>
 <td><code>npm install -g @contorium/mcp</code> · <code>contorium-mcp bootstrap --workspace .</code></td>
+</tr>
+<tr>
+<td><strong>Configure</strong></td>
+<td>Add <code>mcpServers.contorium</code> with <code>CONTORIUM_WORKSPACE</code> (see below)</td>
 </tr>
 <tr>
 <td><strong>Daily use</strong></td>
@@ -109,14 +105,6 @@
 <td>Workspace</td>
 <td>Real project <strong>folder</strong> (not a single file)</td>
 </tr>
-<tr>
-<td>Build</td>
-<td><code>npm run compile</code> or <code>npm run build:mcp</code> before first use (source install)</td>
-</tr>
-<tr>
-<td>Optional CLI</td>
-<td><code>@contora/cli</code> / <code>npx contorium</code> for dashboard bootstrap when not in monorepo</td>
-</tr>
 </tbody>
 </table>
 <hr>
@@ -125,7 +113,7 @@
         ↓
 Host reads .mcp.json / MCP settings
         ↓
-Host spawns: npx @contorium/mcp   (or node …/contorium-mcp.js)
+Host spawns: npx @contorium/mcp
         ↓
 MCP connects over stdio
         ↓
@@ -143,11 +131,11 @@ AI calls tools (get_project_handoff, …) when needed
 <tbody>
 <tr>
 <td>Configure MCP once per host</td>
-<td>Run <code>npx contorium-mcp</code> in a terminal before opening Codex (unless debugging)</td>
+<td>Run MCP in a terminal before opening Codex (unless debugging)</td>
 </tr>
 <tr>
 <td>Set <code>CONTORIUM_WORKSPACE</code> to your <strong>project</strong> root</td>
-<td>Point workspace at the contorium source repo unless you develop contorium itself</td>
+<td>Point workspace at the wrong folder</td>
 </tr>
 <tr>
 <td>Restart Agent / reload MCP after config changes</td>
@@ -155,6 +143,20 @@ AI calls tools (get_project_handoff, …) when needed
 </tr>
 </tbody>
 </table>
+<hr>
+<h2>Install</h2>
+<pre><code class="language-bash">npm install -g @contorium/mcp
+contorium-mcp bootstrap --workspace /path/to/your-project
+</code></pre>
+<p>Optional verify (debug — press Ctrl+C to exit):</p>
+<pre><code class="language-bash">contorium-mcp --workspace /path/to/your-project
+# Expect:
+# [contorium-mcp] workspace: …
+# [contorium-mcp] ready on stdio
+</code></pre>
+<p><strong>Bootstrap only</strong> (sync <code>.contora</code> without stdio server):</p>
+<pre><code class="language-bash">contorium-mcp bootstrap --workspace /path/to/your-project
+</code></pre>
 <hr>
 <h2>Workspace resolution</h2>
 <p>The server resolves the project root in this order:</p>
@@ -165,81 +167,13 @@ AI calls tools (get_project_handoff, …) when needed
 <li>Walk up from cwd to find <code>.contora/state.json</code></li>
 </ol>
 <hr>
-<h2>Install from source</h2>
-<pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile
-</code></pre>
-<p>Entry points:</p>
-<table>
-<thead>
-<tr>
-<th>Entry</th>
-<th>Path</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Standard bin (recommended)</strong></td>
-<td><code>packages/mcp/bin/contorium-mcp.js</code></td>
-</tr>
-<tr>
-<td>Monorepo launcher</td>
-<td><code>bin/contorium-mcp-launch.cjs</code> (delegates to standard bin)</td>
-</tr>
-<tr>
-<td>Compiled server</td>
-<td><code>packages/mcp/dist/server.js</code> (direct / Inspector)</td>
-</tr>
-</tbody>
-</table>
-<p>Repo root also exposes: <code>npx contorium-mcp</code> after <code>npm link</code> or via root <code>package.json</code> bin.</p>
-<p>Verify (debug):</p>
-<pre><code class="language-bash">npx contorium-mcp --workspace /path/to/your-project
-# Expect:
-# [contorium-mcp] workspace: …
-# [contorium-mcp] ready on stdio
-</code></pre>
-<p>Press Ctrl+C to exit. In production, the AI host keeps this process alive.</p>
-<p><strong>Bootstrap only</strong> (sync <code>.contora</code> without stdio server):</p>
-<pre><code class="language-bash">npx contorium-mcp bootstrap --workspace /path/to/your-project
-</code></pre>
-<hr>
-<h2>Configuration templates</h2>
+<h2>Configuration template</h2>
 <p>Replace paths with <strong>your</strong> absolute paths. On Windows, prefer forward slashes: <code>E:/projects/my-app</code>.</p>
-<h3>Template A — local development (this repo)</h3>
-<pre><code class="language-json">{
-  &quot;mcpServers&quot;: {
-    &quot;contorium&quot;: {
-      &quot;command&quot;: &quot;node&quot;,
-      &quot;args&quot;: [&quot;E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js&quot;],
-      &quot;env&quot;: {
-        &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
-      }
-    }
-  }
-}
-</code></pre>
-<h3>Template B — monorepo launcher (legacy-compatible)</h3>
-<pre><code class="language-json">{
-  &quot;mcpServers&quot;: {
-    &quot;contorium&quot;: {
-      &quot;command&quot;: &quot;node&quot;,
-      &quot;args&quot;: [&quot;E:/path/to/contorium/bin/contorium-mcp-launch.cjs&quot;],
-      &quot;env&quot;: {
-        &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
-      }
-    }
-  }
-}
-</code></pre>
-<h3>Template C — npm package (when published)</h3>
 <pre><code class="language-json">{
   &quot;mcpServers&quot;: {
     &quot;contorium&quot;: {
       &quot;command&quot;: &quot;npx&quot;,
-      &quot;args&quot;: [&quot;@contorium/mcp&quot;],
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@contorium/mcp&quot;],
       &quot;env&quot;: {
         &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
       }
@@ -251,14 +185,13 @@ npm run compile
 <h2>Host setup (step by step)</h2>
 <h3>Cursor</h3>
 <ol>
-<li>Build contorium (<code>npm run compile</code>).</li>
 <li>Create <strong><code>.cursor/mcp.json</code></strong> in your <strong>project</strong> root (or use Cursor Settings → MCP):</li>
 </ol>
 <pre><code class="language-json">{
   &quot;mcpServers&quot;: {
     &quot;contorium&quot;: {
-      &quot;command&quot;: &quot;node&quot;,
-      &quot;args&quot;: [&quot;E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js&quot;],
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@contorium/mcp&quot;],
       &quot;env&quot;: {
         &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
       }
@@ -266,7 +199,7 @@ npm run compile
   }
 }
 </code></pre>
-<ol start="3">
+<ol start="2">
 <li><strong>Settings → MCP</strong> → enable <code>contorium</code>.</li>
 <li><strong>Developer: Reload Window</strong> or restart Agent.</li>
 <li>Confirm MCP shows connected; ask Agent to call <code>get_project_handoff</code>.</li>
@@ -274,37 +207,29 @@ npm run compile
 <p><strong>Uninstall:</strong> Settings → MCP → remove <code>contorium</code>, or delete the config entry.</p>
 <hr>
 <h3>Claude Code</h3>
-<p><strong>Option 1 — Plugin (recommended)</strong></p>
-<pre><code class="language-bash">cd /path/to/contorium
-npm run build:mcp
-claude --plugin-dir /path/to/contorium
-</code></pre>
-<p>Uses <code>.mcp.claude.json</code>: <code>CONTORIUM_WORKSPACE</code> defaults to <code>${CLAUDE_PROJECT_DIR}</code>.</p>
-<p><strong>Option 2 — CLI register (project scope)</strong></p>
+<p><strong>Option 1 — CLI register (project scope, recommended)</strong></p>
 <pre><code class="language-bash">cd /path/to/your-project
-claude mcp add --scope project contorium -- node E:/path/to/contorium/bin/contorium-mcp-launch.cjs
+claude mcp add --scope project contorium -- npx -y @contorium/mcp
 </code></pre>
-<p><strong>Option 3 — Project <code>.mcp.json</code></strong></p>
-<p>Same JSON as <a href="#template-a--local-development-this-repo">Template A</a> in your project root.</p>
+<p><strong>Option 2 — Project <code>.mcp.json</code></strong></p>
+<p>Use the <a href="#configuration-template">configuration template</a> in your project root.</p>
 <p><strong>Uninstall:</strong> <code>claude mcp remove contorium</code></p>
 <hr>
 <h3>OpenAI Codex</h3>
 <p><strong>Option 1 — CLI</strong></p>
-<pre><code class="language-bash">cd /path/to/contorium
-npm run build:mcp
-codex mcp add contorium -- node E:/path/to/contorium/bin/contorium-mcp-launch.cjs
+<pre><code class="language-bash">cd /path/to/your-project
+codex mcp add contorium -- npx -y @contorium/mcp
 </code></pre>
 <p>Codex injects <code>CODEX_PROJECT_DIR</code>; often no extra env is needed when working inside the project directory.</p>
-<p><strong>Option 2 — Codex plugin</strong></p>
-<p>Use repo <a href="https://github.com/ContoriumLabs/contorium/blob/main/.mcp.json"><code>.mcp.json</code></a> with <a href="https://github.com/ContoriumLabs/contorium/tree/main/.codex-plugin"><code>.codex-plugin/plugin.json</code></a>. See <a href="../mcp/#codex">MCP Codex setup</a>.</p>
-<p><strong>Option 3 — <code>config.toml</code> (some Codex versions)</strong></p>
+<p><strong>Option 2 — <code>config.toml</code> (some Codex versions)</strong></p>
 <pre><code class="language-toml">[mcp_servers.contorium]
-command = &quot;node&quot;
-args = [&quot;E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js&quot;]
+command = &quot;npx&quot;
+args = [&quot;-y&quot;, &quot;@contorium/mcp&quot;]
 
 [mcp_servers.contorium.env]
 CONTORIUM_WORKSPACE = &quot;E:/path/to/your-project&quot;
 </code></pre>
+<p>Interactive setup: <a href="../mcp/#codex">MCP setup page</a>.</p>
 <p><strong>Uninstall:</strong> <code>codex mcp remove contorium</code></p>
 <hr>
 <h3>Gemini CLI</h3>
@@ -313,28 +238,12 @@ CONTORIUM_WORKSPACE = &quot;E:/path/to/your-project&quot;
 <li>Global: <code>~/.gemini/settings.json</code></li>
 <li>Project: <code>&lt;project&gt;/.gemini/settings.json</code></li>
 </ul>
-<pre><code class="language-json">{
-  &quot;mcpServers&quot;: {
-    &quot;contorium&quot;: {
-      &quot;command&quot;: &quot;node&quot;,
-      &quot;args&quot;: [&quot;/absolute/path/to/contorium/packages/mcp/bin/contorium-mcp.js&quot;],
-      &quot;env&quot;: {
-        &quot;CONTORIUM_WORKSPACE&quot;: &quot;/absolute/path/to/your-project&quot;
-      }
-    }
-  }
-}
-</code></pre>
+<p>Use the <a href="#configuration-template">configuration template</a>.</p>
 <p>Restart the Gemini CLI session after saving.</p>
 <p><strong>Uninstall:</strong> Remove <code>contorium</code> from <code>mcpServers</code>.</p>
 <hr>
 <h3>Other MCP hosts (Continue, Cline, custom TUIs, …)</h3>
-<p>Any host that supports <strong>stdio MCP</strong> can use <a href="#template-a--local-development-this-repo">Template A</a>. Paste the <code>mcpServers.contorium</code> block into that host's MCP configuration format.</p>
-<hr>
-<h2>MCP Inspector (debug)</h2>
-<pre><code class="language-bash">npx @modelcontextprotocol/inspector node packages/mcp/dist/server.js
-</code></pre>
-<p>Invoke tools in the browser; set <code>CONTORIUM_WORKSPACE</code> in the Inspector environment if needed.</p>
+<p>Any host that supports <strong>stdio MCP</strong> can use the <a href="#configuration-template">configuration template</a>. Paste the <code>mcpServers.contorium</code> block into that host's MCP configuration format.</p>
 <hr>
 <h2>Standard MCP v1 tools (recommended)</h2>
 <table>
@@ -424,17 +333,16 @@ CONTORIUM_WORKSPACE = &quot;E:/path/to/your-project&quot;
    - <strong>Agent:</strong> <code>confirm_handoff_injection</code> / <code>skip_handoff_injection</code></li>
 <li>On confirm → <code>.contora/mcp.auto-context.md</code> + clipboard (IDE).</li>
 </ol>
-<p><strong>Debug only:</strong> <code>contorium handoff --prompt-new-chat</code> (TTY fallback).</p>
 <p>Each new chat re-prompts; skip/inject applies to the current chat only (<code>chat_session_id</code>).</p>
 <hr>
 <h2>Runtime bootstrap (automatic)</h2>
-<p>When MCP starts, it schedules (via CLI adapter, detached):</p>
+<p>When MCP starts, it schedules bootstrap and dashboard workers automatically:</p>
 <ul>
-<li><code>contorium bootstrap --source mcp</code> — sync + Passive dashboard worker</li>
+<li>Sync <code>.contora/</code> and start Passive dashboard</li>
 <li>MCP light sync — 5s poll + watch on <code>.contora/events</code> and <code>.git/HEAD</code></li>
 <li>Dashboard wake on file/git changes</li>
 </ul>
-<p>See <a href="dashboard.html">Runtime dashboard</a>. No manual <code>contorium attach</code> in normal use.</p>
+<p>See <a href="dashboard.html">Runtime dashboard</a>. No manual setup in normal use.</p>
 <hr>
 <h2>Environment variables</h2>
 <table>
@@ -521,6 +429,10 @@ CONTORIUM_WORKSPACE = &quot;E:/path/to/your-project&quot;
 <td>Gemini CLI</td>
 <td>Remove from <code>mcpServers</code> in settings.json</td>
 </tr>
+<tr>
+<td>npm package</td>
+<td><code>npm uninstall -g @contorium/mcp</code></td>
+</tr>
 </tbody>
 </table>
 <p>Clear MCP-only memory (optional, project root):</p>
@@ -539,43 +451,36 @@ CONTORIUM_WORKSPACE = &quot;E:/path/to/your-project&quot;
 <tbody>
 <tr>
 <td>MCP fails to start</td>
-<td><code>npm run compile</code>; Node 18+; use absolute paths in config</td>
+<td>Node 18+; reinstall <code>@contorium/mcp</code>; use absolute paths in config</td>
 </tr>
 <tr>
 <td><code>found: false</code> / no handoff</td>
-<td>Set <code>CONTORIUM_WORKSPACE</code>; run <code>npx contorium init .</code> in project</td>
+<td>Set <code>CONTORIUM_WORKSPACE</code>; run <code>contorium init .</code> in project</td>
 </tr>
 <tr>
 <td>Wrong project</td>
-<td><code>CONTORIUM_WORKSPACE</code> must be the <strong>application</strong> root, not contorium repo</td>
+<td><code>CONTORIUM_WORKSPACE</code> must be the <strong>application</strong> root</td>
 </tr>
 <tr>
 <td>Stale state</td>
-<td>Save files; wait for MCP sync; or <code>npx contorium sync .</code></td>
+<td>Save files; wait for MCP sync; or <code>contorium sync .</code></td>
 </tr>
 <tr>
 <td>Agent shows Canceled</td>
-<td>Often Agent init cancel, not MCP crash; test with Inspector</td>
+<td>Often Agent init cancel, not MCP crash; retry after reload</td>
 </tr>
 <tr>
 <td>Dashboard not visible</td>
-<td>Press <strong>Space</strong> in Contorium terminal tab, or enable IDE status bar — debug: <code>handoff --show</code> — see <a href="dashboard.html">Runtime dashboard</a></td>
+<td>Press <strong>Space</strong> in Contorium terminal tab, or enable IDE status bar — see <a href="dashboard.html">Runtime dashboard</a></td>
 </tr>
 <tr>
-<td>Published npm 404</td>
-<td>Run <code>npm login</code>; publish with <code>npm run publish:npm</code>; or use local <code>node …/contorium-mcp.js</code></td>
+<td>npm install fails</td>
+<td>Check network and Node version; try <code>npm install -g @contorium/mcp</code> again</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2>Build notes (maintainers)</h2>
-<pre><code class="language-bash">npm run build:mcp
-# or
-npm run compile
-</code></pre>
-<p>Package: <code>packages/mcp</code> · name <code>@contorium/mcp</code> · bin <code>contorium-mcp</code><br>
-Publish (maintainers, repo root): <code>npm run publish:npm</code> — bundles <code>@contora/state-core</code> inside the tarball (single npm package).</p>
-<h3><code>contorium-mcp</code> subcommands</h3>
+<h2><code>contorium-mcp</code> subcommands</h2>
 <table>
 <thead>
 <tr>
@@ -594,9 +499,6 @@ Publish (maintainers, repo root): <code>npm run publish:npm</code> — bundles <
 </tr>
 </tbody>
 </table>
-<pre><code class="language-bash">npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace E:/your-project
-</code></pre>
 <hr>
 <h2>Related docs</h2>
 <ul>
@@ -604,6 +506,7 @@ contorium-mcp bootstrap --workspace E:/your-project
 <li><a href="dashboard.html">Runtime Dashboard (CRBP)</a></li>
 <li><a href="cli.html">CLI</a></li>
 <li><a href="ide-extension.html">IDE Extension</a></li>
+<li><a href="../mcp/">Interactive MCP setup</a></li>
 </ul>
         </article>
       </main>

@@ -322,7 +322,7 @@
 </table>
 <p>Terminal tab name: <strong>Contorium Dashboard</strong> (background worker; optional).</p>
 <hr>
-<h2>CLI commands (debug only)</h2>
+<h2>Advanced commands (optional)</h2>
 <table>
 <thead>
 <tr>
@@ -364,13 +364,6 @@
 ├── dashboard.signal.json     # expand / minimize / filter signals
 └── dashboard.session.json    # IDE/MCP session marker
 </code></pre>
-<hr>
-<h2>Worker internals (maintainers)</h2>
-<ul>
-<li><strong>Refresh:</strong> <code>fs.watch</code> on <code>.contora/</code> (not tight polling on large repos)</li>
-<li><strong>Package:</strong> <code>packages/cli/src/dashboard/</code></li>
-<li><strong>Bootstrap:</strong> <code>packages/cli/src/runtime/bootstrap.ts</code></li>
-</ul>
 <hr>
 <h2>Related docs</h2>
 <ul>

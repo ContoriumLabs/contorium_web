@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": 1780841736159,
-  "project_intent": "develop documentation, state engine and MCP integration",
-  "current_focus": "work in architecture",
+  "generatedAt": 1780884240492,
+  "project_intent": "develop documentation, MCP integration and state engine",
+  "current_focus": "work in mcp",
   "active_domains": [
     "docs",
-    "state-engine",
     "mcp",
+    "state-engine",
     "ui",
     "ai",
     "build"
@@ -14,9 +14,9 @@
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
     {
-      "cluster": "architecture",
+      "cluster": "mcp",
       "files": [
-        "architecture/index.html"
+        "mcp/index.html"
       ],
       "weight": 0.62
     },
@@ -26,14 +26,7 @@
         "docs/IDE_EXTENSION.md",
         "docs/STATE_ENGINE.md"
       ],
-      "weight": 0.62
-    },
-    {
-      "cluster": "mcp",
-      "files": [
-        "mcp/index.html"
-      ],
-      "weight": 0.62
+      "weight": 0.47
     },
     {
       "cluster": "project root",
@@ -44,7 +37,7 @@
         "修",
         "修改方案2.md"
       ],
-      "weight": 0.46
+      "weight": 0.42
     },
     {
       "cluster": "blog",
@@ -52,13 +45,20 @@
         "blog/index.html"
       ],
       "weight": 0.42
+    },
+    {
+      "cluster": ".contora / events",
+      "files": [
+        ".contora/events/sess_mp487yx1_2450523b.jsonl"
+      ],
+      "weight": 0.32
     }
   ],
   "next_likely_actions": [
     "update documentation for recent changes",
-    "review state persistence and lifecycle logic",
-    "iterate on index.html",
-    "iterate on IDE_EXTENSION.md"
+    "verify MCP tools against workspace state",
+    "iterate on IDE_EXTENSION.md",
+    "iterate on index.html"
   ],
   "confidence": 0.77
 }

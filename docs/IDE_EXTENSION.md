@@ -4,7 +4,7 @@ Extension ID: `franklee-dev.contorium`
 Display name: **Contorium**  
 Requires: VS Code / Cursor **1.85+**, **folder workspace** (single-file windows are limited)
 
-The extension provides: sidebar UI, file/Git scanning, `.contora/state.json`, State Engine artifacts, and **one-click Copy AI-ready context**.  
+The extension provides: sidebar UI, file/Git scanning, `.contora/state.json`, and **one-click Copy AI-ready context**.  
 Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTALL.md).
 
 ---
@@ -13,8 +13,8 @@ Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTAL
 
 | Phase | Action |
 |-------|--------|
-| **Install (VSIX)** | `npm run vsix` → **Install from VSIX** → **Developer: Reload Window** |
-| **Install (dev)** | `npm install && npm run compile` → **F5** → open project folder in new window |
+| **Install (VSIX)** | [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases) → **Install from VSIX…** → **Developer: Reload Window** |
+| **Install (Marketplace)** | Search **Contorium** → Install → Reload |
 | **Verify** | Activity bar **Contorium** → sidebar shows Current focus / Copy button |
 | **Daily use** | **Copy AI-ready context**; auto Passive line + mini-graph; **Space** → Expanded in terminal |
 | **New AI chat** | Auto inject prompt (notification + status bar `[?]`) — **no command** |
@@ -26,30 +26,17 @@ Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTAL
 
 ## Install
 
-### Option A: VSIX (recommended)
+### Option A: VSIX (recommended for Cursor)
 
-1. Get `contorium-0.9.1.vsix` (or current version):
-   - [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases), or
-   - Repo root: `npm run vsix` (Node.js 18+)
+1. Download `contorium-*.vsix` from [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases)
 2. Open **VS Code** or **Cursor**
 3. **Extensions** → `…` → **Install from VSIX…**
 4. Select the `.vsix` file
 5. **Developer: Reload Window**
 
-### Option B: Run from source (development)
+### Option B: Marketplace
 
-```bash
-git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile
-```
-
-Open the repo in VS Code/Cursor → **F5** → open your project folder in the Extension Development Host window.
-
-### Option C: Marketplace (if published)
-
-Search **Contorium**, publisher **franklee-dev**, then Reload Window.
+Search **Contorium**, publisher **franklee-dev**, then Install and Reload Window.
 
 ---
 
@@ -215,11 +202,11 @@ API keys use VS Code **SecretStorage**; may persist after uninstall depending on
 
 | Symptom | Fix |
 |---------|-----|
-| Sidebar loading/blank | Usually **`@contora/state-core` not installed correctly**: repo root `npm run compile` → Reload; compile before F5; reinstall VSIX after `npm run vsix`. Check **Output → Extension Host** for `state-core` |
-| Cursor "installation corrupt" | Remove extension dirs manually, reinstall VSIX; reinstall Cursor if needed |
+| Sidebar loading/blank | Open a **folder** workspace; **Developer: Reload Window**; check **Output → Extension Host** for `Contorium` errors |
+| Cursor "installation corrupt" | Remove extension dirs manually (see Uninstall), reinstall VSIX from Releases; reinstall Cursor if needed |
 | Copy empty or stale | Edit/save files, wait ~7s or **Save session state now**, then copy |
 | No `.contora` | Open folder; save once or **Sync state to disk** |
-| VSIX install fails | Confirm `npm run vsix` succeeds (~350–400KB); avoid broken symlink packages |
+| VSIX install fails | Download a fresh `.vsix` from [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases); avoid partial downloads |
 
 **Logs:** `Ctrl+Shift+P` → **Developer: Show Logs** → **Extension Host**, filter `Contorium`.
 

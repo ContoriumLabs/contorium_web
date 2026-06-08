@@ -51,7 +51,7 @@
 <p>Extension ID: <code>franklee-dev.contorium</code><br>
 Display name: <strong>Contorium</strong><br>
 Requires: VS Code / Cursor <strong>1.85+</strong>, <strong>folder workspace</strong> (single-file windows are limited)</p>
-<p>The extension provides: sidebar UI, file/Git scanning, <code>.contora/state.json</code>, State Engine artifacts, and <strong>one-click Copy AI-ready context</strong>.<br>
+<p>The extension provides: sidebar UI, file/Git scanning, <code>.contora/state.json</code>, and <strong>one-click Copy AI-ready context</strong>.<br>
 Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview: <a href="install.html">INSTALL.md</a>.</p>
 <hr>
 <h2>Command cheat sheet</h2>
@@ -65,11 +65,11 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 <tbody>
 <tr>
 <td><strong>Install (VSIX)</strong></td>
-<td><code>npm run vsix</code> → <strong>Install from VSIX</strong> → <strong>Developer: Reload Window</strong></td>
+<td><a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a> → <strong>Install from VSIX…</strong> → <strong>Developer: Reload Window</strong></td>
 </tr>
 <tr>
-<td><strong>Install (dev)</strong></td>
-<td><code>npm install &amp;&amp; npm run compile</code> → <strong>F5</strong> → open project folder in new window</td>
+<td><strong>Install (Marketplace)</strong></td>
+<td>Search <strong>Contorium</strong> → Install → Reload</td>
 </tr>
 <tr>
 <td><strong>Verify</strong></td>
@@ -99,25 +99,16 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 </table>
 <hr>
 <h2>Install</h2>
-<h3>Option A: VSIX (recommended)</h3>
+<h3>Option A: VSIX (recommended for Cursor)</h3>
 <ol>
-<li>Get <code>contorium-0.9.1.vsix</code> (or current version):<br>
-   - <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a>, or<br>
-   - Repo root: <code>npm run vsix</code> (Node.js 18+)</li>
+<li>Download <code>contorium-*.vsix</code> from <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a></li>
 <li>Open <strong>VS Code</strong> or <strong>Cursor</strong></li>
 <li><strong>Extensions</strong> → <code>…</code> → <strong>Install from VSIX…</strong></li>
 <li>Select the <code>.vsix</code> file</li>
 <li><strong>Developer: Reload Window</strong></li>
 </ol>
-<h3>Option B: Run from source (development)</h3>
-<pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile
-</code></pre>
-<p>Open the repo in VS Code/Cursor → <strong>F5</strong> → open your project folder in the Extension Development Host window.</p>
-<h3>Option C: Marketplace (if published)</h3>
-<p>Search <strong>Contorium</strong>, publisher <strong>franklee-dev</strong>, then Reload Window.</p>
+<h3>Option B: Marketplace</h3>
+<p>Search <strong>Contorium</strong>, publisher <strong>franklee-dev</strong>, then Install and Reload Window.</p>
 <hr>
 <h2>Verify installation</h2>
 <ol>
@@ -342,11 +333,11 @@ Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
 <tbody>
 <tr>
 <td>Sidebar loading/blank</td>
-<td>Usually <strong><code>@contora/state-core</code> not installed correctly</strong>: repo root <code>npm run compile</code> → Reload; compile before F5; reinstall VSIX after <code>npm run vsix</code>. Check <strong>Output → Extension Host</strong> for <code>state-core</code></td>
+<td>Open a <strong>folder</strong> workspace; <strong>Developer: Reload Window</strong>; check <strong>Output → Extension Host</strong> for <code>Contorium</code> errors</td>
 </tr>
 <tr>
 <td>Cursor "installation corrupt"</td>
-<td>Remove extension dirs manually, reinstall VSIX; reinstall Cursor if needed</td>
+<td>Remove extension dirs manually (see Uninstall), reinstall VSIX from Releases; reinstall Cursor if needed</td>
 </tr>
 <tr>
 <td>Copy empty or stale</td>
@@ -358,7 +349,7 @@ Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
 </tr>
 <tr>
 <td>VSIX install fails</td>
-<td>Confirm <code>npm run vsix</code> succeeds (~350–400KB); avoid broken symlink packages</td>
+<td>Download a fresh <code>.vsix</code> from <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a>; avoid partial downloads</td>
 </tr>
 </tbody>
 </table>

@@ -10,13 +10,9 @@ Full reference: [docs/mcp.html](../docs/mcp.html) · Dashboard: [docs/dashboard.
 
 ## Quick start
 
-### From source (development)
-
 ```bash
-git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile
+npm install -g @contorium/mcp
+contorium-mcp bootstrap --workspace /path/to/your-project
 ```
 
 **`.cursor/mcp.json`** (project root — use absolute paths):
@@ -25,8 +21,8 @@ npm run compile
 {
   "mcpServers": {
     "contorium": {
-      "command": "node",
-      "args": ["E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js"],
+      "command": "npx",
+      "args": ["-y", "@contorium/mcp"],
       "env": {
         "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
       }
@@ -37,46 +33,20 @@ npm run compile
 
 Enable in **Cursor → Settings → MCP** → Reload Window.
 
-### npm (when published)
-
-```bash
-npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace /path/to/your-project
-```
-
-Host config:
-
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "npx",
-      "args": ["@contorium/mcp"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
 ### Host-specific one-liners
 
 ```bash
 # Codex
-codex mcp add contorium -- node E:/path/to/contorium/bin/contorium-mcp-launch.cjs
+codex mcp add contorium -- npx -y @contorium/mcp
 
-# Claude Code (plugin)
-claude --plugin-dir /path/to/contorium
-
-# Claude Code (MCP only)
-claude mcp add --scope project contorium -- node E:/path/to/contorium/bin/contorium-mcp-launch.cjs
+# Claude Code
+claude mcp add --scope project contorium -- npx -y @contorium/mcp
 ```
 
 Verify (debug only):
 
 ```bash
-npx contorium-mcp --workspace /path/to/your-project
+contorium-mcp --workspace /path/to/your-project
 # expect: ready on stdio
 ```
 
@@ -103,15 +73,13 @@ Legacy tools still supported: `get_project_snapshot`, `get_workspace_context`, `
 2. Agent asks Y/n (or terminal shows `[?]` → **Enter/i** · **n**)  
 3. On confirm → `.contora/mcp.auto-context.md` written  
 
-Debug: `contorium handoff --prompt-new-chat`
-
 ---
 
 ## CLI equivalent
 
 ```bash
-npx contorium handoff
-npx contorium handoff --copy-to-ai
+contorium handoff
+contorium handoff --copy-to-ai
 # Dashboard: Space in Contorium terminal · c copy
 ```
 

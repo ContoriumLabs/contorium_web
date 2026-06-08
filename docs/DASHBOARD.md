@@ -130,7 +130,7 @@ Terminal tab name: **Contorium Dashboard** (background worker; optional).
 
 ---
 
-## CLI commands (debug only)
+## Advanced commands (optional)
 
 | Command | Purpose |
 |---------|---------|
@@ -157,14 +157,6 @@ Terminal tab name: **Contorium Dashboard** (background worker; optional).
 ├── dashboard.signal.json     # expand / minimize / filter signals
 └── dashboard.session.json    # IDE/MCP session marker
 ```
-
----
-
-## Worker internals (maintainers)
-
-- **Refresh:** `fs.watch` on `.contora/` (not tight polling on large repos)
-- **Package:** `packages/cli/src/dashboard/`
-- **Bootstrap:** `packages/cli/src/runtime/bootstrap.ts`
 
 ---
 

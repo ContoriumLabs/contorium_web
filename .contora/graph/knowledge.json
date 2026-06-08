@@ -3,105 +3,105 @@
     "version": "3.1.0",
     "schemaVersion": "1",
     "closureVersion": "1",
-    "generatedAt": 1780841742321,
+    "generatedAt": 1780884241123,
     "workspaceId": "70995f99",
-    "graphBuildId": "graph_mq3v6ynl",
+    "graphBuildId": "graph_mq4khuxv",
     "sourceVersion": "0.9.1",
     "rebuildTrigger": "intent_change",
-    "lastCommitHash": "f0333b0"
+    "lastCommitHash": "406a255"
   },
   "nodes": [
     {
-      "id": "intent_0_develop_documentation_s",
+      "id": "intent_0_develop_documentation_M",
       "type": "intent",
-      "name": "develop documentation, state engine and MCP integration",
-      "updatedAt": 1780841742321
+      "name": "develop documentation, MCP integration and state engine",
+      "updatedAt": 1780884241123
     },
     {
-      "id": "intent_1_index_html_from_IDE_in",
-      "type": "intent",
-      "name": "index.html (from IDE) integration",
-      "updatedAt": 1780841742321
-    },
-    {
-      "id": "intent_2_IDE_EXTENSION_from_IDE_",
+      "id": "intent_1_IDE_EXTENSION_from_IDE_",
       "type": "intent",
       "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
-      "id": "intent_3_STATE_ENGINE_from_IDE_",
+      "id": "intent_2_index_html_from_IDE_in",
       "type": "intent",
-      "name": "STATE_ENGINE (from IDE) integration",
-      "updatedAt": 1780841742321
+      "name": "index.html (from IDE) integration",
+      "updatedAt": 1780884241123
     },
     {
-      "id": "intent_4_README_from_IDE_integr",
+      "id": "intent_3_README_from_IDE_integr",
       "type": "intent",
       "name": "README (from IDE) integration",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
-      "id": "intent_5__from_IDE_integrat",
+      "id": "intent_4__from_IDE_integrat",
       "type": "intent",
       "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
+    },
+    {
+      "id": "intent_5_sess_mp487yx1_2450523b_j",
+      "type": "intent",
+      "name": "sess_mp487yx1_2450523b.jsonl (from IDE) integration",
+      "updatedAt": 1780884241123
     },
     {
       "id": "mod::scripts",
       "type": "module",
       "name": "scripts",
       "path": "scripts",
-      "updatedAt": 1780841742321
-    },
-    {
-      "id": "mod::index.html (from IDE)",
-      "type": "module",
-      "name": "index.html (from IDE)",
-      "path": "index.html (from IDE)",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "mod::IDE_EXTENSION (from IDE)",
       "type": "module",
       "name": "IDE_EXTENSION (from IDE)",
       "path": "IDE_EXTENSION (from IDE)",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
-      "id": "mod::STATE_ENGINE (from IDE)",
+      "id": "mod::index.html (from IDE)",
       "type": "module",
-      "name": "STATE_ENGINE (from IDE)",
-      "path": "STATE_ENGINE (from IDE)",
-      "updatedAt": 1780841742321
+      "name": "index.html (from IDE)",
+      "path": "index.html (from IDE)",
+      "updatedAt": 1780884241123
     },
     {
       "id": "mod::README (from IDE)",
       "type": "module",
       "name": "README (from IDE)",
       "path": "README (from IDE)",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "mod::修改方案 (from IDE)",
       "type": "module",
       "name": "修改方案 (from IDE)",
       "path": "修改方案 (from IDE)",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
+    },
+    {
+      "id": "mod::sess_mp487yx1_2450523b.jsonl (from IDE)",
+      "type": "module",
+      "name": "sess_mp487yx1_2450523b.jsonl (from IDE)",
+      "path": "sess_mp487yx1_2450523b.jsonl (from IDE)",
+      "updatedAt": 1780884241123
     },
     {
       "id": "mod::index.html (from events)",
       "type": "module",
       "name": "index.html (from events)",
       "path": "index.html (from events)",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "file::scripts/build-docs.py",
       "type": "file",
       "name": "build-docs.py",
       "path": "scripts/build-docs.py",
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::slug_for_href",
@@ -109,9 +109,9 @@
       "name": "slug_for_href",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 140
+        "line": 138
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::rewrite_links",
@@ -119,9 +119,9 @@
       "name": "rewrite_links",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 153
+        "line": 151
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::repl_md",
@@ -129,9 +129,9 @@
       "name": "repl_md",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 154
+        "line": 152
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::render_sidebar",
@@ -139,9 +139,9 @@
       "name": "render_sidebar",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 163
+        "line": 161
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::breadcrumb",
@@ -149,9 +149,9 @@
       "name": "breadcrumb",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 174
+        "line": 172
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::md_to_html",
@@ -159,9 +159,9 @@
       "name": "md_to_html",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 181
+        "line": 179
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::page",
@@ -169,9 +169,9 @@
       "name": "page",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 190
+        "line": 188
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     },
     {
       "id": "scripts/build-docs.py::function::main",
@@ -179,9 +179,9 @@
       "name": "main",
       "path": "scripts/build-docs.py",
       "metadata": {
-        "line": 200
+        "line": 198
       },
-      "updatedAt": 1780841742321
+      "updatedAt": 1780884241123
     }
   ],
   "edges": [
@@ -644,7 +644,7 @@
   "intentMappings": [],
   "inferenceMappings": [
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::slug_for_href",
       "score": 0.542,
       "confidence": 0.542,
@@ -654,7 +654,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::rewrite_links",
       "score": 0.542,
       "confidence": 0.542,
@@ -664,7 +664,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::repl_md",
       "score": 0.542,
       "confidence": 0.542,
@@ -674,7 +674,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::render_sidebar",
       "score": 0.542,
       "confidence": 0.542,
@@ -684,7 +684,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::breadcrumb",
       "score": 0.542,
       "confidence": 0.542,
@@ -694,7 +694,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::md_to_html",
       "score": 0.542,
       "confidence": 0.542,
@@ -704,7 +704,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::page",
       "score": 0.542,
       "confidence": 0.542,
@@ -714,7 +714,7 @@
       ]
     },
     {
-      "intentId": "intent_1_index_html_from_IDE_in",
+      "intentId": "intent_2_index_html_from_IDE_in",
       "functionId": "scripts/build-docs.py::function::main",
       "score": 0.542,
       "confidence": 0.542,
@@ -724,7 +724,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::slug_for_href",
       "score": 0.5,
       "confidence": 0.5,
@@ -734,7 +734,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::rewrite_links",
       "score": 0.5,
       "confidence": 0.5,
@@ -744,7 +744,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::repl_md",
       "score": 0.5,
       "confidence": 0.5,
@@ -754,7 +754,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::render_sidebar",
       "score": 0.5,
       "confidence": 0.5,
@@ -764,7 +764,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::breadcrumb",
       "score": 0.5,
       "confidence": 0.5,
@@ -774,7 +774,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::md_to_html",
       "score": 0.5,
       "confidence": 0.5,
@@ -784,7 +784,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::page",
       "score": 0.5,
       "confidence": 0.5,
@@ -794,7 +794,7 @@
       ]
     },
     {
-      "intentId": "intent_0_develop_documentation_s",
+      "intentId": "intent_0_develop_documentation_M",
       "functionId": "scripts/build-docs.py::function::main",
       "score": 0.5,
       "confidence": 0.5,
@@ -804,7 +804,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::slug_for_href",
       "score": 0.5,
       "confidence": 0.5,
@@ -814,7 +814,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::rewrite_links",
       "score": 0.5,
       "confidence": 0.5,
@@ -824,7 +824,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::repl_md",
       "score": 0.5,
       "confidence": 0.5,
@@ -834,7 +834,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::render_sidebar",
       "score": 0.5,
       "confidence": 0.5,
@@ -844,7 +844,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::breadcrumb",
       "score": 0.5,
       "confidence": 0.5,
@@ -854,7 +854,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::md_to_html",
       "score": 0.5,
       "confidence": 0.5,
@@ -864,7 +864,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::page",
       "score": 0.5,
       "confidence": 0.5,
@@ -874,7 +874,7 @@
       ]
     },
     {
-      "intentId": "intent_2_IDE_EXTENSION_from_IDE_",
+      "intentId": "intent_1_IDE_EXTENSION_from_IDE_",
       "functionId": "scripts/build-docs.py::function::main",
       "score": 0.5,
       "confidence": 0.5,
@@ -884,7 +884,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::slug_for_href",
       "score": 0.5,
       "confidence": 0.5,
@@ -894,7 +894,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::rewrite_links",
       "score": 0.5,
       "confidence": 0.5,
@@ -904,7 +904,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::repl_md",
       "score": 0.5,
       "confidence": 0.5,
@@ -914,7 +914,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::render_sidebar",
       "score": 0.5,
       "confidence": 0.5,
@@ -924,7 +924,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::breadcrumb",
       "score": 0.5,
       "confidence": 0.5,
@@ -934,7 +934,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::md_to_html",
       "score": 0.5,
       "confidence": 0.5,
@@ -944,7 +944,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::page",
       "score": 0.5,
       "confidence": 0.5,
@@ -954,7 +954,7 @@
       ]
     },
     {
-      "intentId": "intent_3_STATE_ENGINE_from_IDE_",
+      "intentId": "intent_3_README_from_IDE_integr",
       "functionId": "scripts/build-docs.py::function::main",
       "score": 0.5,
       "confidence": 0.5,
@@ -964,7 +964,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::slug_for_href",
       "score": 0.5,
       "confidence": 0.5,
@@ -974,7 +974,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::rewrite_links",
       "score": 0.5,
       "confidence": 0.5,
@@ -984,7 +984,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::repl_md",
       "score": 0.5,
       "confidence": 0.5,
@@ -994,7 +994,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::render_sidebar",
       "score": 0.5,
       "confidence": 0.5,
@@ -1004,7 +1004,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::breadcrumb",
       "score": 0.5,
       "confidence": 0.5,
@@ -1014,7 +1014,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::md_to_html",
       "score": 0.5,
       "confidence": 0.5,
@@ -1024,7 +1024,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::page",
       "score": 0.5,
       "confidence": 0.5,
@@ -1034,7 +1034,7 @@
       ]
     },
     {
-      "intentId": "intent_4_README_from_IDE_integr",
+      "intentId": "intent_4__from_IDE_integrat",
       "functionId": "scripts/build-docs.py::function::main",
       "score": 0.5,
       "confidence": 0.5,
@@ -1044,7 +1044,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::slug_for_href",
       "score": 0.5,
       "confidence": 0.5,
@@ -1054,7 +1054,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::rewrite_links",
       "score": 0.5,
       "confidence": 0.5,
@@ -1064,7 +1064,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::repl_md",
       "score": 0.5,
       "confidence": 0.5,
@@ -1074,7 +1074,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::render_sidebar",
       "score": 0.5,
       "confidence": 0.5,
@@ -1084,7 +1084,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::breadcrumb",
       "score": 0.5,
       "confidence": 0.5,
@@ -1094,7 +1094,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::md_to_html",
       "score": 0.5,
       "confidence": 0.5,
@@ -1104,7 +1104,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::page",
       "score": 0.5,
       "confidence": 0.5,
@@ -1114,7 +1114,7 @@
       ]
     },
     {
-      "intentId": "intent_5__from_IDE_integrat",
+      "intentId": "intent_5_sess_mp487yx1_2450523b_j",
       "functionId": "scripts/build-docs.py::function::main",
       "score": 0.5,
       "confidence": 0.5,
@@ -1249,15 +1249,15 @@
   "intentTrees": [],
   "hotspots": [],
   "snapshot": {
-    "generatedAt": 1780841742321,
+    "generatedAt": 1780884241123,
     "topIntents": [],
     "topHotspots": [],
     "topFunctions": [],
     "nextActions": [
       "review and commit pending changes",
       "continue documentation updates",
-      "review state persistence paths",
-      "verify MCP tools against workspace"
+      "verify MCP tools against workspace",
+      "review state persistence paths"
     ],
     "graphSummary": {
       "nodeCount": 22,

@@ -94,7 +94,7 @@ HUB_CONTENT = """
     <a class="docs-card" href="install.html">
       <span class="docs-card-tag">Start here</span>
       <h3>Install &amp; use</h3>
-      <p>Three peer adapters, command matrix, npm install, uninstall.</p>
+      <p>Three peer adapters, install steps, command matrix, uninstall.</p>
     </a>
     <a class="docs-card" href="mcp.html">
       <span class="docs-card-tag">Agents</span>
@@ -104,7 +104,7 @@ HUB_CONTENT = """
     <a class="docs-card" href="cli.html">
       <span class="docs-card-tag">Terminal</span>
       <h3>CLI reference</h3>
-      <p><code>handoff</code>, dashboard keys, export, debug commands.</p>
+      <p><code>handoff</code>, dashboard keys, export, advanced commands.</p>
     </a>
     <a class="docs-card" href="dashboard.html">
       <span class="docs-card-tag">Runtime</span>
@@ -130,9 +130,7 @@ HUB_CONTENT = """
 </section>
 
 <p class="docs-footer-note">
-  Markdown sources remain in <code>docs/*.md</code> for editing.
-  Regenerate HTML with <code>python scripts/build-docs.py</code>.
-  Interactive MCP wiring: <a href="../mcp/">mcp/</a>.
+  Interactive MCP wiring: <a href="../mcp/">mcp/</a> · Full install guide: <a href="install.html">install.html</a>
 </p>
 """
 

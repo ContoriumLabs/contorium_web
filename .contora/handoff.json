@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "generatedAt": 1780841742321,
-  "goal": "develop documentation, state engine and MCP integration",
-  "current_focus": "develop documentation, state engine and MCP integration — editing build-docs.py",
+  "generatedAt": 1780884241123,
+  "goal": "develop documentation, MCP integration and state engine",
+  "current_focus": "develop documentation, MCP integration and state engine — editing build-docs.py",
   "key_changes": [
     {
       "symbol": "scripts/build-docs.py",
@@ -83,12 +83,12 @@
     },
     {
       "action": "review",
-      "target": "review state persistence paths",
+      "target": "verify MCP tools against workspace",
       "reason": ""
     },
     {
       "action": "review",
-      "target": "verify MCP tools against workspace",
+      "target": "review state persistence paths",
       "reason": ""
     }
   ],
@@ -102,5 +102,5 @@
     "fn:page",
     "fn:main"
   ],
-  "summary": "Goal: develop documentation, state engine and MCP integration | Focus: develop documentation, state engine and MCP integration — editing build-docs.py | Changed: scripts/build-docs.py::slug_for_href, scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb | Impact (high): scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb"
+  "summary": "Goal: develop documentation, MCP integration and state engine | Focus: develop documentation, MCP integration and state engine — editing build-docs.py | Changed: scripts/build-docs.py::slug_for_href, scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb | Impact (high): scripts/build-docs.py::rewrite_links, scripts/build-docs.py::repl_md, scripts/build-docs.py::render_sidebar, scripts/build-docs.py::breadcrumb"
 }

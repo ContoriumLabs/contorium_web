@@ -1,6 +1,6 @@
 # Contorium CLI
 
-The CLI is a **peer Runtime Adapter** with IDE and MCP, sharing `@contora/state-core` and `.contora/`.  
+The CLI is a **peer Runtime Adapter** with IDE and MCP, sharing `.contora/`.  
 Overview: [INSTALL.md](./INSTALL.md) · [Home](../index.html)
 
 ---
@@ -9,23 +9,21 @@ Overview: [INSTALL.md](./INSTALL.md) · [Home](../index.html)
 
 | Phase | Command |
 |-------|---------|
-| **Install** | `npm install && npm run compile` (contorium repo root) |
-| **Verify** | `npx contorium status .` or `npx contorium --help` |
-| **Global (optional)** | Repo root `npm link` → `contorium status .` anywhere |
-| **Init** | `npx contorium init [path]` |
-| **Refresh** | `npx contorium sync [path]` |
-| **L4 snapshot** | `npx contorium snapshot [path]` |
-| **Handoff (CHP v1)** | `npx contorium handoff` · `--copy-to-ai` (manual copy) |
+| **Install** | `npm install -g @contorium/cli` |
+| **Verify** | `contorium status .` or `contorium --help` |
+| **Init** | `contorium init [path]` |
+| **Refresh** | `contorium sync [path]` |
+| **L4 snapshot** | `contorium snapshot [path]` |
+| **Handoff (CHP v1)** | `contorium handoff` · `--copy-to-ai` (manual copy) |
 | **Dashboard** | **No command** — auto Passive; **Space** → Expanded |
-| **Semi-auto inject** | **No command** — auto on new AI chat; debug: `--prompt-new-chat` |
-| **Cognitive summary** | `npx contorium graph-snapshot [path]` |
-| **Knowledge graph** | `npx contorium knowledge [path]` |
-| **Change / graph / timeline** | `npx contorium change\|graph\|timeline [path]` |
-| **AI-ready export** | `npx contorium export [path]` or `--format json` |
-| **Status** | `npx contorium status [path]` |
-| **Runtime dashboard** | Zero CLI commands — edit files → auto Passive (see below) |
-| **state.json** | `npx contorium state [path]` |
-| **Uninstall** | `npm unlink -g contorium` (if linked); no daemon |
+| **Semi-auto inject** | **No command** — auto on new AI chat |
+| **Cognitive summary** | `contorium graph-snapshot [path]` |
+| **Knowledge graph** | `contorium knowledge [path]` |
+| **Change / graph / timeline** | `contorium change\|graph\|timeline [path]` |
+| **AI-ready export** | `contorium export [path]` or `--format json` |
+| **Status** | `contorium status [path]` |
+| **state.json** | `contorium state [path]` |
+| **Uninstall** | `npm uninstall -g @contorium/cli` |
 | **Clear data (optional)** | `Remove-Item -Recurse -Force .contora` (PowerShell) |
 
 Default `[path]` is the current directory.
@@ -34,29 +32,11 @@ Default `[path]` is the current directory.
 
 ## Install
 
-### From source (same repo as MCP)
-
 ```bash
-git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile
-```
-
-Verify:
-
-```powershell
-npx contorium status .
-npx contorium init .
-```
-
-### Global command (optional)
-
-From contorium repo root:
-
-```bash
-npm link
-contorium status E:\path\to\your-project
+npm install -g @contorium/cli
+contorium --help
+contorium init .
+contorium status .
 ```
 
 ---
@@ -86,23 +66,23 @@ When Codex / Claude / Gemini **starts Contorium MCP**, the server runs bootstrap
 
 See [Runtime dashboard](./DASHBOARD.md).
 
-### Runtime dashboard commands (debug / dev only)
+### Advanced commands (optional)
+
+These are rarely needed in daily use:
 
 | Command | Purpose |
 |---------|---------|
-| `contorium handoff --show` | Force expand signal (normally use **Space**) |
+| `contorium handoff --show` | Force expand (normally use **Space**) |
 | `contorium handoff --hide` | Minimize to Passive |
-| `contorium handoff --prompt-new-chat` | Force inject prompt in TTY (normally automatic) |
+| `contorium handoff --prompt-new-chat` | Force inject prompt in TTY |
 | `contorium handoff --copy` / `--copy-to-ai` | Manual clipboard copy |
-| `contorium attach . --auto` | Start worker manually |
+| `contorium attach . --auto` | Start dashboard worker manually |
 
 ### V3.1 understanding layer
 
 | Command | Purpose | MCP equivalent |
 |---------|---------|----------------|
 | `contorium handoff [path] [--format compact\|markdown\|json]` | **CHP v1 get_handoff** (default: compact one-liner) | `get_project_handoff` |
-| `contorium handoff --show \| --hide \| --filter` | Dashboard signals (**debug** — use **Space** instead) |
-| `contorium handoff --prompt-new-chat` | Force inject prompt (**debug** — normally automatic) |
 | `contorium graph-snapshot [path]` | Cognitive summary | `get_project_graph_snapshot` |
 | `contorium knowledge [path] [--min-confidence N]` | Knowledge graph (default filter 0.7) | `get_project_knowledge_graph` |
 | `contorium change [path]` | `change.json` | `get_project_change` |
@@ -114,34 +94,30 @@ See [Runtime dashboard](./DASHBOARD.md).
 
 ```powershell
 cd E:\your-project
-npx contorium init .
-npx contorium sync .
-npx contorium handoff
-npx contorium handoff --copy
-npx contorium handoff --prompt-new-chat
-npx contorium handoff --show
-npx contorium handoff --format markdown
-npx contorium graph-snapshot .
-npx contorium knowledge . --min-confidence 0.7
-npx contorium export . | Out-File -Encoding utf8 ai-context.md
-npx contorium export . --format json | Out-File -Encoding utf8 ai-context.json
+contorium init .
+contorium sync .
+contorium handoff
+contorium handoff --copy
+contorium handoff --format markdown
+contorium graph-snapshot .
+contorium knowledge . --min-confidence 0.7
+contorium export . | Out-File -Encoding utf8 ai-context.md
+contorium export . --format json | Out-File -Encoding utf8 ai-context.json
 ```
 
 **bash:**
 
 ```bash
 cd /path/to/project
-npx contorium init .
-npx contorium sync .
-npx contorium handoff
-npx contorium handoff --copy
-npx contorium handoff --prompt-new-chat
-npx contorium handoff --show
-npx contorium handoff --format markdown
-npx contorium graph-snapshot .
-npx contorium knowledge . --min-confidence 0.7
-npx contorium export . > ai-context.md
-npx contorium export . --format json > ai-context.json
+contorium init .
+contorium sync .
+contorium handoff
+contorium handoff --copy
+contorium handoff --format markdown
+contorium graph-snapshot .
+contorium knowledge . --min-confidence 0.7
+contorium export . > ai-context.md
+contorium export . --format json > ai-context.json
 ```
 
 Writes set `state.json` → `source.lastWriter: "cli"`.
@@ -162,18 +138,11 @@ Runtime maintains a single AI handoff state (`.contora/handoff.json` + `state.js
 
 When runtime is active and you open a **new AI chat**, Contorium shows `[?]` automatically.
 
-**Debug (TTY fallback):**
+**Manual fallback:**
 
 ```powershell
-npx contorium handoff --prompt-new-chat
-npx contorium handoff --copy-to-ai
-```
-
-**PowerShell one-liner (fallback only):**
-
-```powershell
-npx contorium handoff --copy
-npx contorium export . | Out-File -Encoding utf8 ai-context.md
+contorium handoff --copy-to-ai
+contorium export . | Out-File -Encoding utf8 ai-context.md
 ```
 
 ### `contorium export` sections (markdown)
@@ -200,14 +169,17 @@ JSON format includes `cognitiveSnapshot` when the knowledge graph exists.
 
 - Does **not** require IDE extension or MCP process  
 - With IDE: IDE writes events; CLI `sync` supplements git/paths only — **does not overwrite** `currentTask` / `notes`  
-- With MCP: shares `syncWorkspaceState()` logic  
+- With MCP: shares the same sync logic  
 
 ---
 
 ## Uninstall
 
-1. If you ran `npm link`: `npm unlink -g contorium`  
-2. Stop calling `contorium`; `.contora/` is **not** removed  
+```bash
+npm uninstall -g @contorium/cli
+```
+
+Stop calling `contorium`; `.contora/` is **not** removed automatically.
 
 Clear shared workspace data:
 
@@ -221,11 +193,11 @@ Remove-Item -Recurse -Force .contora
 
 | Symptom | Fix |
 |---------|-----|
-| `command not found: contorium` | Run `npm run compile`, use `npx contorium` |
+| `command not found: contorium` | Reinstall: `npm install -g @contorium/cli` |
 | `init` shows `created: false` | **Normal** — existing state; check `updated` and `source` |
 | Generic snapshot | Without IDE events, scan-only inference; use extension for precision |
 | `knowledge` / `graph-snapshot` missing | Needs code changes; run `sync` or save files in IDE |
-| `state: no state.json` | Run `npx contorium init .` first |
+| `state: no state.json` | Run `contorium init .` first |
 
 ---
 

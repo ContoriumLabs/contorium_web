@@ -55,11 +55,10 @@
           <h2>Before you start</h2>
           <ol class="steps-list">
             <li>
-              <strong>Build from source</strong>
-              <code style="color: var(--accent)">npm install && npm run compile</code> in the
-              <a href="https://github.com/ContoriumLabs/contorium">Contorium</a> repo. Standard entry:
-              <code style="color: var(--accent)">packages/mcp/bin/contorium-mcp.js</code> (or legacy
-              <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code>).
+              <strong>Install MCP package</strong>
+              <code style="color: var(--accent)">npm install -g @contorium/mcp</code>
+              · optional bootstrap:
+              <code style="color: var(--accent)">contorium-mcp bootstrap --workspace .</code>
             </li>
             <li>
               <strong>Configure MCP once</strong>
@@ -112,30 +111,21 @@
         </div>
       </section>
 
-      <section class="page-section section-mcp" id="build">
+      <section class="page-section section-mcp" id="install">
         <div class="container">
-          <h2>Build</h2>
-          <p>From the <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">Contorium</a> repository root. Installs <code style="color: var(--accent)">packages/mcp</code> dependencies automatically.</p>
+          <h2>Install</h2>
+          <p>Install the published npm package. Node.js 18+ required.</p>
           <div class="code-block" style="max-width: 560px">
-            <div class="code-block-header">Repository root</div>
-            <pre><code>git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-
-npm run build:mcp
-# or: npm run compile
+            <div class="code-block-header">Terminal</div>
+            <pre><code>npm install -g @contorium/mcp
+contorium-mcp bootstrap --workspace E:/your-project
 
 # Verify (debug — Ctrl+C to exit):
-npx contorium-mcp --workspace E:/your-project</code></pre>
+contorium-mcp --workspace E:/your-project</code></pre>
           </div>
-          <ul class="memory-bullets" style="margin-top: 20px">
-            <li><strong style="color: var(--text)">Standard bin:</strong> <code style="color: var(--accent)">packages/mcp/bin/contorium-mcp.js</code></li>
-            <li><strong style="color: var(--text)">Legacy launcher:</strong> <code style="color: var(--accent)">bin/contorium-mcp-launch.cjs</code></li>
-            <li><strong style="color: var(--text)">npm package:</strong> <code style="color: var(--accent)">npm install -g @contorium/mcp</code> · <code style="color: var(--accent)">contorium-mcp bootstrap --workspace .</code></li>
-          </ul>
           <p class="section-cta-inline">
-            <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">docs/mcp.html</a>
-            <a href="../index.html#install" class="btn btn-ghost btn-sm">Install extensions</a>
+            <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">Full MCP guide</a>
+            <a href="../docs/install.html" class="btn btn-ghost btn-sm">Install guide</a>
           </p>
         </div>
       </section>
@@ -144,18 +134,17 @@ npx contorium-mcp --workspace E:/your-project</code></pre>
         <div class="container">
           <h2>Codex</h2>
           <p>
-            After <a href="#build"><code>npm run build:mcp</code></a>, add Contorium MCP to Codex. Plugin manifest:
-            <code style="color: var(--accent)">.codex-plugin/plugin.json</code> · MCP: <code style="color: var(--accent)">.mcp.json</code>.
+            Add Contorium MCP to Codex. Set <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> to your project root.
+            Plugin manifest: <code style="color: var(--accent)">.codex-plugin/plugin.json</code> · MCP: <code style="color: var(--accent)">.mcp.json</code>.
           </p>
           <div class="code-block" style="max-width: 640px">
             <div class="code-block-header">Codex MCP</div>
-            <pre><code>npm run build:mcp
-codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
+            <pre><code>npm install -g @contorium/mcp
+codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
-            Install as a Codex plugin:
-            <a href="https://developers.openai.com/codex/plugins/build" target="_blank" rel="noopener noreferrer">Codex plugins docs</a>.
-            See <code>.agents/plugins/marketplace.example.json</code> in the Contorium repo for a local marketplace example.
+            Or paste this into your project <code>.mcp.json</code> — see
+            <a href="../docs/mcp.html">docs/mcp.html</a>.
           </p>
         </div>
       </section>
@@ -166,23 +155,30 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
           <p>
             See <a href="../docs/mcp.html">docs/mcp.html</a>. Uses
             <code style="color: var(--accent)">.claude-plugin/plugin.json</code> and
-            <code style="color: var(--accent)">.mcp.claude.json</code>. After <a href="#build"><code>npm run build:mcp</code></a>:
+            <code style="color: var(--accent)">.mcp.claude.json</code>.
           </p>
 
-          <h3 style="font-size: 1rem; margin: 28px 0 12px">Option A — Load plugin locally</h3>
-          <div class="code-block" style="max-width: 560px">
-            <pre><code>claude --plugin-dir .</code></pre>
-          </div>
-
-          <h3 style="font-size: 1rem; margin: 28px 0 12px">Option B — MCP only (project scope)</h3>
+          <h3 style="font-size: 1rem; margin: 28px 0 12px">Option A — CLI register (recommended)</h3>
           <div class="code-block" style="max-width: 640px">
-            <pre><code>claude mcp add --scope project contorium \
-  -- node ./bin/contorium-mcp-launch.cjs</code></pre>
+            <pre><code>npm install -g @contorium/mcp
+cd /path/to/your-project
+claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 640px">
-            Plugin MCP config uses <code>${CLAUDE_PLUGIN_ROOT}</code> and <code>${CLAUDE_PROJECT_DIR}</code> (see
-            <code>.mcp.claude.json</code> in the repo).
-          </p>
+
+          <h3 style="font-size: 1rem; margin: 28px 0 12px">Option B — Project `.mcp.json`</h3>
+          <div class="code-block" style="max-width: 640px">
+            <pre><code>{
+  "mcpServers": {
+    "contorium": {
+      "command": "npx",
+      "args": ["-y", "@contorium/mcp"],
+      "env": {
+        "CONTORIUM_WORKSPACE": "/path/to/your-project"
+      }
+    }
+  }
+}</code></pre>
+          </div>
 
           <h3 style="font-size: 1rem; margin: 28px 0 12px">Environment variables</h3>
           <div style="overflow-x: auto">
@@ -443,7 +439,7 @@ codex mcp add contorium -- node ./bin/contorium-mcp-launch.cjs</code></pre>
 
       <section class="cta-band">
         <h2>Connect agents to shared workspace state</h2>
-        <p>Run <code>npm run compile</code>, configure MCP, then wire Codex or Claude Code.</p>
+        <p>Install <code>@contorium/mcp</code>, configure once, then open Codex or Claude Code.</p>
         <div class="cta-buttons">
           <a href="../docs/" class="btn btn-primary">Installation guide</a>
           <a href="../index.html" class="btn btn-ghost">Back to home</a>

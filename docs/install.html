@@ -51,7 +51,7 @@
 <blockquote>
 <p>Back to <a href="../index.html">Home</a> · Per adapter: <a href="ide-extension.html">IDE</a> · <a href="mcp.html">MCP</a> · <a href="cli.html">CLI</a></p>
 </blockquote>
-<p>Contorium v2.2+: <strong>IDE, MCP, and CLI are peer Runtime Adapters</strong> sharing <code>@contora/state-core</code> and the project-local <code>.contora/</code> directory.<br>
+<p>Contorium v2.2+: <strong>IDE, MCP, and CLI are peer Runtime Adapters</strong> sharing the project-local <code>.contora/</code> directory.<br>
 Any adapter can bootstrap and maintain state independently; combined use merges via <code>source.mode: merged</code>.</p>
 <table>
 <thead>
@@ -64,7 +64,7 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 <tbody>
 <tr>
 <td><strong>IDE</strong></td>
-<td>VS Code / Cursor developers</td>
+<td>VS Code / Cursor users</td>
 <td>Events, sidebar, one-click copy, BYOK</td>
 </tr>
 <tr>
@@ -75,11 +75,10 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 <tr>
 <td><strong>CLI</strong></td>
 <td>Terminal / CI / headless</td>
-<td><code>handoff</code>, dashboard, <code>sync</code>, <code>export</code> (legacy)</td>
+<td><code>handoff</code>, dashboard, <code>sync</code>, <code>export</code></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Public API unchanged:</strong> <code>state.json</code> fields remain backward compatible; MCP tool names and extension command IDs are stable. v2.2+ adds optional <code>source</code> metadata.</p>
 <hr>
 <h2>Prerequisites (all adapters)</h2>
 <table>
@@ -92,15 +91,11 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 <tbody>
 <tr>
 <td>Node.js</td>
-<td><strong>18+</strong> (MCP / CLI / source build)</td>
+<td><strong>18+</strong> (MCP and CLI)</td>
 </tr>
 <tr>
 <td>Workspace</td>
-<td>Real project <strong>folder</strong> path</td>
-</tr>
-<tr>
-<td>Build (from source)</td>
-<td>Repo root: <code>npm install &amp;&amp; npm run compile</code></td>
+<td>Real project <strong>folder</strong> path (not a single file)</td>
 </tr>
 </tbody>
 </table>
@@ -131,46 +126,27 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 </thead>
 <tbody>
 <tr>
-<td>VSIX (recommended)</td>
-<td>Download Release or <code>npm run vsix</code> → Extensions → <strong>Install from VSIX</strong> → Reload</td>
+<td>VSIX (recommended for Cursor)</td>
+<td><a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a> → Extensions → <strong>Install from VSIX…</strong> → <strong>Developer: Reload Window</strong></td>
 </tr>
 <tr>
 <td>Marketplace</td>
-<td>Search <strong>Contorium</strong> (<code>franklee-dev</code>)</td>
-</tr>
-<tr>
-<td>Development</td>
-<td><code>npm run compile</code> → F5 Extension Development Host</td>
+<td>Search <strong>Contorium</strong> (publisher <code>franklee-dev</code>) → Install → Reload</td>
 </tr>
 </tbody>
 </table>
 <p>See <a href="ide-extension.html">IDE_EXTENSION.md</a>.</p>
 <h3>MCP server (<code>@contorium/mcp</code>)</h3>
-<pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile          # or npm run build:mcp
+<pre><code class="language-bash">npm install -g @contorium/mcp
+contorium-mcp bootstrap --workspace /path/to/your-project
 </code></pre>
 <p><strong>Normal use:</strong> configure once, then open Codex / Claude / Cursor — the host <strong>spawns MCP automatically</strong>. You do not run MCP in a terminal first.</p>
-<p><strong>Local development config</strong> (replace paths):</p>
-<pre><code class="language-json">{
-  &quot;mcpServers&quot;: {
-    &quot;contorium&quot;: {
-      &quot;command&quot;: &quot;node&quot;,
-      &quot;args&quot;: [&quot;E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js&quot;],
-      &quot;env&quot;: {
-        &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
-      }
-    }
-  }
-}
-</code></pre>
-<p><strong>When published to npm:</strong></p>
+<p><strong>MCP config</strong> (replace paths with your project root):</p>
 <pre><code class="language-json">{
   &quot;mcpServers&quot;: {
     &quot;contorium&quot;: {
       &quot;command&quot;: &quot;npx&quot;,
-      &quot;args&quot;: [&quot;@contorium/mcp&quot;],
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@contorium/mcp&quot;],
       &quot;env&quot;: {
         &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
       }
@@ -192,27 +168,24 @@ npm run compile          # or npm run build:mcp
 </tr>
 <tr>
 <td>Claude Code</td>
-<td><code>claude --plugin-dir .</code> or <code>claude mcp add …</code></td>
+<td><code>claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></td>
 </tr>
 <tr>
 <td>Codex</td>
-<td><code>codex mcp add contorium -- node …/contorium-mcp-launch.cjs</code></td>
+<td><code>codex mcp add contorium -- npx -y @contorium/mcp</code></td>
 </tr>
 <tr>
 <td>Gemini CLI</td>
-<td><code>~/.gemini/settings.json</code> → <code>mcpServers.contorium</code></td>
+<td><code>~/.gemini/settings.json</code> → <code>mcpServers.contorium</code> (same JSON block)</td>
 </tr>
 </tbody>
 </table>
 <p>See <a href="mcp.html">MCP.md</a> for step-by-step host guides.</p>
 <h3>CLI</h3>
-<p>Ships with the same repo — no separate npm publish:</p>
-<pre><code class="language-bash">npm install
-npm run compile
-npx contorium --help
-npx contorium init .
+<pre><code class="language-bash">npm install -g @contorium/cli
+contorium init .
+contorium --help
 </code></pre>
-<p>Optional global link (repo root): <code>npm link</code> → <code>contorium status .</code></p>
 <p>See <a href="cli.html">CLI.md</a>.</p>
 <hr>
 <h2>Usage scenarios</h2>
@@ -225,7 +198,7 @@ npx contorium init .
 <p>No MCP or CLI required.</p>
 <h3>MCP only</h3>
 <ol>
-<li><code>npm install -g @contorium/mcp</code> <strong>or</strong> <code>npm run compile</code> from source  </li>
+<li><code>npm install -g @contorium/mcp</code>  </li>
 <li><code>contorium-mcp bootstrap --workspace /path/to/project</code> (optional)  </li>
 <li>Configure MCP with <code>CONTORIUM_WORKSPACE</code> (see <a href="mcp.html">MCP.md</a>)  </li>
 <li><strong>Open Codex / Claude / Cursor</strong> — host starts MCP and bootstraps <code>.contora/</code>  </li>
@@ -236,19 +209,16 @@ npx contorium init .
 <p>See also <a href="dashboard.html">Runtime Dashboard</a> (Passive line + optional Expanded view).</p>
 <h3>CLI only</h3>
 <pre><code class="language-bash">cd /path/to/your-project
-npx contorium init .
-npx contorium sync .
-npx contorium snapshot .
-npx contorium handoff .
-npx contorium handoff --copy-to-ai
-# debug only:
-# npx contorium handoff --prompt-new-chat
-# npx contorium handoff --show
-npx contorium graph-snapshot .
-npx contorium knowledge .
-npx contorium export .
-npx contorium status .
-npx contorium state .
+contorium init .
+contorium sync .
+contorium snapshot .
+contorium handoff .
+contorium handoff --copy-to-ai
+contorium graph-snapshot .
+contorium knowledge .
+contorium export .
+contorium status .
+contorium state .
 </code></pre>
 <p>No IDE or MCP; suitable for CI and scripts.</p>
 <h3>Combined (recommended)</h3>
@@ -372,13 +342,6 @@ npx contorium state .
 </tr>
 </tbody>
 </table>
-<p><strong>Backward compatible:</strong> extension command IDs, existing MCP tool names, <code>state.json</code> fields.</p>
-<p><strong>V3.1 additions:</strong> <code>.contora/graph/</code> artifacts, MCP standard tools (<code>get_recent_changes</code>, <code>get_understanding_graph</code>, <code>get_runtime_state</code>, handoff injection tools), CLI <code>knowledge</code> / <code>graph-snapshot</code>, semi-auto handoff injection, Expanded fullscreen dashboard.</p>
-<h3>npm install (<code>@contorium/mcp</code>)</h3>
-<pre><code class="language-bash">npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace /path/to/your-project
-</code></pre>
-<p>Single npm package — <code>@contora/state-core</code> is bundled inside. Maintainers: <code>npm run publish:npm</code> from repo root.</p>
 <hr>
 <h2>Uninstall</h2>
 <h3>IDE</h3>
@@ -414,8 +377,9 @@ Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.vscode\extensions\franklee-d
 </tr>
 </tbody>
 </table>
+<p>Optional: <code>npm uninstall -g @contorium/mcp</code></p>
 <h3>CLI</h3>
-<pre><code class="language-bash">npm unlink -g contorium   # if you ran npm link
+<pre><code class="language-bash">npm uninstall -g @contorium/cli
 </code></pre>
 <p>No background service. <code>.contora/</code> is <strong>not</strong> deleted automatically.</p>
 <h3>Clear workspace data (optional, all adapters)</h3>

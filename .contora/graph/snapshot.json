@@ -1,13 +1,13 @@
 {
-  "generatedAt": 1780841742321,
+  "generatedAt": 1780884241123,
   "topIntents": [],
   "topHotspots": [],
   "topFunctions": [],
   "nextActions": [
     "review and commit pending changes",
     "continue documentation updates",
-    "review state persistence paths",
-    "verify MCP tools against workspace"
+    "verify MCP tools against workspace",
+    "review state persistence paths"
   ],
   "graphSummary": {
     "nodeCount": 22,

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": 1780841742321,
+  "generatedAt": 1780884241123,
   "scope": "change-neighborhood",
   "nodes": [
     {
@@ -14,56 +14,56 @@
       "kind": "function",
       "name": "slug_for_href",
       "file": "scripts/build-docs.py",
-      "line": 140
+      "line": 138
     },
     {
       "id": "scripts/build-docs.py::function::rewrite_links",
       "kind": "function",
       "name": "rewrite_links",
       "file": "scripts/build-docs.py",
-      "line": 153
+      "line": 151
     },
     {
       "id": "scripts/build-docs.py::function::repl_md",
       "kind": "function",
       "name": "repl_md",
       "file": "scripts/build-docs.py",
-      "line": 154
+      "line": 152
     },
     {
       "id": "scripts/build-docs.py::function::render_sidebar",
       "kind": "function",
       "name": "render_sidebar",
       "file": "scripts/build-docs.py",
-      "line": 163
+      "line": 161
     },
     {
       "id": "scripts/build-docs.py::function::breadcrumb",
       "kind": "function",
       "name": "breadcrumb",
       "file": "scripts/build-docs.py",
-      "line": 174
+      "line": 172
     },
     {
       "id": "scripts/build-docs.py::function::md_to_html",
       "kind": "function",
       "name": "md_to_html",
       "file": "scripts/build-docs.py",
-      "line": 181
+      "line": 179
     },
     {
       "id": "scripts/build-docs.py::function::page",
       "kind": "function",
       "name": "page",
       "file": "scripts/build-docs.py",
-      "line": 190
+      "line": 188
     },
     {
       "id": "scripts/build-docs.py::function::main",
       "kind": "function",
       "name": "main",
       "file": "scripts/build-docs.py",
-      "line": 200
+      "line": 198
     }
   ],
   "edges": [

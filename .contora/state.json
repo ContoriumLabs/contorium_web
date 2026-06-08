@@ -5,11 +5,9 @@
     "index.html",
     "修改方案.md",
     "docs/IDE_EXTENSION.md",
-    "docs/STATE_ENGINE.md",
     "README.md",
     "mcp/index.html",
-    "blog/index.html",
-    "architecture/index.html"
+    "blog/index.html"
   ],
   "recentFiles": [
     "docs/STATE_ENGINE.md",
@@ -42,9 +40,8 @@
     ".contora/state.json",
     ".contora/timeline.json",
     ".contora/understanding_graph.json",
-    "README.md",
-    "blog/index.html",
     "docs/CLI.md",
+    "docs/DASHBOARD.md",
     "docs/IDE_EXTENSION.md",
     "docs/INSTALL.md",
     "docs/MCP.md",
@@ -55,24 +52,10 @@
     "docs/install.html",
     "docs/mcp.html",
     "index.html",
+    "mcp/README.md",
     "mcp/index.html",
-    "scripts/build-docs.py",
-    "architecture/index.html",
-    "docs/ARCHITECTURE_V2.md",
-    "docs/ARCHITECTURE_V2_2.md",
-    "docs/ARCHITECTURE_V3.md",
-    "docs/ENGINEERING_CLOSURE.md",
-    "docs/RUNTIME.md",
-    "docs/STATE_ENGINE.md",
-    "docs/UPGRADE_PLAN_2.x.md",
-    "docs/architecture-v2-2.html",
-    "docs/architecture-v2.html",
-    "docs/architecture-v3.html",
-    "docs/engineering-closure.html",
-    "docs/runtime.html",
-    "docs/state-engine.html",
-    "docs/upgrade-plan.html"
+    "scripts/build-docs.py"
   ],
   "notes": "",
-  "lastUpdated": 1780841789462
+  "lastUpdated": 1780884233382
 }

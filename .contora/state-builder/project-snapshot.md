@@ -1,17 +1,17 @@
 PROJECT SNAPSHOT
 
 Goal:
-develop documentation, state engine and MCP integration
+develop documentation, MCP integration and state engine
 
 Current Stage:
-documentation + state engine development
+documentation + MCP integration development
 
 Active Modules:
-- index.html (from IDE)
 - IDE_EXTENSION (from IDE)
-- STATE_ENGINE (from IDE)
+- index.html (from IDE)
 - README (from IDE)
 - 修改方案 (from IDE)
+- sess_mp487yx1_2450523b.jsonl (from IDE)
 - index.html (from events)
 
 Recent Decisions:
@@ -19,7 +19,7 @@ Recent Decisions:
 
 Open Problems:
 - uncommitted changes in documentation module (from events)
-- 42 paths with uncommitted changes — integration risk (from Git)
+- 34 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)
@@ -27,5 +27,5 @@ Completed Milestones:
 Next Actions:
 - review and commit pending changes
 - continue documentation updates
-- review state persistence paths
 - verify MCP tools against workspace
+- review state persistence paths
