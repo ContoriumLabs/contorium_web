@@ -1,12 +1,12 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1780884240621,
+  "generatedAt": 1780885444797,
   "project_goal": "develop documentation, MCP integration and state engine",
   "current_stage": "documentation + MCP integration development",
   "active_modules": [
-    "IDE_EXTENSION (from IDE)",
     "index.html (from IDE)",
+    "IDE_EXTENSION (from IDE)",
     "README (from IDE)",
     "修改方案 (from IDE)",
     "sess_mp487yx1_2450523b.jsonl (from IDE)",
@@ -15,7 +15,7 @@
   "recent_decisions": [],
   "open_problems": [
     "uncommitted changes in documentation module (from events)",
-    "34 paths with uncommitted changes — integration risk (from Git)"
+    "11 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [

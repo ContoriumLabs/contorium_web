@@ -53,37 +53,18 @@ See [IDE_EXTENSION.md](./IDE_EXTENSION.md).
 
 ### MCP server (`@contorium/mcp`)
 
-```bash
-npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace /path/to/your-project
-```
+**One command per host** — run from your project folder, then open the AI tool. No JSON required in normal use.
 
-**Normal use:** configure once, then open Codex / Claude / Cursor — the host **spawns MCP automatically**. You do not run MCP in a terminal first.
+| Host | One-time setup |
+|------|----------------|
+| **Codex** | `codex mcp add contorium -- npx -y @contorium/mcp` |
+| **Claude Code** | `claude mcp add --scope project contorium -- npx -y @contorium/mcp` |
+| **Cursor** | Settings → MCP → Add → `npx` / `-y` / `@contorium/mcp` → Reload |
+| **Gemini CLI** | Add `npx -y @contorium/mcp` to `mcpServers` in settings.json |
 
-**MCP config** (replace paths with your project root):
+After that, open Codex / Claude / Cursor **in your project** — MCP starts automatically.
 
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "npx",
-      "args": ["-y", "@contorium/mcp"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
-| Host | Setup |
-|------|-------|
-| Cursor | `.cursor/mcp.json` or Settings → MCP → enable `contorium` |
-| Claude Code | `claude mcp add --scope project contorium -- npx -y @contorium/mcp` |
-| Codex | `codex mcp add contorium -- npx -y @contorium/mcp` |
-| Gemini CLI | `~/.gemini/settings.json` → `mcpServers.contorium` (same JSON block) |
-
-See [MCP.md](./MCP.md) for step-by-step host guides.
+Manual JSON config is **fallback only** — see [MCP.md](./MCP.md#manual-config-fallback).
 
 ### CLI
 
@@ -109,12 +90,10 @@ No MCP or CLI required.
 
 ### MCP only
 
-1. `npm install -g @contorium/mcp`  
-2. `contorium-mcp bootstrap --workspace /path/to/project` (optional)  
-3. Configure MCP with `CONTORIUM_WORKSPACE` (see [MCP.md](./MCP.md))  
-4. **Open Codex / Claude / Cursor** — host starts MCP and bootstraps `.contora/`  
-5. **New chat:** injection prompt appears automatically — Agent asks Y/n, or use terminal **Enter/i** / IDE **[?]**
-6. Or call `get_project_handoff` / `get_understanding_graph` / `get_recent_changes` anytime  
+1. Run the **one-liner** for your AI tool (see [MCP.md](./MCP.md#connect-by-platform-recommended))  
+2. **Open Codex / Claude / Cursor** in your project folder — MCP bootstraps `.contora/` automatically  
+3. **New chat:** injection prompt appears automatically — Agent asks Y/n, or use terminal **Enter/i** / IDE **[?]**  
+4. Or call `get_project_handoff` / `get_understanding_graph` / `get_recent_changes` anytime  
 
 No manual MCP terminal. No IDE required; scan/merged mode is less precise without IDE events.
 

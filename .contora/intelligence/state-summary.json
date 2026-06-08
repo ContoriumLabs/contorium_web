@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1780884240492,
+  "generatedAt": 1780885444634,
   "project_intent": "develop documentation, MCP integration and state engine",
   "current_focus": "work in mcp",
   "active_domains": [
@@ -8,8 +8,7 @@
     "mcp",
     "state-engine",
     "ui",
-    "ai",
-    "build"
+    "ai"
   ],
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
@@ -19,14 +18,6 @@
         "mcp/index.html"
       ],
       "weight": 0.62
-    },
-    {
-      "cluster": "docs",
-      "files": [
-        "docs/IDE_EXTENSION.md",
-        "docs/STATE_ENGINE.md"
-      ],
-      "weight": 0.47
     },
     {
       "cluster": "project root",
@@ -47,6 +38,14 @@
       "weight": 0.42
     },
     {
+      "cluster": "docs",
+      "files": [
+        "docs/IDE_EXTENSION.md",
+        "docs/STATE_ENGINE.md"
+      ],
+      "weight": 0.37
+    },
+    {
       "cluster": ".contora / events",
       "files": [
         ".contora/events/sess_mp487yx1_2450523b.jsonl"
@@ -57,7 +56,6 @@
   "next_likely_actions": [
     "update documentation for recent changes",
     "verify MCP tools against workspace state",
-    "iterate on IDE_EXTENSION.md",
     "iterate on index.html"
   ],
   "confidence": 0.77

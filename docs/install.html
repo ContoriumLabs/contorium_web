@@ -137,50 +137,35 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 </table>
 <p>See <a href="ide-extension.html">IDE_EXTENSION.md</a>.</p>
 <h3>MCP server (<code>@contorium/mcp</code>)</h3>
-<pre><code class="language-bash">npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace /path/to/your-project
-</code></pre>
-<p><strong>Normal use:</strong> configure once, then open Codex / Claude / Cursor — the host <strong>spawns MCP automatically</strong>. You do not run MCP in a terminal first.</p>
-<p><strong>MCP config</strong> (replace paths with your project root):</p>
-<pre><code class="language-json">{
-  &quot;mcpServers&quot;: {
-    &quot;contorium&quot;: {
-      &quot;command&quot;: &quot;npx&quot;,
-      &quot;args&quot;: [&quot;-y&quot;, &quot;@contorium/mcp&quot;],
-      &quot;env&quot;: {
-        &quot;CONTORIUM_WORKSPACE&quot;: &quot;E:/path/to/your-project&quot;
-      }
-    }
-  }
-}
-</code></pre>
+<p><strong>One command per host</strong> — run from your project folder, then open the AI tool. No JSON required in normal use.</p>
 <table>
 <thead>
 <tr>
 <th>Host</th>
-<th>Setup</th>
+<th>One-time setup</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Cursor</td>
-<td><code>.cursor/mcp.json</code> or Settings → MCP → enable <code>contorium</code></td>
-</tr>
-<tr>
-<td>Claude Code</td>
-<td><code>claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></td>
-</tr>
-<tr>
-<td>Codex</td>
+<td><strong>Codex</strong></td>
 <td><code>codex mcp add contorium -- npx -y @contorium/mcp</code></td>
 </tr>
 <tr>
-<td>Gemini CLI</td>
-<td><code>~/.gemini/settings.json</code> → <code>mcpServers.contorium</code> (same JSON block)</td>
+<td><strong>Claude Code</strong></td>
+<td><code>claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></td>
+</tr>
+<tr>
+<td><strong>Cursor</strong></td>
+<td>Settings → MCP → Add → <code>npx</code> / <code>-y</code> / <code>@contorium/mcp</code> → Reload</td>
+</tr>
+<tr>
+<td><strong>Gemini CLI</strong></td>
+<td>Add <code>npx -y @contorium/mcp</code> to <code>mcpServers</code> in settings.json</td>
 </tr>
 </tbody>
 </table>
-<p>See <a href="mcp.html">MCP.md</a> for step-by-step host guides.</p>
+<p>After that, open Codex / Claude / Cursor <strong>in your project</strong> — MCP starts automatically.</p>
+<p>Manual JSON config is <strong>fallback only</strong> — see <a href="mcp.html#manual-config-fallback">MCP.md</a>.</p>
 <h3>CLI</h3>
 <pre><code class="language-bash">npm install -g @contorium/cli
 contorium init .
@@ -198,11 +183,9 @@ contorium --help
 <p>No MCP or CLI required.</p>
 <h3>MCP only</h3>
 <ol>
-<li><code>npm install -g @contorium/mcp</code>  </li>
-<li><code>contorium-mcp bootstrap --workspace /path/to/project</code> (optional)  </li>
-<li>Configure MCP with <code>CONTORIUM_WORKSPACE</code> (see <a href="mcp.html">MCP.md</a>)  </li>
-<li><strong>Open Codex / Claude / Cursor</strong> — host starts MCP and bootstraps <code>.contora/</code>  </li>
-<li><strong>New chat:</strong> injection prompt appears automatically — Agent asks Y/n, or use terminal <strong>Enter/i</strong> / IDE <strong>[?]</strong></li>
+<li>Run the <strong>one-liner</strong> for your AI tool (see <a href="mcp.html#connect-by-platform-recommended">MCP.md</a>)  </li>
+<li><strong>Open Codex / Claude / Cursor</strong> in your project folder — MCP bootstraps <code>.contora/</code> automatically  </li>
+<li><strong>New chat:</strong> injection prompt appears automatically — Agent asks Y/n, or use terminal <strong>Enter/i</strong> / IDE <strong>[?]</strong>  </li>
 <li>Or call <code>get_project_handoff</code> / <code>get_understanding_graph</code> / <code>get_recent_changes</code> anytime  </li>
 </ol>
 <p>No manual MCP terminal. No IDE required; scan/merged mode is less precise without IDE events.</p>

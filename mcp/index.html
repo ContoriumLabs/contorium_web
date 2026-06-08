@@ -52,28 +52,21 @@
 
       <section class="page-section">
         <div class="container">
-          <h2>Before you start</h2>
+          <h2>Setup in 2 steps</h2>
           <ol class="steps-list">
             <li>
-              <strong>Install MCP package</strong>
-              <code style="color: var(--accent)">npm install -g @contorium/mcp</code>
-              · optional bootstrap:
-              <code style="color: var(--accent)">contorium-mcp bootstrap --workspace .</code>
+              <strong>Connect once</strong>
+              Run one command for your AI tool (Codex / Claude / Cursor below). No JSON file needed.
             </li>
             <li>
-              <strong>Configure MCP once</strong>
-              Set <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> to your <strong>project</strong> root in host MCP settings.
-            </li>
-            <li>
-              <strong>Open your AI host</strong>
-              Codex / Claude / Cursor spawns MCP — you do <em>not</em> run MCP in a terminal in normal use.
-            </li>
-            <li>
-              <strong>Runtime dashboard (automatic)</strong>
-              Passive line appears on bootstrap. <strong>Space</strong> → Expanded. New chat → auto <code>[?]</code> inject prompt.
-              <a href="../docs/dashboard.html">Dashboard guide</a>
+              <strong>Open your AI tool</strong>
+              Work in your project folder — the host spawns MCP automatically. You do <em>not</em> run MCP in a terminal daily.
             </li>
           </ol>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 16px">
+            Manual JSON config is a <strong>fallback only</strong> — see
+            <a href="../docs/mcp.html#manual-config-fallback">docs/mcp.html</a>.
+          </p>
         </div>
       </section>
 
@@ -111,21 +104,23 @@
         </div>
       </section>
 
-      <section class="page-section section-mcp" id="install">
+      <section class="page-section section-mcp" id="connect">
         <div class="container">
-          <h2>Install</h2>
-          <p>Install the published npm package. Node.js 18+ required.</p>
-          <div class="code-block" style="max-width: 560px">
-            <div class="code-block-header">Terminal</div>
-            <pre><code>npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace E:/your-project
-
-# Verify (debug — Ctrl+C to exit):
-contorium-mcp --workspace E:/your-project</code></pre>
+          <h2>Connect by platform</h2>
+          <p>Run from your project folder. Node.js 18+ required (for <code style="color: var(--accent)">npx</code>).</p>
+          <div class="code-block" style="max-width: 640px">
+            <div class="code-block-header">Codex</div>
+            <pre><code>cd /path/to/your-project
+codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
+          </div>
+          <div class="code-block" style="max-width: 640px; margin-top: 16px">
+            <div class="code-block-header">Claude Code</div>
+            <pre><code>cd /path/to/your-project
+claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
           </div>
           <p class="section-cta-inline">
             <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">Full MCP guide</a>
-            <a href="../docs/install.html" class="btn btn-ghost btn-sm">Install guide</a>
+            <a href="../docs/mcp.html#manual-config-fallback" class="btn btn-ghost btn-sm">Manual config fallback</a>
           </p>
         </div>
       </section>
@@ -134,17 +129,16 @@ contorium-mcp --workspace E:/your-project</code></pre>
         <div class="container">
           <h2>Codex</h2>
           <p>
-            Add Contorium MCP to Codex. Set <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> to your project root.
-            Plugin manifest: <code style="color: var(--accent)">.codex-plugin/plugin.json</code> · MCP: <code style="color: var(--accent)">.mcp.json</code>.
+            One command from your project folder. Codex sets the project path automatically.
           </p>
           <div class="code-block" style="max-width: 640px">
-            <div class="code-block-header">Codex MCP</div>
-            <pre><code>npm install -g @contorium/mcp
+            <div class="code-block-header">Codex</div>
+            <pre><code>cd /path/to/your-project
 codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
-            Or paste this into your project <code>.mcp.json</code> — see
-            <a href="../docs/mcp.html">docs/mcp.html</a>.
+            Remove: <code>codex mcp remove contorium</code> · Fallback JSON:
+            <a href="../docs/mcp.html#manual-config-fallback">docs/mcp.html</a>
           </p>
         </div>
       </section>
@@ -153,32 +147,17 @@ codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
         <div class="container">
           <h2>Claude Code</h2>
           <p>
-            See <a href="../docs/mcp.html">docs/mcp.html</a>. Uses
-            <code style="color: var(--accent)">.claude-plugin/plugin.json</code> and
-            <code style="color: var(--accent)">.mcp.claude.json</code>.
+            One command from your project folder. See
+            <a href="../docs/mcp.html">docs/mcp.html</a> for details.
           </p>
 
-          <h3 style="font-size: 1rem; margin: 28px 0 12px">Option A — CLI register (recommended)</h3>
           <div class="code-block" style="max-width: 640px">
-            <pre><code>npm install -g @contorium/mcp
-cd /path/to/your-project
+            <pre><code>cd /path/to/your-project
 claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
           </div>
-
-          <h3 style="font-size: 1rem; margin: 28px 0 12px">Option B — Project `.mcp.json`</h3>
-          <div class="code-block" style="max-width: 640px">
-            <pre><code>{
-  "mcpServers": {
-    "contorium": {
-      "command": "npx",
-      "args": ["-y", "@contorium/mcp"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "/path/to/your-project"
-      }
-    }
-  }
-}</code></pre>
-          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem">
+            Remove: <code>claude mcp remove contorium</code>
+          </p>
 
           <h3 style="font-size: 1rem; margin: 28px 0 12px">Environment variables</h3>
           <div style="overflow-x: auto">
@@ -439,7 +418,7 @@ claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
 
       <section class="cta-band">
         <h2>Connect agents to shared workspace state</h2>
-        <p>Install <code>@contorium/mcp</code>, configure once, then open Codex or Claude Code.</p>
+        <p>Run one command for your AI tool, then open Codex or Claude Code in your project.</p>
         <div class="cta-buttons">
           <a href="../docs/" class="btn btn-primary">Installation guide</a>
           <a href="../index.html" class="btn btn-ghost">Back to home</a>
