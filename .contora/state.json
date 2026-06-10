@@ -21,35 +21,12 @@
     "README.md"
   ],
   "gitStaged": [],
-  "gitWorking": [
-    ".contora/change.json",
-    ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-    ".contora/graph.json",
-    ".contora/graph/edges.json",
-    ".contora/graph/functions.json",
-    ".contora/graph/hotspots.json",
-    ".contora/graph/intents.json",
-    ".contora/graph/knowledge.json",
-    ".contora/graph/metadata.json",
-    ".contora/graph/nodes.json",
-    ".contora/graph/snapshot.json",
-    ".contora/handoff.json",
-    ".contora/intelligence/state-summary.json",
-    ".contora/intent-graph/graph.json",
-    ".contora/state-builder/project-snapshot.md",
-    ".contora/state-builder/project-state.json",
-    ".contora/state.json",
-    "README.md",
-    "index.html",
-    "styles.css",
-    "\"/344/277/256/346/224/271/346/226/271/346/241/210.md\"",
-    ".contora/dashboard.signal.json"
-  ],
+  "gitWorking": [],
   "notes": "",
-  "lastUpdated": 1781056706847,
+  "lastUpdated": 1781057516178,
   "source": {
     "mode": "event-driven",
     "lastWriter": "ide",
-    "lastUpdated": "2026-06-10T01:58:26.847Z"
+    "lastUpdated": "2026-06-10T02:11:56.178Z"
   }
 }

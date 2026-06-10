@@ -1,109 +1,9 @@
 {
   "version": 2,
-  "generatedAt": 1781056714076,
-  "goal": "develop documentation, state engine and AI integration",
-  "current_focus": "develop documentation, state engine and AI integration — focus: shared state engine, landing page / static UI, IDE extension UI",
+  "generatedAt": 1781057523796,
+  "goal": "develop documentation, MCP integration and state engine",
+  "current_focus": "develop documentation, MCP integration and state engine — focus: IDE extension UI, documentation, landing page / static UI",
   "key_changes": [
-    {
-      "symbol": ".contora/change.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/edges.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/functions.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/hotspots.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/intents.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/knowledge.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/metadata.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/nodes.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/graph/snapshot.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/handoff.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/intelligence/state-summary.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/intent-graph/graph.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/state-builder/project-snapshot.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/state-builder/project-state.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/state.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "README.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "index.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "styles.css",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/dashboard.signal.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
     {
       "symbol": "docs/IDE_EXTENSION.md",
       "kind": "file",
@@ -120,12 +20,22 @@
       "change_type": "modified"
     },
     {
+      "symbol": "index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
       "symbol": "修改方案2.md",
       "kind": "file",
       "change_type": "modified"
     },
     {
       "symbol": "architecture/index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "README.md",
       "kind": "file",
       "change_type": "modified"
     },
@@ -143,31 +53,13 @@
   "impact_summary": {
     "risk": "low",
     "affected_modules": [
-      ".contora/change.json",
-      ".contora/graph.json",
-      ".contora/graph/edges.json",
-      ".contora/graph/functions.json",
-      ".contora/graph/hotspots.json",
-      ".contora/graph/intents.json",
-      ".contora/graph/knowledge.json",
-      ".contora/graph/metadata.json",
-      ".contora/graph/nodes.json",
-      ".contora/graph/snapshot.json",
-      ".contora/handoff.json",
-      ".contora/intelligence/state-summary.json",
-      ".contora/intent-graph/graph.json",
-      ".contora/state-builder/project-snapshot.md",
-      ".contora/state-builder/project-state.json",
-      ".contora/state.json",
-      "README.md",
-      "index.html",
-      "styles.css",
-      ".contora/dashboard.signal.json",
       "docs/IDE_EXTENSION.md",
       "docs/STATE_ENGINE.md",
       "修改方案.md",
+      "index.html",
       "修改方案2.md",
       "architecture/index.html",
+      "README.md",
       "blog/index.html",
       "mcp/index.html"
     ],
@@ -176,26 +68,21 @@
   },
   "next_actions": [
     {
-      "action": "review",
-      "target": "review and commit pending changes",
-      "reason": ""
-    },
-    {
       "action": "continue",
       "target": "continue documentation updates",
       "reason": ""
     },
     {
       "action": "review",
-      "target": "review state persistence paths",
+      "target": "verify MCP tools against workspace",
       "reason": ""
     },
     {
       "action": "review",
-      "target": "review AI integration changes",
+      "target": "review state persistence paths",
       "reason": ""
     }
   ],
   "context_graph_refs": [],
-  "summary": "Goal: develop documentation, state engine and AI integration | Focus: develop documentation, state engine and AI integration — focus: shared state engine, landing page / static UI, IDE extension UI | Changed files: .contora/change.json, .contora/graph.json, .contora/graph/edges.json, .contora/graph/functions.json, .contora/graph/hotspots.json"
+  "summary": "Goal: develop documentation, MCP integration and state engine | Focus: develop documentation, MCP integration and state engine — focus: IDE extension UI, documentation, landing page / static UI | Changed files: docs/IDE_EXTENSION.md, docs/STATE_ENGINE.md, 修改方案.md, index.html, 修改方案2.md"
 }
