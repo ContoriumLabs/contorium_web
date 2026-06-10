@@ -1,43 +1,43 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1780884241123,
-  "graphBuildId": "graph_mq4khuxv",
+  "generatedAt": 1781056714076,
+  "graphBuildId": "graph_mq7f6jx8",
   "nodes": [
     {
-      "id": "intent_0_develop_documentation_M",
+      "id": "intent_0_develop_documentation_s",
       "type": "intent",
-      "name": "develop documentation, MCP integration and state engine",
-      "updatedAt": 1780884241123
+      "name": "develop documentation, state engine and AI integration",
+      "updatedAt": 1781056714076
     },
     {
-      "id": "intent_1_IDE_EXTENSION_from_IDE_",
-      "type": "intent",
-      "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1780884241123
-    },
-    {
-      "id": "intent_2_index_html_from_IDE_in",
+      "id": "intent_1_index_html_from_IDE_in",
       "type": "intent",
       "name": "index.html (from IDE) integration",
-      "updatedAt": 1780884241123
+      "updatedAt": 1781056714076
     },
     {
-      "id": "intent_3_README_from_IDE_integr",
+      "id": "intent_2_README_from_IDE_integr",
       "type": "intent",
       "name": "README (from IDE) integration",
-      "updatedAt": 1780884241123
+      "updatedAt": 1781056714076
+    },
+    {
+      "id": "intent_3_IDE_EXTENSION_from_IDE_",
+      "type": "intent",
+      "name": "IDE_EXTENSION (from IDE) integration",
+      "updatedAt": 1781056714076
     },
     {
       "id": "intent_4__from_IDE_integrat",
       "type": "intent",
       "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1780884241123
+      "updatedAt": 1781056714076
     },
     {
       "id": "intent_5_sess_mp487yx1_2450523b_j",
       "type": "intent",
       "name": "sess_mp487yx1_2450523b.jsonl (from IDE) integration",
-      "updatedAt": 1780884241123
+      "updatedAt": 1781056714076
     }
   ]
 }

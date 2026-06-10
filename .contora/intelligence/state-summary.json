@@ -1,24 +1,17 @@
 {
   "version": 1,
-  "generatedAt": 1780885444634,
-  "project_intent": "develop documentation, MCP integration and state engine",
-  "current_focus": "work in mcp",
+  "generatedAt": 1781056713872,
+  "project_intent": "develop documentation, state engine and AI integration",
+  "current_focus": "work in project root",
   "active_domains": [
     "docs",
-    "mcp",
     "state-engine",
-    "ui",
-    "ai"
+    "ai",
+    "mcp",
+    "ui"
   ],
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
-    {
-      "cluster": "mcp",
-      "files": [
-        "mcp/index.html"
-      ],
-      "weight": 0.62
-    },
     {
       "cluster": "project root",
       "files": [
@@ -28,12 +21,19 @@
         "修",
         "修改方案2.md"
       ],
-      "weight": 0.42
+      "weight": 0.46
     },
     {
       "cluster": "blog",
       "files": [
         "blog/index.html"
+      ],
+      "weight": 0.42
+    },
+    {
+      "cluster": "mcp",
+      "files": [
+        "mcp/index.html"
       ],
       "weight": 0.42
     },
@@ -55,8 +55,9 @@
   ],
   "next_likely_actions": [
     "update documentation for recent changes",
-    "verify MCP tools against workspace state",
-    "iterate on index.html"
+    "review state persistence and lifecycle logic",
+    "iterate on index.html",
+    "iterate on README.md"
   ],
-  "confidence": 0.77
+  "confidence": 0.73
 }

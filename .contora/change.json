@@ -1,53 +1,169 @@
 {
   "version": 2,
-  "generatedAt": 1780884241123,
+  "generatedAt": 1781056714076,
   "changed_files": [
-    "scripts/build-docs.py"
+    ".contora/change.json",
+    ".contora/graph.json",
+    ".contora/graph/edges.json",
+    ".contora/graph/functions.json",
+    ".contora/graph/hotspots.json",
+    ".contora/graph/intents.json",
+    ".contora/graph/knowledge.json",
+    ".contora/graph/metadata.json",
+    ".contora/graph/nodes.json",
+    ".contora/graph/snapshot.json",
+    ".contora/handoff.json",
+    ".contora/intelligence/state-summary.json",
+    ".contora/intent-graph/graph.json",
+    ".contora/state-builder/project-snapshot.md",
+    ".contora/state-builder/project-state.json",
+    ".contora/state.json",
+    "README.md",
+    "index.html",
+    "styles.css",
+    ".contora/dashboard.signal.json",
+    "docs/IDE_EXTENSION.md",
+    "docs/STATE_ENGINE.md",
+    "修改方案.md",
+    "修改方案2.md",
+    "architecture/index.html",
+    "blog/index.html",
+    "mcp/index.html"
   ],
   "key_changes": [
     {
-      "symbol": "scripts/build-docs.py",
+      "symbol": ".contora/change.json",
       "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::slug_for_href",
-      "kind": "function",
+      "symbol": ".contora/graph.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::rewrite_links",
-      "kind": "function",
+      "symbol": ".contora/graph/edges.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::repl_md",
-      "kind": "function",
+      "symbol": ".contora/graph/functions.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::render_sidebar",
-      "kind": "function",
+      "symbol": ".contora/graph/hotspots.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::breadcrumb",
-      "kind": "function",
+      "symbol": ".contora/graph/intents.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::md_to_html",
-      "kind": "function",
+      "symbol": ".contora/graph/knowledge.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::page",
-      "kind": "function",
+      "symbol": ".contora/graph/metadata.json",
+      "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/build-docs.py::main",
-      "kind": "function",
+      "symbol": ".contora/graph/nodes.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/snapshot.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/handoff.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intelligence/state-summary.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intent-graph/graph.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/state-builder/project-snapshot.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/state-builder/project-state.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/state.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "README.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "styles.css",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/dashboard.signal.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/IDE_EXTENSION.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/STATE_ENGINE.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "修改方案.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "修改方案2.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "architecture/index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "blog/index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "mcp/index.html",
+      "kind": "file",
       "change_type": "modified"
     }
   ]

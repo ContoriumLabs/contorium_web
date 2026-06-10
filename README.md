@@ -6,7 +6,7 @@ Static site for **Contorium** — persistent project memory for AI development. 
 
 | Path | Page |
 | ---- | ---- |
-| `index.html` | Home — product story, features, install |
+| `index.html` | Home — product story, before/after, install |
 | `docs/` | **Documentation hub** (sidebar navigation, readable HTML) |
 | `docs/install.html` | Install & use — three adapters, command matrix |
 | `docs/mcp.html` | MCP server — `@contorium/mcp`, CHP v1 tools |

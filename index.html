@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="fba835fbf32479b7" />
     <meta
       name="description"
-      content="Contorium — A persistent project memory layer for AI development. Git for AI collaboration across Cursor, Claude Code, Gemini CLI, and VS Code."
+      content="Contorium — AI coding tools forget your project. Contorium gives them memory. Continuous project understanding across Cursor, Claude, Codex, and VS Code."
     />
-    <title>Contorium — Persistent Project Memory for AI Development</title>
+    <title>Contorium — AI Coding Tools Finally Remember Your Project</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +33,9 @@
         </a>
         <div class="nav-links">
           <a href="#problem">Problem</a>
-          <a href="#value">Value</a>
-          <a href="#how">How it works</a>
-          <a href="#features">Features</a>
+          <a href="#solution">Solution</a>
+          <a href="#compare">Compare</a>
+          <a href="#capabilities">Capabilities</a>
           <a href="#install">Install</a>
           <a href="docs/">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -44,192 +45,226 @@
     </header>
 
     <main>
-      <!-- Hero -->
-      <section class="hero hero--full">
+      <section class="hero hero--full hero-v2">
         <div class="container hero-grid">
           <div class="hero-copy">
             <h1 class="hero-headline">
-              AI doesn't remember your project.<br />
-              <span class="hero-headline-accent">Contorium does.</span>
+              AI coding tools forget your project.<br />
+              <span class="hero-headline-accent">Contorium gives them memory.</span>
             </h1>
-            <p class="hero-lead">A persistent project memory layer for AI development.</p>
-            <p class="hero-slogan">Git for AI Collaboration</p>
+            <p class="hero-subtext">
+              Stop re-explaining your project every time you switch tools, models, or sessions.
+              Keep AI continuously aware of your workspace state.
+            </p>
             <div class="hero-ctas">
-              <a href="#install" class="btn btn-primary">Install extension</a>
-              <a
-                href="https://github.com/ContoriumLabs/contorium"
-                class="btn btn-ghost"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View on GitHub</a
-              >
+              <a href="#solution" class="btn btn-primary">See how it works</a>
+              <a href="#install" class="btn btn-ghost">Install Contorium</a>
             </div>
             <a href="#problem" class="hero-scroll">Scroll ↓</a>
           </div>
-          <div class="dashboard hero-video" aria-label="Product demo video">
-            <div class="hero-video-chrome">
-              <span class="hero-video-dots" aria-hidden="true"><span></span><span></span><span></span></span>
-              <span class="hero-video-path">.contora / workspace state</span>
+
+          <div class="compare-panel" aria-label="Before and after Contorium">
+            <div class="compare-panel-header">
+              <span>Before</span>
+              <span>After Contorium</span>
             </div>
-            <div class="hero-video-frame">
-              <video src="contorium.mp4" autoplay loop muted playsinline></video>
+            <div class="compare-split">
+              <div class="compare-side compare-side--before">
+                <span class="compare-tag">Without memory</span>
+                <p class="compare-bubble">What is your project?</p>
+                <p class="compare-bubble">Can you explain the architecture again?</p>
+                <p class="compare-bubble">Context reset — starting over.</p>
+              </div>
+              <div class="compare-side compare-side--after">
+                <span class="compare-tag">With Contorium</span>
+                <p class="compare-bubble">Project summary auto-loaded</p>
+                <p class="compare-bubble">Current task: fix MCP bootstrap</p>
+                <p class="compare-bubble compare-bubble--highlight">I understand your project ✓</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Problem -->
       <section class="section section-muted" id="problem">
-        <div class="container two-col two-col--align-center">
-          <div>
-            <h2 class="section-title">Modern AI coding tools are powerful — but forget everything.</h2>
-            <p class="section-lead">After a few interactions:</p>
-            <ul class="problem-list">
-              <li>context resets</li>
-              <li>architecture gets re-explained</li>
-              <li>intent is lost</li>
-              <li>switching tools breaks understanding</li>
-            </ul>
-            <p class="problem-closer problem-closer--left">
-              You end up spending more time explaining your project than building it.
-            </p>
+        <div class="container">
+          <h2 class="section-title section-title--center">AI tools don't remember what you're building.</h2>
+          <p class="section-lead section-lead--center">
+            Every time you switch Cursor → Claude → Codex, or start a new session, you lose project context.
+          </p>
+          <div class="problem-cards">
+            <article class="problem-card">
+              <div class="problem-card-icon" aria-hidden="true">↺</div>
+              <h3>Context reset</h3>
+              <p>Every new session resets your AI understanding. You start from zero again.</p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-card-icon" aria-hidden="true">⇄</div>
+              <h3>Tool switching</h3>
+              <p>Cursor → Claude → Codex means re-explaining everything, every time.</p>
+            </article>
+            <article class="problem-card">
+              <div class="problem-card-icon" aria-hidden="true">◎</div>
+              <h3>Lost work state</h3>
+              <p>AI cannot track your project progress, current task, or debugging context.</p>
+            </article>
           </div>
-          <div class="forget-loop" aria-hidden="true">
-            <div class="forget-loop-inner">
-              <p class="forget-line forget-line--active">What were we building again?</p>
-              <p class="forget-line">Re-explaining the architecture…</p>
-              <p class="forget-line">Context window full — starting over.</p>
-              <p class="forget-line">Switching to Claude — paste the README.</p>
-              <p class="forget-line">Intent lost between sessions.</p>
+          <p class="problem-closer">
+            You end up spending more time <strong>re-explaining your project</strong> than building it.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-light" id="solution">
+        <div class="container">
+          <h2 class="section-title section-title--center">Contorium maintains your project's live state.</h2>
+          <p class="section-lead section-lead--center">
+            So AI always knows what you're building, what you're working on, and what changed recently.
+          </p>
+          <div class="solution-block">
+            <ul class="solution-list">
+              <li>Project state tracking</li>
+              <li>Task focus awareness</li>
+              <li>Code &amp; file context</li>
+              <li>Session continuity</li>
+            </ul>
+            <blockquote class="solution-aside">
+              Contorium keeps AI aligned with your <strong>real development progress</strong> — not just chat history.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="continuity">
+        <div class="container">
+          <h2 class="section-title section-title--center">Always consistent across tools</h2>
+          <div class="tool-pills">
+            <span class="tool-pill">Cursor</span>
+            <span class="tool-pill">VS Code</span>
+            <span class="tool-pill">Claude Code</span>
+            <span class="tool-pill">Codex</span>
+            <span class="tool-pill">MCP-compatible agents</span>
+          </div>
+          <p class="continuity-tagline">Switch freely. Your project understanding stays the same.</p>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="does">
+        <div class="container">
+          <h2 class="section-title section-title--center">What it actually does</h2>
+          <div class="does-grid">
+            <div class="does-item"><strong>Tracks workspace state</strong> in real time</div>
+            <div class="does-item"><strong>Maintains current focus</strong> across sessions</div>
+            <div class="does-item"><strong>Keeps active file + git context</strong> synced</div>
+            <div class="does-item"><strong>Builds continuous understanding</strong> of your project</div>
+            <div class="does-item does-item--full">
+              <strong>Generates AI-ready project snapshots</strong> for any tool
+            </div>
+          </div>
+          <p class="does-footnote">
+            Not chat memory. Not prompts.
+            <em>Real project state.</em>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="compare">
+        <div class="container">
+          <h2 class="section-title section-title--center">The difference is continuity</h2>
+          <div class="compare-hero">
+            <div class="compare-hero-col compare-hero-col--before">
+              <h3>Without Contorium</h3>
+              <ul>
+                <li>AI forgets your last work</li>
+                <li>Every session starts from zero</li>
+                <li>Repetitive explanations</li>
+                <li>Debugging restarts from scratch</li>
+              </ul>
+            </div>
+            <div class="compare-hero-col compare-hero-col--after">
+              <h3>With Contorium</h3>
+              <ul>
+                <li>AI already knows your project</li>
+                <li>Continuous understanding</li>
+                <li>Instant onboarding into context</li>
+                <li>Work feels uninterrupted</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Core Value -->
-      <section class="section section-light" id="value">
-        <div class="container value-statement">
-          <p class="value-lead">Contorium maintains a persistent cognitive layer for your project.</p>
-          <p class="value-sub">
-            So AI doesn't restart from zero every time.<br />
-            It continues understanding your project.
+      <section class="section section-muted" id="capabilities">
+        <div class="container">
+          <h2 class="section-title section-title--center">A continuous runtime layer for AI development</h2>
+          <div class="system-cards">
+            <article class="system-card">
+              <div class="system-card-num">01</div>
+              <h3>Persistent workspace state</h3>
+              <p>Keeps your project state alive across tools and sessions.</p>
+            </article>
+            <article class="system-card">
+              <div class="system-card-num">02</div>
+              <h3>Cross-tool continuity</h3>
+              <p>Works across Cursor, Claude, VS Code, Codex, and MCP agents.</p>
+            </article>
+            <article class="system-card">
+              <div class="system-card-num">03</div>
+              <h3>AI-ready context</h3>
+              <p>Transforms raw project data into structured understanding for AI.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="memory-layer">
+        <div class="container">
+          <h2 class="section-title section-title--center">Not a tool. A memory layer.</h2>
+          <div class="memory-flow" aria-label="Contorium connects your tools">
+            <div class="memory-flow-node">You + your project</div>
+            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
+            <div class="memory-flow-node memory-flow-node--core">Contorium — Project State Layer</div>
+            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
+            <div class="memory-flow-node memory-flow-node--tools">
+              <span>Cursor</span>
+              <span>Claude</span>
+              <span>Codex</span>
+              <span>VS Code</span>
+            </div>
+          </div>
+          <p class="memory-layer-copy">
+            Contorium does <strong>not</strong> replace your IDE or AI model.<br />
+            It connects them with a shared understanding of your project.
           </p>
         </div>
       </section>
 
-      <!-- How it works -->
-      <section class="section" id="how">
+      <section class="section section-muted" id="trust">
         <div class="container">
-          <h2 class="section-title section-title--center">How it works</h2>
-          <p class="section-lead section-lead--center">From workspace activity to any AI tool — one continuous understanding.</p>
-          <div class="cognitive-flow" aria-label="How Contorium works">
-            <div class="cognitive-flow-step">Workspace Activity</div>
-            <span class="cognitive-flow-arrow" aria-hidden="true">↓</span>
-            <div class="cognitive-flow-step cognitive-flow-step--highlight">Project Understanding Layer</div>
-            <span class="cognitive-flow-arrow" aria-hidden="true">↓</span>
-            <div class="cognitive-flow-step">Knowledge Graph + Intent Tracking</div>
-            <span class="cognitive-flow-arrow" aria-hidden="true">↓</span>
-            <div class="cognitive-flow-step cognitive-flow-step--pulse">Hotspot Detection</div>
-            <span class="cognitive-flow-arrow" aria-hidden="true">↓</span>
-            <div class="cognitive-flow-step cognitive-flow-step--highlight">AI-ready Snapshot</div>
-            <span class="cognitive-flow-arrow" aria-hidden="true">↓</span>
-            <div class="cognitive-flow-step">Any AI Tool</div>
+          <h2 class="section-title section-title--center">Built for AI-native developers</h2>
+          <div class="trust-grid">
+            <div class="trust-item">Works with MCP-compatible tools</div>
+            <div class="trust-item">No lock-in</div>
+            <div class="trust-item">Lightweight integration</div>
+            <div class="trust-item">Local-first · open architecture</div>
           </div>
         </div>
       </section>
 
-      <!-- Core Features -->
-      <section class="section section-muted" id="features">
-        <div class="container">
-          <h2 class="section-title section-title--center">Core features</h2>
-          <p class="section-lead section-lead--center">Project cognition — not another feature checklist.</p>
-          <div class="capability-grid capability-grid--5">
-            <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">◎</div>
-              <h3 class="capability-title">Persistent Project Memory</h3>
-              <p class="capability-desc">
-                AI remembers your project across sessions, tools, and model switches.
-              </p>
-            </article>
-            <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">⇄</div>
-              <h3 class="capability-title">Cross-tool Continuity</h3>
-              <p class="capability-desc">
-                Cursor · Claude Code · Gemini CLI · Codex · VS Code
-              </p>
-            </article>
-            <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">◈</div>
-              <h3 class="capability-title">Project Knowledge Graph</h3>
-              <p class="capability-desc">
-                <code class="inline-mono">Intent → Module → File → Function</code><br />
-                A structured understanding of your codebase.
-              </p>
-            </article>
-            <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">◉</div>
-              <h3 class="capability-title">Hotspots</h3>
-              <p class="capability-desc">
-                Highlights what matters right now — frequently edited files, key logic areas, and high-impact code paths.
-              </p>
-            </article>
-            <article class="capability-card capability-card--compact">
-              <div class="capability-icon" aria-hidden="true">⎘</div>
-              <h3 class="capability-title">AI-ready Snapshot</h3>
-              <p class="capability-desc">A compact project state for AI handoff.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why it matters -->
-      <section class="section" id="why">
-        <div class="container">
-          <h2 class="section-title section-title--center">Why it matters</h2>
-          <div class="before-after-grid">
-            <article class="before-after-card before-after-card--before">
-              <span class="before-after-label">Without Contorium</span>
-              <p>AI resets understanding every session.</p>
-            </article>
-            <article class="before-after-card before-after-card--after">
-              <span class="before-after-label">With Contorium</span>
-              <p>AI maintains continuous project cognition.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Not an agent -->
-      <section class="section section-muted not-section" id="not-agent">
-        <div class="container">
-          <h2 class="section-title section-title--center">Contorium is NOT an autonomous coding agent.</h2>
-          <p class="section-lead section-lead--center">It does NOT:</p>
-          <ul class="not-list">
-            <li>generate tasks</li>
-            <li>decide what to build</li>
-            <li>replace developers</li>
-          </ul>
-          <p class="not-closer">
-            <strong>Developers stay in control.</strong> Contorium maintains understanding.
-          </p>
-        </div>
-      </section>
-
-      <!-- Install (unchanged) -->
       <section class="section section-mcp" id="install">
         <div class="container">
           <h2 class="section-title">Install Contorium</h2>
-          <p class="section-lead">Three peer adapters — IDE extension, MCP server, and CLI. Each reads and writes the same <code style="color: var(--accent)">.contora/</code> state.</p>
+          <p class="section-lead">IDE extension, MCP, or CLI — pick one entry point. All share the same project memory.</p>
           <div class="install-grid install-grid--3">
             <div class="install-col">
               <h3>IDE extension</h3>
               <ul class="install-links">
                 <li>
                   <a
-                    href="https://marketplace.visualstudio.com/search?term=contorium&target=VSCode&category=All%20categories&sortBy=Relevance"
+                    href="https://github.com/ContoriumLabs/contorium/releases"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >VS Code <span class="install-arrow" aria-hidden="true">→</span></a
+                    >Download VSIX <span class="install-arrow" aria-hidden="true">→</span></a
                   >
                 </li>
                 <li>
@@ -237,19 +272,11 @@
                     href="https://marketplace.visualstudio.com/search?term=contorium&target=VSCode&category=All%20categories&sortBy=Relevance"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Cursor (VSIX) <span class="install-arrow" aria-hidden="true">→</span></a
+                    >Marketplace <span class="install-arrow" aria-hidden="true">→</span></a
                   >
                 </li>
                 <li>
-                  <a
-                    href="https://open-vsx.org/?search=contorium&sortBy=relevance&sortOrder=desc"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Open VSX <span class="install-arrow" aria-hidden="true">→</span></a
-                  >
-                </li>
-                <li>
-                  <a href="docs/ide-extension.html">IDE docs <span class="install-arrow" aria-hidden="true">→</span></a>
+                  <a href="docs/ide-extension.html">IDE guide <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
               </ul>
             </div>
@@ -263,13 +290,7 @@
                   <a href="mcp/#claude-code">Claude Code <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
                 <li>
-                  <a href="mcp/">MCP setup <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
-                <li>
-                  <a href="docs/mcp.html">MCP one-liner guide <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
-                <li>
-                  <a href="docs/mcp.html">MCP docs <span class="install-arrow" aria-hidden="true">→</span></a>
+                  <a href="docs/mcp.html">One-liner setup <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
               </ul>
             </div>
@@ -282,36 +303,19 @@
                 <li>
                   <a href="docs/install.html">Full install guide <span class="install-arrow" aria-hidden="true">→</span></a>
                 </li>
-                <li>
-                  <a href="docs/dashboard.html">Runtime dashboard <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
               </ul>
-              <div class="code-block" style="margin-top: 12px">
-                <pre><code style="font-size: 0.78rem">npm install -g @contorium/cli
-contorium init .
-contorium handoff
-contorium handoff --copy-to-ai
-# Passive dashboard: Space · Enter/i inject · c copy
-# MCP: host auto-spawns @contorium/mcp</code></pre>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Vision -->
-      <section class="section vision-section" id="vision">
-        <div class="container vision-inner">
-          <p class="vision-line">Today's AI tools have context windows.</p>
-          <p class="vision-line vision-line--accent">Tomorrow's tools need memory.</p>
-          <p class="vision-statement">Contorium is the missing memory layer for AI development.</p>
-          <p class="vision-closer">
-            Because AI conversations end.<br />
-            Project understanding should not.
-          </p>
-          <div class="vision-ctas">
-            <a href="#install" class="btn btn-primary">Get started</a>
-            <a href="docs/" class="btn btn-ghost">Read the docs</a>
+      <section class="cta-final" id="cta">
+        <div class="container">
+          <h2>Stop re-explaining your project.</h2>
+          <p>AI should already understand it.</p>
+          <div class="cta-final-buttons">
+            <a href="#install" class="btn btn-primary">Start using Contorium</a>
+            <a href="#solution" class="btn btn-ghost">See how it works</a>
           </div>
         </div>
       </section>
@@ -331,7 +335,7 @@ contorium handoff --copy-to-ai
             Contorium
           </a>
           <p class="footer-oneliner">
-            The persistent cognitive layer for AI development — memory that survives sessions, tools, and model switches.
+            AI loses memory between tools. Contorium restores continuity.
           </p>
           <ul class="footer-trust">
             <li>Local-first</li>

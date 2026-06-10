@@ -2,10 +2,10 @@
   "version": "3.1.0",
   "schemaVersion": "1",
   "closureVersion": "1",
-  "generatedAt": 1780884241123,
+  "generatedAt": 1781056714076,
   "workspaceId": "70995f99",
-  "graphBuildId": "graph_mq4khuxv",
+  "graphBuildId": "graph_mq7f6jx8",
   "sourceVersion": "0.9.1",
-  "rebuildTrigger": "intent_change",
+  "rebuildTrigger": "file_batch",
   "lastCommitHash": "406a255"
 }
