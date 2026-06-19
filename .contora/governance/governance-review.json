@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "generatedAt": 1781828558374,
+  "file": "修改方案.md",
+  "status": "pass",
+  "risk": "low",
+  "score": 100,
+  "protectedPath": false,
+  "truthImpact": false,
+  "recommendation": "safe_to_modify",
+  "reason": "No governance violations detected",
+  "allow": true
+}

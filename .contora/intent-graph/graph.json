@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": 1781057523586,
+  "updatedAt": 1781836785999,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
       "text": "develop documentation, MCP integration and state engine",
-      "status": "WEAKENING",
-      "confidence": 0.59,
+      "status": "ACTIVE",
+      "confidence": 0.78,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -19,16 +19,19 @@
         "修",
         "styles.css",
         "docs/IDE_EXTENSION.md",
-        "docs/STATE_ENGINE.md"
+        "docs/STATE_ENGINE.md",
+        "mcp/README.md",
+        "contorium.mp4",
+        "googlefba835fbf32479b7.html"
       ],
-      "lastUpdated": 1781057523586,
+      "lastUpdated": 1781836785999,
       "learnedAt": 1780286520992
     },
     {
       "id": "intent_mpuomn4x_0bqur2",
       "text": "update documentation for recent changes",
-      "status": "WEAKENING",
-      "confidence": 0.54,
+      "status": "ACTIVE",
+      "confidence": 0.71,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -41,9 +44,12 @@
         "styles.css",
         "docs/IDE_EXTENSION.md",
         "mcp/index.html",
-        "docs/STATE_ENGINE.md"
+        "docs/STATE_ENGINE.md",
+        "mcp/README.md",
+        "contorium.mp4",
+        "googlefba835fbf32479b7.html"
       ],
-      "lastUpdated": 1781057523586,
+      "lastUpdated": 1781836785999,
       "learnedAt": 1780286520992
     },
     {
@@ -63,9 +69,12 @@
         "修改方案2.md",
         "docs/IDE_EXTENSION.md",
         "mcp/index.html",
-        "docs/STATE_ENGINE.md"
+        "docs/STATE_ENGINE.md",
+        "mcp/README.md",
+        "contorium.mp4",
+        "googlefba835fbf32479b7.html"
       ],
-      "lastUpdated": 1781057523586,
+      "lastUpdated": 1781836785999,
       "learnedAt": 1780286520992
     },
     {
@@ -85,9 +94,10 @@
         "修改方案2.md",
         "docs/IDE_EXTENSION.md",
         "mcp/index.html",
-        "docs/STATE_ENGINE.md"
+        "docs/STATE_ENGINE.md",
+        "mcp/README.md"
       ],
-      "lastUpdated": 1781057523586,
+      "lastUpdated": 1781836785999,
       "learnedAt": 1780286520992
     },
     {
@@ -109,14 +119,14 @@
         "mcp/index.html",
         "docs/STATE_ENGINE.md"
       ],
-      "lastUpdated": 1781057315327,
+      "lastUpdated": 1781791679742,
       "learnedAt": 1780286534119
     },
     {
       "id": "intent_mpuoon5s_46m7m6",
       "text": "iterate on 修改方案2.md",
       "status": "ARCHIVED",
-      "confidence": 0.05,
+      "confidence": 0.5,
       "relatedFiles": [
         "修改方案2.md",
         "index.html",
@@ -125,9 +135,13 @@
         "architecture/index.html",
         "blog/index.html",
         "修",
-        "styles.css"
+        "styles.css",
+        "contorium.mp4",
+        "googlefba835fbf32479b7.html",
+        "mcp/index.html",
+        "mcp/README.md"
       ],
-      "lastUpdated": 1780382246371,
+      "lastUpdated": 1781828557328,
       "learnedAt": 1780286614336
     },
     {
@@ -163,10 +177,41 @@
         "修改方案.md",
         "修",
         "修改方案2.md",
-        "docs/STATE_ENGINE.md"
+        "docs/STATE_ENGINE.md",
+        "mcp/README.md",
+        "contorium.mp4"
       ],
-      "lastUpdated": 1780884240593,
+      "lastUpdated": 1781833121904,
       "learnedAt": 1780548054684
+    },
+    {
+      "id": "intent_mqjn4atx_n9wbv6",
+      "text": "develop documentation, MCP integration and build tooling",
+      "status": "ARCHIVED",
+      "confidence": 0.55,
+      "relatedFiles": [
+        "blog/index.html",
+        "mcp/index.html",
+        "mcp/README.md",
+        "index.html",
+        "README.md",
+        "修改方案.md",
+        "contorium.mp4",
+        "googlefba835fbf32479b7.html",
+        "styles.css",
+        "修"
+      ],
+      "lastUpdated": 1781836487946,
+      "learnedAt": 1781795640020
+    },
+    {
+      "id": "intent_mqk9gu88_p3isgf",
+      "text": "ongoing workspace development",
+      "status": "ACTIVE",
+      "confidence": 1,
+      "relatedFiles": [],
+      "lastUpdated": 1781836785999,
+      "learnedAt": 1781833176584
     }
   ],
   "edges": [
@@ -688,6 +733,146 @@
     {
       "from": "intent_mpuomn4x_95gdjs",
       "to": "file:docs/STATE_ENGINE.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:googlefba835fbf32479b7.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:googlefba835fbf32479b7.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mqjn4atx_n9wbv6",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mqjn4atx_n9wbv6",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:修",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:googlefba835fbf32479b7.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:googlefba835fbf32479b7.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:googlefba835fbf32479b7.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuoon5s_46m7m6",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:contorium.mp4",
       "type": "AFFECTS"
     }
   ]

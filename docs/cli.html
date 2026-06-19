@@ -48,7 +48,7 @@
         <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / CLI</nav>
         <article class="docs-prose">
           <h1>Contorium CLI</h1>
-<p>The CLI is a <strong>peer Runtime Adapter</strong> with IDE and MCP, sharing <code>.contora/</code>.<br>
+<p>The CLI is a <strong>peer Runtime Adapter</strong> with IDE and MCP, sharing <code>@contora/state-core</code> and <code>.contora/</code>.<br>
 Overview: <a href="install.html">INSTALL.md</a> · <a href="../index.html">Home</a></p>
 <hr>
 <h2>Command cheat sheet</h2>
@@ -62,27 +62,31 @@ Overview: <a href="install.html">INSTALL.md</a> · <a href="../index.html">Home<
 <tbody>
 <tr>
 <td><strong>Install</strong></td>
-<td><code>npm install -g @contorium/cli</code></td>
+<td><code>npm install &amp;&amp; npm run compile</code> (contorium repo root)</td>
 </tr>
 <tr>
 <td><strong>Verify</strong></td>
-<td><code>contorium status .</code> or <code>contorium --help</code></td>
+<td><code>npx contorium status .</code> or <code>npx contorium --help</code></td>
+</tr>
+<tr>
+<td><strong>Global (optional)</strong></td>
+<td>Repo root <code>npm link</code> → <code>contorium status .</code> anywhere</td>
 </tr>
 <tr>
 <td><strong>Init</strong></td>
-<td><code>contorium init [path]</code></td>
+<td><code>npx contorium init [path]</code></td>
 </tr>
 <tr>
 <td><strong>Refresh</strong></td>
-<td><code>contorium sync [path]</code></td>
+<td><code>npx contorium sync [path]</code></td>
 </tr>
 <tr>
 <td><strong>L4 snapshot</strong></td>
-<td><code>contorium snapshot [path]</code></td>
+<td><code>npx contorium snapshot [path]</code></td>
 </tr>
 <tr>
 <td><strong>Handoff (CHP v1)</strong></td>
-<td><code>contorium handoff</code> · <code>--copy-to-ai</code> (manual copy)</td>
+<td><code>npx contorium handoff</code> · <code>--copy-to-ai</code> (manual copy)</td>
 </tr>
 <tr>
 <td><strong>Dashboard</strong></td>
@@ -90,35 +94,59 @@ Overview: <a href="install.html">INSTALL.md</a> · <a href="../index.html">Home<
 </tr>
 <tr>
 <td><strong>Semi-auto inject</strong></td>
-<td><strong>No command</strong> — auto on new AI chat</td>
+<td><strong>No command</strong> — auto on new AI chat; debug: <code>--prompt-new-chat</code></td>
 </tr>
 <tr>
 <td><strong>Cognitive summary</strong></td>
-<td><code>contorium graph-snapshot [path]</code></td>
+<td><code>npx contorium graph-snapshot [path]</code></td>
 </tr>
 <tr>
 <td><strong>Knowledge graph</strong></td>
-<td><code>contorium knowledge [path]</code></td>
+<td><code>npx contorium knowledge [path]</code></td>
 </tr>
 <tr>
 <td><strong>Change / graph / timeline</strong></td>
-<td><code>contorium change\|graph\|timeline [path]</code></td>
+<td><code>npx contorium change\|graph\|timeline [path]</code></td>
 </tr>
 <tr>
 <td><strong>AI-ready export</strong></td>
-<td><code>contorium export [path]</code> or <code>--format json</code></td>
+<td><code>npx contorium export [path]</code> or <code>--format json</code></td>
+</tr>
+<tr>
+<td><strong>Governance review</strong></td>
+<td><code>npx contorium governance review [path] --target &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Governance cycle</strong></td>
+<td><code>npx contorium governance cycle [path] [--target &lt;file&gt;]</code></td>
+</tr>
+<tr>
+<td><strong>Governance export</strong></td>
+<td><code>npx contorium governance export [path] [--copy]</code></td>
+</tr>
+<tr>
+<td><strong>Control surface</strong></td>
+<td><code>npx contorium control governance\|check\|intent\|analyze\|execute\|ready [path]</code></td>
+</tr>
+<tr>
+<td><strong>Runtime bootstrap</strong></td>
+<td><code>npx contorium bootstrap [path] [--source ide\|mcp\|cli]</code></td>
 </tr>
 <tr>
 <td><strong>Status</strong></td>
-<td><code>contorium status [path]</code></td>
+<td><code>npx contorium status [path]</code></td>
+</tr>
+<tr>
+<td><strong>Runtime dashboard</strong></td>
+<td>Zero CLI commands — edit files → auto Passive (see below)</td>
 </tr>
 <tr>
 <td><strong>state.json</strong></td>
-<td><code>contorium state [path]</code></td>
+<td><code>npx contorium state [path]</code></td>
 </tr>
 <tr>
 <td><strong>Uninstall</strong></td>
-<td><code>npm uninstall -g @contorium/cli</code></td>
+<td><code>npm unlink -g contorium</code> (if linked); no daemon</td>
 </tr>
 <tr>
 <td><strong>Clear data (optional)</strong></td>
@@ -129,10 +157,20 @@ Overview: <a href="install.html">INSTALL.md</a> · <a href="../index.html">Home<
 <p>Default <code>[path]</code> is the current directory.</p>
 <hr>
 <h2>Install</h2>
-<pre><code class="language-bash">npm install -g @contorium/cli
-contorium --help
-contorium init .
-contorium status .
+<h3>From source (same repo as MCP)</h3>
+<pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
+cd contorium
+npm install
+npm run compile
+</code></pre>
+<p>Verify:</p>
+<pre><code class="language-powershell">npx contorium status .
+npx contorium init .
+</code></pre>
+<h3>Global command (optional)</h3>
+<p>From contorium repo root:</p>
+<pre><code class="language-bash">npm link
+contorium status E:\path\to\your-project
 </code></pre>
 <hr>
 <h2>Commands</h2>
@@ -150,6 +188,11 @@ contorium status .
 <td><code>contorium init [path]</code></td>
 <td>Create/merge <code>state.json</code>, L4 snapshot</td>
 <td>bootstrap</td>
+</tr>
+<tr>
+<td><code>contorium bootstrap [path] [--source ide\|mcp\|cli]</code></td>
+<td>Runtime attach + dashboard worker</td>
+<td>MCP initialize</td>
 </tr>
 <tr>
 <td><code>contorium sync [path]</code></td>
@@ -201,9 +244,8 @@ contorium status .
 </tr>
 </tbody>
 </table>
-<p>See <a href="dashboard.html">Runtime dashboard</a>.</p>
-<h3>Advanced commands (optional)</h3>
-<p>These are rarely needed in daily use:</p>
+<p>See <a href="dashboard.html">DASHBOARD.md</a>.</p>
+<h3>Runtime dashboard commands (debug / dev only)</h3>
 <table>
 <thead>
 <tr>
@@ -214,7 +256,7 @@ contorium status .
 <tbody>
 <tr>
 <td><code>contorium handoff --show</code></td>
-<td>Force expand (normally use <strong>Space</strong>)</td>
+<td>Force expand signal (normally use <strong>Space</strong>)</td>
 </tr>
 <tr>
 <td><code>contorium handoff --hide</code></td>
@@ -222,7 +264,7 @@ contorium status .
 </tr>
 <tr>
 <td><code>contorium handoff --prompt-new-chat</code></td>
-<td>Force inject prompt in TTY</td>
+<td>Force inject prompt in TTY (normally automatic)</td>
 </tr>
 <tr>
 <td><code>contorium handoff --copy</code> / <code>--copy-to-ai</code></td>
@@ -230,7 +272,42 @@ contorium status .
 </tr>
 <tr>
 <td><code>contorium attach . --auto</code></td>
-<td>Start dashboard worker manually</td>
+<td>Start worker manually</td>
+</tr>
+</tbody>
+</table>
+<h3>Dashboard subcommands (debug / dev only)</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contorium dashboard show</code></td>
+<td>Force expand signal</td>
+</tr>
+<tr>
+<td><code>contorium dashboard hide</code></td>
+<td>Minimize to Passive</td>
+</tr>
+<tr>
+<td><code>contorium dashboard line</code></td>
+<td>Print Passive line to stdout</td>
+</tr>
+<tr>
+<td><code>contorium dashboard wake</code></td>
+<td>Wake worker and refresh</td>
+</tr>
+<tr>
+<td><code>contorium dashboard open</code></td>
+<td>Open dashboard terminal</td>
+</tr>
+<tr>
+<td><code>contorium dashboard filter [symbol]</code></td>
+<td>Set or clear symbol filter</td>
 </tr>
 </tbody>
 </table>
@@ -248,6 +325,16 @@ contorium status .
 <td><code>contorium handoff [path] [--format compact\|markdown\|json]</code></td>
 <td><strong>CHP v1 get_handoff</strong> (default: compact one-liner)</td>
 <td><code>get_project_handoff</code></td>
+</tr>
+<tr>
+<td><code>contorium handoff --show \| --hide \| --filter</code></td>
+<td>Dashboard signals (<strong>debug</strong> — use <strong>Space</strong> instead)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>contorium handoff --prompt-new-chat</code></td>
+<td>Force inject prompt (<strong>debug</strong> — normally automatic)</td>
+<td></td>
 </tr>
 <tr>
 <td><code>contorium graph-snapshot [path]</code></td>
@@ -276,34 +363,115 @@ contorium status .
 </tr>
 <tr>
 <td><code>contorium export [path] [--format json\|markdown]</code></td>
-<td>Legacy full export (manual copy fallback)</td>
+<td>Unified export (handoff + governance appendix)</td>
 <td>combined tools</td>
 </tr>
 </tbody>
 </table>
+<h3>Governance (<code>.contora/governance/*</code>)</h3>
+<p>Unified artifacts under <code>.contora/governance/</code> — see <a href="install.html#architecture-three-adapters">INSTALL.md</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>Writes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contorium governance review [path] --target &lt;file&gt;</code></td>
+<td>Run governance review on a target file</td>
+<td><code>review.json</code> only</td>
+</tr>
+<tr>
+<td><code>contorium governance cycle [path] [--target &lt;file&gt;]</code></td>
+<td>Full governance cycle (calls MCP dist when available)</td>
+<td>decision, scope, trace, cycle</td>
+</tr>
+<tr>
+<td><code>contorium governance export [path] [--copy]</code></td>
+<td>Export governance appendix; <code>--copy</code> to clipboard</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PowerShell:</strong></p>
+<pre><code class="language-powershell">npx contorium governance review . --target src/foo.ts
+npx contorium governance cycle .
+npx contorium governance export . --copy
+</code></pre>
+<h3>Control surface (control-core)</h3>
+<p>Mirrors MCP auxiliary governance tools:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>MCP equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contorium control governance [path]</code></td>
+<td>Read governance rules</td>
+<td><code>get_control_context</code></td>
+</tr>
+<tr>
+<td><code>contorium control check [path] --target &lt;file&gt;</code></td>
+<td>Review an action</td>
+<td>check via governance engine</td>
+</tr>
+<tr>
+<td><code>contorium control intent [path] "&lt;text&gt;"</code></td>
+<td>Update project direction</td>
+<td><code>update_project_intent</code></td>
+</tr>
+<tr>
+<td><code>contorium control analyze [path]</code></td>
+<td>Analyze project</td>
+<td><code>analyze_project</code></td>
+</tr>
+<tr>
+<td><code>contorium control execute [path] --target &lt;file&gt;</code></td>
+<td>Validate governance loop</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>contorium control ready [path]</code></td>
+<td>Bootstrap governance + sync</td>
+<td><code>ensure_control_ready</code></td>
+</tr>
+</tbody>
+</table>
+<p>Legacy aliases also work: <code>get-governance</code>, <code>check-action</code>, <code>update-project-intent</code>.</p>
 <p><strong>PowerShell:</strong></p>
 <pre><code class="language-powershell">cd E:\your-project
-contorium init .
-contorium sync .
-contorium handoff
-contorium handoff --copy
-contorium handoff --format markdown
-contorium graph-snapshot .
-contorium knowledge . --min-confidence 0.7
-contorium export . | Out-File -Encoding utf8 ai-context.md
-contorium export . --format json | Out-File -Encoding utf8 ai-context.json
+npx contorium init .
+npx contorium sync .
+npx contorium handoff
+npx contorium handoff --copy
+npx contorium handoff --prompt-new-chat
+npx contorium handoff --show
+npx contorium handoff --format markdown
+npx contorium graph-snapshot .
+npx contorium knowledge . --min-confidence 0.7
+npx contorium export . | Out-File -Encoding utf8 ai-context.md
+npx contorium export . --format json | Out-File -Encoding utf8 ai-context.json
 </code></pre>
 <p><strong>bash:</strong></p>
 <pre><code class="language-bash">cd /path/to/project
-contorium init .
-contorium sync .
-contorium handoff
-contorium handoff --copy
-contorium handoff --format markdown
-contorium graph-snapshot .
-contorium knowledge . --min-confidence 0.7
-contorium export . &gt; ai-context.md
-contorium export . --format json &gt; ai-context.json
+npx contorium init .
+npx contorium sync .
+npx contorium handoff
+npx contorium handoff --copy
+npx contorium handoff --prompt-new-chat
+npx contorium handoff --show
+npx contorium handoff --format markdown
+npx contorium graph-snapshot .
+npx contorium knowledge . --min-confidence 0.7
+npx contorium export . &gt; ai-context.md
+npx contorium export . --format json &gt; ai-context.json
 </code></pre>
 <p>Writes set <code>state.json</code> → <code>source.lastWriter: "cli"</code>.</p>
 <h3>CHP v1 — unified handoff (recommended)</h3>
@@ -340,12 +508,16 @@ contorium export . --format json &gt; ai-context.json
 </table>
 <h3>Semi-auto inject (automatic)</h3>
 <p>When runtime is active and you open a <strong>new AI chat</strong>, Contorium shows <code>[?]</code> automatically.</p>
-<p><strong>Manual fallback:</strong></p>
-<pre><code class="language-powershell">contorium handoff --copy-to-ai
-contorium export . | Out-File -Encoding utf8 ai-context.md
+<p><strong>Debug (TTY fallback):</strong></p>
+<pre><code class="language-powershell">npx contorium handoff --prompt-new-chat
+npx contorium handoff --copy-to-ai
+</code></pre>
+<p><strong>PowerShell one-liner (fallback only):</strong></p>
+<pre><code class="language-powershell">npx contorium handoff --copy
+npx contorium export . | Out-File -Encoding utf8 ai-context.md
 </code></pre>
 <h3><code>contorium export</code> sections (markdown)</h3>
-<p>Uses the same <code>formatCanonicalAiMarkdown</code> as IDE <strong>Copy AI-ready context</strong>:</p>
+<p>Uses the same canonical export as IDE <strong>Copy AI-ready context</strong>, plus a unified <strong>GOVERNANCE:</strong> appendix when governance artifacts exist:</p>
 <pre><code class="language-text"># TASK ANCHOR
 # PROJECT SNAPSHOT
 # WORKING CONTEXT
@@ -355,20 +527,27 @@ contorium export . | Out-File -Encoding utf8 ai-context.md
 # CODE EVOLUTION
 # NOTES
 # INSTRUCTION
+---
+GOVERNANCE:
+## DECISION
+## SCOPE
+## TRACE
 </code></pre>
-<p>JSON format includes <code>cognitiveSnapshot</code> when the knowledge graph exists.</p>
+<p>Dashboard <strong>c</strong> key, <code>contorium handoff --copy</code>, and <code>contorium governance export</code> use the same unified export builder from <code>@contora/state-core</code>.</p>
+<p>JSON format includes <code>cognitiveSnapshot</code> when the knowledge graph exists, and <code>governance_export</code> when governance artifacts exist.</p>
 <hr>
 <h2>Relationship to IDE / MCP</h2>
 <ul>
 <li>Does <strong>not</strong> require IDE extension or MCP process  </li>
 <li>With IDE: IDE writes events; CLI <code>sync</code> supplements git/paths only — <strong>does not overwrite</strong> <code>currentTask</code> / <code>notes</code>  </li>
-<li>With MCP: shares the same sync logic  </li>
+<li>With MCP: shares <code>syncWorkspaceState()</code> logic  </li>
 </ul>
 <hr>
 <h2>Uninstall</h2>
-<pre><code class="language-bash">npm uninstall -g @contorium/cli
-</code></pre>
-<p>Stop calling <code>contorium</code>; <code>.contora/</code> is <strong>not</strong> removed automatically.</p>
+<ol>
+<li>If you ran <code>npm link</code>: <code>npm unlink -g contorium</code>  </li>
+<li>Stop calling <code>contorium</code>; <code>.contora/</code> is <strong>not</strong> removed  </li>
+</ol>
 <p>Clear shared workspace data:</p>
 <pre><code class="language-powershell">Remove-Item -Recurse -Force .contora
 </code></pre>
@@ -384,7 +563,7 @@ contorium export . | Out-File -Encoding utf8 ai-context.md
 <tbody>
 <tr>
 <td><code>command not found: contorium</code></td>
-<td>Reinstall: <code>npm install -g @contorium/cli</code></td>
+<td>Run <code>npm run compile</code>, use <code>npx contorium</code></td>
 </tr>
 <tr>
 <td><code>init</code> shows <code>created: false</code></td>
@@ -400,7 +579,15 @@ contorium export . | Out-File -Encoding utf8 ai-context.md
 </tr>
 <tr>
 <td><code>state: no state.json</code></td>
-<td>Run <code>contorium init .</code> first</td>
+<td>Run <code>npx contorium init .</code> first</td>
+</tr>
+<tr>
+<td>Copy missing <code>GOVERNANCE:</code> block</td>
+<td>Run <code>governance review</code> or <code>governance cycle</code> first; restart dashboard worker after CLI rebuild</td>
+</tr>
+<tr>
+<td>Dashboard shows stale UI</td>
+<td>Run <code>npm run build:cli</code> then restart dashboard worker</td>
 </tr>
 </tbody>
 </table>
@@ -412,6 +599,9 @@ contorium export . | Out-File -Encoding utf8 ai-context.md
 <li><a href="ide-extension.html">IDE Extension</a></li>
 <li><a href="mcp.html">MCP Server</a></li>
 <li><a href="dashboard.html">Runtime Dashboard (CRBP)</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md">Architecture V3.1</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md">Engineering Closure</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md">State Engine</a></li>
 </ul>
         </article>
       </main>

@@ -40,12 +40,13 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <span class="section-badge">@contorium/mcp · CHP v1 · auto-spawn</span>
+          <span class="section-badge">@contorium/mcp · CHP v1 · Governance V4 · auto-spawn</span>
           <h1>Contorium MCP Server</h1>
           <p class="page-hero-lead">
-            Configure once — <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor Agent</strong>, and
+            Configure once — <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor</strong>, and
             <strong>Gemini CLI</strong> spawn MCP automatically. Primary tool: <code style="color: var(--accent)">get_project_handoff</code>.
-            Semi-auto handoff injection on new chats. See <a href="../docs/dashboard.html">Runtime dashboard</a>.
+            Semi-auto handoff injection on new chats. Governance V4 + optional cognitive mode (A/B).
+            See <a href="../docs/dashboard.html">Runtime dashboard</a> · <a href="../docs/mcp.html">Full MCP guide</a>.
           </p>
         </div>
       </header>
@@ -64,7 +65,8 @@
             </li>
           </ol>
           <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 16px">
-            Manual JSON config is a <strong>fallback only</strong> — see
+            Pick <strong>either</strong> automatic setup <strong>or</strong> manual config — not both.
+            Manual JSON is a <strong>fallback only</strong> — see
             <a href="../docs/mcp.html#manual-config-fallback">docs/mcp.html</a>.
           </p>
         </div>
@@ -111,12 +113,12 @@
           <div class="code-block" style="max-width: 640px">
             <div class="code-block-header">Codex</div>
             <pre><code>cd /path/to/your-project
-codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
+codex mcp add contorium -- npx @contorium/mcp</code></pre>
           </div>
           <div class="code-block" style="max-width: 640px; margin-top: 16px">
             <div class="code-block-header">Claude Code</div>
             <pre><code>cd /path/to/your-project
-claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
+claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
           </div>
           <p class="section-cta-inline">
             <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">Full MCP guide</a>
@@ -134,7 +136,7 @@ claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
           <div class="code-block" style="max-width: 640px">
             <div class="code-block-header">Codex</div>
             <pre><code>cd /path/to/your-project
-codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
+codex mcp add contorium -- npx @contorium/mcp</code></pre>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
             Remove: <code>codex mcp remove contorium</code> · Fallback JSON:
@@ -147,13 +149,13 @@ codex mcp add contorium -- npx -y @contorium/mcp</code></pre>
         <div class="container">
           <h2>Claude Code</h2>
           <p>
-            One command from your project folder. See
-            <a href="../docs/mcp.html">docs/mcp.html</a> for details.
+            One command from your project folder. Claude injects <code>CLAUDE_PROJECT_DIR</code> automatically.
+            See <a href="../docs/mcp.html">docs/mcp.html</a> for plugin and project-scope options.
           </p>
 
           <div class="code-block" style="max-width: 640px">
             <pre><code>cd /path/to/your-project
-claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
+claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
             Remove: <code>claude mcp remove contorium</code>
@@ -189,22 +191,38 @@ claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
 
       <section class="page-section section-mcp" id="cursor">
         <div class="container">
-          <h2>Cursor Agent (MCP)</h2>
-          <div class="blog-coming" style="max-width: none; text-align: left">
-            <p><strong style="color: var(--text)">Coming soon.</strong></p>
-            <p style="margin-top: 8px">
-              Detailed Cursor Agent MCP wiring will be added here. The repo ships root <code>mcp.json</code> (see platform table
-              above). For now: install the <strong>Contorium VSIX</strong>, or use <a href="#codex">Codex</a> /
-              <a href="#claude-code">Claude Code</a> MCP flows.
-            </p>
-          </div>
+          <h2>Cursor</h2>
+          <p>Cursor has no <code>mcp add</code> CLI. Use the MCP settings UI (one-time setup):</p>
+          <ol class="steps-list">
+            <li><strong>Settings → MCP → Add MCP Server</strong></li>
+            <li>Name: <code>contorium</code></li>
+            <li>Command: <code>npx</code></li>
+            <li>Args: <code>@contorium/mcp</code></li>
+            <li>Env (optional): <code>CONTORIUM_WORKSPACE</code> = project root if auto-detect fails</li>
+            <li>Enable the server → <strong>Developer: Reload Window</strong></li>
+          </ol>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 12px">
+            Remove: Settings → MCP → remove <code>contorium</code> · Or use
+            <a href="../docs/mcp.html#manual-config-fallback">manual <code>.cursor/mcp.json</code></a>
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section section-mcp" id="gemini">
+        <div class="container">
+          <h2>Gemini CLI</h2>
+          <p>
+            Add <code>contorium</code> to <code>mcpServers</code> in
+            <code>~/.gemini/settings.json</code> or <code>&lt;project&gt;/.gemini/settings.json</code>.
+            See <a href="../docs/mcp.html#manual-config-fallback">configuration template</a> in the full MCP guide.
+          </p>
         </div>
       </section>
 
       <section class="page-section">
         <div class="container">
-          <h2>MCP tools (CHP v1 + legacy)</h2>
-          <p>Recommended: <code>get_project_handoff</code>, injection tools, <code>get_understanding_graph</code>, <code>get_recent_changes</code>. Full list in <a href="../docs/mcp.html">docs/mcp.html</a>.</p>
+          <h2>MCP tools (CHP v1 + Governance V4)</h2>
+          <p>Recommended: <code>get_project_handoff</code>, injection tools, <code>run_governance_cycle</code>, <code>get_understanding_graph</code>. Full catalog in <a href="../docs/mcp.html">docs/mcp.html</a>.</p>
           <div style="overflow-x: auto; margin-bottom: 32px">
             <table class="compare-table">
               <thead>
@@ -244,6 +262,21 @@ claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
                   <td><code>get_runtime_state</code></td>
                   <td>R</td>
                   <td>Bootstrap / dashboard / session (read-only)</td>
+                </tr>
+                <tr>
+                  <td><code>run_governance_cycle</code></td>
+                  <td>W</td>
+                  <td>Full governance decision cycle → <code>.contora/governance/</code></td>
+                </tr>
+                <tr>
+                  <td><code>export_governance_context</code></td>
+                  <td>R</td>
+                  <td>Export governance appendix for AI chat</td>
+                </tr>
+                <tr>
+                  <td><code>get_cognitive_mode</code> / <code>set_cognitive_mode</code></td>
+                  <td>R/W</td>
+                  <td>Cognitive overlay mode A (default) or B (skill suggestions)</td>
                 </tr>
                 <tr>
                   <td><code>get_project_snapshot</code></td>
@@ -328,25 +361,23 @@ claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
       <section class="page-section">
         <div class="container two-col">
           <div>
-            <h2>Typical workflow</h2>
+            <h2>Typical workflow (automatic)</h2>
             <ol class="steps-list">
               <li>
-                <strong>Set workspace root</strong>
-                Configure <code style="color: var(--accent)">CONTORIUM_WORKSPACE</code> to your project folder.
+                <strong>One-time setup</strong>
+                Run <code>codex mcp add</code> or <code>claude mcp add</code> (or Cursor MCP UI) from your project folder.
               </li>
               <li>
-                <strong>Bootstrap or sync state</strong>
-                MCP bootstraps <code style="color: var(--accent)">.contora/</code> on first call; IDE extension adds event-driven precision (optional).
+                <strong>Open your AI tool</strong>
+                Host spawns <code>npx @contorium/mcp</code>, bootstraps <code>.contora/</code>, and attaches the Passive dashboard.
               </li>
               <li>
-                <strong>Set current focus (IDE, optional)</strong>
-                e.g. <em>Refactor payment retry system</em> — ranks files and snapshot around that intent.
+                <strong>New chat</strong>
+                Optional Y/n inject prompt — or Agent calls <code>get_project_handoff</code> when needed.
               </li>
               <li>
-                <strong>Agents call MCP tools</strong>
-                Prefer <code>get_project_handoff</code> or <code>get_project_graph_snapshot</code>; also
-                <code>get_project_snapshot</code>, <code>get_workspace_context</code>, <code>store_memory</code> — or use IDE
-                <strong>Copy AI-ready context</strong> for clipboard export.
+                <strong>Governance (optional)</strong>
+                Use <code>run_governance_cycle</code> or IDE Review Change; export via <code>export_governance_context</code> or dashboard <strong>c</strong>.
               </li>
             </ol>
           </div>
@@ -362,7 +393,8 @@ claude mcp add --scope project contorium -- npx -y @contorium/mcp</code></pre>
     ├── mcp.auto-context.md
     ├── mcp.handoff-injection.json
     ├── dashboard.*.json
-    ├── graph/                    <span class="dir-highlight"># V3.1 cognitive graph</span>
+    ├── graph/                    <span class="dir-highlight"># knowledge, snapshot, hotspots</span>
+    ├── governance/               <span class="dir-highlight"># review, decision, scope, trace, cycle</span>
     ├── events/
     ├── state-builder/
     └── mcp/

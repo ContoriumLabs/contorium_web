@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "lastCheckAt": 1781836792624,
+  "lastAction": "allow",
+  "lastAllow": true,
+  "source": "ide:control",
+  "target_path": ".contora/state.json"
+}

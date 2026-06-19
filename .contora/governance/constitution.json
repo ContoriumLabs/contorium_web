@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "principles": [
+    "Do not modify core architecture without explicit approval",
+    "Never introduce hardcoded production values without marking them in truth.json",
+    "All mock data must be explicitly marked",
+    "All AI changes must be traceable"
+  ],
+  "protected_paths": [
+    "src/core/",
+    "packages/state-core/src/understanding/knowledgeGraph/"
+  ],
+  "forbidden_actions": [
+    "delete_database_schema",
+    "overwrite_core_logic"
+  ],
+  "ai_rules": [
+    "Always check truth layer before modifying business logic",
+    "Validate intent alignment before execution",
+    "Call validate_governance before editing protected paths"
+  ]
+}

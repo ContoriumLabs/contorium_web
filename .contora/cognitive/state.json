@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "generatedAt": 1781836478456,
+  "phase": "change_integration",
+  "progress": 0.4,
+  "current_focus": "develop documentation, MCP integration and state engine — focus: shared state engine, IDE extension UI, documentation",
+  "active_tasks": [
+    "review:review and commit pending changes",
+    "continue:continue documentation updates",
+    "review:verify MCP tools against workspace",
+    "review:review state persistence paths"
+  ]
+}

@@ -1,43 +1,43 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1781057523796,
-  "graphBuildId": "graph_mq7fnwpg",
+  "generatedAt": 1781836786101,
+  "graphBuildId": "graph_mqkbm7cl",
   "nodes": [
     {
       "id": "intent_0_develop_documentation_M",
       "type": "intent",
       "name": "develop documentation, MCP integration and state engine",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_1_index_html_from_IDE_in",
       "type": "intent",
       "name": "index.html (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_2_IDE_EXTENSION_from_IDE_",
       "type": "intent",
       "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_3_README_from_IDE_integr",
       "type": "intent",
       "name": "README (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_4__from_IDE_integrat",
       "type": "intent",
       "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
-      "id": "intent_5_sess_mp487yx1_2450523b_j",
+      "id": "intent_5_settings_json_from_IDE_",
       "type": "intent",
-      "name": "sess_mp487yx1_2450523b.jsonl (from IDE) integration",
-      "updatedAt": 1781057523796
+      "name": "settings.json (from IDE) integration",
+      "updatedAt": 1781836786101
     }
   ]
 }

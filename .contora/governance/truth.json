@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "mock_data": [
+    "src/mock/**",
+    "**/__mocks__/**",
+    "**/*.mock.ts",
+    "**/*.mock.js"
+  ],
+  "hardcoded_values": [],
+  "production_flags": []
+}

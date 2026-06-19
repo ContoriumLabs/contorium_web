@@ -6,9 +6,9 @@
     <meta name="google-site-verification" content="fba835fbf32479b7" />
     <meta
       name="description"
-      content="Contorium — AI coding tools forget your project. Contorium gives them memory. Continuous project understanding across Cursor, Claude, Codex, and VS Code."
+      content="Contorium — AI Runtime Cognition Platform. Persistent project understanding across Cursor, Claude, Codex, Gemini CLI, VS Code, and MCP agents. No context resets. No tool fragmentation."
     />
-    <title>Contorium — AI Coding Tools Finally Remember Your Project</title>
+    <title>Contorium — AI Runtime Cognition Platform</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,10 +32,10 @@
           Contorium
         </a>
         <div class="nav-links">
+          <a href="#positioning">Platform</a>
           <a href="#problem">Problem</a>
           <a href="#solution">Solution</a>
-          <a href="#compare">Compare</a>
-          <a href="#capabilities">Capabilities</a>
+          <a href="#capabilities">Architecture</a>
           <a href="#install">Install</a>
           <a href="docs/">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -48,19 +48,30 @@
       <section class="hero hero--full hero-v2">
         <div class="container hero-grid">
           <div class="hero-copy">
+            <p class="hero-eyebrow">Contorium</p>
             <h1 class="hero-headline">
-              AI coding tools forget your project.<br />
-              <span class="hero-headline-accent">Contorium gives them memory.</span>
+              AI Runtime Cognition<br />
+              <span class="hero-headline-accent">Platform</span>
             </h1>
             <p class="hero-subtext">
-              Stop re-explaining your project every time you switch tools, models, or sessions.
-              Keep AI continuously aware of your workspace state.
+              Persistent project understanding across AI coding tools, IDEs, CLI, and MCP agents.
+              Every session continues from where the last one stopped.
+            </p>
+            <p class="hero-flow">AI → understands your project → continues work → stays aligned</p>
+            <ul class="hero-continuity-list">
+              <li>No context resets</li>
+              <li>No repeated explanations</li>
+              <li>No tool fragmentation</li>
+            </ul>
+            <p class="hero-tools">
+              Works with Claude Code · Codex · Cursor · Gemini CLI · VS Code · MCP agents
             </p>
             <div class="hero-ctas">
-              <a href="#solution" class="btn btn-primary">See how it works</a>
-              <a href="#install" class="btn btn-ghost">Install Contorium</a>
+              <a href="#install" class="btn btn-primary">Get Started</a>
+              <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">View GitHub</a>
+              <a href="docs/" class="btn btn-ghost">Read Docs</a>
             </div>
-            <a href="#problem" class="hero-scroll">Scroll ↓</a>
+            <a href="#positioning" class="hero-scroll">Scroll ↓</a>
           </div>
 
           <div class="compare-panel" aria-label="Before and after Contorium">
@@ -70,100 +81,138 @@
             </div>
             <div class="compare-split">
               <div class="compare-side compare-side--before">
-                <span class="compare-tag">Without memory</span>
+                <span class="compare-tag">Without runtime layer</span>
                 <p class="compare-bubble">What is your project?</p>
                 <p class="compare-bubble">Can you explain the architecture again?</p>
                 <p class="compare-bubble">Context reset — starting over.</p>
               </div>
               <div class="compare-side compare-side--after">
                 <span class="compare-tag">With Contorium</span>
-                <p class="compare-bubble">Project summary auto-loaded</p>
-                <p class="compare-bubble">Current task: fix MCP bootstrap</p>
-                <p class="compare-bubble compare-bubble--highlight">I understand your project ✓</p>
+                <p class="compare-bubble">[?] Runtime active. Inject state? (Y/n)</p>
+                <p class="compare-bubble">Current task: fix governance cycle</p>
+                <p class="compare-bubble compare-bubble--highlight">Continuous understanding ✓</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section class="section section-light positioning-strip" id="positioning">
+        <div class="container">
+          <h2 class="section-title section-title--center">Not a memory tool. Not a context retriever. Not an AI assistant plugin.</h2>
+          <p class="section-lead section-lead--center">
+            Contorium is a <strong>runtime system</strong> that maintains AI understanding of software projects —
+            a cognition layer between your codebase and every AI tool you use.
+          </p>
+        </div>
+      </section>
+
       <section class="section section-muted" id="problem">
         <div class="container">
-          <h2 class="section-title section-title--center">AI tools don't remember what you're building.</h2>
+          <h2 class="section-title section-title--center">AI coding tools are powerful — but stateless</h2>
           <p class="section-lead section-lead--center">
-            Every time you switch Cursor → Claude → Codex, or start a new session, you lose project context.
+            Every session restart causes loss of project context, repeated explanations, broken architectural continuity,
+            and inconsistent decisions across tools.
           </p>
           <div class="problem-cards">
             <article class="problem-card">
               <div class="problem-card-icon" aria-hidden="true">↺</div>
               <h3>Context reset</h3>
-              <p>Every new session resets your AI understanding. You start from zero again.</p>
+              <p>Every new session starts from zero. AI rebuilds understanding from scratch — again and again.</p>
             </article>
             <article class="problem-card">
               <div class="problem-card-icon" aria-hidden="true">⇄</div>
-              <h3>Tool switching</h3>
-              <p>Cursor → Claude → Codex means re-explaining everything, every time.</p>
+              <h3>Tool fragmentation</h3>
+              <p>Cursor → Claude → Codex means re-explaining architecture, intent, and project state every time.</p>
             </article>
             <article class="problem-card">
               <div class="problem-card-icon" aria-hidden="true">◎</div>
-              <h3>Lost work state</h3>
-              <p>AI cannot track your project progress, current task, or debugging context.</p>
+              <h3>Broken continuity</h3>
+              <p>No shared runtime layer — decisions, tasks, and architectural context don't persist across tools.</p>
             </article>
           </div>
           <p class="problem-closer">
-            You end up spending more time <strong>re-explaining your project</strong> than building it.
+            The real issue is not memory. It is the <strong>absence of a runtime understanding layer</strong>.
           </p>
         </div>
       </section>
 
       <section class="section section-light" id="solution">
-        <div class="container">
-          <h2 class="section-title section-title--center">Contorium maintains your project's live state.</h2>
+        <div class="container solution-container">
+          <h2 class="section-title section-title--center">Contorium introduces Runtime Cognition</h2>
           <p class="section-lead section-lead--center">
-            So AI always knows what you're building, what you're working on, and what changed recently.
+            A persistent execution layer that continuously builds and maintains structured understanding of your codebase.
           </p>
-          <div class="solution-block">
-            <ul class="solution-list">
-              <li>Project state tracking</li>
-              <li>Task focus awareness</li>
-              <li>Code &amp; file context</li>
-              <li>Session continuity</li>
-            </ul>
-            <blockquote class="solution-aside">
-              Contorium keeps AI aligned with your <strong>real development progress</strong> — not just chat history.
-            </blockquote>
+
+          <div class="solution-compare">
+            <article class="solution-card solution-card--before">
+              <span class="solution-card-label">Without runtime layer</span>
+              <p class="solution-card-flow">AI forgets → rebuilds → repeats</p>
+              <p class="solution-card-desc">Every session restarts context from scratch.</p>
+            </article>
+            <div class="solution-compare-divider" aria-hidden="true">
+              <span class="solution-compare-arrow">→</span>
+            </div>
+            <article class="solution-card solution-card--after">
+              <span class="solution-card-label">With Runtime Cognition</span>
+              <p class="solution-card-flow">AI understands → evolves → continues</p>
+              <p class="solution-card-desc">Understanding persists and grows across sessions.</p>
+            </article>
+          </div>
+
+          <p class="solution-summary">
+            Instead of restarting context every session, Contorium keeps AI aligned with your
+            <strong>real development progress</strong> — across IDEs, CLI, and MCP agents.
+          </p>
+
+          <div class="solution-handoff">
+            <div class="solution-handoff-header">
+              <span class="solution-handoff-dot" aria-hidden="true"></span>
+              AI Handoff
+            </div>
+            <pre class="solution-handoff-code"><code>[?] Runtime active.
+Inject current project state? (Y/n)</code></pre>
+            <p class="solution-handoff-note">No silent injection · User control preserved · Context transparency</p>
           </div>
         </div>
       </section>
 
       <section class="section" id="continuity">
         <div class="container">
-          <h2 class="section-title section-title--center">Always consistent across tools</h2>
+          <h2 class="section-title section-title--center">Cross-tool continuity</h2>
+          <p class="section-lead section-lead--center">
+            IDE, CLI, and MCP agents share the same runtime state — one cognition layer for every AI tool.
+          </p>
           <div class="tool-pills">
             <span class="tool-pill">Cursor</span>
             <span class="tool-pill">VS Code</span>
             <span class="tool-pill">Claude Code</span>
             <span class="tool-pill">Codex</span>
-            <span class="tool-pill">MCP-compatible agents</span>
+            <span class="tool-pill">Gemini CLI</span>
+            <span class="tool-pill">MCP agents</span>
           </div>
-          <p class="continuity-tagline">Switch freely. Your project understanding stays the same.</p>
+          <p class="continuity-tagline">IDE ↔ CLI ↔ MCP ↔ AI Tools — shared cognition layer</p>
         </div>
       </section>
 
       <section class="section section-muted" id="does">
         <div class="container">
-          <h2 class="section-title section-title--center">What it actually does</h2>
+          <h2 class="section-title section-title--center">What Contorium does</h2>
+          <p class="section-lead section-lead--center">
+            Not a chatbot plugin — a runtime system for AI development workflows.
+          </p>
           <div class="does-grid">
-            <div class="does-item"><strong>Tracks workspace state</strong> in real time</div>
-            <div class="does-item"><strong>Maintains current focus</strong> across sessions</div>
-            <div class="does-item"><strong>Keeps active file + git context</strong> synced</div>
-            <div class="does-item"><strong>Builds continuous understanding</strong> of your project</div>
+            <div class="does-item"><strong>Maintains persistent project memory</strong> across sessions and tools</div>
+            <div class="does-item"><strong>Builds live knowledge graph</strong> of your codebase</div>
+            <div class="does-item"><strong>Tracks changes, intent, and architecture</strong> as they evolve</div>
+            <div class="does-item"><strong>Generates AI-ready structured context</strong> for any tool</div>
             <div class="does-item does-item--full">
-              <strong>Generates AI-ready project snapshots</strong> for any tool
+              <strong>Synchronizes understanding</strong> across IDE, CLI, and MCP agents
             </div>
           </div>
           <p class="does-footnote">
-            Not chat memory. Not prompts.
-            <em>Real project state.</em>
+            Not chat memory. Not a context extension.
+            <em>AI Runtime Cognition Infrastructure.</em>
           </p>
         </div>
       </section>
@@ -175,19 +224,19 @@
             <div class="compare-hero-col compare-hero-col--before">
               <h3>Without Contorium</h3>
               <ul>
-                <li>AI forgets your last work</li>
+                <li>AI forgets → rebuilds → repeats</li>
                 <li>Every session starts from zero</li>
-                <li>Repetitive explanations</li>
-                <li>Debugging restarts from scratch</li>
+                <li>Re-explain architecture and intent</li>
+                <li>Inconsistent decisions across tools</li>
               </ul>
             </div>
             <div class="compare-hero-col compare-hero-col--after">
               <h3>With Contorium</h3>
               <ul>
-                <li>AI already knows your project</li>
-                <li>Continuous understanding</li>
-                <li>Instant onboarding into context</li>
-                <li>Work feels uninterrupted</li>
+                <li>AI understands → evolves → continues</li>
+                <li>Continuous project understanding</li>
+                <li>Runtime snapshot on every handoff</li>
+                <li>Execution continuity across tools</li>
               </ul>
             </div>
           </div>
@@ -196,22 +245,35 @@
 
       <section class="section section-muted" id="capabilities">
         <div class="container">
-          <h2 class="section-title section-title--center">A continuous runtime layer for AI development</h2>
+          <h2 class="section-title section-title--center">Five-layer runtime architecture</h2>
+          <p class="section-lead section-lead--center">
+            A structured cognition system — from persistent state to governed AI interaction.
+          </p>
           <div class="system-cards">
             <article class="system-card">
               <div class="system-card-num">01</div>
-              <h3>Persistent workspace state</h3>
-              <p>Keeps your project state alive across tools and sessions.</p>
+              <h3>Runtime Memory Layer</h3>
+              <p>Persistent project state across sessions and tools — tasks, active work, intent, and recent changes.</p>
             </article>
             <article class="system-card">
               <div class="system-card-num">02</div>
-              <h3>Cross-tool continuity</h3>
-              <p>Works across Cursor, Claude, VS Code, Codex, and MCP agents.</p>
+              <h3>Understanding Layer</h3>
+              <p>Live analysis of changes, structure, dependencies, and hotspots in your workspace.</p>
             </article>
             <article class="system-card">
               <div class="system-card-num">03</div>
-              <h3>AI-ready context</h3>
-              <p>Transforms raw project data into structured understanding for AI.</p>
+              <h3>Knowledge Graph Layer</h3>
+              <p>Structured cognition: Intent → Module → File → Function. AI sees relationships, not just files.</p>
+            </article>
+            <article class="system-card">
+              <div class="system-card-num">04</div>
+              <h3>Governance Engine</h3>
+              <p>Structured decision system with risk scoring, change reasoning, and multi-agent review — stored in <code>.contora/governance/</code>.</p>
+            </article>
+            <article class="system-card">
+              <div class="system-card-num">05</div>
+              <h3>AI Interaction Layer</h3>
+              <p>Controls how AI receives context — runtime snapshot, handoff system (Y/N), controlled injection, and export pipeline.</p>
             </article>
           </div>
         </div>
@@ -219,42 +281,61 @@
 
       <section class="section" id="memory-layer">
         <div class="container">
-          <h2 class="section-title section-title--center">Not a tool. A memory layer.</h2>
-          <div class="memory-flow" aria-label="Contorium connects your tools">
-            <div class="memory-flow-node">You + your project</div>
+          <h2 class="section-title section-title--center">Runtime cognition architecture</h2>
+          <p class="section-lead section-lead--center">
+            Workspace activity flows through a single shared system — from change detection to AI handoff.
+          </p>
+          <div class="memory-flow" aria-label="Contorium system flow">
+            <div class="memory-flow-node">Workspace Activity</div>
             <span class="memory-flow-arrow" aria-hidden="true">↓</span>
-            <div class="memory-flow-node memory-flow-node--core">Contorium — Project State Layer</div>
+            <div class="memory-flow-node">Change Detection</div>
+            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
+            <div class="memory-flow-node memory-flow-node--core">Runtime Cognition Layer</div>
+            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
+            <div class="memory-flow-node">Knowledge Graph → Governance Engine → Runtime Snapshot</div>
             <span class="memory-flow-arrow" aria-hidden="true">↓</span>
             <div class="memory-flow-node memory-flow-node--tools">
-              <span>Cursor</span>
-              <span>Claude</span>
-              <span>Codex</span>
-              <span>VS Code</span>
+              <span>IDE</span>
+              <span>CLI</span>
+              <span>MCP</span>
+              <span>AI Tools</span>
             </div>
           </div>
           <p class="memory-layer-copy">
             Contorium does <strong>not</strong> replace your IDE or AI model.<br />
-            It connects them with a shared understanding of your project.
+            It connects them through a shared runtime cognition layer — local-first, no cloud dependency.
           </p>
         </div>
       </section>
 
       <section class="section section-muted" id="trust">
         <div class="container">
-          <h2 class="section-title section-title--center">Built for AI-native developers</h2>
+          <h2 class="section-title section-title--center">Local-first by design</h2>
+          <p class="section-lead section-lead--center">
+            All data stays inside your workspace. No cloud dependency. No vendor lock-in.
+          </p>
+          <div class="code-block local-first-block">
+            <div class="code-block-header">.contora/</div>
+            <pre><code>├── state.json
+├── handoff.json
+├── graph.json
+├── timeline.json
+├── governance/
+└── events/</code></pre>
+          </div>
           <div class="trust-grid">
             <div class="trust-item">Works with MCP-compatible tools</div>
-            <div class="trust-item">No lock-in</div>
+            <div class="trust-item">No vendor lock-in</div>
             <div class="trust-item">Lightweight integration</div>
-            <div class="trust-item">Local-first · open architecture</div>
+            <div class="trust-item">Open architecture · MIT License</div>
           </div>
         </div>
       </section>
 
       <section class="section section-mcp" id="install">
         <div class="container">
-          <h2 class="section-title">Install Contorium</h2>
-          <p class="section-lead">IDE extension, MCP, or CLI — pick one entry point. All share the same project memory.</p>
+          <h2 class="section-title">Get Started</h2>
+          <p class="section-lead">IDE extension, MCP, or CLI — pick one entry point. All share the same runtime cognition layer.</p>
           <div class="install-grid install-grid--3">
             <div class="install-col">
               <h3>IDE extension</h3>
@@ -311,11 +392,11 @@
 
       <section class="cta-final" id="cta">
         <div class="container">
-          <h2>Stop re-explaining your project.</h2>
-          <p>AI should already understand it.</p>
+          <h2>Project understanding should persist</h2>
+          <p>Even when conversations do not.</p>
           <div class="cta-final-buttons">
-            <a href="#install" class="btn btn-primary">Start using Contorium</a>
-            <a href="#solution" class="btn btn-ghost">See how it works</a>
+            <a href="#install" class="btn btn-primary">Get Started</a>
+            <a href="docs/" class="btn btn-ghost">Read Docs</a>
           </div>
         </div>
       </section>
@@ -335,7 +416,7 @@
             Contorium
           </a>
           <p class="footer-oneliner">
-            AI loses memory between tools. Contorium restores continuity.
+            A runtime cognition layer that maintains continuous understanding between AI coding tools and evolving software systems.
           </p>
           <ul class="footer-trust">
             <li>Local-first</li>

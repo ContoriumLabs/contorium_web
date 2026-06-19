@@ -3,10 +3,10 @@
     "version": "3.1.0",
     "schemaVersion": "1",
     "closureVersion": "1",
-    "generatedAt": 1781057523796,
+    "generatedAt": 1781836786101,
     "workspaceId": "70995f99",
-    "graphBuildId": "graph_mq7fnwpg",
-    "sourceVersion": "0.9.1",
+    "graphBuildId": "graph_mqkbm7cl",
+    "sourceVersion": "0.9.5",
     "rebuildTrigger": "file_batch",
     "lastCommitHash": "406a255"
   },
@@ -15,135 +15,142 @@
       "id": "intent_0_develop_documentation_M",
       "type": "intent",
       "name": "develop documentation, MCP integration and state engine",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_1_index_html_from_IDE_in",
       "type": "intent",
       "name": "index.html (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_2_IDE_EXTENSION_from_IDE_",
       "type": "intent",
       "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_3_README_from_IDE_integr",
       "type": "intent",
       "name": "README (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "intent_4__from_IDE_integrat",
       "type": "intent",
       "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
-      "id": "intent_5_sess_mp487yx1_2450523b_j",
+      "id": "intent_5_settings_json_from_IDE_",
       "type": "intent",
-      "name": "sess_mp487yx1_2450523b.jsonl (from IDE) integration",
-      "updatedAt": 1781057523796
+      "name": "settings.json (from IDE) integration",
+      "updatedAt": 1781836786101
     },
     {
-      "id": "mod::docs",
+      "id": "mod::.contora",
       "type": "module",
-      "name": "docs",
-      "path": "docs",
-      "updatedAt": 1781057523796
+      "name": ".contora",
+      "path": ".contora",
+      "updatedAt": 1781836786101
+    },
+    {
+      "id": "mod::.vscode",
+      "type": "module",
+      "name": ".vscode",
+      "path": ".vscode",
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::修改方案.md",
       "type": "module",
       "name": "修改方案.md",
       "path": "修改方案.md",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
-      "id": "mod::index.html",
+      "id": "mod::styles.css",
       "type": "module",
-      "name": "index.html",
-      "path": "index.html",
-      "updatedAt": 1781057523796
-    },
-    {
-      "id": "mod::修改方案2.md",
-      "type": "module",
-      "name": "修改方案2.md",
-      "path": "修改方案2.md",
-      "updatedAt": 1781057523796
-    },
-    {
-      "id": "mod::architecture",
-      "type": "module",
-      "name": "architecture",
-      "path": "architecture",
-      "updatedAt": 1781057523796
+      "name": "styles.css",
+      "path": "styles.css",
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::README.md",
       "type": "module",
       "name": "README.md",
       "path": "README.md",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
-      "id": "mod::blog",
+      "id": "mod::index.html",
       "type": "module",
-      "name": "blog",
-      "path": "blog",
-      "updatedAt": 1781057523796
+      "name": "index.html",
+      "path": "index.html",
+      "updatedAt": 1781836786101
+    },
+    {
+      "id": "mod::docs",
+      "type": "module",
+      "name": "docs",
+      "path": "docs",
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::mcp",
       "type": "module",
       "name": "mcp",
       "path": "mcp",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::index.html (from IDE)",
       "type": "module",
       "name": "index.html (from IDE)",
       "path": "index.html (from IDE)",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::IDE_EXTENSION (from IDE)",
       "type": "module",
       "name": "IDE_EXTENSION (from IDE)",
       "path": "IDE_EXTENSION (from IDE)",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::README (from IDE)",
       "type": "module",
       "name": "README (from IDE)",
       "path": "README (from IDE)",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::修改方案 (from IDE)",
       "type": "module",
       "name": "修改方案 (from IDE)",
       "path": "修改方案 (from IDE)",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     },
     {
-      "id": "mod::sess_mp487yx1_2450523b.jsonl (from IDE)",
+      "id": "mod::settings.json (from IDE)",
       "type": "module",
-      "name": "sess_mp487yx1_2450523b.jsonl (from IDE)",
-      "path": "sess_mp487yx1_2450523b.jsonl (from IDE)",
-      "updatedAt": 1781057523796
+      "name": "settings.json (from IDE)",
+      "path": "settings.json (from IDE)",
+      "updatedAt": 1781836786101
+    },
+    {
+      "id": "mod::contorium.mp4 (from IDE)",
+      "type": "module",
+      "name": "contorium.mp4 (from IDE)",
+      "path": "contorium.mp4 (from IDE)",
+      "updatedAt": 1781836786101
     },
     {
       "id": "mod::index.html (from events)",
       "type": "module",
       "name": "index.html (from events)",
       "path": "index.html (from events)",
-      "updatedAt": 1781057523796
+      "updatedAt": 1781836786101
     }
   ],
   "edges": [],
@@ -153,17 +160,18 @@
   "intentTrees": [],
   "hotspots": [],
   "snapshot": {
-    "generatedAt": 1781057523796,
+    "generatedAt": 1781836786101,
     "topIntents": [],
     "topHotspots": [],
     "topFunctions": [],
     "nextActions": [
+      "review and commit pending changes",
       "continue documentation updates",
       "verify MCP tools against workspace",
       "review state persistence paths"
     ],
     "graphSummary": {
-      "nodeCount": 20,
+      "nodeCount": 21,
       "edgeCount": 0,
       "mappingCount": 0,
       "avgConfidence": 0

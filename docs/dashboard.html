@@ -252,7 +252,7 @@
 </tr>
 <tr>
 <td><strong>Copy To AI</strong></td>
-<td>CHP commands + semi-auto injection hint</td>
+<td>CHP commands + semi-auto injection hint + <strong>GOVERNANCE:</strong> appendix when artifacts exist</td>
 </tr>
 </tbody>
 </table>
@@ -280,7 +280,7 @@
 </tr>
 <tr>
 <td><strong>c</strong></td>
-<td><strong>Copy To AI</strong> — handoff markdown to clipboard</td>
+<td><strong>Copy To AI</strong> — unified export (handoff + governance appendix) to clipboard</td>
 </tr>
 <tr>
 <td><strong>q</strong></td>
@@ -322,7 +322,7 @@
 </table>
 <p>Terminal tab name: <strong>Contorium Dashboard</strong> (background worker; optional).</p>
 <hr>
-<h2>Advanced commands (optional)</h2>
+<h2>CLI commands (debug only)</h2>
 <table>
 <thead>
 <tr>
@@ -364,6 +364,13 @@
 ├── dashboard.signal.json     # expand / minimize / filter signals
 └── dashboard.session.json    # IDE/MCP session marker
 </code></pre>
+<hr>
+<h2>Worker internals (maintainers)</h2>
+<ul>
+<li><strong>Refresh:</strong> <code>fs.watch</code> on <code>.contora/</code> (not tight polling on large repos)</li>
+<li><strong>Package:</strong> <code>packages/cli/src/dashboard/</code></li>
+<li><strong>Bootstrap:</strong> <code>packages/cli/src/runtime/bootstrap.ts</code></li>
+</ul>
 <hr>
 <h2>Related docs</h2>
 <ul>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1780884241340,
+  "generatedAt": 1781836488032,
   "recent_change": {
     "name": "scripts/build-docs.py::slug_for_href()",
     "change_type": "modified"
@@ -19,5 +19,5 @@
     "scripts/build-docs.py::slug_for_href",
     "scripts/build-docs.py::slug_for_href()"
   ],
-  "agent": "runtime"
+  "agent": "ide"
 }

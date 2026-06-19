@@ -4,7 +4,7 @@ Extension ID: `franklee-dev.contorium`
 Display name: **Contorium**  
 Requires: VS Code / Cursor **1.85+**, **folder workspace** (single-file windows are limited)
 
-The extension provides: sidebar UI, file/Git scanning, `.contora/state.json`, and **one-click Copy AI-ready context**.  
+The extension provides: sidebar UI, file/Git scanning, `.contora/state.json`, State Engine artifacts, and **one-click Copy AI-ready context**.  
 Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTALL.md).
 
 ---
@@ -13,10 +13,11 @@ Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTAL
 
 | Phase | Action |
 |-------|--------|
-| **Install (VSIX)** | [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases) → **Install from VSIX…** → **Developer: Reload Window** |
-| **Install (Marketplace)** | Search **Contorium** → Install → Reload |
+| **Install (VSIX)** | `npm run vsix` → **Install from VSIX** → **Developer: Reload Window** |
+| **Install (dev)** | `npm install && npm run compile` → **F5** → open project folder in new window |
 | **Verify** | Activity bar **Contorium** → sidebar shows Current focus / Copy button |
 | **Daily use** | **Copy AI-ready context**; auto Passive line + mini-graph; **Space** → Expanded in terminal |
+| **Governance** | Review Change · View Rules · Edit Direction · Smart/Diff Inject |
 | **New AI chat** | Auto inject prompt (notification + status bar `[?]`) — **no command** |
 | **Settings** | `contora.autoAttachDashboard` (default `true`) — auto-start dashboard worker |
 | **Uninstall** | Extensions → Contorium → Uninstall → Reload |
@@ -26,17 +27,30 @@ Peer adapters: [MCP](./MCP.md), [CLI](./CLI.md). Overview: [INSTALL.md](./INSTAL
 
 ## Install
 
-### Option A: VSIX (recommended for Cursor)
+### Option A: VSIX (recommended)
 
-1. Download `contorium-*.vsix` from [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases)
+1. Get `contorium-0.9.1.vsix` (or current version):
+   - [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases), or
+   - Repo root: `npm run vsix` (Node.js 18+)
 2. Open **VS Code** or **Cursor**
 3. **Extensions** → `…` → **Install from VSIX…**
 4. Select the `.vsix` file
 5. **Developer: Reload Window**
 
-### Option B: Marketplace
+### Option B: Run from source (development)
 
-Search **Contorium**, publisher **franklee-dev**, then Install and Reload Window.
+```bash
+git clone https://github.com/ContoriumLabs/contorium.git
+cd contorium
+npm install
+npm run compile
+```
+
+Open the repo in VS Code/Cursor → **F5** → open your project folder in the Extension Development Host window.
+
+### Option C: Marketplace (if published)
+
+Search **Contorium**, publisher **franklee-dev**, then Reload Window.
 
 ---
 
@@ -76,7 +90,12 @@ If the sidebar stays blank, see [Troubleshooting](#troubleshooting).
 
 | Command | Purpose |
 |---------|---------|
-| Copy AI-ready context (clipboard) | One-click export |
+| Copy AI-ready context (clipboard) | One-click export (includes governance appendix when available) |
+| Smart inject (governance → AI) | Pre-review + inject governance context into chat |
+| Diff mode inject (governance → AI) | Diff-scoped governance inject |
+| Review Change | Run governance review on current scope |
+| View Rules | Open governance rules panel |
+| Edit Direction | Update project intent |
 | Save session state now | Persist immediately |
 | Restore editors from saved state | Restore editors |
 | Configure API key… (BYOK) | Optional cloud model keys |
@@ -101,7 +120,24 @@ When `contora.autoAttachDashboard` is enabled (default):
 
 Optional: **Ctrl+Shift+C** opens IDE Webview panel (secondary view).
 
-See [Runtime dashboard](./DASHBOARD.md).
+See [DASHBOARD.md](./DASHBOARD.md).
+
+### Governance (V4)
+
+The IDE participates in the unified governance pipeline shared with MCP and CLI:
+
+| Action | Command / UI | Artifact |
+|--------|--------------|----------|
+| Review current change | **Review Change** | `governance/review.json` |
+| View rules | **View Rules** | reads control-core store |
+| Edit project direction | **Edit Direction** | updates project intent |
+| Smart inject to chat | **Smart inject (governance → AI)** | reads review + generates inject payload |
+| Diff-scoped inject | **Diff mode inject** | scoped to git diff |
+| Export with governance | **Copy AI-ready context** | full export + `GOVERNANCE:` appendix |
+
+IDE **Review Change** writes `review.json` only. A full **cycle** (decision / scope / trace / cycle artifacts) is triggered via MCP `run_governance_cycle` or CLI `contorium governance cycle`.
+
+See [INSTALL.md](./INSTALL.md#architecture-three-adapters) for the three-adapter governance matrix.
 
 ### Copy AI-ready context structure (V3.1 canonical)
 
@@ -118,6 +154,11 @@ Same as `contorium export` / `formatCanonicalAiMarkdown` (sections appear when d
 # CODE EVOLUTION            (timeline recent commits)
 # INSIGHTS                  (up to 4 weak hints, optional)
 # NOTES / INSTRUCTION
+---
+GOVERNANCE:                  (when governance artifacts exist)
+## DECISION
+## SCOPE
+## TRACE
 ```
 
 JSON export (`contora.exportFormat: json`) includes `cognitiveSnapshot` when the knowledge graph exists.
@@ -139,6 +180,13 @@ All data stays in the project; **not uploaded by default**:
 ├── handoff.json               # CHP v1 AI handoff
 ├── understanding_graph.json   # call chains + impact
 ├── change.json / graph.json / timeline.json
+├── governance/                # V4 governance artifacts
+│   ├── review.json            # Review results (IDE/CLI review)
+│   ├── decision.json          # Decision outcome
+│   ├── scope.json             # Scope context
+│   ├── trace.json             # Summary trace
+│   ├── trace-full.json        # Detailed reason_chain
+│   └── cycle.json             # Full cycle record + matched_rules
 ├── runtime.bootstrap.json     # runtime_id (session-level)
 ├── mcp.auto-context.md        # after user confirms semi-auto injection
 ├── mcp.handoff-injection.json
@@ -202,11 +250,11 @@ API keys use VS Code **SecretStorage**; may persist after uninstall depending on
 
 | Symptom | Fix |
 |---------|-----|
-| Sidebar loading/blank | Open a **folder** workspace; **Developer: Reload Window**; check **Output → Extension Host** for `Contorium` errors |
-| Cursor "installation corrupt" | Remove extension dirs manually (see Uninstall), reinstall VSIX from Releases; reinstall Cursor if needed |
+| Sidebar loading/blank | Usually **`@contora/state-core` not installed correctly**: repo root `npm run compile` → Reload; compile before F5; reinstall VSIX after `npm run vsix`. Check **Output → Extension Host** for `state-core` |
+| Cursor "installation corrupt" | Remove extension dirs manually, reinstall VSIX; reinstall Cursor if needed |
 | Copy empty or stale | Edit/save files, wait ~7s or **Save session state now**, then copy |
 | No `.contora` | Open folder; save once or **Sync state to disk** |
-| VSIX install fails | Download a fresh `.vsix` from [GitHub Releases](https://github.com/ContoriumLabs/contorium/releases); avoid partial downloads |
+| VSIX install fails | Confirm `npm run vsix` succeeds (~350–400KB); avoid broken symlink packages |
 
 **Logs:** `Ctrl+Shift+P` → **Developer: Show Logs** → **Extension Host**, filter `Contorium`.
 
@@ -219,3 +267,7 @@ API keys use VS Code **SecretStorage**; may persist after uninstall depending on
 - [Runtime Dashboard (CRBP)](./DASHBOARD.md)
 - [MCP](./MCP.md)
 - [CLI](./CLI.md)
+- [State Engine](https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md)
+- [Architecture V3.1](https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md)
+- [Engineering Closure](https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md)
+- [Runtime package](https://github.com/ContoriumLabs/contorium/blob/main/docs/RUNTIME.md)

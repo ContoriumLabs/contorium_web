@@ -51,7 +51,7 @@
 <p>Extension ID: <code>franklee-dev.contorium</code><br>
 Display name: <strong>Contorium</strong><br>
 Requires: VS Code / Cursor <strong>1.85+</strong>, <strong>folder workspace</strong> (single-file windows are limited)</p>
-<p>The extension provides: sidebar UI, file/Git scanning, <code>.contora/state.json</code>, and <strong>one-click Copy AI-ready context</strong>.<br>
+<p>The extension provides: sidebar UI, file/Git scanning, <code>.contora/state.json</code>, State Engine artifacts, and <strong>one-click Copy AI-ready context</strong>.<br>
 Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview: <a href="install.html">INSTALL.md</a>.</p>
 <hr>
 <h2>Command cheat sheet</h2>
@@ -65,11 +65,11 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 <tbody>
 <tr>
 <td><strong>Install (VSIX)</strong></td>
-<td><a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a> → <strong>Install from VSIX…</strong> → <strong>Developer: Reload Window</strong></td>
+<td><code>npm run vsix</code> → <strong>Install from VSIX</strong> → <strong>Developer: Reload Window</strong></td>
 </tr>
 <tr>
-<td><strong>Install (Marketplace)</strong></td>
-<td>Search <strong>Contorium</strong> → Install → Reload</td>
+<td><strong>Install (dev)</strong></td>
+<td><code>npm install &amp;&amp; npm run compile</code> → <strong>F5</strong> → open project folder in new window</td>
 </tr>
 <tr>
 <td><strong>Verify</strong></td>
@@ -78,6 +78,10 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 <tr>
 <td><strong>Daily use</strong></td>
 <td><strong>Copy AI-ready context</strong>; auto Passive line + mini-graph; <strong>Space</strong> → Expanded in terminal</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>Review Change · View Rules · Edit Direction · Smart/Diff Inject</td>
 </tr>
 <tr>
 <td><strong>New AI chat</strong></td>
@@ -99,16 +103,25 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 </table>
 <hr>
 <h2>Install</h2>
-<h3>Option A: VSIX (recommended for Cursor)</h3>
+<h3>Option A: VSIX (recommended)</h3>
 <ol>
-<li>Download <code>contorium-*.vsix</code> from <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a></li>
+<li>Get <code>contorium-0.9.1.vsix</code> (or current version):<br>
+   - <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a>, or<br>
+   - Repo root: <code>npm run vsix</code> (Node.js 18+)</li>
 <li>Open <strong>VS Code</strong> or <strong>Cursor</strong></li>
 <li><strong>Extensions</strong> → <code>…</code> → <strong>Install from VSIX…</strong></li>
 <li>Select the <code>.vsix</code> file</li>
 <li><strong>Developer: Reload Window</strong></li>
 </ol>
-<h3>Option B: Marketplace</h3>
-<p>Search <strong>Contorium</strong>, publisher <strong>franklee-dev</strong>, then Install and Reload Window.</p>
+<h3>Option B: Run from source (development)</h3>
+<pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
+cd contorium
+npm install
+npm run compile
+</code></pre>
+<p>Open the repo in VS Code/Cursor → <strong>F5</strong> → open your project folder in the Extension Development Host window.</p>
+<h3>Option C: Marketplace (if published)</h3>
+<p>Search <strong>Contorium</strong>, publisher <strong>franklee-dev</strong>, then Reload Window.</p>
 <hr>
 <h2>Verify installation</h2>
 <ol>
@@ -185,7 +198,27 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 <tbody>
 <tr>
 <td>Copy AI-ready context (clipboard)</td>
-<td>One-click export</td>
+<td>One-click export (includes governance appendix when available)</td>
+</tr>
+<tr>
+<td>Smart inject (governance → AI)</td>
+<td>Pre-review + inject governance context into chat</td>
+</tr>
+<tr>
+<td>Diff mode inject (governance → AI)</td>
+<td>Diff-scoped governance inject</td>
+</tr>
+<tr>
+<td>Review Change</td>
+<td>Run governance review on current scope</td>
+</tr>
+<tr>
+<td>View Rules</td>
+<td>Open governance rules panel</td>
+</tr>
+<tr>
+<td>Edit Direction</td>
+<td>Update project intent</td>
 </tr>
 <tr>
 <td>Save session state now</td>
@@ -236,7 +269,52 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 <li>Terminal keys: <strong>Space</strong> toggle · <strong>c</strong> copy · <strong>Enter/i</strong> inject · <strong>n</strong> skip · <strong>q</strong> quit.</li>
 </ol>
 <p>Optional: <strong>Ctrl+Shift+C</strong> opens IDE Webview panel (secondary view).</p>
-<p>See <a href="dashboard.html">Runtime dashboard</a>.</p>
+<p>See <a href="dashboard.html">DASHBOARD.md</a>.</p>
+<h3>Governance (V4)</h3>
+<p>The IDE participates in the unified governance pipeline shared with MCP and CLI:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Command / UI</th>
+<th>Artifact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Review current change</td>
+<td><strong>Review Change</strong></td>
+<td><code>governance/review.json</code></td>
+</tr>
+<tr>
+<td>View rules</td>
+<td><strong>View Rules</strong></td>
+<td>reads control-core store</td>
+</tr>
+<tr>
+<td>Edit project direction</td>
+<td><strong>Edit Direction</strong></td>
+<td>updates project intent</td>
+</tr>
+<tr>
+<td>Smart inject to chat</td>
+<td><strong>Smart inject (governance → AI)</strong></td>
+<td>reads review + generates inject payload</td>
+</tr>
+<tr>
+<td>Diff-scoped inject</td>
+<td><strong>Diff mode inject</strong></td>
+<td>scoped to git diff</td>
+</tr>
+<tr>
+<td>Export with governance</td>
+<td><strong>Copy AI-ready context</strong></td>
+<td>full export + <code>GOVERNANCE:</code> appendix</td>
+</tr>
+</tbody>
+</table>
+<p>IDE <strong>Review Change</strong> writes <code>review.json</code> only. A full <strong>cycle</strong> (decision / scope / trace / cycle artifacts) is triggered via MCP <code>run_governance_cycle</code> or CLI <code>contorium governance cycle</code>.</p>
+<p>See <a href="install.html#architecture-three-adapters">INSTALL.md</a> for the three-adapter governance matrix.</p>
 <h3>Copy AI-ready context structure (V3.1 canonical)</h3>
 <p>Same as <code>contorium export</code> / <code>formatCanonicalAiMarkdown</code> (sections appear when data exists):</p>
 <pre><code class="language-text"># TASK ANCHOR
@@ -249,6 +327,11 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 # CODE EVOLUTION            (timeline recent commits)
 # INSIGHTS                  (up to 4 weak hints, optional)
 # NOTES / INSTRUCTION
+---
+GOVERNANCE:                  (when governance artifacts exist)
+## DECISION
+## SCOPE
+## TRACE
 </code></pre>
 <p>JSON export (<code>contora.exportFormat: json</code>) includes <code>cognitiveSnapshot</code> when the knowledge graph exists.</p>
 <p><strong>Not in main copy:</strong> full Intent graph, State conflict details, full <code>knowledge.json</code> (use COGNITIVE SNAPSHOT instead).</p>
@@ -264,6 +347,13 @@ Peer adapters: <a href="mcp.html">MCP</a>, <a href="cli.html">CLI</a>. Overview:
 ├── handoff.json               # CHP v1 AI handoff
 ├── understanding_graph.json   # call chains + impact
 ├── change.json / graph.json / timeline.json
+├── governance/                # V4 governance artifacts
+│   ├── review.json            # Review results (IDE/CLI review)
+│   ├── decision.json          # Decision outcome
+│   ├── scope.json             # Scope context
+│   ├── trace.json             # Summary trace
+│   ├── trace-full.json        # Detailed reason_chain
+│   └── cycle.json             # Full cycle record + matched_rules
 ├── runtime.bootstrap.json     # runtime_id (session-level)
 ├── mcp.auto-context.md        # after user confirms semi-auto injection
 ├── mcp.handoff-injection.json
@@ -333,11 +423,11 @@ Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
 <tbody>
 <tr>
 <td>Sidebar loading/blank</td>
-<td>Open a <strong>folder</strong> workspace; <strong>Developer: Reload Window</strong>; check <strong>Output → Extension Host</strong> for <code>Contorium</code> errors</td>
+<td>Usually <strong><code>@contora/state-core</code> not installed correctly</strong>: repo root <code>npm run compile</code> → Reload; compile before F5; reinstall VSIX after <code>npm run vsix</code>. Check <strong>Output → Extension Host</strong> for <code>state-core</code></td>
 </tr>
 <tr>
 <td>Cursor "installation corrupt"</td>
-<td>Remove extension dirs manually (see Uninstall), reinstall VSIX from Releases; reinstall Cursor if needed</td>
+<td>Remove extension dirs manually, reinstall VSIX; reinstall Cursor if needed</td>
 </tr>
 <tr>
 <td>Copy empty or stale</td>
@@ -349,7 +439,7 @@ Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
 </tr>
 <tr>
 <td>VSIX install fails</td>
-<td>Download a fresh <code>.vsix</code> from <a href="https://github.com/ContoriumLabs/contorium/releases">GitHub Releases</a>; avoid partial downloads</td>
+<td>Confirm <code>npm run vsix</code> succeeds (~350–400KB); avoid broken symlink packages</td>
 </tr>
 </tbody>
 </table>
@@ -362,6 +452,10 @@ Remove-Item -Recurse -Force .context-recall -ErrorAction SilentlyContinue
 <li><a href="dashboard.html">Runtime Dashboard (CRBP)</a></li>
 <li><a href="mcp.html">MCP</a></li>
 <li><a href="cli.html">CLI</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md">State Engine</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md">Architecture V3.1</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md">Engineering Closure</a></li>
+<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/RUNTIME.md">Runtime package</a></li>
 </ul>
         </article>
       </main>

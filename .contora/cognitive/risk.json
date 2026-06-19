@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "generatedAt": 1781836478456,
+  "risks": [
+    {
+      "type": "impact_summary",
+      "level": "low",
+      "description": "Impact from recent changes"
+    },
+    {
+      "type": "affected_modules",
+      "level": "low",
+      "description": "Modules: .contora/change.json, .contora/dashboard.signal.json, .contora/graph.json, .contora/graph/edges.json, .contora/graph/functions.json, .contora/graph/hotspots.json"
+    }
+  ]
+}

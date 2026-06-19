@@ -1,14 +1,17 @@
 {
   "version": 1,
-  "generatedAt": 1781057523232,
+  "generatedAt": 1781836785893,
   "project_intent": "develop documentation, MCP integration and state engine",
   "current_focus": "work in blog",
   "active_domains": [
     "docs",
     "mcp",
-    "state-engine"
+    "state-engine",
+    "ui",
+    "ai",
+    "build"
   ],
-  "active_problem_area": "active work in documentation module",
+  "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
     {
       "cluster": "blog",
@@ -20,9 +23,10 @@
     {
       "cluster": "mcp",
       "files": [
-        "mcp/index.html"
+        "mcp/index.html",
+        "mcp/README.md"
       ],
-      "weight": 0.42
+      "weight": 0.37
     },
     {
       "cluster": "project root",
@@ -30,23 +34,30 @@
         "index.html",
         "README.md",
         "修改方案.md",
-        "修",
-        "修改方案2.md"
+        "contorium.mp4",
+        "googlefba835fbf32479b7.html",
+        "styles.css"
       ],
-      "weight": 0.38
+      "weight": 0.37
     },
     {
       "cluster": "docs",
       "files": [
         "docs/IDE_EXTENSION.md",
-        "docs/STATE_ENGINE.md"
+        "docs/cli.html",
+        "docs/CLI.md",
+        "docs/dashboard.html",
+        "docs/DASHBOARD.md",
+        "docs/docs.css",
+        "docs/ide-extension.html",
+        "docs/index.html"
       ],
-      "weight": 0.37
+      "weight": 0.33
     },
     {
-      "cluster": ".contora / events",
+      "cluster": ".vscode",
       "files": [
-        ".contora/events/sess_mp487yx1_2450523b.jsonl"
+        ".vscode/settings.json"
       ],
       "weight": 0.32
     }
@@ -57,5 +68,5 @@
     "iterate on index.html",
     "iterate on IDE_EXTENSION.md"
   ],
-  "confidence": 0.35
+  "confidence": 0.6
 }

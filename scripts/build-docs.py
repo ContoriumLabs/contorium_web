@@ -120,6 +120,16 @@ HUB_CONTENT = """
 </section>
 
 <section style="margin-top:40px">
+  <h2>What's new (v0.9.5+)</h2>
+  <ul>
+    <li><strong>Governance V4</strong> — unified review / cycle / scope / decision / trace pipeline across IDE, MCP, and CLI</li>
+    <li><strong>Cognitive mode (A/B)</strong> — optional skill suggestion overlay (display-only; switch via dashboard or MCP tools)</li>
+    <li><strong>Semi-auto handoff</strong> — new AI chat prompts Y/n to inject runtime context</li>
+    <li><strong>Runtime dashboard (CRBP)</strong> — Passive status line + Expanded panels; zero commands in normal use</li>
+  </ul>
+</section>
+
+<section style="margin-top:32px">
   <h2>What's automatic</h2>
   <ul>
     <li><strong>MCP spawn</strong> — Codex / Claude / Cursor starts <code>@contorium/mcp</code> after one-time config</li>

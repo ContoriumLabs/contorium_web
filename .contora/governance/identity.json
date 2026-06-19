@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "contora_web",
+  "purpose": "Software project with AI-assisted development",
+  "current_focus": [
+    "develop documentation, state engine and AI integration — focus: shared state engine, landing page / static UI, documentation",
+    "develop documentation, MCP integration and state engine — focus: shared state engine, landing page / static UI, documentation",
+    "develop documentation, MCP integration and state engine — focus: shared state engine, IDE extension UI, documentation"
+  ],
+  "non_goals": [
+    "Not a model company",
+    "Not an IDE replacement"
+  ]
+}

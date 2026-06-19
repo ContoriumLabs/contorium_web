@@ -1,25 +1,138 @@
 {
   "version": 2,
-  "generatedAt": 1781057523796,
+  "generatedAt": 1781836786101,
   "changed_files": [
-    "docs/IDE_EXTENSION.md",
-    "docs/STATE_ENGINE.md",
+    ".contora/change.json",
+    ".contora/dashboard.signal.json",
+    ".contora/graph.json",
+    ".contora/graph/edges.json",
+    ".contora/graph/functions.json",
+    ".contora/graph/hotspots.json",
+    ".contora/graph/intents.json",
+    ".contora/graph/knowledge.json",
+    ".contora/graph/metadata.json",
+    ".contora/graph/nodes.json",
+    ".contora/graph/snapshot.json",
+    ".contora/handoff.json",
+    ".contora/intelligence/state-summary.json",
+    ".contora/intent-graph/graph.json",
+    ".contora/state-builder/project-snapshot.md",
+    ".contora/state-builder/project-state.json",
+    ".contora/state.json",
+    ".contora/understanding_graph.json",
+    ".contora/dashboard.activity.json",
+    ".vscode/settings.json",
     "修改方案.md",
-    "index.html",
-    "修改方案2.md",
-    "architecture/index.html",
+    "styles.css",
     "README.md",
-    "blog/index.html",
-    "mcp/index.html"
+    "index.html",
+    "docs/index.html",
+    "docs/dashboard.html",
+    "docs/cli.html",
+    "docs/mcp.html",
+    "docs/ide-extension.html",
+    "docs/install.html",
+    "mcp/index.html",
+    "docs/INSTALL.md"
   ],
   "key_changes": [
     {
-      "symbol": "docs/IDE_EXTENSION.md",
+      "symbol": ".contora/change.json",
       "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "docs/STATE_ENGINE.md",
+      "symbol": ".contora/dashboard.signal.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/edges.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/functions.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/hotspots.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/intents.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/knowledge.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/metadata.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/nodes.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/snapshot.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/handoff.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intelligence/state-summary.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intent-graph/graph.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/state-builder/project-snapshot.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/state-builder/project-state.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/state.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/understanding_graph.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/dashboard.activity.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".vscode/settings.json",
       "kind": "file",
       "change_type": "modified"
     },
@@ -29,17 +142,7 @@
       "change_type": "modified"
     },
     {
-      "symbol": "index.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "修改方案2.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "architecture/index.html",
+      "symbol": "styles.css",
       "kind": "file",
       "change_type": "modified"
     },
@@ -49,12 +152,47 @@
       "change_type": "modified"
     },
     {
-      "symbol": "blog/index.html",
+      "symbol": "index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/dashboard.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/cli.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/mcp.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/ide-extension.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/install.html",
       "kind": "file",
       "change_type": "modified"
     },
     {
       "symbol": "mcp/index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/INSTALL.md",
       "kind": "file",
       "change_type": "modified"
     }

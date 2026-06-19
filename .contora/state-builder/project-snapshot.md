@@ -11,19 +11,22 @@ Active Modules:
 - IDE_EXTENSION (from IDE)
 - README (from IDE)
 - 修改方案 (from IDE)
-- sess_mp487yx1_2450523b.jsonl (from IDE)
+- settings.json (from IDE)
+- contorium.mp4 (from IDE)
 - index.html (from events)
 
 Recent Decisions:
 (none yet)
 
 Open Problems:
-- active work in documentation module (from events)
+- uncommitted changes in documentation module (from events)
+- 26 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)
 
 Next Actions:
+- review and commit pending changes
 - continue documentation updates
 - verify MCP tools against workspace
 - review state persistence paths
