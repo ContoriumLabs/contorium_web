@@ -1,43 +1,43 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1782021609588,
-  "graphBuildId": "graph_mqndnm2c",
+  "generatedAt": 1782026795870,
+  "graphBuildId": "graph_mqngqrtq",
   "nodes": [
     {
-      "id": "intent_0_develop_documentation_M",
+      "id": "intent_0_develop_documentation_A",
       "type": "intent",
-      "name": "develop documentation, MCP integration and state engine",
-      "updatedAt": 1782021609588
+      "name": "develop documentation, AI integration and state engine",
+      "updatedAt": 1782026795870
     },
     {
-      "id": "intent_1_IDE_EXTENSION_from_IDE_",
-      "type": "intent",
-      "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1782021609588
-    },
-    {
-      "id": "intent_2_index_html_from_IDE_in",
+      "id": "intent_1_index_html_from_IDE_in",
       "type": "intent",
       "name": "index.html (from IDE) integration",
-      "updatedAt": 1782021609588
+      "updatedAt": 1782026795870
     },
     {
-      "id": "intent_3_cli_html_from_IDE_inte",
+      "id": "intent_2_styles_css_from_IDE_in",
       "type": "intent",
-      "name": "cli.html (from IDE) integration",
-      "updatedAt": 1782021609588
+      "name": "styles.css (from IDE) integration",
+      "updatedAt": 1782026795870
     },
     {
-      "id": "intent_4_CLI_from_IDE_integrati",
+      "id": "intent_3_IDE_EXTENSION_from_IDE_",
       "type": "intent",
-      "name": "CLI (from IDE) integration",
-      "updatedAt": 1782021609588
+      "name": "IDE_EXTENSION (from IDE) integration",
+      "updatedAt": 1782026795870
     },
     {
-      "id": "intent_5_dashboard_html_from_IDE",
+      "id": "intent_4_README_from_IDE_integr",
       "type": "intent",
-      "name": "dashboard.html (from IDE) integration",
-      "updatedAt": 1782021609588
+      "name": "README (from IDE) integration",
+      "updatedAt": 1782026795870
+    },
+    {
+      "id": "intent_5__from_IDE_integratio",
+      "type": "intent",
+      "name": "优化 (from IDE) integration",
+      "updatedAt": 1782026795870
     }
   ]
 }

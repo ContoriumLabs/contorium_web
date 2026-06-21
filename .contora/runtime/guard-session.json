@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "lastCheckAt": 1782021634708,
-  "lastAction": "warn",
+  "lastCheckAt": 1782026819629,
+  "lastAction": "allow",
   "lastAllow": true,
   "source": "ide:control",
-  "target_path": "scripts/build-docs.py"
+  "target_path": "docs/GETTING_STARTED.md"
 }

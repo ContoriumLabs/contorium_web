@@ -50,8 +50,7 @@
           <div class="hero-copy">
             <p class="hero-eyebrow">Project Intelligence Layer</p>
             <h1 class="hero-headline">
-              AI Project Intelligence<br />
-              <span class="hero-headline-accent">Layer for Coding Agents</span>
+              AI Project Intelligence Layer 
             </h1>
             <p class="hero-subtext">
               A shared intelligence layer that preserves project understanding across AI coding tools.
@@ -127,23 +126,38 @@
         <div class="container solution-container">
           <h2 class="section-title section-title--center">Contorium preserves project intelligence</h2>
           <p class="section-lead section-lead--center">
-            Contorium introduces a persistent <strong>Project Intelligence Layer (PIL)</strong>.
-            Instead of storing chat history, it stores structured project understanding — all locally in your workspace.
+            A persistent <strong>Project Intelligence Layer (PIL)</strong> — structured understanding stored in your workspace,
+            not chat history in the cloud.
           </p>
 
-          <div class="pil-store-grid">
-            <div class="pil-store-item">Current project state</div>
-            <div class="pil-store-item">Project intent</div>
-            <div class="pil-store-item">Architectural decisions</div>
-            <div class="pil-store-item">Decision reasoning</div>
-            <div class="pil-store-item">Evolution history</div>
-            <div class="pil-store-item">Impact relationships</div>
-            <div class="pil-store-item pil-store-item--full">Provenance &amp; confidence</div>
-          </div>
+          <p class="solution-chain">Capture → Structure → Preserve → Retrieve → Transfer</p>
 
-          <div class="code-block local-first-block">
-            <div class="code-block-header">.contora/</div>
-            <pre><code>All structured intelligence lives here — inside your project.</code></pre>
+          <div class="solution-layout">
+            <div class="solution-panel solution-panel--store">
+              <h3 class="solution-panel-title">What gets preserved</h3>
+              <ul class="solution-store-list">
+                <li>Current project state</li>
+                <li>Project intent</li>
+                <li>Architectural decisions</li>
+                <li>Decision reasoning</li>
+                <li>Evolution history</li>
+                <li>Impact relationships</li>
+                <li>Provenance &amp; confidence</li>
+              </ul>
+            </div>
+            <div class="solution-panel solution-panel--local">
+              <h3 class="solution-panel-title">Where it lives</h3>
+              <div class="solution-contora">
+                <div class="solution-contora-header">.contora/</div>
+                <ul class="solution-contora-tree">
+                  <li>state.json · handoff.json</li>
+                  <li>intent/ · timeline/ · graph/</li>
+                  <li>intelligence/ · governance/</li>
+                  <li>events/</li>
+                </ul>
+                <p class="solution-contora-note">Local-first — no cloud account required.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -242,16 +256,43 @@
       </section>
 
       <section class="section section-light" id="how">
-        <div class="container">
+        <div class="container how-container">
           <h2 class="section-title section-title--center">How it works</h2>
-          <ol class="steps-list steps-list--centered">
-            <li><strong>AI agent connects</strong> to your workspace</li>
-            <li><strong>Contorium loads</strong> <code>.contora/</code></li>
-            <li><strong>State is reconstructed</strong> from structured artifacts</li>
-            <li><strong>AI inspects</strong> project intelligence</li>
-            <li><strong>Work continues</strong> with full context</li>
-            <li><strong>New decisions</strong> are captured back into state</li>
-          </ol>
+          <p class="section-lead section-lead--center">
+            From connecting an AI tool to capturing new decisions — one continuous loop in your project folder.
+          </p>
+          <div class="how-steps">
+            <article class="how-step">
+              <span class="how-step-num" aria-hidden="true">1</span>
+              <h3>AI agent connects</h3>
+              <p>IDE, MCP, or CLI attaches to your workspace folder.</p>
+            </article>
+            <article class="how-step">
+              <span class="how-step-num" aria-hidden="true">2</span>
+              <h3>Contorium loads <code>.contora/</code></h3>
+              <p>Existing project intelligence is read from local artifacts.</p>
+            </article>
+            <article class="how-step">
+              <span class="how-step-num" aria-hidden="true">3</span>
+              <h3>State is reconstructed</h3>
+              <p>Intent, decisions, and structure are rebuilt for the session.</p>
+            </article>
+            <article class="how-step">
+              <span class="how-step-num" aria-hidden="true">4</span>
+              <h3>AI inspects intelligence</h3>
+              <p>Agents read context instead of asking you to re-explain.</p>
+            </article>
+            <article class="how-step">
+              <span class="how-step-num" aria-hidden="true">5</span>
+              <h3>Work continues</h3>
+              <p>Development proceeds with full project understanding.</p>
+            </article>
+            <article class="how-step">
+              <span class="how-step-num" aria-hidden="true">6</span>
+              <h3>Decisions are captured</h3>
+              <p>New focus, notes, and changes flow back into <code>.contora/</code>.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -349,51 +390,64 @@
         </div>
       </section>
 
-      <section class="section section-mcp" id="install">
-        <div class="container">
-          <h2 class="section-title">Install MCP Runtime</h2>
-          <p class="section-lead">One command per host — then open your AI tool in your project folder.</p>
-          <div class="code-block install-cmd-block">
-            <div class="code-block-header">Optional global install</div>
-            <pre><code>npm install -g @contorium/mcp</code></pre>
+      <section class="section section-install" id="install">
+        <div class="container install-container">
+          <div class="install-header">
+            <h2 class="section-title section-title--center">Install MCP Runtime</h2>
+            <p class="section-lead section-lead--center">
+              Run one command for your AI host, then open the tool in your project folder. Node.js 18+ required.
+            </p>
           </div>
-          <div class="install-cmd-grid">
-            <div class="code-block">
-              <div class="code-block-header">Claude Code</div>
-              <pre><code>claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
-            </div>
-            <div class="code-block">
-              <div class="code-block-header">Codex</div>
-              <pre><code>codex mcp add contorium -- npx @contorium/mcp</code></pre>
-            </div>
+
+          <div class="install-optional">
+            <span class="install-optional-label">Optional</span>
+            <code class="install-optional-cmd">npm install -g @contorium/mcp</code>
+            <span class="install-optional-hint">Faster cold start — or use <code>npx @contorium/mcp</code> directly</span>
           </div>
-          <div class="install-grid install-grid--3" style="margin-top: 32px">
-            <div class="install-col">
-              <h3>IDE extension</h3>
-              <ul class="install-links">
-                <li>
-                  <a href="https://github.com/ContoriumLabs/contorium/releases" target="_blank" rel="noopener noreferrer"
-                    >Download VSIX <span class="install-arrow" aria-hidden="true">→</span></a
-                  >
-                </li>
-                <li>
-                  <a href="docs/ide-extension.html">IDE guide <span class="install-arrow" aria-hidden="true">→</span></a>
-                </li>
+
+          <div class="install-host-grid">
+            <article class="install-host-card">
+              <div class="install-host-card-head">
+                <span class="install-host-name">Codex</span>
+                <a href="mcp/#codex" class="install-host-link">Setup guide →</a>
+              </div>
+              <pre class="install-host-code"><code>codex mcp add contorium -- npx @contorium/mcp</code></pre>
+            </article>
+            <article class="install-host-card">
+              <div class="install-host-card-head">
+                <span class="install-host-name">Claude Code</span>
+                <a href="mcp/#claude-code" class="install-host-link">Setup guide →</a>
+              </div>
+              <pre class="install-host-code"><code>claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
+            </article>
+            <article class="install-host-card">
+              <div class="install-host-card-head">
+                <span class="install-host-name">Cursor</span>
+                <a href="mcp/#cursor" class="install-host-link">Setup guide →</a>
+              </div>
+              <ul class="install-host-steps">
+                <li>Settings → MCP → Add server</li>
+                <li>Command: <code>npx</code> · Args: <code>@contorium/mcp</code></li>
+                <li>Reload Window</li>
               </ul>
-            </div>
-            <div class="install-col">
-              <h3>MCP / agents</h3>
-              <ul class="install-links">
-                <li><a href="mcp/">Interactive setup <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="docs/mcp.html">Full MCP guide <span class="install-arrow" aria-hidden="true">→</span></a></li>
-              </ul>
-            </div>
-            <div class="install-col">
-              <h3>CLI</h3>
-              <ul class="install-links">
-                <li><a href="docs/cli.html">CLI reference <span class="install-arrow" aria-hidden="true">→</span></a></li>
-                <li><a href="docs/install.html">Full install guide <span class="install-arrow" aria-hidden="true">→</span></a></li>
-              </ul>
+            </article>
+          </div>
+
+          <div class="install-more">
+            <p class="install-more-title">Also available</p>
+            <div class="install-more-grid">
+              <a class="install-more-card" href="docs/ide-extension.html">
+                <span class="install-more-label">IDE extension</span>
+                <span class="install-more-desc">VS Code / Cursor · VSIX or Marketplace</span>
+              </a>
+              <a class="install-more-card" href="docs/cli.html">
+                <span class="install-more-label">CLI</span>
+                <span class="install-more-desc">Terminal · inspect, transfer, capture</span>
+              </a>
+              <a class="install-more-card" href="docs/install.html">
+                <span class="install-more-label">Full install guide</span>
+                <span class="install-more-desc">All adapters · uninstall · scenarios</span>
+              </a>
             </div>
           </div>
         </div>
@@ -401,15 +455,19 @@
 
       <section class="cta-final" id="cta">
         <div class="container">
-          <h2>A new layer for AI-native development</h2>
-          <p class="cta-final-lead">
-            Persistent project intelligence across AI systems — not a tool, not an assistant,
-            a shared cognitive layer for building software with AI.
-          </p>
-          <div class="cta-final-buttons">
-            <a href="#install" class="btn btn-primary">Get Started</a>
-            <a href="docs/" class="btn btn-ghost">View Docs</a>
-            <a href="mcp/" class="btn btn-ghost">Install MCP</a>
+          <div class="cta-final-inner">
+            <p class="cta-final-eyebrow">Ready to start</p>
+            <h2>A new layer for AI-native development</h2>
+            <p class="cta-final-lead">
+              Persistent project intelligence across AI systems — not a tool, not an assistant,
+              a shared cognitive layer for building software with AI.
+            </p>
+            <div class="cta-final-actions">
+              <a href="#install" class="btn btn-primary btn-lg">Get Started</a>
+              <a href="docs/" class="btn btn-ghost btn-lg">View Docs</a>
+              <a href="mcp/" class="btn btn-ghost btn-lg">Install MCP</a>
+            </div>
+            <p class="cta-final-footnote">Local-first · MIT License · Works with Cursor, Claude, Codex, Gemini CLI</p>
           </div>
         </div>
       </section>

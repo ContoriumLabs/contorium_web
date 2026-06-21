@@ -1,6 +1,6 @@
 {
   "schema": "intent.v1",
-  "updated_at": "2026-06-21T06:00:09.519Z",
+  "updated_at": "2026-06-21T07:26:35.798Z",
   "nodes": [
     {
       "intent_id": "intent_mpuomn4w_ms6zcz",
@@ -30,8 +30,8 @@
         "scripts"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T06:00:09.519Z",
-      "updated_at": "2026-06-21T06:00:09.519Z",
+      "created_at": "2026-06-21T07:26:35.798Z",
+      "updated_at": "2026-06-21T07:26:35.798Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -66,8 +66,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T06:00:09.519Z",
-      "updated_at": "2026-06-21T06:00:09.519Z",
+      "created_at": "2026-06-21T07:26:35.798Z",
+      "updated_at": "2026-06-21T07:26:35.798Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -101,8 +101,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T06:00:09.519Z",
-      "updated_at": "2026-06-21T06:00:09.519Z",
+      "created_at": "2026-06-21T07:23:38.874Z",
+      "updated_at": "2026-06-21T07:23:38.874Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -135,8 +135,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T05:44:38.111Z",
-      "updated_at": "2026-06-21T05:44:38.111Z",
+      "created_at": "2026-06-21T07:26:35.798Z",
+      "updated_at": "2026-06-21T07:26:35.798Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -345,6 +345,61 @@
       "updated_at": "2026-06-20T09:01:35.361Z",
       "cognition": {
         "confidence": 0.76,
+        "category": "evolving",
+        "freshness": "recent"
+      }
+    },
+    {
+      "intent_id": "intent_mqndoym2_6ly78z",
+      "title": "develop documentation, MCP integration and test coverage",
+      "name": "develop documentation, MCP integration and test coverage",
+      "description": "develop documentation, MCP integration and test coverage",
+      "why": "develop documentation, MCP integration and test coverage",
+      "design_principles": [],
+      "constraints": [
+        "scoped to 8 path(s)"
+      ],
+      "related_modules": [
+        "blog",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "styles.css",
+        "mcp"
+      ],
+      "linked_decisions": [],
+      "created_at": "2026-06-21T07:26:35.798Z",
+      "updated_at": "2026-06-21T07:26:35.798Z",
+      "cognition": {
+        "confidence": 0.71,
+        "category": "evolving",
+        "freshness": "recent"
+      }
+    },
+    {
+      "intent_id": "intent_mqndq65z_rg26ig",
+      "title": "refine ai module changes",
+      "name": "refine ai module changes",
+      "description": "refine ai module changes",
+      "why": "refine ai module changes",
+      "design_principles": [],
+      "constraints": [
+        "scoped to 6 path(s)"
+      ],
+      "related_modules": [
+        "blog",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "styles.css"
+      ],
+      "linked_decisions": [],
+      "created_at": "2026-06-21T07:26:35.798Z",
+      "updated_at": "2026-06-21T07:26:35.798Z",
+      "cognition": {
+        "confidence": 0.73,
         "category": "evolving",
         "freshness": "recent"
       }
@@ -1360,6 +1415,101 @@
       "from": "intent_mpz0c7tp_4eyp79",
       "to": "file:优化.md",
       "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mqndoym2_6ly78z",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mqndoym2_6ly78z",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mqndq65z_rg26ig",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mqndq65z_rg26ig",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "intent_mqndq65z_rg26ig",
+      "type": "RELATED_TO"
     }
   ]
 }

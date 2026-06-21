@@ -1,27 +1,27 @@
 PROJECT SNAPSHOT
 
 Goal:
-develop documentation, MCP integration and state engine
+develop documentation, AI integration and state engine
 
 Current Stage:
-documentation + MCP integration development
+documentation + AI layer development
 
 Active Modules:
-- IDE_EXTENSION (from IDE)
 - index.html (from IDE)
-- cli.html (from IDE)
-- CLI (from IDE)
-- dashboard.html (from IDE)
-- DASHBOARD (from IDE)
-- ide-extension.html (from IDE)
-- build-docs (from events)
+- styles.css (from IDE)
+- IDE_EXTENSION (from IDE)
+- README (from IDE)
+- 优化 (from IDE)
+- 修改方案 (from IDE)
+- index.html (from events)
+- styles.css (from events)
 
 Recent Decisions:
 (none yet)
 
 Open Problems:
 - uncommitted changes in documentation module (from events)
-- 64 paths with uncommitted changes — integration risk (from Git)
+- 39 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)
@@ -29,5 +29,5 @@ Completed Milestones:
 Next Actions:
 - review and commit pending changes
 - continue documentation updates
-- verify MCP tools against workspace
+- review AI integration changes
 - review state persistence paths

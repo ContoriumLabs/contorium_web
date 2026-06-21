@@ -1,6 +1,6 @@
 {
   "schema": "why.v1",
-  "updated_at": "2026-06-21T06:00:09.602Z",
+  "updated_at": "2026-06-21T07:26:35.886Z",
   "features": [
     {
       "feature": "contora_web",
@@ -99,8 +99,24 @@
       "linked_intent": "intent_mqm2re8p_h4y519"
     },
     {
-      "feature": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
-      "why": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
+      "feature": "develop documentation, MCP integration and test coverage",
+      "why": "develop documentation, MCP integration and test coverage",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mqndoym2_6ly78z"
+    },
+    {
+      "feature": "refine ai module changes",
+      "why": "refine ai module changes",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mqndq65z_rg26ig"
+    },
+    {
+      "feature": "develop documentation, AI integration and state engine — focus: shared state engine",
+      "why": "develop documentation, AI integration and state engine — focus: shared state engine",
       "problem": "Active work context is invisible to AI without handoff",
       "value": "Continuity for current task and focus",
       "origin_decision": "",

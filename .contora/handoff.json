@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "generatedAt": 1782021609588,
-  "goal": "develop documentation, MCP integration and state engine",
-  "current_focus": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
+  "generatedAt": 1782026795870,
+  "goal": "develop documentation, AI integration and state engine",
+  "current_focus": "develop documentation, AI integration and state engine — focus: shared state engine",
   "key_changes": [
     {
       "symbol": ".contora/change.json",
@@ -30,17 +30,12 @@
       "change_type": "modified"
     },
     {
-      "symbol": ".contora/dashboard.activity.json",
+      "symbol": ".contora/confidence/confidence_index.json",
       "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": ".contora/dashboard.signal.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/governance/identity.json",
+      "symbol": ".contora/evolution/evolution_graph.json",
       "kind": "file",
       "change_type": "modified"
     },
@@ -66,6 +61,11 @@
     },
     {
       "symbol": ".contora/graph/hotspots.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/graph/impact_graph.json",
       "kind": "file",
       "change_type": "modified"
     },
@@ -100,7 +100,32 @@
       "change_type": "modified"
     },
     {
+      "symbol": ".contora/identity/project_identity.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intelligence/health.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intelligence/repository_state.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intelligence/snapshot.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
       "symbol": ".contora/intelligence/state-summary.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intelligence/validation.json",
       "kind": "file",
       "change_type": "modified"
     },
@@ -110,7 +135,22 @@
       "change_type": "modified"
     },
     {
-      "symbol": ".contora/memory/latest-memory.json",
+      "symbol": ".contora/intent/intent_graph.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intent/intent_nodes.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/intent/why.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/provenance/provenance_chain.json",
       "kind": "file",
       "change_type": "modified"
     },
@@ -123,46 +163,6 @@
       "symbol": ".contora/state-builder/project-snapshot.md",
       "kind": "file",
       "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/state-builder/project-state.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/state.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": ".contora/understanding_graph.json",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/CLI.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/DASHBOARD.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/IDE_EXTENSION.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/INSTALL.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/MCP.md",
-      "kind": "file",
-      "change_type": "modified"
     }
   ],
   "impact_summary": {
@@ -173,33 +173,33 @@
       ".contora/cognitive/intent.json",
       ".contora/cognitive/risk.json",
       ".contora/cognitive/state.json",
-      ".contora/dashboard.activity.json",
-      ".contora/dashboard.signal.json",
-      ".contora/governance/identity.json",
+      ".contora/confidence/confidence_index.json",
+      ".contora/evolution/evolution_graph.json",
       ".contora/governance/review.json",
       ".contora/graph.json",
       ".contora/graph/edges.json",
       ".contora/graph/functions.json",
       ".contora/graph/hotspots.json",
+      ".contora/graph/impact_graph.json",
       ".contora/graph/intents.json",
       ".contora/graph/knowledge.json",
       ".contora/graph/metadata.json",
       ".contora/graph/nodes.json",
       ".contora/graph/snapshot.json",
       ".contora/handoff.json",
+      ".contora/identity/project_identity.json",
+      ".contora/intelligence/health.json",
+      ".contora/intelligence/repository_state.json",
+      ".contora/intelligence/snapshot.json",
       ".contora/intelligence/state-summary.json",
+      ".contora/intelligence/validation.json",
       ".contora/intent-graph/graph.json",
-      ".contora/memory/latest-memory.json",
+      ".contora/intent/intent_graph.json",
+      ".contora/intent/intent_nodes.json",
+      ".contora/intent/why.json",
+      ".contora/provenance/provenance_chain.json",
       ".contora/runtime/guard-session.json",
-      ".contora/state-builder/project-snapshot.md",
-      ".contora/state-builder/project-state.json",
-      ".contora/state.json",
-      ".contora/understanding_graph.json",
-      "docs/CLI.md",
-      "docs/DASHBOARD.md",
-      "docs/IDE_EXTENSION.md",
-      "docs/INSTALL.md",
-      "docs/MCP.md"
+      ".contora/state-builder/project-snapshot.md"
     ],
     "affected_functions": [],
     "details": []
@@ -217,7 +217,7 @@
     },
     {
       "action": "review",
-      "target": "verify MCP tools against workspace",
+      "target": "review AI integration changes",
       "reason": ""
     },
     {
@@ -227,5 +227,5 @@
     }
   ],
   "context_graph_refs": [],
-  "summary": "Goal: develop documentation, MCP integration and state engine | Focus: develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation | Changed files: .contora/change.json, .contora/cognitive/graph.json, .contora/cognitive/intent.json, .contora/cognitive/risk.json, .contora/cognitive/state.json"
+  "summary": "Goal: develop documentation, AI integration and state engine | Focus: develop documentation, AI integration and state engine — focus: shared state engine | Changed files: .contora/change.json, .contora/cognitive/graph.json, .contora/cognitive/intent.json, .contora/cognitive/risk.json, .contora/cognitive/state.json"
 }

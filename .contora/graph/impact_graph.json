@@ -1,6 +1,6 @@
 {
   "schema": "impact_graph.v1",
-  "updated_at": "2026-06-21T06:00:09.619Z",
+  "updated_at": "2026-06-21T07:26:35.907Z",
   "entries": [
     {
       "source_entity": ".vscode/settings.json",
@@ -257,7 +257,7 @@
       "updated_at": "2026-06-21T05:42:32.513Z"
     },
     {
-      "source_entity": ".contora/change.json",
+      "source_entity": ".contora/governance/review.json",
       "change_type": "modified",
       "impacted_nodes": [
         {
@@ -265,15 +265,105 @@
           "impact_level": 1
         },
         {
+          "module": "scripts",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "styles.css",
+          "impact_level": 1
+        },
+        {
           "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "优化.md",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 1,
+      "risk_score": 0.88,
+      "updated_at": "2026-06-21T06:01:12.586Z"
+    },
+    {
+      "source_entity": "index.html",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "styles.css",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "优化.md",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
           "impact_level": 1
         }
       ],
       "impact_radius": 1,
       "blast_radius": 1,
       "dependency_depth": 0,
-      "risk_score": 0.57,
-      "updated_at": "2026-06-21T06:00:09.618Z"
+      "risk_score": 0.68,
+      "updated_at": "2026-06-21T07:23:39.833Z"
+    },
+    {
+      "source_entity": ".contora/change.json",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": ".contora",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 0,
+      "risk_score": 0.53,
+      "updated_at": "2026-06-21T07:26:35.907Z"
     }
   ]
 }

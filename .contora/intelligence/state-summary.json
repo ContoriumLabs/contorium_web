@@ -1,26 +1,18 @@
 {
   "version": 1,
-  "generatedAt": 1782021609403,
-  "project_intent": "develop documentation, MCP integration and state engine",
-  "current_focus": "work in scripts",
+  "generatedAt": 1782026795689,
+  "project_intent": "develop documentation, AI integration and state engine",
+  "current_focus": "work in project root",
   "active_domains": [
     "docs",
-    "mcp",
+    "ai",
     "state-engine",
-    "build",
+    "mcp",
     "ui",
-    "ai"
+    "auth"
   ],
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
-    {
-      "cluster": "scripts",
-      "files": [
-        "scripts/build-docs.py",
-        "scripts/sync-docs-from-source.py"
-      ],
-      "weight": 0.52
-    },
     {
       "cluster": "project root",
       "files": [
@@ -33,12 +25,19 @@
       "weight": 0.48
     },
     {
+      "cluster": "blog",
+      "files": [
+        "blog/index.html"
+      ],
+      "weight": 0.42
+    },
+    {
       "cluster": "mcp",
       "files": [
-        "mcp/README.md",
-        "mcp/index.html"
+        "mcp/index.html",
+        "mcp/README.md"
       ],
-      "weight": 0.47
+      "weight": 0.37
     },
     {
       "cluster": "docs",
@@ -48,25 +47,32 @@
         "docs/CLI.md",
         "docs/dashboard.html",
         "docs/DASHBOARD.md",
-        "docs/ide-extension.html",
-        "docs/index.html",
-        "docs/install.html"
+        "docs/GETTING_STARTED.md",
+        "docs/getting-started.html",
+        "docs/ide-extension.html"
       ],
-      "weight": 0.44
+      "weight": 0.33
     },
     {
-      "cluster": "blog",
+      "cluster": "docs / _source",
       "files": [
-        "blog/index.html"
+        "docs/_source/CLI.md",
+        "docs/_source/COGNITIVE_DIMENSIONS.md",
+        "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+        "docs/_source/DASHBOARD.md",
+        "docs/_source/IDE_EXTENSION.md",
+        "docs/_source/INSTALL.md",
+        "docs/_source/MCP.md",
+        "docs/_source/PROJECT_INTELLIGENCE_LAYER.md"
       ],
-      "weight": 0.42
+      "weight": 0.32
     }
   ],
   "next_likely_actions": [
     "update documentation for recent changes",
-    "verify MCP tools against workspace state",
-    "iterate on IDE_EXTENSION.md",
-    "iterate on index.html"
+    "refine ai module changes",
+    "iterate on index.html",
+    "iterate on styles.css"
   ],
-  "confidence": 0.74
+  "confidence": 0.73
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1782021609519,
+  "updatedAt": 1782026795798,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -33,7 +33,7 @@
         "docs/dashboard.html",
         "docs/ide-extension.html"
       ],
-      "lastUpdated": 1782021609519,
+      "lastUpdated": 1782026795798,
       "learnedAt": 1780286520992
     },
     {
@@ -67,7 +67,7 @@
         "docs/dashboard.html",
         "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1782021609519,
+      "lastUpdated": 1782026795798,
       "learnedAt": 1780286520992
     },
     {
@@ -100,7 +100,7 @@
         "docs/dashboard.html",
         "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1782021609519,
+      "lastUpdated": 1782026618874,
       "learnedAt": 1780286520992
     },
     {
@@ -127,7 +127,7 @@
         "docs/DASHBOARD.md",
         "优化.md"
       ],
-      "lastUpdated": 1782020678111,
+      "lastUpdated": 1782026795798,
       "learnedAt": 1780286520992
     },
     {
@@ -284,6 +284,40 @@
       ],
       "lastUpdated": 1781946095361,
       "learnedAt": 1781942844121
+    },
+    {
+      "id": "intent_mqndoym2_6ly78z",
+      "text": "develop documentation, MCP integration and test coverage",
+      "status": "ACTIVE",
+      "confidence": 1,
+      "relatedFiles": [
+        "blog/index.html",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "styles.css",
+        "mcp/index.html",
+        "mcp/README.md"
+      ],
+      "lastUpdated": 1782026795798,
+      "learnedAt": 1782021672506
+    },
+    {
+      "id": "intent_mqndq65z_rg26ig",
+      "text": "refine ai module changes",
+      "status": "ACTIVE",
+      "confidence": 1,
+      "relatedFiles": [
+        "blog/index.html",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "styles.css"
+      ],
+      "lastUpdated": 1782026795798,
+      "learnedAt": 1782021728950
     }
   ],
   "edges": [
@@ -1296,6 +1330,101 @@
       "from": "intent_mpz0c7tp_4eyp79",
       "to": "file:优化.md",
       "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mqndoym2_6ly78z",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mqndoym2_6ly78z",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mqndq65z_rg26ig",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mqndq65z_rg26ig",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "intent_mqndq65z_rg26ig",
+      "type": "RELATED_TO"
     }
   ]
 }
