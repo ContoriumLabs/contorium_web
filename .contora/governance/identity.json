@@ -5,7 +5,12 @@
   "current_focus": [
     "develop documentation, state engine and AI integration — focus: shared state engine, landing page / static UI, documentation",
     "develop documentation, MCP integration and state engine — focus: shared state engine, landing page / static UI, documentation",
-    "develop documentation, MCP integration and state engine — focus: shared state engine, IDE extension UI, documentation"
+    "develop documentation, MCP integration and state engine — focus: shared state engine, IDE extension UI, documentation",
+    "develop documentation, state engine and MCP integration — focus: shared state engine, landing page / static UI, documentation",
+    "develop documentation, state engine and MCP integration — focus: testing, shared state engine",
+    "develop documentation, state engine and AI integration — focus: testing, shared state engine",
+    "develop documentation, state engine and MCP integration — focus: testing, shared state engine, landing page / static UI",
+    "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation"
   ],
   "non_goals": [
     "Not a model company",

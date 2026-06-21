@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build static HTML docs from docs/*.md"""
+"""Build user-facing HTML manuals from docs/*.md"""
 from __future__ import annotations
 
 import re
@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 
 SLUG_MAP = {
+    "GETTING_STARTED.md": "getting-started.html",
     "INSTALL.md": "install.html",
     "IDE_EXTENSION.md": "ide-extension.html",
     "MCP.md": "mcp.html",
@@ -21,9 +22,10 @@ SLUG_MAP = {
 NAV = [
     ("Getting started", [
         ("Overview", "index.html"),
+        ("Quick start", "getting-started.html"),
         ("Install & use", "install.html"),
     ]),
-    ("Adapters", [
+    ("Guides", [
         ("IDE extension", "ide-extension.html"),
         ("MCP server", "mcp.html"),
         ("CLI", "cli.html"),
@@ -56,7 +58,7 @@ HEADER = """<!DOCTYPE html>
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#features">Product</a>
+          <a href="../index.html#pil">Product</a>
           <a href="../index.html#install">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
@@ -81,66 +83,74 @@ HEADER = """<!DOCTYPE html>
 
 HUB_CONTENT = """
 <div class="docs-hub-hero">
-  <h1>Documentation</h1>
+  <h1>User guide</h1>
   <p>
-    Install and use Contorium — IDE extension, <code>@contorium/mcp</code>, and CLI over shared
-    <code>.contora/</code> state.
+    Install and use Contorium — keep project understanding across AI coding sessions.
+    Pick <strong>IDE</strong>, <strong>MCP</strong>, or <strong>CLI</strong>; all share the same
+    <code>.contora/</code> folder in your project.
   </p>
 </div>
 
 <section>
-  <p class="docs-sidebar-title" style="padding-left:0">Quick paths</p>
+  <p class="docs-sidebar-title" style="padding-left:0">Start here</p>
   <div class="docs-card-grid">
+    <a class="docs-card" href="getting-started.html">
+      <span class="docs-card-tag">New user</span>
+      <h3>Quick start</h3>
+      <p>Choose an entry point, daily workflow, and the three things to remember.</p>
+    </a>
     <a class="docs-card" href="install.html">
-      <span class="docs-card-tag">Start here</span>
+      <span class="docs-card-tag">Setup</span>
       <h3>Install &amp; use</h3>
-      <p>Three peer adapters, install steps, command matrix, uninstall.</p>
+      <p>Install IDE, MCP, or CLI · usage scenarios · uninstall.</p>
     </a>
-    <a class="docs-card" href="mcp.html">
-      <span class="docs-card-tag">Agents</span>
-      <h3>MCP server</h3>
-      <p>Host auto-spawn, CHP v1 tools, semi-auto handoff injection.</p>
-    </a>
-    <a class="docs-card" href="cli.html">
-      <span class="docs-card-tag">Terminal</span>
-      <h3>CLI reference</h3>
-      <p><code>handoff</code>, dashboard keys, export, advanced commands.</p>
-    </a>
-    <a class="docs-card" href="dashboard.html">
-      <span class="docs-card-tag">Runtime</span>
-      <h3>Runtime dashboard</h3>
-      <p>Passive line, Expanded view, keyboard shortcuts, artifacts.</p>
-    </a>
-    <a class="docs-card" href="ide-extension.html">
-      <span class="docs-card-tag">IDE</span>
-      <h3>IDE extension</h3>
-      <p>VSIX install, sidebar, Copy AI-ready context, status bar.</p>
+    <a class="docs-card" href="../mcp/">
+      <span class="docs-card-tag">Interactive</span>
+      <h3>MCP setup wizard</h3>
+      <p>Step-by-step wiring for Codex, Claude Code, and Cursor.</p>
     </a>
   </div>
 </section>
 
 <section style="margin-top:40px">
-  <h2>What's new (v0.9.5+)</h2>
-  <ul>
-    <li><strong>Governance V4</strong> — unified review / cycle / scope / decision / trace pipeline across IDE, MCP, and CLI</li>
-    <li><strong>Cognitive mode (A/B)</strong> — optional skill suggestion overlay (display-only; switch via dashboard or MCP tools)</li>
-    <li><strong>Semi-auto handoff</strong> — new AI chat prompts Y/n to inject runtime context</li>
-    <li><strong>Runtime dashboard (CRBP)</strong> — Passive status line + Expanded panels; zero commands in normal use</li>
-  </ul>
+  <p class="docs-sidebar-title" style="padding-left:0">Guides by tool</p>
+  <div class="docs-card-grid">
+    <a class="docs-card" href="ide-extension.html">
+      <span class="docs-card-tag">IDE</span>
+      <h3>IDE extension</h3>
+      <p>VSIX install, sidebar, focus, Transfer Context, status bar.</p>
+    </a>
+    <a class="docs-card" href="mcp.html">
+      <span class="docs-card-tag">MCP</span>
+      <h3>MCP server</h3>
+      <p>One-line setup, handoff injection, main agent tools.</p>
+    </a>
+    <a class="docs-card" href="cli.html">
+      <span class="docs-card-tag">CLI</span>
+      <h3>CLI</h3>
+      <p><code>inspect</code>, <code>transfer</code>, <code>capture</code> from the terminal.</p>
+    </a>
+    <a class="docs-card" href="dashboard.html">
+      <span class="docs-card-tag">Dashboard</span>
+      <h3>Runtime dashboard</h3>
+      <p>Terminal status UI, keyboard shortcuts — starts automatically.</p>
+    </a>
+  </div>
 </section>
 
-<section style="margin-top:32px">
-  <h2>What's automatic</h2>
+<section style="margin-top:40px">
+  <h2>What happens automatically</h2>
   <ul>
-    <li><strong>MCP spawn</strong> — Codex / Claude / Cursor starts <code>@contorium/mcp</code> after one-time config</li>
-    <li><strong>Passive dashboard</strong> — compact <code>task | last | agent</code> line on bootstrap</li>
-    <li><strong>Expanded view</strong> — press <strong>Space</strong> in the Contorium terminal</li>
-    <li><strong>New chat inject</strong> — auto <code>[?]</code> prompt → Enter/i · n</li>
+    <li>MCP spawns when you open Codex / Claude / Cursor (after one-time setup)</li>
+    <li><code>.contora/</code> is created or merged on first use</li>
+    <li>New AI chats can prompt to inject project context (Y/n)</li>
+    <li>Dashboard shows a compact status line in the terminal</li>
   </ul>
 </section>
 
 <p class="docs-footer-note">
-  Interactive MCP wiring: <a href="../mcp/">mcp/</a> · Full install guide: <a href="install.html">install.html</a>
+  Developer / architecture docs:
+  <a href="https://github.com/ContoriumLabs/contorium/tree/main/docs" target="_blank" rel="noopener noreferrer">GitHub</a>
 </p>
 """
 
@@ -163,8 +173,6 @@ def rewrite_links(text: str) -> str:
         return f"]({slug_for_href(m.group(1))})"
 
     text = re.sub(r"\]\((\./[^)]+)\)", repl_md, text)
-    text = text.replace("](../index.html)", "](../index.html)")
-    text = text.replace("](../mcp/", "](../mcp/")
     return text
 
 
@@ -206,14 +214,13 @@ def page(title: str, description: str, active: str, content: str, crumb: str | N
 
 
 def main() -> None:
-    md_ext = markdown.Markdown(extensions=["tables", "fenced_code", "nl2br", "sane_lists"])
-
     titles = {
-        "install.html": ("Install & use", "Install, use, and uninstall Contorium — IDE, MCP, and CLI."),
+        "getting-started.html": ("Quick start", "Get started with Contorium — choose IDE, MCP, or CLI."),
+        "install.html": ("Install & use", "Install, use, and uninstall Contorium."),
         "ide-extension.html": ("IDE extension", "Contorium VS Code / Cursor extension guide."),
-        "mcp.html": ("MCP server", "Contorium MCP server — @contorium/mcp setup and tools."),
-        "cli.html": ("CLI", "Contorium CLI commands — handoff, dashboard, export."),
-        "dashboard.html": ("Runtime dashboard", "CRBP runtime dashboard — Passive and Expanded views."),
+        "mcp.html": ("MCP server", "Connect @contorium/mcp to your AI coding agent."),
+        "cli.html": ("CLI", "Contorium terminal commands for inspect, transfer, and capture."),
+        "dashboard.html": ("Runtime dashboard", "Terminal dashboard — shortcuts and daily use."),
     }
 
     for md_name, html_name in SLUG_MAP.items():
@@ -223,19 +230,30 @@ def main() -> None:
             continue
         src = md_path.read_text(encoding="utf-8")
         html_body = md_to_html(src)
-        t, desc = titles.get(html_name, (html_name, "Contorium documentation"))
+        t, desc = titles.get(html_name, (html_name, "Contorium user guide"))
         out = page(t, desc, html_name, html_body, t)
         (DOCS / html_name).write_text(out, encoding="utf-8")
         print(f"built {html_name}")
 
     hub = page(
-        "Documentation",
-        "Contorium documentation — install, MCP, CLI, and runtime dashboard.",
+        "User guide",
+        "Contorium user guide — install, MCP, CLI, IDE extension, and dashboard.",
         "index.html",
         HUB_CONTENT,
     )
     (DOCS / "index.html").write_text(hub, encoding="utf-8")
     print("built index.html")
+
+    for orphan_html in [
+        "pil-runtime.html",
+        "project-intelligence-layer.html",
+        "cognitive-dimensions.html",
+        "contorium-language-spec.html",
+    ]:
+        path = DOCS / orphan_html
+        if path.exists():
+            path.unlink()
+            print(f"removed {orphan_html}")
 
 
 if __name__ == "__main__":

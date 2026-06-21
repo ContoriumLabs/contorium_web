@@ -1,0 +1,110 @@
+{
+  "schema": "why.v1",
+  "updated_at": "2026-06-21T06:00:09.602Z",
+  "features": [
+    {
+      "feature": "contora_web",
+      "why": "Software project with AI-assisted development",
+      "problem": "Project purpose must persist across AI sessions and tools",
+      "value": "Structured inheritance instead of re-explaining architecture",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuomn4w_ms6zcz"
+    },
+    {
+      "feature": "develop documentation, MCP integration and state engine",
+      "why": "develop documentation, MCP integration and state engine",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuomn4w_ms6zcz"
+    },
+    {
+      "feature": "update documentation for recent changes",
+      "why": "update documentation for recent changes",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuomn4x_0bqur2"
+    },
+    {
+      "feature": "verify MCP tools against workspace state",
+      "why": "verify MCP tools against workspace state",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuomn4x_95gdjs"
+    },
+    {
+      "feature": "iterate on index.html",
+      "why": "iterate on index.html",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuomn4x_4lkrpf"
+    },
+    {
+      "feature": "review state persistence and lifecycle logic",
+      "why": "review state persistence and lifecycle logic",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuomx9j_yw4kyz"
+    },
+    {
+      "feature": "iterate on 修改方案2.md",
+      "why": "iterate on 修改方案2.md",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpuoon5s_46m7m6"
+    },
+    {
+      "feature": "develop documentation and MCP integration",
+      "why": "develop documentation and MCP integration",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpw9npi0_qygppg"
+    },
+    {
+      "feature": "iterate on IDE_EXTENSION.md",
+      "why": "iterate on IDE_EXTENSION.md",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mpz0c7tp_4eyp79"
+    },
+    {
+      "feature": "develop documentation, MCP integration and build tooling",
+      "why": "develop documentation, MCP integration and build tooling",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mqjn4atx_n9wbv6"
+    },
+    {
+      "feature": "ongoing workspace development",
+      "why": "ongoing workspace development",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mqk9gu88_p3isgf"
+    },
+    {
+      "feature": "iterate on settings.json",
+      "why": "iterate on settings.json",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mqm2re8p_h4y519"
+    },
+    {
+      "feature": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
+      "why": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
+      "problem": "Active work context is invisible to AI without handoff",
+      "value": "Continuity for current task and focus",
+      "origin_decision": "",
+      "linked_intent": ""
+    }
+  ]
+}

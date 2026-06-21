@@ -1,16 +1,89 @@
 {
-  "savedAt": 1781833169286,
-  "sessionId": "sess_mqk9gnax_6d4f51f8",
+  "savedAt": 1781950726959,
+  "sessionId": "sess_mqk9gnhd_83413b02",
   "mode": "feature",
   "strategyLabel": "feature: balanced working set, open tabs, and task keywords",
   "memory": {
-    "sessionId": "sess_mqk9gnax_6d4f51f8",
-    "task": "",
-    "workingFiles": [],
-    "openFiles": [],
+    "sessionId": "sess_mqk9gnhd_83413b02",
+    "task": "修改mcp接口",
+    "workingFiles": [
+      "docs/dashboard.html",
+      "docs/index.html",
+      "docs/cli.html",
+      "docs/mcp.html",
+      "docs/ide-extension.html",
+      "docs/install.html",
+      "mcp/README.md",
+      "docs/DASHBOARD.md",
+      "docs/IDE_EXTENSION.md",
+      "docs/CLI.md",
+      "docs/MCP.md",
+      "docs/INSTALL.md",
+      "scripts/sync-docs-from-source.py",
+      "mcp/index.html",
+      "scripts/build-docs.py",
+      "styles.css",
+      "index.html",
+      "README.md",
+      "blog/index.html",
+      "docs/docs.css",
+      "googlefba835fbf32479b7.html",
+      "contorium.mp4",
+      ".vscode/settings.json",
+      "修改方案.md"
+    ],
+    "openFiles": [
+      "index.html",
+      "修改方案.md",
+      "docs/IDE_EXTENSION.md",
+      "README.md",
+      "mcp/index.html",
+      "blog/index.html"
+    ],
     "gitState": {
       "staged": [],
-      "modified": []
+      "modified": [
+        ".contora/change.json",
+        ".contora/cognitive/graph.json",
+        ".contora/cognitive/intent.json",
+        ".contora/cognitive/risk.json",
+        ".contora/cognitive/state.json",
+        ".contora/dashboard.activity.json",
+        ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+        ".contora/governance/identity.json",
+        ".contora/governance/review.json",
+        ".contora/graph.json",
+        ".contora/graph/edges.json",
+        ".contora/graph/functions.json",
+        ".contora/graph/hotspots.json",
+        ".contora/graph/intents.json",
+        ".contora/graph/knowledge.json",
+        ".contora/graph/metadata.json",
+        ".contora/graph/nodes.json",
+        ".contora/graph/snapshot.json",
+        ".contora/handoff.json",
+        ".contora/intelligence/state-summary.json",
+        ".contora/intent-graph/graph.json",
+        ".contora/memory/latest-memory.json",
+        ".contora/runtime/guard-session.json",
+        ".contora/state-builder/project-snapshot.md",
+        ".contora/state-builder/project-state.json",
+        ".contora/state.json",
+        ".contora/understanding_graph.json",
+        ".contora/confidence/",
+        ".contora/evolution/",
+        ".contora/graph/impact_graph.json",
+        ".contora/graph/knowledge_graph.json",
+        ".contora/identity/",
+        ".contora/intelligence/health.json",
+        ".contora/intelligence/repository_state.json",
+        ".contora/intelligence/snapshot.json",
+        ".contora/intelligence/validation.json",
+        ".contora/intent/",
+        ".contora/provenance/",
+        ".contora/state/",
+        ".contora/timeline/"
+      ]
     },
     "notes": "",
     "recentEvents": [
@@ -18,45 +91,7 @@
         "type": "git_change",
         "modified": [],
         "staged": [],
-        "timestamp": 1781057516177
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/dashboard.signal.json",
-          ".contora/state.json"
-        ],
-        "staged": [],
-        "timestamp": 1781057574435
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781057583771
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json"
-        ],
-        "staged": [],
-        "timestamp": 1781057633835
+        "timestamp": 1781836480879
       },
       {
         "type": "git_change",
@@ -78,55 +113,92 @@
           ".contora/intent-graph/graph.json",
           ".contora/state-builder/project-snapshot.md",
           ".contora/state-builder/project-state.json",
-          ".contora/state.json"
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/cognitive/",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/",
+          ".contora/memory/",
+          ".contora/runtime/"
         ],
         "staged": [],
-        "timestamp": 1781057693817
+        "timestamp": 1781836539907
       },
       {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781065092176
+        "type": "file_save",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781836551879
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/dashboard.signal.json",
+          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/cognitive/",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/",
+          ".contora/memory/",
+          ".contora/runtime/",
+          ".vscode/"
+        ],
+        "staged": [],
+        "timestamp": 1781836552345
+      },
+      {
+        "type": "file_save",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781836556392
+      },
+      {
+        "type": "file_save",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781836561471
+      },
+      {
+        "type": "file_save",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781836565612
+      },
+      {
+        "type": "file_save",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781836567984
       },
       {
         "type": "git_change",
         "modified": [],
         "staged": [],
-        "timestamp": 1781784454886
+        "timestamp": 1781923812006
       },
       {
         "type": "git_change",
         "modified": [
           ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
           ".contora/dashboard.activity.json",
-          ".contora/governance/"
-        ],
-        "staged": [],
-        "timestamp": 1781784512697
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
           ".contora/graph.json",
           ".contora/graph/edges.json",
           ".contora/graph/functions.json",
@@ -139,38 +211,91 @@
           ".contora/handoff.json",
           ".contora/intelligence/state-summary.json",
           ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
           ".contora/state-builder/project-snapshot.md",
           ".contora/state-builder/project-state.json",
           ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/"
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
         ],
         "staged": [],
-        "timestamp": 1781784572611
+        "timestamp": 1781923870717
       },
       {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781785216581
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781785783511
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781923929928
       },
       {
         "type": "git_change",
         "modified": [],
         "staged": [],
-        "timestamp": 1781788374985
+        "timestamp": 1781934117565
       },
       {
         "type": "git_change",
         "modified": [
           ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
           ".contora/graph.json",
           ".contora/graph/edges.json",
           ".contora/graph/functions.json",
@@ -183,90 +308,118 @@
           ".contora/handoff.json",
           ".contora/intelligence/state-summary.json",
           ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
           ".contora/state-builder/project-snapshot.md",
           ".contora/state-builder/project-state.json",
           ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/"
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
         ],
         "staged": [],
-        "timestamp": 1781788433543
+        "timestamp": 1781934176745
+      },
+      {
+        "type": "git_change",
+        "modified": [],
+        "staged": [],
+        "timestamp": 1781941656662
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781941715242
       },
       {
         "type": "task_update",
-        "task": "创建落地页1",
-        "timestamp": 1781788514175
+        "task": "修改",
+        "timestamp": 1781941767353
       },
       {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781788552519
+        "type": "task_update",
+        "task": "修改m'c'p",
+        "timestamp": 1781941768347
+      },
+      {
+        "type": "task_update",
+        "task": "修改mcp",
+        "timestamp": 1781941769437
+      },
+      {
+        "type": "task_update",
+        "task": "修改mcp接口",
+        "timestamp": 1781941773078
       },
       {
         "type": "git_change",
         "modified": [],
         "staged": [],
-        "timestamp": 1781790022965
+        "timestamp": 1781942676554
       },
       {
         "type": "git_change",
         "modified": [
           ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
           ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781790080811
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
           ".contora/graph.json",
           ".contora/graph/edges.json",
           ".contora/graph/functions.json",
@@ -279,484 +432,511 @@
           ".contora/handoff.json",
           ".contora/intelligence/state-summary.json",
           ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781790140675
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781790208402
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781790216706
-      },
-      {
-        "type": "git_change",
-        "modified": [],
-        "staged": [],
-        "timestamp": 1781791134155
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781791192082
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781791251848
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781791534586
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781791540078
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781791546681
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781791553246
-      },
-      {
-        "type": "git_change",
-        "modified": [],
-        "staged": [],
-        "timestamp": 1781794030000
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781794044708
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781794045909
-      },
-      {
-        "type": "file_save",
-        "file": "修改方案.md",
-        "timestamp": 1781794053270
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781794057889
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          "\"/344/277/256/346/224/271/346/226/271/346/241/210.md\"",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781794060845
-      },
-      {
-        "type": "file_save",
-        "file": "修改方案.md",
-        "timestamp": 1781795495390
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781795496927
-      },
-      {
-        "type": "git_change",
-        "modified": [],
-        "staged": [],
-        "timestamp": 1781795621313
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
           ".contora/state-builder/project-snapshot.md",
           ".contora/state-builder/project-state.json",
           ".contora/state.json",
           ".contora/understanding_graph.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
         ],
         "staged": [],
-        "timestamp": 1781795679436
-      },
-      {
-        "type": "git_change",
-        "modified": [],
-        "staged": [],
-        "timestamp": 1781803501307
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/understanding_graph.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781813366751
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781828217575
-      },
-      {
-        "type": "file_focus",
-        "file": "docs/IDE_EXTENSION.md",
-        "timestamp": 1781828220111
-      },
-      {
-        "type": "file_focus",
-        "file": "修改方案.md",
-        "timestamp": 1781828546388
-      },
-      {
-        "type": "git_change",
-        "modified": [],
-        "staged": [],
-        "timestamp": 1781833027261
-      },
-      {
-        "type": "git_change",
-        "modified": [
-          ".contora/change.json",
-          ".contora/dashboard.signal.json",
-          ".contora/events/sess_mpy90eav_6b7acb2e.jsonl",
-          ".contora/graph.json",
-          ".contora/graph/edges.json",
-          ".contora/graph/functions.json",
-          ".contora/graph/hotspots.json",
-          ".contora/graph/intents.json",
-          ".contora/graph/knowledge.json",
-          ".contora/graph/metadata.json",
-          ".contora/graph/nodes.json",
-          ".contora/graph/snapshot.json",
-          ".contora/handoff.json",
-          ".contora/intelligence/state-summary.json",
-          ".contora/intent-graph/graph.json",
-          ".contora/state-builder/project-snapshot.md",
-          ".contora/state-builder/project-state.json",
-          ".contora/state.json",
-          ".contora/understanding_graph.json",
-          ".contora/cognitive/",
-          ".contora/dashboard.activity.json",
-          ".contora/governance/",
-          ".contora/runtime/"
-        ],
-        "staged": [],
-        "timestamp": 1781833065307
-      },
-      {
-        "type": "file_focus",
-        "file": "docs/IDE_EXTENSION.md",
-        "timestamp": 1781833072972
-      },
-      {
-        "type": "file_focus",
-        "file": "README.md",
-        "timestamp": 1781833152686
+        "timestamp": 1781942735724
       },
       {
         "type": "file_focus",
         "file": "index.html",
-        "timestamp": 1781833154743
+        "timestamp": 1781942812422
+      },
+      {
+        "type": "file_focus",
+        "file": "styles.css",
+        "timestamp": 1781942816404
+      },
+      {
+        "type": "file_focus",
+        "file": "README.md",
+        "timestamp": 1781942825021
+      },
+      {
+        "type": "file_focus",
+        "file": "index.html",
+        "timestamp": 1781942831321
+      },
+      {
+        "type": "file_focus",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781942840794
       },
       {
         "type": "file_focus",
         "file": "docs/index.html",
-        "timestamp": 1781833157321
+        "timestamp": 1781942844033
       },
       {
         "type": "file_focus",
         "file": "docs/dashboard.html",
-        "timestamp": 1781833159826
+        "timestamp": 1781942853751
+      },
+      {
+        "type": "file_focus",
+        "file": "styles.css",
+        "timestamp": 1781942853931
+      },
+      {
+        "type": "file_focus",
+        "file": "README.md",
+        "timestamp": 1781942862109
       },
       {
         "type": "file_focus",
         "file": "docs/cli.html",
-        "timestamp": 1781833161333
+        "timestamp": 1781942863462
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/memory/latest-memory.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781942864784
+      },
+      {
+        "type": "file_focus",
+        "file": "index.html",
+        "timestamp": 1781942866650
+      },
+      {
+        "type": "file_focus",
+        "file": "docs/index.html",
+        "timestamp": 1781942873742
+      },
+      {
+        "type": "file_focus",
+        "file": "docs/dashboard.html",
+        "timestamp": 1781942883212
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781942886973
+      },
+      {
+        "type": "file_focus",
+        "file": "docs/cli.html",
+        "timestamp": 1781942886998
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/memory/latest-memory.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781942924089
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781943119463
+      },
+      {
+        "type": "file_focus",
+        "file": "styles.css",
+        "timestamp": 1781943125013
+      },
+      {
+        "type": "file_focus",
+        "file": "index.html",
+        "timestamp": 1781943135922
+      },
+      {
+        "type": "file_focus",
+        "file": "styles.css",
+        "timestamp": 1781943135976
+      },
+      {
+        "type": "file_focus",
+        "file": "index.html",
+        "timestamp": 1781943142320
+      },
+      {
+        "type": "file_focus",
+        "file": ".vscode/settings.json",
+        "timestamp": 1781943145900
+      },
+      {
+        "type": "file_focus",
+        "file": "index.html",
+        "timestamp": 1781943151839
+      },
+      {
+        "type": "git_change",
+        "modified": [],
+        "staged": [],
+        "timestamp": 1781946061187
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/memory/latest-memory.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781946112896
+      },
+      {
+        "type": "git_change",
+        "modified": [],
+        "staged": [],
+        "timestamp": 1781950534789
+      },
+      {
+        "type": "git_change",
+        "modified": [
+          ".contora/change.json",
+          ".contora/cognitive/graph.json",
+          ".contora/cognitive/intent.json",
+          ".contora/cognitive/risk.json",
+          ".contora/cognitive/state.json",
+          ".contora/dashboard.activity.json",
+          ".contora/events/sess_mqk9gnhd_83413b02.jsonl",
+          ".contora/governance/identity.json",
+          ".contora/governance/review.json",
+          ".contora/graph.json",
+          ".contora/graph/edges.json",
+          ".contora/graph/functions.json",
+          ".contora/graph/hotspots.json",
+          ".contora/graph/intents.json",
+          ".contora/graph/knowledge.json",
+          ".contora/graph/metadata.json",
+          ".contora/graph/nodes.json",
+          ".contora/graph/snapshot.json",
+          ".contora/handoff.json",
+          ".contora/intelligence/state-summary.json",
+          ".contora/intent-graph/graph.json",
+          ".contora/memory/latest-memory.json",
+          ".contora/runtime/guard-session.json",
+          ".contora/state-builder/project-snapshot.md",
+          ".contora/state-builder/project-state.json",
+          ".contora/state.json",
+          ".contora/understanding_graph.json",
+          ".contora/confidence/",
+          ".contora/evolution/",
+          ".contora/graph/impact_graph.json",
+          ".contora/graph/knowledge_graph.json",
+          ".contora/identity/",
+          ".contora/intelligence/health.json",
+          ".contora/intelligence/repository_state.json",
+          ".contora/intelligence/snapshot.json",
+          ".contora/intelligence/validation.json",
+          ".contora/intent/",
+          ".contora/provenance/",
+          ".contora/state/",
+          ".contora/timeline/"
+        ],
+        "staged": [],
+        "timestamp": 1781950575241
       }
     ],
     "priorityFiles": [
       {
-        "path": "修改方案.md",
-        "score": 24
-      },
-      {
         "path": "index.html",
-        "score": 7.833333333333332
-      },
-      {
-        "path": "docs/STATE_ENGINE.md",
-        "score": 7.833333333333332
+        "score": 31.2
       },
       {
         "path": "docs/IDE_EXTENSION.md",
-        "score": 3.5
+        "score": 29.6
       },
       {
-        "path": "docs/index.html",
-        "score": 1.5
-      },
-      {
-        "path": "docs/CLI.md",
-        "score": 1
-      },
-      {
-        "path": "docs/INSTALL.md",
-        "score": 1
-      },
-      {
-        "path": "docs/MCP.md",
-        "score": 1
-      },
-      {
-        "path": "docs/ARCHITECTURE_V2.md",
-        "score": 0.5
+        "path": "mcp/index.html",
+        "score": 25.6
       },
       {
         "path": "README.md",
-        "score": 0.5
+        "score": 25.066666666666666
+      },
+      {
+        "path": "blog/index.html",
+        "score": 21.6
+      },
+      {
+        "path": "修改方案.md",
+        "score": 20.8
+      },
+      {
+        "path": ".vscode/settings.json",
+        "score": 19.466666666666665
       },
       {
         "path": "docs/dashboard.html",
-        "score": 0.5
+        "score": 18.666666666666664
       },
       {
-        "path": "docs/cli.html",
-        "score": 0.5
+        "path": "docs/index.html",
+        "score": 17.866666666666664
       }
     ],
-    "semanticSummary": "Workspace intent (heuristic):\nLikely focus: hotspot around \".contora/graph\" (no explicit task field).\n\nCurrent focus area:\n.contora/graph/* · .contora/state-builder/*\n\nMost Active Areas:\n- docs/ (25 signals)\n- 修改方案.md/ (19 signals)\n- index.html/ (6 signals)\n- README.md/ (1 signals)\n\nMost Active Files (by focus + save events):\n- 修改方案.md (19)\n- docs/IDE_EXTENSION.md (7)\n- index.html (6)\n- docs/STATE_ENGINE.md (6)\n- docs/index.html (3)\n- docs/CLI.md (2)\n- (other active) INSTALL.md, MCP.md\n\nLikely Goal:\nLikely focus: hotspot around \".contora/graph\" (no explicit task field).\n\nDevelopment Pattern:\nNavigation-heavy exploration\n\nRanking pipeline (top paths, normalized blend):\nRanking breakdown: 修改方案.md\n  +200  focus events (raw 64, max 64 → 100%)\n  +400  save events (raw 15, max 15 → 100%)\n  → Normalized blend score: 24\n\nRanking breakdown: index.html\n  +62.5  focus events (raw 20, max 64 → 31.25%)\n  +133.33  save events (raw 5, max 15 → 33.33%)\n  → Normalized blend score: 7.83"
+    "semanticSummary": "Workspace intent (heuristic):\nStated task: \"修改mcp接口\". Signals suggest frontend UI.\n\nCurrent focus area:\n.contora/graph/* · .contora/intelligence/*\n\nMost Active Areas:\n- docs/ (19 signals)\n- .vscode/ (8 signals)\n- index.html/ (8 signals)\n- styles.css/ (5 signals)\n- README.md/ (4 signals)\n\nMost Active Files (by focus + save events):\n- .vscode/settings.json (7)\n- index.html (6)\n- styles.css (4)\n- README.md (2)\n- docs/index.html (2)\n- docs/dashboard.html (2)\n- (other active) cli.html\n\nLikely Goal:\n修改mcp接口\n\nDevelopment Pattern:\nFocused debugging\n\nRanking pipeline (top paths, normalized blend):\nRanking breakdown: index.html\n  +0  git working (raw 0, max 8 → 0%)\n  +500  open tab (raw 6, max 6 → 100%)\n  +80  working set recency (raw 4, max 20 → 20%)\n  +200  focus events (raw 24, max 24 → 100%)\n  +0  save events (raw 0, max 25 → 0%)\n  → Normalized blend score: 31.2\n\nRanking breakdown: docs/IDE_EXTENSION.md\n  +0  git working (raw 0, max 8 → 0%)\n  +500  open tab (raw 6, max 6 → 100%)\n  +240  working set recency (raw 12, max 20 → 60%)\n  +0  focus events (raw 0, max 24 → 0%)\n  +0  save events (raw 0, max 25 → 0%)\n  → Normalized blend score: 29.6"
   },
   "analysis": {
     "fileActivity": {
       "index.html": 6,
-      "修改方案.md": 19,
-      "docs/ARCHITECTURE_V2.md": 1,
-      "docs/CLI.md": 2,
-      "docs/IDE_EXTENSION.md": 7,
-      "docs/index.html": 3,
-      "docs/INSTALL.md": 2,
-      "docs/MCP.md": 2,
-      "docs/STATE_ENGINE.md": 6,
-      "README.md": 1,
-      "docs/dashboard.html": 1,
-      "docs/cli.html": 1
+      "styles.css": 4,
+      "README.md": 2,
+      ".vscode/settings.json": 7,
+      "docs/index.html": 2,
+      "docs/dashboard.html": 2,
+      "docs/cli.html": 2
     },
     "focusByFile": {
-      "index.html": 5,
-      "修改方案.md": 16,
-      "docs/ARCHITECTURE_V2.md": 1,
-      "docs/CLI.md": 2,
-      "docs/IDE_EXTENSION.md": 7,
-      "docs/index.html": 3,
-      "docs/INSTALL.md": 2,
-      "docs/MCP.md": 2,
-      "docs/STATE_ENGINE.md": 5,
-      "README.md": 1,
-      "docs/dashboard.html": 1,
-      "docs/cli.html": 1
+      "index.html": 6,
+      "styles.css": 4,
+      "README.md": 2,
+      ".vscode/settings.json": 2,
+      "docs/index.html": 2,
+      "docs/dashboard.html": 2,
+      "docs/cli.html": 2
     },
     "saveByFile": {
-      "index.html": 1,
-      "修改方案.md": 3,
-      "docs/STATE_ENGINE.md": 1
+      ".vscode/settings.json": 5
     },
     "folderHits": {
-      "index.html": 6,
-      "修改方案.md": 19,
-      "docs": 25,
-      "README.md": 1
+      ".vscode": 8,
+      "index.html": 8,
+      "styles.css": 5,
+      "README.md": 4,
+      "docs": 19,
+      "mcp": 3,
+      "scripts": 2,
+      "blog": 2,
+      "googlefba835fbf32479b7.html": 1,
+      "contorium.mp4": 1,
+      "修改方案.md": 2
     }
   },
   "intelligence": {
-    "likelyIntent": "Likely focus: hotspot around \".contora/graph\" (no explicit task field).",
-    "developmentPattern": "Navigation-heavy exploration",
-    "workspaceFocus": ".contora/graph/* · .contora/state-builder/*"
+    "likelyIntent": "Stated task: \"修改mcp接口\". Signals suggest frontend UI.",
+    "developmentPattern": "Focused debugging",
+    "workspaceFocus": ".contora/graph/* · .contora/intelligence/*"
   },
   "quality": {
-    "score": 78,
+    "score": 70,
     "warnings": [
+      "Duplicate file references detected across lists.",
       "Many low-signal events vs actionable file signals."
     ]
   },
   "lifecycle": {
-    "qualityScore": 78,
+    "qualityScore": 70,
     "hasUsableAiIntent": false,
     "heuristicIntentWindowHours": 2
   }

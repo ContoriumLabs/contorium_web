@@ -1,23 +1,19 @@
 {
   "version": 1,
-  "generatedAt": 1781836488032,
+  "generatedAt": 1782020678242,
   "recent_change": {
-    "name": "scripts/build-docs.py::slug_for_href()",
+    "name": "scripts/sync-docs-from-source.py::adapt_links()",
     "change_type": "modified"
   },
   "call_chain": [
-    "scripts/build-docs.py::slug_for_href()"
+    "scripts/sync-docs-from-source.py::adapt_links()"
   ],
   "affected": [
-    "scripts/build-docs.py::rewrite_links",
-    "scripts/build-docs.py::repl_md",
-    "scripts/build-docs.py::render_sidebar",
-    "scripts/build-docs.py::breadcrumb",
-    "scripts/build-docs.py::md_to_html",
-    "scripts/build-docs.py::page",
-    "scripts/build-docs.py::main",
-    "scripts/build-docs.py::slug_for_href",
-    "scripts/build-docs.py::slug_for_href()"
+    "scripts/sync-docs-from-source.py::offsite",
+    "scripts/sync-docs-from-source.py::adapt_mcp_readme",
+    "scripts/sync-docs-from-source.py::main",
+    "scripts/sync-docs-from-source.py::adapt_links",
+    "scripts/sync-docs-from-source.py::adapt_links()"
   ],
   "agent": "ide"
 }

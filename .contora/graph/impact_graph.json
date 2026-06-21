@@ -1,0 +1,279 @@
+{
+  "schema": "impact_graph.v1",
+  "updated_at": "2026-06-21T06:00:09.619Z",
+  "entries": [
+    {
+      "source_entity": ".vscode/settings.json",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": ".vscode",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        },
+        {
+          "module": "styles.css",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 0,
+      "risk_score": 0.68,
+      "updated_at": "2026-06-20T08:05:04.456Z"
+    },
+    {
+      "source_entity": "README.md",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "styles.css",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": ".vscode",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 0,
+      "risk_score": 0.68,
+      "updated_at": "2026-06-20T09:01:35.510Z"
+    },
+    {
+      "source_entity": "blog/index.html",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": "blog",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 0,
+      "risk_score": 0.68,
+      "updated_at": "2026-06-20T10:49:40.756Z"
+    },
+    {
+      "source_entity": "docs/dashboard.html",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "scripts",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "styles.css",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 1,
+      "risk_score": 0.88,
+      "updated_at": "2026-06-21T04:59:47.301Z"
+    },
+    {
+      "source_entity": "优化.md",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": "优化.md",
+          "impact_level": 1
+        },
+        {
+          "module": "scripts",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 1,
+      "risk_score": 0.88,
+      "updated_at": "2026-06-21T05:35:15.257Z"
+    },
+    {
+      "source_entity": "styles.css",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": "styles.css",
+          "impact_level": 1
+        },
+        {
+          "module": "scripts",
+          "impact_level": 1
+        },
+        {
+          "module": "index.html",
+          "impact_level": 1
+        },
+        {
+          "module": "优化.md",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        },
+        {
+          "module": "mcp",
+          "impact_level": 1
+        },
+        {
+          "module": "blog",
+          "impact_level": 1
+        },
+        {
+          "module": "README.md",
+          "impact_level": 1
+        },
+        {
+          "module": "修改方案.md",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 1,
+      "risk_score": 0.88,
+      "updated_at": "2026-06-21T05:42:32.513Z"
+    },
+    {
+      "source_entity": ".contora/change.json",
+      "change_type": "modified",
+      "impacted_nodes": [
+        {
+          "module": ".contora",
+          "impact_level": 1
+        },
+        {
+          "module": "docs",
+          "impact_level": 1
+        }
+      ],
+      "impact_radius": 1,
+      "blast_radius": 1,
+      "dependency_depth": 0,
+      "risk_score": 0.57,
+      "updated_at": "2026-06-21T06:00:09.618Z"
+    }
+  ]
+}

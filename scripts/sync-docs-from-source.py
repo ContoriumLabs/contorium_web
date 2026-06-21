@@ -7,11 +7,12 @@ from pathlib import Path
 
 SOURCE_DOCS = Path(r"E:\sessionrecall\docs")
 SOURCE_MCP_README = Path(r"E:\sessionrecall\packages\mcp\README.md")
-TARGET_DOCS = Path(__file__).resolve().parent.parent / "docs"
+TARGET_DOCS = Path(__file__).resolve().parent.parent / "docs" / "_source"
 TARGET_MCP_README = Path(__file__).resolve().parent.parent / "mcp" / "README.md"
 
 GITHUB_BASE = "https://github.com/ContoriumLabs/contorium/blob/main/docs"
 
+# Architecture / historical docs — link to GitHub, not built as site pages
 OFFSITE_DOCS = {
     "ARCHITECTURE_V3.md",
     "ARCHITECTURE_V3_CORE.md",
@@ -24,37 +25,51 @@ OFFSITE_DOCS = {
 }
 
 SYNC_FILES = [
+    "PIL_RUNTIME.md",
     "INSTALL.md",
+    "PROJECT_INTELLIGENCE_LAYER.md",
+    "IDE_EXTENSION.md",
     "MCP.md",
     "CLI.md",
-    "IDE_EXTENSION.md",
     "DASHBOARD.md",
+    "CONTORIUM_LANGUAGE_SPEC.md",
+    "COGNITIVE_DIMENSIONS.md",
 ]
 
 
 def adapt_links(text: str) -> str:
     text = text.replace("[README](../README.md)", "[Home](../index.html)")
     text = text.replace("](../README.md)", "](../index.html)")
+    text = re.sub(
+        r"\[([^\]]+)\]\(\./README\.md\)",
+        r"[\1](index.html)",
+        text,
+    )
+    text = re.sub(
+        r"\[([^\]]+)\]\(\.\./packages/mcp/README\.md\)",
+        r"[\1](../mcp/README.md)",
+        text,
+    )
 
     def offsite(m: re.Match) -> str:
         label, path = m.group(1), m.group(2)
-        name = Path(path).name
+        name = Path(path.split("#")[0]).name
         if name in OFFSITE_DOCS:
-            return f"[{label}]({GITHUB_BASE}/{name})"
+            anchor = path[len(name) :] if "#" in path else ""
+            return f"[{label}]({GITHUB_BASE}/{name}{anchor})"
         return m.group(0)
 
     text = re.sub(r"\[([^\]]+)\]\(\./([^)]+\.md[^)]*)\)", offsite, text)
     text = re.sub(
         r"\[([^\]]+)\]\(\.\./([^)]+\.md[^)]*)\)",
         lambda m: (
-            f"[{m.group(1)}]({GITHUB_BASE}/{Path(m.group(2)).name})"
-            if Path(m.group(2)).name in OFFSITE_DOCS
+            f"[{m.group(1)}]({GITHUB_BASE}/{Path(m.group(2).split('#')[0]).name})"
+            if Path(m.group(2).split("#")[0]).name in OFFSITE_DOCS
             else m.group(0)
         ),
         text,
     )
 
-    # Repo-internal paths not on website
     text = re.sub(
         r"\[([^\]]+)\]\(\.\./commands/[^)]+\)",
         r"[\1](https://github.com/ContoriumLabs/contorium/blob/main/commands/setup-mcp-codex.md)",
@@ -88,66 +103,36 @@ def adapt_links(text: str) -> str:
 
 def adapt_mcp_readme(text: str) -> str:
     text = adapt_links(text)
-    text = text.replace(
-        "See [docs/MCP.md](../docs/MCP.md)",
-        "See [docs/mcp.html](../docs/mcp.html)",
-    )
-    text = text.replace(
-        "See [docs/INSTALL.md](../docs/INSTALL.md)",
-        "See [docs/install.html](../docs/install.html)",
-    )
-    text = text.replace(
-        "See [docs/CLI.md](../docs/CLI.md)",
-        "See [docs/cli.html](../docs/cli.html)",
-    )
-    text = text.replace(
-        "See [docs/ARCHITECTURE_V3.md](../docs/ARCHITECTURE_V3.md)",
-        f"See [Architecture V3]({GITHUB_BASE}/ARCHITECTURE_V3.md)",
-    )
-    text = re.sub(
-        r"\[docs/MCP\.md\]\(\.\./docs/MCP\.md\)",
-        "[docs/mcp.html](../docs/mcp.html)",
-        text,
-    )
-    text = re.sub(
-        r"\[docs/INSTALL\.md\]\(\.\./docs/INSTALL\.md\)",
-        "[docs/install.html](../docs/install.html)",
-        text,
-    )
-    text = re.sub(
-        r"\[docs/CLI\.md\]\(\.\./docs/CLI\.md\)",
-        "[docs/cli.html](../docs/cli.html)",
-        text,
-    )
-    text = re.sub(
-        r"\[docs/ARCHITECTURE_V3\.md\]\(\.\./docs/ARCHITECTURE_V3\.md\)",
-        f"[Architecture V3]({GITHUB_BASE}/ARCHITECTURE_V3.md)",
-        text,
-    )
-    text = re.sub(
-        r"\[Install \(three adapters\)\]\(\.\./docs/INSTALL\.md\)",
-        "[Install (three adapters)](../docs/install.html)",
-        text,
-    )
-    text = re.sub(
-        r"\[Full MCP guide\]\(\.\./docs/MCP\.md\)",
-        "[Full MCP guide](../docs/mcp.html)",
-        text,
-    )
-    text = re.sub(
-        r"\[CLI guide\]\(\.\./docs/CLI\.md\)",
-        "[CLI guide](../docs/cli.html)",
-        text,
-    )
-    text = re.sub(
-        r"\[Architecture\]\(\.\./docs/ARCHITECTURE_V3\.md\)",
-        f"[Architecture]({GITHUB_BASE}/ARCHITECTURE_V3.md)",
-        text,
-    )
+    replacements = [
+        (r"\[docs/MCP\.md\]\(\.\./docs/MCP\.md\)", "[docs/mcp.html](../docs/mcp.html)"),
+        (r"\[docs/INSTALL\.md\]\(\.\./docs/INSTALL\.md\)", "[docs/install.html](../docs/install.html)"),
+        (r"\[docs/CLI\.md\]\(\.\./docs/CLI\.md\)", "[docs/cli.html](../docs/cli.html)"),
+        (
+            r"\[docs/ARCHITECTURE_V3\.md\]\(\.\./docs/ARCHITECTURE_V3\.md\)",
+            f"[Architecture V3]({GITHUB_BASE}/ARCHITECTURE_V3.md)",
+        ),
+        (
+            r"\[docs/PIL_RUNTIME\.md\]\(\.\./docs/PIL_RUNTIME\.md\)",
+            "[PIL Runtime](../docs/pil-runtime.html)",
+        ),
+        (
+            r"\[Install \(three adapters\)\]\(\.\./docs/INSTALL\.md\)",
+            "[Install (three adapters)](../docs/install.html)",
+        ),
+        (r"\[Full MCP guide\]\(\.\./docs/MCP\.md\)", "[Full MCP guide](../docs/mcp.html)"),
+        (r"\[CLI guide\]\(\.\./docs/CLI\.md\)", "[CLI guide](../docs/cli.html)"),
+        (
+            r"\[Architecture\]\(\.\./docs/ARCHITECTURE_V3\.md\)",
+            f"[Architecture]({GITHUB_BASE}/ARCHITECTURE_V3.md)",
+        ),
+    ]
+    for pattern, repl in replacements:
+        text = re.sub(pattern, repl, text)
     return text
 
 
 def main() -> None:
+    TARGET_DOCS.mkdir(parents=True, exist_ok=True)
     for name in SYNC_FILES:
         src = SOURCE_DOCS / name
         if not src.exists():

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get started with Contorium — choose IDE, MCP, or CLI." />
+    <title>Quick start — Contorium Docs</title>
+    <link rel="icon" href="../logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="docs.css" />
+  </head>
+  <body class="docs-body">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a href="../index.html" class="logo">
+          <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
+          Contorium
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#pil">Product</a>
+          <a href="../index.html#install">Install</a>
+          <a href="../mcp/">MCP setup</a>
+          <a href="index.html" class="nav-active">Docs</a>
+          <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </header>
+    <div class="docs-shell">
+      <aside class="docs-sidebar" aria-label="Documentation">
+        <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
+<li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html" class="is-active">Quick start</a></li>
+<li><a href="install.html">Install & use</a></li>
+</ul></div>
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Guides</p><ul class="docs-nav">
+<li><a href="ide-extension.html">IDE extension</a></li>
+<li><a href="mcp.html">MCP server</a></li>
+<li><a href="cli.html">CLI</a></li>
+<li><a href="dashboard.html">Runtime dashboard</a></li>
+</ul></div>
+      </aside>
+      <main class="docs-main">
+        <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / Quick start</nav>
+        <article class="docs-prose">
+          <h1>Quick start</h1>
+<blockquote>
+<p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
+</blockquote>
+<p>Contorium is an <strong>AI Project Intelligence Layer</strong>. It keeps project understanding in your workspace so AI tools can <strong>continue where you left off</strong> — without re-explaining architecture every session.</p>
+<p><strong>You use it by:</strong> installing one entry point (IDE, MCP, or CLI), opening a <strong>folder</strong> workspace, then using <strong>Inspect · Transfer · Capture</strong> as you work with AI.</p>
+<hr>
+<h2>Choose your entry point</h2>
+<table>
+<thead>
+<tr>
+<th>If you…</th>
+<th>Start with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code in VS Code / Cursor</td>
+<td><a href="ide-extension.html">IDE extension</a></td>
+</tr>
+<tr>
+<td>Use Claude Code, Codex, or Cursor Agent</td>
+<td><a href="mcp.html">MCP server</a></td>
+</tr>
+<tr>
+<td>Work in the terminal or CI</td>
+<td><a href="cli.html">CLI</a></td>
+</tr>
+</tbody>
+</table>
+<p>All three share the same <code>.contora/</code> folder in your project. You can add more later.</p>
+<hr>
+<h2>Daily workflow</h2>
+<h3>IDE + AI chat</h3>
+<ol>
+<li>Install the extension → open a <strong>folder</strong> (not a single file).</li>
+<li>Set <strong>Current focus</strong> in the Contorium sidebar.</li>
+<li>Code as usual — Contorium updates <code>.contora/</code> automatically.</li>
+<li>Starting a new AI chat? Confirm the <strong>handoff prompt</strong> (Y/n) or use <strong>Transfer Context</strong> from the sidebar.</li>
+</ol>
+<h3>MCP + AI agent</h3>
+<ol>
+<li>Run the <a href="mcp.html#connect-your-ai-tool">one-line MCP setup</a> for your host.</li>
+<li>Open Codex / Claude / Cursor in your project — MCP starts automatically.</li>
+<li>The agent reads project state via <code>inspect_*</code> tools and exports context via <code>transfer_*</code> when needed.</li>
+</ol>
+<h3>Terminal</h3>
+<pre><code class="language-bash">contorium init .
+contorium inspect health .
+contorium transfer context --copy
+</code></pre>
+<p>See the <a href="cli.html">CLI guide</a> for the full command list.</p>
+<hr>
+<h2>Three things to remember</h2>
+<ol>
+<li><strong>Open a folder</strong> — Contorium needs a project root, not a lone file.</li>
+<li><strong>Local-first</strong> — everything lives in <code>.contora/</code> inside your repo. No cloud account.</li>
+<li><strong>Transfer, don't re-prompt</strong> — use Transfer Context / Handoff instead of pasting long explanations again.</li>
+</ol>
+<hr>
+<h2>What Contorium is not</h2>
+<ul>
+<li>Not an AI agent or code generator</li>
+<li>Not a project manager or task runner</li>
+<li>Not a cloud service</li>
+</ul>
+<p>It <strong>records and preserves</strong> project intelligence. It does <strong>not</strong> make decisions for you.</p>
+<hr>
+<h2>Next steps</h2>
+<ul>
+<li><a href="install.html">Install all adapters</a></li>
+<li><a href="dashboard.html">Runtime dashboard</a> — terminal status UI (starts automatically)</li>
+<li><a href="../mcp/">Interactive MCP setup</a></li>
+</ul>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

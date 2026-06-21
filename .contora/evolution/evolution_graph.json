@@ -1,0 +1,66 @@
+{
+  "schema": "evolution_graph.v1",
+  "updated_at": "2026-06-21T06:00:09.634Z",
+  "chains": [
+    {
+      "chain_id": "evo_architecture",
+      "topic": "architecture",
+      "nodes": [
+        {
+          "node_id": "intent_mpuomn4w_ms6zcz",
+          "label": "develop documentation, MCP integration and state engine",
+          "stage": "intent",
+          "linked_intent": "intent_mpuomn4w_ms6zcz"
+        },
+        {
+          "node_id": "intent_mpuomn4x_0bqur2",
+          "label": "update documentation for recent changes",
+          "stage": "intent",
+          "linked_intent": "intent_mpuomn4x_0bqur2"
+        },
+        {
+          "node_id": "intent_mpuomn4x_95gdjs",
+          "label": "verify MCP tools against workspace state",
+          "stage": "intent",
+          "linked_intent": "intent_mpuomn4x_95gdjs"
+        },
+        {
+          "node_id": "intent_mpuomn4x_4lkrpf",
+          "label": "iterate on index.html",
+          "stage": "intent",
+          "linked_intent": "intent_mpuomn4x_4lkrpf"
+        },
+        {
+          "node_id": "intent_mpuomx9j_yw4kyz",
+          "label": "review state persistence and lifecycle logic",
+          "stage": "intent",
+          "linked_intent": "intent_mpuomx9j_yw4kyz"
+        },
+        {
+          "node_id": "intent_mpw9npi0_qygppg",
+          "label": "develop documentation and MCP integration",
+          "stage": "intent",
+          "linked_intent": "intent_mpw9npi0_qygppg"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.634Z"
+    },
+    {
+      "chain_id": "evo_scripts_build_docs_py",
+      "topic": "scripts/build-docs.py",
+      "nodes": [
+        {
+          "node_id": "evt_scripts/build-docs.py_1780841808000000",
+          "label": "modify scripts/build-docs.py",
+          "stage": "milestone"
+        },
+        {
+          "node_id": "evt_scripts/build-docs.py_1780841441000000",
+          "label": "add scripts/build-docs.py",
+          "stage": "milestone"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.634Z"
+    }
+  ]
+}

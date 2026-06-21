@@ -1,44 +1,44 @@
 {
   "version": 1,
-  "generatedAt": 1781836785893,
+  "generatedAt": 1782021609403,
   "project_intent": "develop documentation, MCP integration and state engine",
-  "current_focus": "work in blog",
+  "current_focus": "work in scripts",
   "active_domains": [
     "docs",
     "mcp",
     "state-engine",
+    "build",
     "ui",
-    "ai",
-    "build"
+    "ai"
   ],
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
     {
-      "cluster": "blog",
+      "cluster": "scripts",
       "files": [
-        "blog/index.html"
+        "scripts/build-docs.py",
+        "scripts/sync-docs-from-source.py"
       ],
-      "weight": 0.42
-    },
-    {
-      "cluster": "mcp",
-      "files": [
-        "mcp/index.html",
-        "mcp/README.md"
-      ],
-      "weight": 0.37
+      "weight": 0.52
     },
     {
       "cluster": "project root",
       "files": [
         "index.html",
+        "styles.css",
         "README.md",
-        "修改方案.md",
-        "contorium.mp4",
-        "googlefba835fbf32479b7.html",
-        "styles.css"
+        "优化.md",
+        "修改方案.md"
       ],
-      "weight": 0.37
+      "weight": 0.48
+    },
+    {
+      "cluster": "mcp",
+      "files": [
+        "mcp/README.md",
+        "mcp/index.html"
+      ],
+      "weight": 0.47
     },
     {
       "cluster": "docs",
@@ -48,25 +48,25 @@
         "docs/CLI.md",
         "docs/dashboard.html",
         "docs/DASHBOARD.md",
-        "docs/docs.css",
         "docs/ide-extension.html",
-        "docs/index.html"
+        "docs/index.html",
+        "docs/install.html"
       ],
-      "weight": 0.33
+      "weight": 0.44
     },
     {
-      "cluster": ".vscode",
+      "cluster": "blog",
       "files": [
-        ".vscode/settings.json"
+        "blog/index.html"
       ],
-      "weight": 0.32
+      "weight": 0.42
     }
   ],
   "next_likely_actions": [
     "update documentation for recent changes",
     "verify MCP tools against workspace state",
-    "iterate on index.html",
-    "iterate on IDE_EXTENSION.md"
+    "iterate on IDE_EXTENSION.md",
+    "iterate on index.html"
   ],
-  "confidence": 0.6
+  "confidence": 0.74
 }

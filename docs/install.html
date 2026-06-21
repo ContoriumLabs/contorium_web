@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Install, use, and uninstall Contorium — IDE, MCP, and CLI." />
+    <meta name="description" content="Install, use, and uninstall Contorium." />
     <title>Install & use — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#features">Product</a>
+          <a href="../index.html#pil">Product</a>
           <a href="../index.html#install">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
@@ -35,9 +35,10 @@
       <aside class="docs-sidebar" aria-label="Documentation">
         <div class="docs-sidebar-group"><p class="docs-sidebar-title">Getting started</p><ul class="docs-nav">
 <li><a href="index.html">Overview</a></li>
+<li><a href="getting-started.html">Quick start</a></li>
 <li><a href="install.html" class="is-active">Install & use</a></li>
 </ul></div>
-<div class="docs-sidebar-group"><p class="docs-sidebar-title">Adapters</p><ul class="docs-nav">
+<div class="docs-sidebar-group"><p class="docs-sidebar-title">Guides</p><ul class="docs-nav">
 <li><a href="ide-extension.html">IDE extension</a></li>
 <li><a href="mcp.html">MCP server</a></li>
 <li><a href="cli.html">CLI</a></li>
@@ -47,42 +48,41 @@
       <main class="docs-main">
         <nav class="docs-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Docs</a> / Install & use</nav>
         <article class="docs-prose">
-          <h1>Contorium — Install, Use, and Uninstall (Three Adapters)</h1>
+          <h1>Install &amp; use</h1>
 <blockquote>
-<p>Back to <a href="../index.html">Home</a> · Per adapter: <a href="ide-extension.html">IDE</a> · <a href="mcp.html">MCP</a> · <a href="cli.html">CLI</a></p>
+<p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
 </blockquote>
-<p>Contorium v2.2+: <strong>IDE, MCP, and CLI are peer Runtime Adapters</strong> sharing <code>@contora/state-core</code> and the project-local <code>.contora/</code> directory.<br>
-Any adapter can bootstrap and maintain state independently; combined use merges via <code>source.mode: merged</code>.</p>
+<p>Contorium is an <strong>AI Project Intelligence Layer (PIL)</strong>. IDE, MCP, and CLI are <strong>peer PIL runtimes</strong> sharing <code>shared local state</code> and the project-local <code>.contora/</code> directory.</p>
+<p><strong>Responsibility chain:</strong> Capture → Structure → Preserve → Retrieve → Transfer</p>
 <table>
 <thead>
 <tr>
 <th>Adapter</th>
 <th>Typical user</th>
-<th>Standalone capability</th>
+<th>Primary PIL loop</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>IDE</strong></td>
 <td>VS Code / Cursor developers</td>
-<td>Events, sidebar, one-click copy, BYOK, governance UI</td>
+<td>Capture → Visualize → Transfer</td>
 </tr>
 <tr>
 <td><strong>MCP</strong></td>
 <td>Claude Code / Cursor Agent / Codex / Gemini</td>
-<td>Auto-spawn <code>@contorium/mcp</code>, CHP v1 tools, <strong>semi-auto</strong> handoff injection, governance V4 tools</td>
+<td>Retrieve → Inspect → Transfer</td>
 </tr>
 <tr>
 <td><strong>CLI</strong></td>
 <td>Terminal / CI / headless</td>
-<td><code>handoff</code>, dashboard, <code>sync</code>, <code>export</code>, governance commands</td>
+<td>Inspect → Audit → Transfer</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Public API unchanged:</strong> <code>state.json</code> fields remain backward compatible; MCP tool names and extension command IDs are stable. v2.2+ adds optional <code>source</code> metadata.</p>
 <hr>
 <h2>What Contorium does</h2>
-<p>Contorium is the <strong>Runtime Continuity Layer for AI Coding</strong>. It maintains a continuously updated understanding of your project and exposes it to AI tools through IDEs, MCP servers, dashboards, and AI handoffs.</p>
+<p>Contorium is the <strong>AI Project Intelligence Layer</strong> for AI-assisted development. It maintains a continuously updated record of project intelligence and exposes it through IDE, MCP, CLI, and the Cognitive State dashboard.</p>
 <table>
 <thead>
 <tr>
@@ -92,32 +92,32 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 </thead>
 <tbody>
 <tr>
-<td><strong>Persistent project memory</strong></td>
-<td>Task, focus, changes, and impact chains survive sessions and tool switches</td>
+<td><strong>PIL Core</strong></td>
+<td>Capture → Structure → Preserve → Retrieve → Transfer</td>
 </tr>
 <tr>
-<td><strong>AI Handoff (CHP v1)</strong></td>
-<td><code>handoff.json</code> is the unified AI execution context</td>
+<td><strong>Inspect / Transfer / Capture</strong></td>
+<td>Aligned capability groups across IDE, MCP, CLI (v3.0)</td>
+</tr>
+<tr>
+<td><strong>Persistent project memory</strong></td>
+<td>Task, focus, graphs, decisions survive sessions and tool switches</td>
+</tr>
+<tr>
+<td><strong>Transfer Context / Intelligence / Handoff</strong></td>
+<td>Tiered exports for AI continuity</td>
 </tr>
 <tr>
 <td><strong>Semi-auto injection</strong></td>
-<td>New AI chats prompt Y/n to inject runtime context</td>
+<td>New AI chats prompt to inject runtime handoff (user confirm)</td>
 </tr>
 <tr>
-<td><strong>Runtime Dashboard</strong></td>
-<td>Passive status line + Expanded fullscreen panels (CRBP)</td>
-</tr>
-<tr>
-<td><strong>Project Understanding (V3.1)</strong></td>
-<td>Change detection → graph → cognitive snapshot → export</td>
+<td><strong>Cognitive State dashboard</strong></td>
+<td>Full-screen terminal UI — core, dimensions, streams</td>
 </tr>
 <tr>
 <td><strong>Governance Engine (V4)</strong></td>
-<td>Unified review / cycle / scope / decision / trace pipeline</td>
-</tr>
-<tr>
-<td><strong>Cognitive mode (A/B)</strong></td>
-<td>A = default; B = skill suggestion overlay (display-only)</td>
+<td>Change review, scope, decision, trace pipeline</td>
 </tr>
 <tr>
 <td><strong>Cross-tool continuity</strong></td>
@@ -125,114 +125,6 @@ Any adapter can bootstrap and maintain state independently; combined use merges 
 </tr>
 </tbody>
 </table>
-<hr>
-<h2>Repository structure</h2>
-<pre><code class="language-text">contorium/                         # Monorepo root (also VS Code/Cursor extension host)
-├── src/                           # IDE extension source
-│   ├── extension.ts               # Extension entry, command registration
-│   ├── ai/                        # BYOK, governance inject, export
-│   ├── cognition/                 # Sidebar Cortex / Graph panels
-│   └── dashboard/                 # IDE-side Runtime Dashboard
-├── packages/
-│   ├── state-core/                # ★ Shared state engine (all three adapters)
-│   │   ├── understanding/         # Change detection, graphs, handoff builder
-│   │   ├── governance/            # V4 artifacts, unified export
-│   │   └── state-builder/         # L4 scan snapshot
-│   ├── cli/                       # CLI adapter + Dashboard worker
-│   │   ├── src/cli.ts             # Main command entry
-│   │   └── src/dashboard/         # Terminal UI (Passive / Expanded / Governance)
-│   ├── mcp/                       # MCP server
-│   │   ├── src/server.ts          # MCP tool registration
-│   │   └── src/governanceV4.ts    # Governance V4 tools
-│   └── runtime/                   # Runtime abstraction (embedded in IDE)
-├── docs/                          # Install, architecture, dashboard guides
-└── package.json                   # Extension manifest + top-level build scripts
-</code></pre>
-<hr>
-<h2>Architecture (three adapters)</h2>
-<p>Three adapters are <strong>independent processes</strong> that collaborate through <strong><code>@contora/state-core</code> + <code>.contora/</code></strong>:</p>
-<pre><code class="language-text">┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐
-│  IDE Extension  │   │  CLI + Dashboard│   │   MCP Server    │
-│     (src/)      │   │ (packages/cli)  │   │ (packages/mcp)  │
-└────────┬────────┘   └────────┬────────┘   └────────┬────────┘
-         │                     │                     │
-         └─────────────────────┼─────────────────────┘
-                               ▼
-                  ┌────────────────────────┐
-                  │  @contora/state-core   │
-                  │  sync · understanding  │
-                  │  governance · handoff  │
-                  └───────────┬────────────┘
-                              ▼
-                    .contora/ (shared artifacts)
-</code></pre>
-<p><strong>Understanding pipeline (V3.1):</strong></p>
-<pre><code class="language-text">IDE events / Git scan
-  → change.json → graph.json → handoff.json → timeline.json
-  → graph/knowledge.json → graph/snapshot.json
-  → IDE sidebar / MCP tools / CLI export / Dashboard [c] copy
-</code></pre>
-<p><strong>Governance V4 pipeline:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>MCP tool</th>
-<th>IDE</th>
-<th>CLI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bootstrap</td>
-<td><code>ensure_control_ready</code></td>
-<td>Startup ensure</td>
-<td><code>contorium control ready</code></td>
-</tr>
-<tr>
-<td>Context</td>
-<td><code>get_control_context</code></td>
-<td>Sidebar + state</td>
-<td><code>contorium control governance</code></td>
-</tr>
-<tr>
-<td>Scope</td>
-<td><code>resolve_scope_context</code></td>
-<td>Open files + Git</td>
-<td>Built into cycle</td>
-</tr>
-<tr>
-<td>Decision</td>
-<td><code>run_governance_cycle</code></td>
-<td>Review Change</td>
-<td><code>contorium governance cycle</code></td>
-</tr>
-<tr>
-<td>Review only</td>
-<td>—</td>
-<td>Review Change</td>
-<td><code>contorium governance review</code></td>
-</tr>
-<tr>
-<td>Inject</td>
-<td><code>generate_inject_payload</code></td>
-<td>Smart/Diff Inject</td>
-<td>Dashboard Enter</td>
-</tr>
-<tr>
-<td>Export</td>
-<td><code>export_governance_context</code></td>
-<td>Export AI context</td>
-<td><code>[c]</code> / <code>contorium export</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Semantic separation:</strong></p>
-<ul>
-<li><code>governance review</code> → writes <strong><code>review.json</code> only</strong></li>
-<li><code>governance cycle</code> → writes <strong>decision / scope / trace / cycle</strong> full artifact set</li>
-</ul>
-<p>See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md">ARCHITECTURE_V3.md</a> for the understanding layer design.</p>
 <hr>
 <h2>Prerequisites (all adapters)</h2>
 <table>
@@ -390,10 +282,10 @@ npx contorium init .
 <li>Configure MCP with <code>CONTORIUM_WORKSPACE</code> (see <a href="mcp.html">MCP.md</a>)  </li>
 <li><strong>Open Codex / Claude / Cursor</strong> — host starts MCP and bootstraps <code>.contora/</code>  </li>
 <li><strong>New chat:</strong> injection prompt appears automatically — Agent asks Y/n, or use terminal <strong>Enter/i</strong> / IDE <strong>[?]</strong></li>
-<li>Or call <code>get_project_handoff</code> / <code>get_understanding_graph</code> / <code>get_recent_changes</code> anytime  </li>
+<li>Agent calls <strong><code>inspect_state</code></strong> / <strong><code>transfer_context</code></strong> / <strong><code>transfer_handoff</code></strong> as needed (legacy: <code>get_project_handoff</code>, <code>get_understanding_graph</code>, …)</li>
 </ol>
 <p>No manual MCP terminal. No IDE required; scan/merged mode is less precise without IDE events.</p>
-<p>See also <a href="dashboard.html">Runtime Dashboard</a> (Passive line + optional Expanded view).</p>
+<p>See also <a href="dashboard.html">Runtime Dashboard</a> — full-screen <strong>Cognitive State</strong> TUI (auto-attached after bootstrap).</p>
 <h3>CLI only</h3>
 <pre><code class="language-bash">cd /path/to/your-project
 npx contorium init .
@@ -438,14 +330,14 @@ npx contorium state .
 </tbody>
 </table>
 <hr>
-<h2>Command matrix (V3.1)</h2>
+<h2>Command matrix (PIL v3.0 + legacy)</h2>
 <table>
 <thead>
 <tr>
 <th>Capability</th>
 <th>IDE</th>
-<th>MCP</th>
-<th>CLI</th>
+<th>MCP (PIL)</th>
+<th>CLI (PIL)</th>
 </tr>
 </thead>
 <tbody>
@@ -462,118 +354,61 @@ npx contorium state .
 <td><code>contorium sync</code></td>
 </tr>
 <tr>
-<td>Read state</td>
+<td><strong>Inspect state</strong></td>
 <td>Sidebar</td>
-<td><code>get_workspace_context</code></td>
-<td><code>contorium state</code></td>
+<td><code>inspect_state</code></td>
+<td><code>contorium inspect state</code></td>
 </tr>
 <tr>
-<td>L4 snapshot</td>
-<td>Sidebar / copy</td>
-<td><code>get_project_snapshot</code></td>
-<td><code>contorium snapshot</code></td>
+<td><strong>Inspect health</strong></td>
+<td>Cortex panels</td>
+<td><code>inspect_health</code></td>
+<td><code>contorium inspect health</code></td>
 </tr>
 <tr>
-<td><strong>AI execution entry (CHP v1)</strong></td>
-<td>Copy includes handoff</td>
-<td><code>get_project_handoff</code></td>
-<td><code>contorium handoff</code> · <code>--copy-to-ai</code></td>
+<td><strong>Transfer Context</strong></td>
+<td>Sidebar button</td>
+<td><code>transfer_context</code></td>
+<td><code>contorium transfer context [--copy]</code></td>
+</tr>
+<tr>
+<td><strong>Transfer Intelligence</strong></td>
+<td>Sidebar button</td>
+<td><code>transfer_intelligence</code></td>
+<td><code>contorium transfer intelligence [--copy]</code></td>
+</tr>
+<tr>
+<td><strong>Transfer Handoff</strong></td>
+<td>Runtime inject</td>
+<td><code>transfer_handoff</code></td>
+<td><code>contorium transfer handoff [--copy]</code></td>
+</tr>
+<tr>
+<td><strong>Capture focus / note</strong></td>
+<td>Sidebar</td>
+<td><code>capture_focus</code> · <code>capture_note</code></td>
+<td><code>contorium capture focus\|note</code></td>
 </tr>
 <tr>
 <td><strong>Semi-auto new chat inject</strong></td>
 <td>Auto dialog + <code>[?]</code> status bar</td>
-<td>Agent auto-asks on new chat</td>
-<td>Auto <code>[?]</code> Passive · debug: <code>--prompt-new-chat</code></td>
+<td><code>get_handoff_injection_status</code> → confirm</td>
+<td>Dashboard <strong><code>i</code></strong> · debug: <code>handoff --prompt-new-chat</code></td>
 </tr>
 <tr>
 <td><strong>Runtime dashboard</strong></td>
-<td>Status bar Passive · auto attach</td>
-<td>bootstrap on MCP init</td>
-<td><strong>Space</strong> toggles Expanded · debug: <code>handoff --show</code></td>
+<td>Auto attach on workspace open</td>
+<td>Auto attach on MCP init</td>
+<td>Auto attach after <code>bootstrap</code></td>
 </tr>
 <tr>
-<td><strong>Cognitive summary</strong></td>
-<td><code># COGNITIVE SNAPSHOT</code> in copy</td>
-<td><code>get_project_graph_snapshot</code></td>
-<td><code>contorium graph-snapshot</code></td>
-</tr>
-<tr>
-<td><strong>Knowledge graph</strong></td>
-<td>AI Cortex sidebar</td>
-<td><code>get_project_knowledge_graph</code></td>
-<td><code>contorium knowledge</code></td>
-</tr>
-<tr>
-<td>Change / graph / timeline</td>
-<td>Cortex</td>
-<td><code>get_project_change/graph/timeline</code></td>
-<td><code>contorium change/graph/timeline</code></td>
-</tr>
-<tr>
-<td>Status summary</td>
-<td>Sidebar</td>
-<td>tool JSON</td>
-<td><code>contorium status</code></td>
-</tr>
-<tr>
-<td>Write task/notes</td>
-<td>Sidebar</td>
-<td>—</td>
-<td>—</td>
-</tr>
-<tr>
-<td>Agent memory</td>
-<td>—</td>
-<td><code>store_memory</code></td>
-<td>—</td>
-</tr>
-<tr>
-<td>Canonical Markdown export</td>
-<td>Copy AI-ready context</td>
-<td>—</td>
-<td><code>contorium export</code></td>
-</tr>
-<tr>
-<td><strong>Governance review</strong></td>
-<td>Review Change</td>
-<td>—</td>
-<td><code>contorium governance review --target &lt;file&gt;</code></td>
-</tr>
-<tr>
-<td><strong>Governance cycle</strong></td>
-<td>Review Change (cycle path)</td>
-<td><code>run_governance_cycle</code></td>
-<td><code>contorium governance cycle</code></td>
-</tr>
-<tr>
-<td><strong>Governance export</strong></td>
-<td>Export appendix in copy</td>
-<td><code>export_governance_context</code></td>
-<td><code>[c]</code> · <code>contorium governance export</code></td>
-</tr>
-<tr>
-<td><strong>Project intent / rules</strong></td>
-<td>Edit Direction · View Rules</td>
-<td><code>update_project_intent</code> · <code>get_control_context</code></td>
-<td><code>contorium control intent</code> · <code>control governance</code></td>
-</tr>
-<tr>
-<td><strong>Cognitive mode (A/B)</strong></td>
-<td>—</td>
-<td><code>get_cognitive_mode</code> / <code>set_cognitive_mode</code></td>
-<td>Dashboard ↑↓ in Expanded view</td>
+<td>---</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Backward compatible:</strong> extension command IDs, existing MCP tool names, <code>state.json</code> fields.</p>
-<p><strong>V3.1 additions:</strong> <code>.contora/graph/</code> artifacts, MCP standard tools (<code>get_recent_changes</code>, <code>get_understanding_graph</code>, <code>get_runtime_state</code>, handoff injection tools), CLI <code>knowledge</code> / <code>graph-snapshot</code>, semi-auto handoff injection, Expanded fullscreen dashboard.</p>
-<p><strong>V4 governance additions:</strong> <code>.contora/governance/*</code> artifacts, unified export appendix (<code>GOVERNANCE:</code> block), MCP governance V4 tools, CLI <code>governance</code> and <code>control</code> subcommands.</p>
-<h3>npm install (<code>@contorium/mcp</code>)</h3>
-<pre><code class="language-bash">npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace /path/to/your-project
-</code></pre>
-<p>Single npm package — <code>@contora/state-core</code> is bundled inside. Maintainers: <code>npm run publish:npm</code> from repo root.</p>
-<hr>
 <h2>Uninstall</h2>
 <h3>IDE</h3>
 <p>Extensions → Contorium → <strong>Uninstall</strong> → Reload Window</p>
@@ -658,59 +493,6 @@ Remove-Item -Recurse -Force &quot;$env:USERPROFILE\.vscode\extensions\franklee-d
 </table>
 <p>First-time init: <code>created: true</code>, <code>mode: scan-driven</code>.</p>
 <hr>
-<h2>Build scripts (maintainers)</h2>
-<p>From repo root:</p>
-<table>
-<thead>
-<tr>
-<th>Script</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>npm run compile</code></td>
-<td>Full build (runtime + state-core + cli + mcp + extension)</td>
-</tr>
-<tr>
-<td><code>npm run build:cli</code></td>
-<td>CLI only</td>
-</tr>
-<tr>
-<td><code>npm run build:mcp</code></td>
-<td>MCP only</td>
-</tr>
-<tr>
-<td><code>npm run build:state-core</code></td>
-<td>state-core only</td>
-</tr>
-<tr>
-<td><code>npm run vsix</code></td>
-<td>Package VSIX for IDE extension</td>
-</tr>
-<tr>
-<td><code>npm run publish:npm</code></td>
-<td>Publish <code>@contorium/mcp</code> to npm</td>
-</tr>
-<tr>
-<td><code>npm test</code></td>
-<td>state-core tests</td>
-</tr>
-</tbody>
-</table>
-<p>After changing CLI or dashboard code: run <code>npm run build:cli</code> and <strong>restart the dashboard worker</strong> for changes to take effect.</p>
-<hr>
-<h2>Related docs</h2>
-<ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="ide-extension.html">IDE Extension</a></li>
-<li><a href="mcp.html">MCP Server</a></li>
-<li><a href="cli.html">CLI</a></li>
-<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md">Architecture V3.1</a></li>
-<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md">Engineering Closure (frozen)</a></li>
-<li><a href="dashboard.html">Runtime Dashboard (CRBP)</a></li>
-<li><a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md">State Engine</a></li>
-</ul>
         </article>
       </main>
     </div>

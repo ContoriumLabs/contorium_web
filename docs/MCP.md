@@ -1,37 +1,112 @@
-# Contorium MCP Server (`@contorium/mcp`)
+# MCP server — User guide
 
-stdio MCP server for **Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI**, and other MCP-compatible hosts.
+> [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)
 
-**You do not start MCP manually in normal use.** After one-time configuration, the AI host (Codex, Claude, Cursor, etc.) **spawns** `contorium-mcp` automatically when a session starts.
+stdio MCP server — **PIL Runtime** for Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI, and other MCP hosts.
 
-Overview: [INSTALL.md](./INSTALL.md) · [Dashboard](./DASHBOARD.md) · [CLI](./CLI.md) · [Home](../index.html)
-
----
-
-## Quick reference
-
-| Phase | Action |
-|-------|--------|
-| **Build (from source)** | Repo root: `npm install && npm run compile` |
-| **Verify (debug only)** | `npx contorium-mcp --workspace /path/to/project` → expect `ready on stdio`, then Ctrl+C |
-| **Published (npm)** | `npm install -g @contorium/mcp` · `contorium-mcp bootstrap --workspace .` |
-| **Daily use** | Open Codex / Claude / Cursor — host starts MCP automatically |
-| **Primary AI tool** | `get_project_handoff` (CHP v1) |
-| **Governance cycle** | `run_governance_cycle` |
-| **Governance export** | `export_governance_context` |
-| **New chat** | `get_handoff_injection_status` → `confirm_handoff_injection` |
-| **Remove** | Host-specific: see [Uninstall](#uninstall--disable) |
+- [Quick start](getting-started.html) · [Package README](../mcp/) · [Dashboard](./DASHBOARD.md) · [CLI](./CLI.md) · [Install](./INSTALL.md)
 
 ---
 
-## Prerequisites
+## Before you start
 
 | Requirement | Notes |
 |-------------|-------|
 | Node.js | **18+** |
-| Workspace | Real project **folder** (not a single file) |
-| Build | `npm run compile` or `npm run build:mcp` before first use (source install) |
-| Optional CLI | `@contora/cli` / `npx contorium` for dashboard bootstrap when not in monorepo |
+| Workspace | A real **project folder** (not a single file) |
+| Setup | One command per host — see [Connect your AI tool](#connect-your-ai-tool) |
+
+## Main MCP tools
+
+| Group | What it does | Examples |
+|-------|--------------|----------|
+| **Inspect** | Read project intelligence | `inspect_state`, `inspect_health`, `inspect_graph` |
+| **Transfer** | Export context for AI chats | `transfer_context`, `transfer_handoff`, `transfer_intelligence` |
+| **Capture** | Save focus, notes, decisions | `capture_focus`, `capture_note`, `capture_decision` |
+
+On a **new AI chat**, the agent may ask to inject project state (Y/n). No terminal command needed.
+
+---
+
+## Connect your AI tool
+
+Run **one command** from your project folder, then open the AI tool in that folder.  
+Node.js **18+** required. No JSON editing needed in normal use.
+
+### Codex
+
+```bash
+cd /path/to/your-project
+codex mcp add contorium -- npx @contorium/mcp
+```
+
+Open Codex in the project folder. Remove: `codex mcp remove contorium`
+
+### Claude Code
+
+```bash
+cd /path/to/your-project
+claude mcp add --scope project contorium -- npx @contorium/mcp
+```
+
+Restart Claude Code in the same folder. Remove: `claude mcp remove contorium`
+
+### Cursor
+
+1. **Settings → MCP → Add MCP Server**
+2. Name: `contorium` · Command: `npx` · Args: `@contorium/mcp`
+3. Enable the server → **Developer: Reload Window**
+
+Remove: Settings → MCP → delete `contorium`
+
+### Gemini CLI
+
+Add to `~/.gemini/settings.json` or `<project>/.gemini/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "contorium": {
+      "command": "npx",
+      "args": ["@contorium/mcp"],
+      "env": {
+        "CONTORIUM_WORKSPACE": "/path/to/your-project"
+      }
+    }
+  }
+}
+```
+
+Restart the Gemini CLI session after saving.
+
+---
+
+## Manual config (fallback only)
+
+Use this **only if** the one-liner above fails. Do **not** combine with `mcp add`.
+
+<a id="manual-config-fallback"></a>
+
+```json
+{
+  "mcpServers": {
+    "contorium": {
+      "command": "npx",
+      "args": ["@contorium/mcp"],
+      "env": {
+        "CONTORIUM_WORKSPACE": "/path/to/your-project"
+      }
+    }
+  }
+}
+```
+
+| Host | Config file |
+|------|-------------|
+| Cursor | `.cursor/mcp.json` or Settings → MCP |
+| Claude Code | `.mcp.json` in project root |
+| Codex | `config.toml` under `[mcp_servers.contorium]` |
+| Gemini CLI | `settings.json` → `mcpServers` |
 
 ---
 
@@ -70,279 +145,40 @@ The server resolves the project root in this order:
 
 ---
 
-## Install from source
+## Decision Provenance tools (preferred)
 
-```bash
-git clone https://github.com/ContoriumLabs/contorium.git
-cd contorium
-npm install
-npm run compile
-```
-
-Entry points:
-
-| Entry | Path |
-|-------|------|
-| **Standard bin (recommended)** | `packages/mcp/bin/contorium-mcp.js` |
-| Monorepo launcher | `bin/contorium-mcp-launch.cjs` (delegates to standard bin) |
-| Compiled server | `packages/mcp/dist/server.js` (direct / Inspector) |
-
-Repo root also exposes: `npx contorium-mcp` after `npm link` or via root `package.json` bin.
-
-Verify (debug):
-
-```bash
-npx contorium-mcp --workspace /path/to/your-project
-# Expect:
-# [contorium-mcp] workspace: …
-# [contorium-mcp] ready on stdio
-```
-
-Press Ctrl+C to exit. In production, the AI host keeps this process alive.
-
-**Bootstrap only** (sync `.contora` without stdio server):
-
-```bash
-npx contorium-mcp bootstrap --workspace /path/to/your-project
-```
-
----
-
-<a id="manual-config-fallback"></a>
-
-## Configuration templates
-
-Replace paths with **your** absolute paths. On Windows, prefer forward slashes: `E:/projects/my-app`.
-
-### Template A — local development (this repo)
-
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "node",
-      "args": ["E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
-### Template B — monorepo launcher (legacy-compatible)
-
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "node",
-      "args": ["E:/path/to/contorium/bin/contorium-mcp-launch.cjs"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
-### Template C — npm package (when published)
-
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "npx",
-      "args": ["@contorium/mcp"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
----
-
-## Host setup (step by step)
-
-### Cursor
-
-1. Build contorium (`npm run compile`).
-2. Create **`.cursor/mcp.json`** in your **project** root (or use Cursor Settings → MCP):
-
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "node",
-      "args": ["E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "E:/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
-3. **Settings → MCP** → enable `contorium`.
-4. **Developer: Reload Window** or restart Agent.
-5. Confirm MCP shows connected; ask Agent to call `get_project_handoff`.
-
-**Uninstall:** Settings → MCP → remove `contorium`, or delete the config entry.
-
----
-
-### Claude Code
-
-**Option 1 — Plugin (recommended)**
-
-```bash
-cd /path/to/contorium
-npm run build:mcp
-claude --plugin-dir /path/to/contorium
-```
-
-Uses `.mcp.claude.json`: `CONTORIUM_WORKSPACE` defaults to `${CLAUDE_PROJECT_DIR}`.
-
-**Option 2 — CLI register (project scope)**
-
-```bash
-cd /path/to/your-project
-claude mcp add --scope project contorium -- node E:/path/to/contorium/bin/contorium-mcp-launch.cjs
-```
-
-**Option 3 — Project `.mcp.json`**
-
-Same JSON as [Template A](#template-a--local-development-this-repo) in your project root.
-
-**Uninstall:** `claude mcp remove contorium`
-
----
-
-### OpenAI Codex
-
-**Option 1 — CLI**
-
-```bash
-cd /path/to/contorium
-npm run build:mcp
-codex mcp add contorium -- node E:/path/to/contorium/bin/contorium-mcp-launch.cjs
-```
-
-Codex injects `CODEX_PROJECT_DIR`; often no extra env is needed when working inside the project directory.
-
-**Option 2 — Codex plugin**
-
-Use repo [`.mcp.json`](https://github.com/ContoriumLabs/contorium/blob/main/.mcp.json) with [`.codex-plugin/plugin.json`](https://github.com/ContoriumLabs/contorium/blob/main/.codex-plugin/plugin.json). See [commands/setup-mcp-codex.md](https://github.com/ContoriumLabs/contorium/blob/main/commands/setup-mcp-codex.md).
-
-**Option 3 — `config.toml` (some Codex versions)**
-
-```toml
-[mcp_servers.contorium]
-command = "node"
-args = ["E:/path/to/contorium/packages/mcp/bin/contorium-mcp.js"]
-
-[mcp_servers.contorium.env]
-CONTORIUM_WORKSPACE = "E:/path/to/your-project"
-```
-
-**Uninstall:** `codex mcp remove contorium`
-
----
-
-### Gemini CLI
-
-Edit global or project settings:
-
-- Global: `~/.gemini/settings.json`
-- Project: `<project>/.gemini/settings.json`
-
-```json
-{
-  "mcpServers": {
-    "contorium": {
-      "command": "node",
-      "args": ["/absolute/path/to/contorium/packages/mcp/bin/contorium-mcp.js"],
-      "env": {
-        "CONTORIUM_WORKSPACE": "/absolute/path/to/your-project"
-      }
-    }
-  }
-}
-```
-
-Restart the Gemini CLI session after saving.
-
-**Uninstall:** Remove `contorium` from `mcpServers`.
-
----
-
-### Other MCP hosts (Continue, Cline, custom TUIs, …)
-
-Any host that supports **stdio MCP** can use [Template A](#template-a--local-development-this-repo). Paste the `mcpServers.contorium` block into that host's MCP configuration format.
-
----
-
-## MCP Inspector (debug)
-
-```bash
-npx @modelcontextprotocol/inspector node packages/mcp/dist/server.js
-```
-
-Invoke tools in the browser; set `CONTORIUM_WORKSPACE` in the Inspector environment if needed.
-
----
-
-## Standard MCP v1 tools (recommended)
-
-| Tool | Purpose | Output |
-|------|---------|--------|
-| **`get_handoff_injection_status`** | Semi-auto new-chat prompt state | pending / prompt / compact |
-| **`confirm_handoff_injection`** | User confirmed (Y) — write context file | `.contora/mcp.auto-context.md` |
-| **`skip_handoff_injection`** | User declined (N) for this runtime | state only |
-| **`get_project_handoff`** | CHP v1 unified AI memory | `compact` / `markdown` / `json` |
-| **`get_recent_changes`** | File & symbol updates | `.contora/change.json` |
-| **`get_understanding_graph`** | Call chains + impact | `.contora/understanding_graph.json` |
-| **`get_runtime_state`** | Bootstrap / dashboard / session (read-only) | JSON |
-
-### `get_project_handoff` parameters
-
-| Param | Values | Default |
-|-------|--------|---------|
-| `format` | `compact`, `markdown`, `json` | compact + legacy `handoff` object when omitted |
-| `filter` | symbol substring | none |
-| `workspaceRoot` | override path | auto-detect |
-
-### Legacy tools (still supported)
-
-`get_project_change`, `get_project_graph`, `get_project_knowledge_graph`, `get_project_graph_snapshot`, `get_workspace_context`, `get_project_snapshot`, `get_project_state`, `get_project_intelligence`, `get_intent_graph`, `get_active_intents`, `get_state_conflicts`, `store_memory`, `search_memory`, `get_memory`, and others remain available for backward compatibility.
-
----
-
-## Governance V4 tools
-
-Single decision pipeline shared with IDE and CLI. Artifacts persist under `.contora/governance/`.
+Single decision pipeline shared with IDE and CLI. Artifacts persist under `.contora/governance/`.  
+See [GitHub language spec](https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM_LANGUAGE_SPEC.md).
 
 | Tool | Purpose | IDE equivalent | CLI equivalent |
 |------|---------|----------------|----------------|
-| **`ensure_control_ready`** | Bootstrap governance + sync | Startup ensure | `contorium control ready` |
-| **`get_control_context`** | Read governance rules and context | View Rules | `contorium control governance` |
-| **`resolve_scope_context`** | Resolve scope from open files + git | Review scope selector | Built into cycle |
-| **`run_governance_cycle`** | Full decision cycle | Review Change (cycle path) | `contorium governance cycle` |
-| **`generate_inject_payload`** | Build inject text for AI chat | Smart/Diff Inject | Dashboard Enter |
-| **`export_governance_context`** | Export governance appendix | Copy AI context appendix | `[c]` · `governance export` |
+| **`inspect_cognition_ready`** | Verify Decision Provenance layer initialized | Startup ensure | `contorium cognition inspect ready` |
+| **`get_decision_context`** | Read decision provenance rules and context | View Rules | `contorium cognition inspect governance` |
+| **`resolve_scope_context`** | Resolve scope from open files + git | Review scope selector | Built into derive |
+| **`derive_decision_provenance`** | Derive decision provenance chain | Review Change (cycle path) | `contorium decision derive` |
+| **`synthesize_context_payload`** | Synthesize inject text for AI chat | Smart/Diff Inject | Dashboard Enter |
+| **`export_decision_provenance`** | Export decision provenance appendix | Copy AI context appendix | `[c]` · `decision synthesize` |
 
 **Semantic separation:**
 
 - Review-only flows write **`review.json`**
-- `run_governance_cycle` writes **decision / scope / trace / cycle** (and optional trace-full)
+- `derive_decision_provenance` writes **decision / scope / trace / cycle** (and optional trace-full)
+
+### Legacy governance tool aliases
+
+| Legacy | Preferred |
+|--------|-----------|
+| `ensure_control_ready` | `inspect_cognition_ready` |
+| `get_control_context` | `get_decision_context` |
+| `run_governance_cycle` · `build_decision_provenance` | `derive_decision_provenance` |
+| `generate_inject_payload` | `synthesize_context_payload` |
+| `export_governance_context` | `export_decision_provenance` |
 
 ### Governance auxiliary tools
 
 | Tool | Purpose |
 |------|---------|
-| **`update_project_intent`** | Update project direction text |
+| **`record_project_intent`** | Record project direction text |
 | **`analyze_project`** | Analyze project structure and intent |
 | **`get_cognitive_state`** | Read cognitive projection state |
 | **`get_change_log`** | Read structured change log |
@@ -360,49 +196,6 @@ Single decision pipeline shared with IDE and CLI. Artifacts persist under `.cont
 | **`get_model_preset`** | Read recommended model preset |
 
 Mode B overlay suggests skills from open sources (GitHub, npm, local registry). Display-only — nothing is auto-installed. Switch modes from the runtime dashboard (↑↓ select, Enter apply) or via MCP tools.
-
----
-
-## Full tool catalog
-
-### Handoff and understanding
-
-| Tool | Purpose |
-|------|---------|
-| `get_project_handoff` | CHP v1 unified AI memory |
-| `get_handoff_injection_status` | Semi-auto new-chat prompt state |
-| `confirm_handoff_injection` | User confirmed (Y) — write context file |
-| `skip_handoff_injection` | User declined (N) for this chat |
-| `get_recent_changes` | File and symbol updates |
-| `get_understanding_graph` | Call chains + impact |
-| `get_runtime_state` | Bootstrap / dashboard / session (read-only) |
-| `get_workspace_context` | Read `state.json` snapshot |
-| `get_project_snapshot` | L4 PROJECT SNAPSHOT markdown |
-| `get_project_change` | `change.json` |
-| `get_project_graph` | Change neighborhood `graph.json` |
-| `get_project_timeline` | `timeline.json` |
-| `get_project_knowledge_graph` | Full knowledge graph |
-| `get_project_graph_snapshot` | Compact cognitive summary |
-| `get_project_intelligence` | Derived project understanding |
-| `get_intent_graph` | Intent graph |
-| `get_active_intents` | Active intents |
-| `get_state_conflicts` | State conflict audit |
-
-### Memory
-
-| Tool | Purpose |
-|------|---------|
-| `store_memory` | Persist note/decision/architecture under `.contora/mcp/` |
-| `search_memory` | Search memory by keyword |
-| `get_memory` | Get memory entry by exact key |
-
-### Governance V4
-
-`ensure_control_ready` · `get_control_context` · `resolve_scope_context` · `run_governance_cycle` · `generate_inject_payload` · `export_governance_context` · `update_project_intent` · `analyze_project` · `get_cognitive_state` · `get_change_log`
-
-### Cognitive mode
-
-`get_cognitive_mode` · `set_cognitive_mode` · `get_cognitive_insights` · `get_skill_suggestions` · `get_model_preset`
 
 ---
 
@@ -447,19 +240,6 @@ See [DASHBOARD.md](./DASHBOARD.md). No manual `contorium attach` in normal use.
 
 ---
 
-## vs IDE one-click copy
-
-| Method | Use case |
-|--------|----------|
-| **`get_project_handoff`** (MCP) | Agent-native; use semi-auto injection for new chats |
-| **`get_understanding_graph`** (MCP) | Call-chain + impact view |
-| **`export_governance_context`** (MCP) | Governance appendix only |
-| **Copy AI-ready context** (IDE) | Full canonical Markdown + governance appendix to clipboard |
-| **`contorium handoff --copy`** (CLI) | Copy To AI for next chat (unified export) |
-| **`contorium export`** (CLI) | Full export with governance appendix |
-
----
-
 ## Uninstall / disable
 
 | Host | Action |
@@ -484,45 +264,11 @@ Does not remove `state.json`, `handoff.json`, or other shared artifacts.
 
 | Symptom | Fix |
 |---------|-----|
-| MCP fails to start | `npm run compile`; Node 18+; use absolute paths in config |
+| MCP fails to start | MCP fails to start | Node 18+; retry one-line setup; or use [manual config](#manual-config-fallback) |
 | `found: false` / no handoff | Set `CONTORIUM_WORKSPACE`; run `npx contorium init .` in project |
 | Wrong project | `CONTORIUM_WORKSPACE` must be the **application** root, not contorium repo |
 | Stale state | Save files; wait for MCP sync; or `npx contorium sync .` |
-| Agent shows Canceled | Often Agent init cancel, not MCP crash; test with Inspector |
+| Agent shows Canceled | Usually host init cancel — retry opening the AI tool |
 | Dashboard not visible | Press **Space** in Contorium terminal tab, or enable IDE status bar — debug: `handoff --show` — see [DASHBOARD.md](./DASHBOARD.md) |
-| Published npm 404 | Run `npm login`; publish with `npm run publish:npm`; or use local `node …/contorium-mcp.js` |
 
 ---
-
-## Build notes (maintainers)
-
-```bash
-npm run build:mcp
-# or
-npm run compile
-```
-
-Package: `packages/mcp` · name `@contorium/mcp` · bin `contorium-mcp`  
-Publish (maintainers, repo root): `npm run publish:npm` — bundles `@contora/state-core` inside the tarball (single npm package).
-
-### `contorium-mcp` subcommands
-
-| Command | Purpose |
-|---------|---------|
-| `contorium-mcp` | Start stdio MCP server (default — host spawns this) |
-| `contorium-mcp bootstrap [--workspace PATH]` | Pre-sync `.contora` + schedule dashboard **without** starting stdio |
-
-```bash
-npm install -g @contorium/mcp
-contorium-mcp bootstrap --workspace E:/your-project
-```
-
----
-
-## Related docs
-
-- [Install overview](./INSTALL.md)
-- [Runtime Dashboard (CRBP)](./DASHBOARD.md)
-- [CLI](./CLI.md)
-- [IDE Extension](./IDE_EXTENSION.md)
-- [Architecture V3.1](https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md)

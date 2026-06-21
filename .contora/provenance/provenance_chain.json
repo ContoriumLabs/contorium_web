@@ -1,0 +1,293 @@
+{
+  "schema": "provenance_chain.v1",
+  "updated_at": "2026-06-21T06:00:09.631Z",
+  "entries": [
+    {
+      "query_anchor": "contora_web",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "contora_web",
+          "label": "Software project with AI-assisted development"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuomn4w_ms6zcz",
+          "label": "develop documentation, MCP integration and state engine",
+          "timestamp": "2026-06-21T06:00:09.519Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuomn4w_ms6zcz_1781952060223",
+          "label": "develop documentation, MCP integration and state engine",
+          "timestamp": "2026-06-20T10:41:00.223Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "develop documentation, MCP integration and state engine",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "develop documentation, MCP integration and state engine",
+          "label": "develop documentation, MCP integration and state engine"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuomn4w_ms6zcz",
+          "label": "develop documentation, MCP integration and state engine",
+          "timestamp": "2026-06-21T06:00:09.519Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuomn4w_ms6zcz_1781952060223",
+          "label": "develop documentation, MCP integration and state engine",
+          "timestamp": "2026-06-20T10:41:00.223Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "update documentation for recent changes",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "update documentation for recent changes",
+          "label": "update documentation for recent changes"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuomn4x_0bqur2",
+          "label": "update documentation for recent changes",
+          "timestamp": "2026-06-21T06:00:09.519Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuomn4x_0bqur2_1781952060223",
+          "label": "update documentation for recent changes",
+          "timestamp": "2026-06-20T10:41:00.223Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "verify MCP tools against workspace state",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "verify MCP tools against workspace state",
+          "label": "verify MCP tools against workspace state"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuomn4x_95gdjs",
+          "label": "verify MCP tools against workspace state",
+          "timestamp": "2026-06-21T06:00:09.519Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuomn4x_95gdjs_1781952579331",
+          "label": "verify MCP tools against workspace state",
+          "timestamp": "2026-06-20T10:49:39.331Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "iterate on index.html",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "iterate on index.html",
+          "label": "iterate on index.html"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuomn4x_4lkrpf",
+          "label": "iterate on index.html",
+          "timestamp": "2026-06-21T05:44:38.111Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuomn4x_4lkrpf_1781952060223",
+          "label": "iterate on index.html",
+          "timestamp": "2026-06-20T10:41:00.223Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "review state persistence and lifecycle logic",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "review state persistence and lifecycle logic",
+          "label": "review state persistence and lifecycle logic"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuomx9j_yw4kyz",
+          "label": "review state persistence and lifecycle logic",
+          "timestamp": "2026-06-21T05:58:04.422Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuomx9j_yw4kyz_1781952060223",
+          "label": "review state persistence and lifecycle logic",
+          "timestamp": "2026-06-20T10:41:00.223Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "iterate on 修改方案2.md",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "iterate on 修改方案2.md",
+          "label": "iterate on 修改方案2.md"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpuoon5s_46m7m6",
+          "label": "iterate on 修改方案2.md",
+          "timestamp": "2026-06-19T00:22:37.328Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpuoon5s_46m7m6_1781828557328",
+          "label": "iterate on 修改方案2.md",
+          "timestamp": "2026-06-19T00:22:37.328Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "develop documentation and MCP integration",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "develop documentation and MCP integration",
+          "label": "develop documentation and MCP integration"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpw9npi0_qygppg",
+          "label": "develop documentation and MCP integration",
+          "timestamp": "2026-06-20T10:49:39.331Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpw9npi0_qygppg_1781952579331",
+          "label": "develop documentation and MCP integration",
+          "timestamp": "2026-06-20T10:49:39.331Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "iterate on IDE_EXTENSION.md",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "iterate on IDE_EXTENSION.md",
+          "label": "iterate on IDE_EXTENSION.md"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mpz0c7tp_4eyp79",
+          "label": "iterate on IDE_EXTENSION.md",
+          "timestamp": "2026-06-21T06:00:09.519Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mpz0c7tp_4eyp79_1781833121904",
+          "label": "iterate on IDE_EXTENSION.md",
+          "timestamp": "2026-06-19T01:38:41.904Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "develop documentation, MCP integration and build tooling",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "develop documentation, MCP integration and build tooling",
+          "label": "develop documentation, MCP integration and build tooling"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mqjn4atx_n9wbv6",
+          "label": "develop documentation, MCP integration and build tooling",
+          "timestamp": "2026-06-21T05:42:32.299Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mqjn4atx_n9wbv6_1781970224207",
+          "label": "develop documentation, MCP integration and build tooling",
+          "timestamp": "2026-06-20T15:43:44.207Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "ongoing workspace development",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "ongoing workspace development",
+          "label": "ongoing workspace development"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mqk9gu88_p3isgf",
+          "label": "ongoing workspace development",
+          "timestamp": "2026-06-20T07:57:43.527Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mqk9gu88_p3isgf_1781942263527",
+          "label": "ongoing workspace development",
+          "timestamp": "2026-06-20T07:57:43.527Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "iterate on settings.json",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "iterate on settings.json",
+          "label": "iterate on settings.json"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mqm2re8p_h4y519",
+          "label": "iterate on settings.json",
+          "timestamp": "2026-06-20T09:01:35.361Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mqm2re8p_h4y519_1781946095361",
+          "label": "iterate on settings.json",
+          "timestamp": "2026-06-20T09:01:35.361Z"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    },
+    {
+      "query_anchor": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation",
+          "label": "develop documentation, MCP integration and state engine — focus: testing, shared state engine, documentation"
+        }
+      ],
+      "updated_at": "2026-06-21T06:00:09.631Z"
+    }
+  ]
+}

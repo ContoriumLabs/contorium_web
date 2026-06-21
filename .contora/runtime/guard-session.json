@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "lastCheckAt": 1781836792624,
-  "lastAction": "allow",
+  "lastCheckAt": 1782021634708,
+  "lastAction": "warn",
   "lastAllow": true,
   "source": "ide:control",
-  "target_path": ".contora/state.json"
+  "target_path": "scripts/build-docs.py"
 }

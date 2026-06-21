@@ -1,0 +1,150 @@
+{
+  "schema": "confidence_index.v1",
+  "updated_at": "2026-06-21T06:00:09.622Z",
+  "entities": [
+    {
+      "entity_id": "project",
+      "confidence_score": 0.35,
+      "category": "experimental",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 34,
+        "decision_volatility": 0,
+        "intent_changes": 11
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpuomn4w_ms6zcz",
+      "confidence_score": 0.62,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 6,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpuomn4x_0bqur2",
+      "confidence_score": 0.62,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 6,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpuomn4x_95gdjs",
+      "confidence_score": 0.62,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 5.6000000000000005,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpuomn4x_4lkrpf",
+      "confidence_score": 0.62,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 5.2,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpuomx9j_yw4kyz",
+      "confidence_score": 0.62,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 5.6000000000000005,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpuoon5s_46m7m6",
+      "confidence_score": 0.64,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 4.4,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpw9npi0_qygppg",
+      "confidence_score": 0.68,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 3.2,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mpz0c7tp_4eyp79",
+      "confidence_score": 0.62,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 5.2,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mqjn4atx_n9wbv6",
+      "confidence_score": 0.64,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 4.4,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mqk9gu88_p3isgf",
+      "confidence_score": 0.88,
+      "category": "stable",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 0,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    },
+    {
+      "entity_id": "intent_mqm2re8p_h4y519",
+      "confidence_score": 0.76,
+      "category": "evolving",
+      "freshness": "recent",
+      "signal_sources": {
+        "change_frequency": 2,
+        "decision_volatility": 0,
+        "intent_changes": 1
+      },
+      "updated_at": "2026-06-21T06:00:09.622Z"
+    }
+  ]
+}

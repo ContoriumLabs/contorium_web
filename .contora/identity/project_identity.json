@@ -1,0 +1,34 @@
+{
+  "schema": "project_intelligence.v1",
+  "project_id": "contora_web",
+  "current_state_hash": "875e0455d59060ab",
+  "active_intents": [
+    "intent_mpuomn4w_ms6zcz",
+    "intent_mpuomn4x_0bqur2",
+    "intent_mpuomn4x_95gdjs",
+    "intent_mpuomn4x_4lkrpf",
+    "intent_mpuomx9j_yw4kyz",
+    "intent_mpuoon5s_46m7m6",
+    "intent_mpw9npi0_qygppg",
+    "intent_mpz0c7tp_4eyp79",
+    "intent_mqjn4atx_n9wbv6",
+    "intent_mqk9gu88_p3isgf",
+    "intent_mqm2re8p_h4y519"
+  ],
+  "active_decisions": [],
+  "last_tool_source": "ide",
+  "runtime_version": "1.1.3",
+  "sync_mode": "merged",
+  "updated_at": "2026-06-21T06:00:09.605Z",
+  "tool_sources": [
+    {
+      "tool": "ide",
+      "last_seen": "2026-06-21T06:00:09.605Z"
+    }
+  ],
+  "cognition": {
+    "confidence": 0.35,
+    "category": "experimental",
+    "freshness": "recent"
+  }
+}

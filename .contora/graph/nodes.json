@@ -1,148 +1,113 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1781836786101,
-  "graphBuildId": "graph_mqkbm7cl",
+  "generatedAt": 1782021609588,
+  "graphBuildId": "graph_mqndnm2c",
   "nodes": [
     {
       "id": "intent_0_develop_documentation_M",
       "type": "intent",
       "name": "develop documentation, MCP integration and state engine",
-      "updatedAt": 1781836786101
+      "updatedAt": 1782021609588
     },
     {
-      "id": "intent_1_index_html_from_IDE_in",
-      "type": "intent",
-      "name": "index.html (from IDE) integration",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "intent_2_IDE_EXTENSION_from_IDE_",
+      "id": "intent_1_IDE_EXTENSION_from_IDE_",
       "type": "intent",
       "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1781836786101
+      "updatedAt": 1782021609588
     },
     {
-      "id": "intent_3_README_from_IDE_integr",
+      "id": "intent_2_index_html_from_IDE_in",
       "type": "intent",
-      "name": "README (from IDE) integration",
-      "updatedAt": 1781836786101
+      "name": "index.html (from IDE) integration",
+      "updatedAt": 1782021609588
     },
     {
-      "id": "intent_4__from_IDE_integrat",
+      "id": "intent_3_cli_html_from_IDE_inte",
       "type": "intent",
-      "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1781836786101
+      "name": "cli.html (from IDE) integration",
+      "updatedAt": 1782021609588
     },
     {
-      "id": "intent_5_settings_json_from_IDE_",
+      "id": "intent_4_CLI_from_IDE_integrati",
       "type": "intent",
-      "name": "settings.json (from IDE) integration",
-      "updatedAt": 1781836786101
+      "name": "CLI (from IDE) integration",
+      "updatedAt": 1782021609588
+    },
+    {
+      "id": "intent_5_dashboard_html_from_IDE",
+      "type": "intent",
+      "name": "dashboard.html (from IDE) integration",
+      "updatedAt": 1782021609588
     },
     {
       "id": "mod::.contora",
       "type": "module",
       "name": ".contora",
       "path": ".contora",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::.vscode",
-      "type": "module",
-      "name": ".vscode",
-      "path": ".vscode",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::修改方案.md",
-      "type": "module",
-      "name": "修改方案.md",
-      "path": "修改方案.md",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::styles.css",
-      "type": "module",
-      "name": "styles.css",
-      "path": "styles.css",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::README.md",
-      "type": "module",
-      "name": "README.md",
-      "path": "README.md",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::index.html",
-      "type": "module",
-      "name": "index.html",
-      "path": "index.html",
-      "updatedAt": 1781836786101
+      "updatedAt": 1782021609588
     },
     {
       "id": "mod::docs",
       "type": "module",
       "name": "docs",
       "path": "docs",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::mcp",
-      "type": "module",
-      "name": "mcp",
-      "path": "mcp",
-      "updatedAt": 1781836786101
-    },
-    {
-      "id": "mod::index.html (from IDE)",
-      "type": "module",
-      "name": "index.html (from IDE)",
-      "path": "index.html (from IDE)",
-      "updatedAt": 1781836786101
+      "updatedAt": 1782021609588
     },
     {
       "id": "mod::IDE_EXTENSION (from IDE)",
       "type": "module",
       "name": "IDE_EXTENSION (from IDE)",
       "path": "IDE_EXTENSION (from IDE)",
-      "updatedAt": 1781836786101
+      "updatedAt": 1782021609588
     },
     {
-      "id": "mod::README (from IDE)",
+      "id": "mod::index.html (from IDE)",
       "type": "module",
-      "name": "README (from IDE)",
-      "path": "README (from IDE)",
-      "updatedAt": 1781836786101
+      "name": "index.html (from IDE)",
+      "path": "index.html (from IDE)",
+      "updatedAt": 1782021609588
     },
     {
-      "id": "mod::修改方案 (from IDE)",
+      "id": "mod::cli.html (from IDE)",
       "type": "module",
-      "name": "修改方案 (from IDE)",
-      "path": "修改方案 (from IDE)",
-      "updatedAt": 1781836786101
+      "name": "cli.html (from IDE)",
+      "path": "cli.html (from IDE)",
+      "updatedAt": 1782021609588
     },
     {
-      "id": "mod::settings.json (from IDE)",
+      "id": "mod::CLI (from IDE)",
       "type": "module",
-      "name": "settings.json (from IDE)",
-      "path": "settings.json (from IDE)",
-      "updatedAt": 1781836786101
+      "name": "CLI (from IDE)",
+      "path": "CLI (from IDE)",
+      "updatedAt": 1782021609588
     },
     {
-      "id": "mod::contorium.mp4 (from IDE)",
+      "id": "mod::dashboard.html (from IDE)",
       "type": "module",
-      "name": "contorium.mp4 (from IDE)",
-      "path": "contorium.mp4 (from IDE)",
-      "updatedAt": 1781836786101
+      "name": "dashboard.html (from IDE)",
+      "path": "dashboard.html (from IDE)",
+      "updatedAt": 1782021609588
     },
     {
-      "id": "mod::index.html (from events)",
+      "id": "mod::DASHBOARD (from IDE)",
       "type": "module",
-      "name": "index.html (from events)",
-      "path": "index.html (from events)",
-      "updatedAt": 1781836786101
+      "name": "DASHBOARD (from IDE)",
+      "path": "DASHBOARD (from IDE)",
+      "updatedAt": 1782021609588
+    },
+    {
+      "id": "mod::ide-extension.html (from IDE)",
+      "type": "module",
+      "name": "ide-extension.html (from IDE)",
+      "path": "ide-extension.html (from IDE)",
+      "updatedAt": 1782021609588
+    },
+    {
+      "id": "mod::build-docs (from events)",
+      "type": "module",
+      "name": "build-docs (from events)",
+      "path": "build-docs (from events)",
+      "updatedAt": 1782021609588
     }
   ]
 }

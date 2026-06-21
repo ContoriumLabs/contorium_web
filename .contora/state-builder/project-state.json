@@ -1,22 +1,23 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1781836786034,
+  "generatedAt": 1782021609548,
   "project_goal": "develop documentation, MCP integration and state engine",
   "current_stage": "documentation + MCP integration development",
   "active_modules": [
-    "index.html (from IDE)",
     "IDE_EXTENSION (from IDE)",
-    "README (from IDE)",
-    "修改方案 (from IDE)",
-    "settings.json (from IDE)",
-    "contorium.mp4 (from IDE)",
-    "index.html (from events)"
+    "index.html (from IDE)",
+    "cli.html (from IDE)",
+    "CLI (from IDE)",
+    "dashboard.html (from IDE)",
+    "DASHBOARD (from IDE)",
+    "ide-extension.html (from IDE)",
+    "build-docs (from events)"
   ],
   "recent_decisions": [],
   "open_problems": [
     "uncommitted changes in documentation module (from events)",
-    "26 paths with uncommitted changes — integration risk (from Git)"
+    "64 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [
@@ -25,5 +26,5 @@
     "verify MCP tools against workspace",
     "review state persistence paths"
   ],
-  "confidence": 0.88
+  "confidence": 0.92
 }

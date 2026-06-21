@@ -1,9 +1,16 @@
 {
   "version": 2,
-  "generatedAt": 1781836786101,
+  "generatedAt": 1782021609588,
   "changed_files": [
     ".contora/change.json",
+    ".contora/cognitive/graph.json",
+    ".contora/cognitive/intent.json",
+    ".contora/cognitive/risk.json",
+    ".contora/cognitive/state.json",
+    ".contora/dashboard.activity.json",
     ".contora/dashboard.signal.json",
+    ".contora/governance/identity.json",
+    ".contora/governance/review.json",
     ".contora/graph.json",
     ".contora/graph/edges.json",
     ".contora/graph/functions.json",
@@ -16,24 +23,17 @@
     ".contora/handoff.json",
     ".contora/intelligence/state-summary.json",
     ".contora/intent-graph/graph.json",
+    ".contora/memory/latest-memory.json",
+    ".contora/runtime/guard-session.json",
     ".contora/state-builder/project-snapshot.md",
     ".contora/state-builder/project-state.json",
     ".contora/state.json",
     ".contora/understanding_graph.json",
-    ".contora/dashboard.activity.json",
-    ".vscode/settings.json",
-    "修改方案.md",
-    "styles.css",
-    "README.md",
-    "index.html",
-    "docs/index.html",
-    "docs/dashboard.html",
-    "docs/cli.html",
-    "docs/mcp.html",
-    "docs/ide-extension.html",
-    "docs/install.html",
-    "mcp/index.html",
-    "docs/INSTALL.md"
+    "docs/CLI.md",
+    "docs/DASHBOARD.md",
+    "docs/IDE_EXTENSION.md",
+    "docs/INSTALL.md",
+    "docs/MCP.md"
   ],
   "key_changes": [
     {
@@ -42,7 +42,42 @@
       "change_type": "modified"
     },
     {
+      "symbol": ".contora/cognitive/graph.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/cognitive/intent.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/cognitive/risk.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/cognitive/state.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/dashboard.activity.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
       "symbol": ".contora/dashboard.signal.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/governance/identity.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/governance/review.json",
       "kind": "file",
       "change_type": "modified"
     },
@@ -107,6 +142,16 @@
       "change_type": "modified"
     },
     {
+      "symbol": ".contora/memory/latest-memory.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": ".contora/runtime/guard-session.json",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
       "symbol": ".contora/state-builder/project-snapshot.md",
       "kind": "file",
       "change_type": "modified"
@@ -127,72 +172,27 @@
       "change_type": "modified"
     },
     {
-      "symbol": ".contora/dashboard.activity.json",
+      "symbol": "docs/CLI.md",
       "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": ".vscode/settings.json",
+      "symbol": "docs/DASHBOARD.md",
       "kind": "file",
       "change_type": "modified"
     },
     {
-      "symbol": "修改方案.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "styles.css",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "README.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "index.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/index.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/dashboard.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/cli.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/mcp.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/ide-extension.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/install.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "mcp/index.html",
+      "symbol": "docs/IDE_EXTENSION.md",
       "kind": "file",
       "change_type": "modified"
     },
     {
       "symbol": "docs/INSTALL.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/MCP.md",
       "kind": "file",
       "change_type": "modified"
     }

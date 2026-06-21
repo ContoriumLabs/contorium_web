@@ -1,0 +1,24 @@
+{
+  "schema": "project_intelligence_repository.v1",
+  "updated_at": "2026-06-21T06:00:09.648Z",
+  "last_signal_source": "ide",
+  "repository_version": "1.1.3",
+  "schema_version": "1.1.3",
+  "pipeline_version": 2,
+  "dimensions": {
+    "timeline_events": 256,
+    "impact_entries": 7,
+    "confidence_entities": 12,
+    "provenance_entries": 13,
+    "evolution_chains": 2
+  },
+  "health": {
+    "intelligence_completeness": 0.89,
+    "decision_coverage": 0,
+    "intent_linkage": 0,
+    "provenance_coverage": 0.92,
+    "knowledge_coverage": 1,
+    "health_score": 0.5,
+    "health_category": "Incomplete"
+  }
+}

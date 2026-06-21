@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": 1781836785999,
+  "updatedAt": 1782021609519,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
       "text": "develop documentation, MCP integration and state engine",
       "status": "ACTIVE",
-      "confidence": 0.78,
+      "confidence": 1,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -22,16 +22,25 @@
         "docs/STATE_ENGINE.md",
         "mcp/README.md",
         "contorium.mp4",
-        "googlefba835fbf32479b7.html"
+        "googlefba835fbf32479b7.html",
+        ".vscode/settings.json",
+        "docs/DASHBOARD.md",
+        "优化.md",
+        "scripts/sync-docs-from-source.py",
+        "scripts/build-docs.py",
+        "docs/cli.html",
+        "docs/CLI.md",
+        "docs/dashboard.html",
+        "docs/ide-extension.html"
       ],
-      "lastUpdated": 1781836785999,
+      "lastUpdated": 1782021609519,
       "learnedAt": 1780286520992
     },
     {
       "id": "intent_mpuomn4x_0bqur2",
       "text": "update documentation for recent changes",
       "status": "ACTIVE",
-      "confidence": 0.71,
+      "confidence": 1,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -47,9 +56,18 @@
         "docs/STATE_ENGINE.md",
         "mcp/README.md",
         "contorium.mp4",
-        "googlefba835fbf32479b7.html"
+        "googlefba835fbf32479b7.html",
+        ".vscode/settings.json",
+        "scripts/build-docs.py",
+        "docs/DASHBOARD.md",
+        "优化.md",
+        "scripts/sync-docs-from-source.py",
+        "docs/cli.html",
+        "docs/CLI.md",
+        "docs/dashboard.html",
+        "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1781836785999,
+      "lastUpdated": 1782021609519,
       "learnedAt": 1780286520992
     },
     {
@@ -72,9 +90,17 @@
         "docs/STATE_ENGINE.md",
         "mcp/README.md",
         "contorium.mp4",
-        "googlefba835fbf32479b7.html"
+        "googlefba835fbf32479b7.html",
+        "scripts/build-docs.py",
+        "docs/DASHBOARD.md",
+        "优化.md",
+        "scripts/sync-docs-from-source.py",
+        "docs/cli.html",
+        "docs/CLI.md",
+        "docs/dashboard.html",
+        "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1781836785999,
+      "lastUpdated": 1782021609519,
       "learnedAt": 1780286520992
     },
     {
@@ -95,9 +121,13 @@
         "docs/IDE_EXTENSION.md",
         "mcp/index.html",
         "docs/STATE_ENGINE.md",
-        "mcp/README.md"
+        "mcp/README.md",
+        "contorium.mp4",
+        "scripts/build-docs.py",
+        "docs/DASHBOARD.md",
+        "优化.md"
       ],
-      "lastUpdated": 1781836785999,
+      "lastUpdated": 1782020678111,
       "learnedAt": 1780286520992
     },
     {
@@ -117,9 +147,21 @@
         "styles.css",
         "docs/IDE_EXTENSION.md",
         "mcp/index.html",
-        "docs/STATE_ENGINE.md"
+        "docs/STATE_ENGINE.md",
+        "mcp/README.md",
+        "contorium.mp4",
+        ".vscode/settings.json",
+        "docs/DASHBOARD.md",
+        "优化.md",
+        "scripts/build-docs.py",
+        "scripts/sync-docs-from-source.py",
+        "docs/cli.html",
+        "docs/CLI.md",
+        "docs/COGNITIVE_DIMENSIONS.md",
+        "docs/cognitive-dimensions.html",
+        "docs/CONTORIUM_LANGUAGE_SPEC.md"
       ],
-      "lastUpdated": 1781791679742,
+      "lastUpdated": 1782021484422,
       "learnedAt": 1780286534119
     },
     {
@@ -148,7 +190,7 @@
       "id": "intent_mpw9npi0_qygppg",
       "text": "develop documentation and MCP integration",
       "status": "ARCHIVED",
-      "confidence": 0.11,
+      "confidence": 0.55,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -157,9 +199,11 @@
         "mcp/index.html",
         "index.html",
         "README.md",
-        "styles.css"
+        "styles.css",
+        "docs/DASHBOARD.md",
+        "修改方案.md"
       ],
-      "lastUpdated": 1780382370227,
+      "lastUpdated": 1781952579331,
       "learnedAt": 1780382308824
     },
     {
@@ -179,9 +223,19 @@
         "修改方案2.md",
         "docs/STATE_ENGINE.md",
         "mcp/README.md",
-        "contorium.mp4"
+        "contorium.mp4",
+        "scripts/build-docs.py",
+        "scripts/sync-docs-from-source.py",
+        "styles.css",
+        "docs/cli.html",
+        "docs/CLI.md",
+        "docs/dashboard.html",
+        "docs/COGNITIVE_DIMENSIONS.md",
+        "docs/cognitive-dimensions.html",
+        "docs/CONTORIUM_LANGUAGE_SPEC.md",
+        "优化.md"
       ],
-      "lastUpdated": 1781833121904,
+      "lastUpdated": 1782021609519,
       "learnedAt": 1780548054684
     },
     {
@@ -199,19 +253,37 @@
         "contorium.mp4",
         "googlefba835fbf32479b7.html",
         "styles.css",
-        "修"
+        "修",
+        "scripts/build-docs.py",
+        "优化.md"
       ],
-      "lastUpdated": 1781836487946,
+      "lastUpdated": 1782020552299,
       "learnedAt": 1781795640020
     },
     {
       "id": "intent_mqk9gu88_p3isgf",
       "text": "ongoing workspace development",
-      "status": "ACTIVE",
-      "confidence": 1,
+      "status": "ARCHIVED",
+      "confidence": 0.1,
       "relatedFiles": [],
-      "lastUpdated": 1781836785999,
+      "lastUpdated": 1781942263527,
       "learnedAt": 1781833176584
+    },
+    {
+      "id": "intent_mqm2re8p_h4y519",
+      "text": "iterate on settings.json",
+      "status": "ARCHIVED",
+      "confidence": 0.05,
+      "relatedFiles": [
+        ".vscode/settings.json",
+        "blog/index.html",
+        "mcp/index.html",
+        "mcp/README.md",
+        "index.html",
+        "README.md"
+      ],
+      "lastUpdated": 1781946095361,
+      "learnedAt": 1781942844121
     }
   ],
   "edges": [
@@ -873,6 +945,356 @@
     {
       "from": "intent_mpz0c7tp_4eyp79",
       "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:contorium.mp4",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:.vscode/settings.json",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:.vscode/settings.json",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:.vscode/settings.json",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqm2re8p_h4y519",
+      "to": "file:.vscode/settings.json",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqm2re8p_h4y519",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqm2re8p_h4y519",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqm2re8p_h4y519",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqm2re8p_h4y519",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqm2re8p_h4y519",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mqm2re8p_h4y519",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mqm2re8p_h4y519",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:docs/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:docs/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_4lkrpf",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:scripts/sync-docs-from-source.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:scripts/sync-docs-from-source.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:scripts/sync-docs-from-source.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:scripts/build-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:scripts/sync-docs-from-source.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:styles.css",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/cli.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/dashboard.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/ide-extension.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/cli.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/dashboard.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:scripts/sync-docs-from-source.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/cli.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/dashboard.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/cli.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/dashboard.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/cognitive-dimensions.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "file:docs/contorium-language-spec.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/cognitive-dimensions.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/cli.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/cognitive-dimensions.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomx9j_yw4kyz",
+      "to": "file:docs/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/cognitive-dimensions.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:docs/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpz0c7tp_4eyp79",
+      "to": "file:优化.md",
       "type": "AFFECTS"
     }
   ]

@@ -7,20 +7,21 @@ Current Stage:
 documentation + MCP integration development
 
 Active Modules:
-- index.html (from IDE)
 - IDE_EXTENSION (from IDE)
-- README (from IDE)
-- 修改方案 (from IDE)
-- settings.json (from IDE)
-- contorium.mp4 (from IDE)
-- index.html (from events)
+- index.html (from IDE)
+- cli.html (from IDE)
+- CLI (from IDE)
+- dashboard.html (from IDE)
+- DASHBOARD (from IDE)
+- ide-extension.html (from IDE)
+- build-docs (from events)
 
 Recent Decisions:
 (none yet)
 
 Open Problems:
 - uncommitted changes in documentation module (from events)
-- 26 paths with uncommitted changes — integration risk (from Git)
+- 64 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)
