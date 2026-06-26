@@ -11,8 +11,8 @@
     "blog/index.html"
   ],
   "recentFiles": [
-    "index.html",
     "styles.css",
+    "index.html",
     "docs/index.html",
     "docs/dashboard.html",
     "docs/cli.html",
@@ -74,16 +74,14 @@
     ".contora/state-builder/project-state.json",
     ".contora/state.json",
     ".contora/timeline/project_timeline.json",
-    ".contora/understanding_graph.json",
-    "index.html",
-    "styles.css"
+    ".contora/config/"
   ],
   "notes": "",
-  "lastUpdated": 1782026788565,
+  "lastUpdated": 1782390462678,
   "source": {
-    "mode": "merged",
+    "mode": "event-driven",
     "lastWriter": "ide",
-    "lastUpdated": "2026-06-21T07:26:28.565Z"
+    "lastUpdated": "2026-06-25T12:27:42.678Z"
   },
   "cognition": {
     "confidence": 0.35,

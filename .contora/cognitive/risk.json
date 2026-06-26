@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1782026616178,
+  "generatedAt": 1782388087222,
   "risks": [
     {
       "type": "impact_summary",
@@ -10,7 +10,7 @@
     {
       "type": "affected_modules",
       "level": "low",
-      "description": "Modules: .contora/change.json, .contora/confidence/confidence_index.json, .contora/evolution/evolution_graph.json, .contora/governance/review.json, .contora/graph.json, .contora/graph/edges.json"
+      "description": "Modules: .contora/change.json, .contora/cognitive/graph.json, .contora/cognitive/intent.json, .contora/cognitive/risk.json, .contora/cognitive/state.json, .contora/confidence/confidence_index.json"
     }
   ]
 }

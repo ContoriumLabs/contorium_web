@@ -1,0 +1,24 @@
+{
+  "enabled": false,
+  "provider": "openai",
+  "model": "deepseek-chat",
+  "api_key_env": "CONTORIUM_IDE_LLM_API_KEY",
+  "temperature": 0.2,
+  "max_tokens": 4000,
+  "intent_router": {
+    "enabled": false,
+    "mode": "hybrid"
+  },
+  "enabled_modules": [
+    "why",
+    "story",
+    "essence",
+    "dna",
+    "ask_enhance"
+  ],
+  "cache": {
+    "enabled": true,
+    "ttl_days": 30
+  },
+  "base_url": "https://api.deepseek.com/v1"
+}

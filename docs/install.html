@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -52,80 +52,34 @@
 <blockquote>
 <p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
 </blockquote>
-<p>Contorium is an <strong>AI Project Intelligence Layer (PIL)</strong>. IDE, MCP, and CLI are <strong>peer PIL runtimes</strong> sharing <code>shared local state</code> and the project-local <code>.contora/</code> directory.</p>
-<p><strong>Responsibility chain:</strong> Capture → Structure → Preserve → Retrieve → Transfer</p>
+<p>Contorium is a local <strong>Cognitive Interaction Layer (CIL)</strong> on a <strong>Project Intelligence Layer (PIL)</strong>. Install <strong>IDE</strong>, <strong>MCP</strong>, or <strong>CLI</strong> — all share <code>.contora/</code> in your project folder.</p>
+<p><strong>Responsibility chain:</strong> Capture → Structure → Preserve → Ask → Transfer</p>
 <table>
 <thead>
 <tr>
 <th>Adapter</th>
 <th>Typical user</th>
-<th>Primary PIL loop</th>
+<th>Primary loop</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>IDE</strong></td>
-<td>VS Code / Cursor developers</td>
-<td>Capture → Visualize → Transfer</td>
+<td>VS Code / Cursor</td>
+<td>Ask · Capture · Transfer</td>
 </tr>
 <tr>
 <td><strong>MCP</strong></td>
-<td>Claude Code / Cursor Agent / Codex / Gemini</td>
-<td>Retrieve → Inspect → Transfer</td>
+<td>Claude / Codex / Cursor Agent</td>
+<td>Ask · Inspect · Transfer</td>
 </tr>
 <tr>
 <td><strong>CLI</strong></td>
-<td>Terminal / CI / headless</td>
-<td>Inspect → Audit → Transfer</td>
+<td>Terminal / CI</td>
+<td>Ask · Inspect · Transfer</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2>What Contorium does</h2>
-<p>Contorium is the <strong>AI Project Intelligence Layer</strong> for AI-assisted development. It maintains a continuously updated record of project intelligence and exposes it through IDE, MCP, CLI, and the Cognitive State dashboard.</p>
-<table>
-<thead>
-<tr>
-<th>Capability</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>PIL Core</strong></td>
-<td>Capture → Structure → Preserve → Retrieve → Transfer</td>
-</tr>
-<tr>
-<td><strong>Inspect / Transfer / Capture</strong></td>
-<td>Aligned capability groups across IDE, MCP, CLI (v3.0)</td>
-</tr>
-<tr>
-<td><strong>Persistent project memory</strong></td>
-<td>Task, focus, graphs, decisions survive sessions and tool switches</td>
-</tr>
-<tr>
-<td><strong>Transfer Context / Intelligence / Handoff</strong></td>
-<td>Tiered exports for AI continuity</td>
-</tr>
-<tr>
-<td><strong>Semi-auto injection</strong></td>
-<td>New AI chats prompt to inject runtime handoff (user confirm)</td>
-</tr>
-<tr>
-<td><strong>Cognitive State dashboard</strong></td>
-<td>Full-screen terminal UI — core, dimensions, streams</td>
-</tr>
-<tr>
-<td><strong>Governance Engine (V4)</strong></td>
-<td>Change review, scope, decision, trace pipeline</td>
-</tr>
-<tr>
-<td><strong>Cross-tool continuity</strong></td>
-<td>Claude Code, Codex, Cursor, Gemini CLI, VS Code share <code>.contora/</code></td>
-</tr>
-</tbody>
-</table>
-<hr>
 <h2>Prerequisites (all adapters)</h2>
 <table>
 <thead>
@@ -167,6 +121,10 @@
 ├── mcp.handoff-injection.json # injection state per runtime_id
 ├── state-builder/           # L4 snapshot (scan or IDE cognition pipeline)
 ├── graph/                   # V3.1 cognitive graph (knowledge.json, snapshot.json, …)
+├── config/                  # LLM settings (no secrets in llm.json)
+│   ├── llm.json             # provider, model, modules, intent_router
+│   └── .llm-keys.json       # per-provider API keys (gitignored)
+├── cache/llm/               # optional LLM response cache
 ├── events/                  # IDE events (CLI/MCP read; IDE writes)
 ├── dashboard.*.json         # dashboard view/signals (not business state source)
 └── mcp/                     # MCP store_memory (optional)
@@ -196,7 +154,7 @@
 </tr>
 </tbody>
 </table>
-<p>See <a href="ide-extension.html">IDE_EXTENSION.md</a>.</p>
+<p>See <a href="ide-extension.html">IDE extension</a>.</p>
 <h3>MCP server (<code>@contorium/mcp</code>)</h3>
 <pre><code class="language-bash">git clone https://github.com/ContoriumLabs/contorium.git
 cd contorium
@@ -256,7 +214,7 @@ npm run compile          # or npm run build:mcp
 </tr>
 </tbody>
 </table>
-<p>See <a href="mcp.html">MCP.md</a> for step-by-step host guides.</p>
+<p>See <a href="mcp.html">MCP</a> for step-by-step host guides.</p>
 <h3>CLI</h3>
 <p>Ships with the same repo — no separate npm publish:</p>
 <pre><code class="language-bash">npm install
@@ -265,7 +223,7 @@ npx contorium --help
 npx contorium init .
 </code></pre>
 <p>Optional global link (repo root): <code>npm link</code> → <code>contorium status .</code></p>
-<p>See <a href="cli.html">CLI.md</a>.</p>
+<p>See <a href="cli.html">CLI</a>.</p>
 <hr>
 <h2>Usage scenarios</h2>
 <h3>IDE only</h3>
@@ -279,7 +237,7 @@ npx contorium init .
 <ol>
 <li><code>npm install -g @contorium/mcp</code> <strong>or</strong> <code>npm run compile</code> from source  </li>
 <li><code>contorium-mcp bootstrap --workspace /path/to/project</code> (optional)  </li>
-<li>Configure MCP with <code>CONTORIUM_WORKSPACE</code> (see <a href="mcp.html">MCP.md</a>)  </li>
+<li>Configure MCP with <code>CONTORIUM_WORKSPACE</code> (see <a href="mcp.html">MCP</a>)  </li>
 <li><strong>Open Codex / Claude / Cursor</strong> — host starts MCP and bootstraps <code>.contora/</code>  </li>
 <li><strong>New chat:</strong> injection prompt appears automatically — Agent asks Y/n, or use terminal <strong>Enter/i</strong> / IDE <strong>[?]</strong></li>
 <li>Agent calls <strong><code>inspect_state</code></strong> / <strong><code>transfer_context</code></strong> / <strong><code>transfer_handoff</code></strong> as needed (legacy: <code>get_project_handoff</code>, <code>get_understanding_graph</code>, …)</li>

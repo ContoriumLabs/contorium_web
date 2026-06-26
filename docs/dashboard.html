@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Terminal dashboard — shortcuts and daily use." />
+    <meta name="description" content="Cognitive State terminal UI — shortcuts and daily use." />
     <title>Runtime dashboard — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -129,7 +129,7 @@
 │ [+] Cognitive Streams                                      │
 │ ▶ Change Stream / Cognitive Health / Evolution               │
 ├──────────────────────────────────────────────────────────────┤
-│ View Mode: ● Live  ○ Governance  ○ Debug                   │
+│ View Mode: ● Live  ○ Gov  ○ Debug  ○ History  ○ LLM Config      │
 ├──────────────────────────────────────────────────────────────┤
 │ Shortcuts                                                  │
 │ [c]       Copy PIL context to clipboard                    │
@@ -159,7 +159,7 @@
 </tr>
 <tr>
 <td><strong>View Mode</strong></td>
-<td>Live Cognition · Governance Overlay · Debug Trace</td>
+<td>Live · Governance · Debug · <strong>Project History</strong> · <strong>LLM Config</strong></td>
 </tr>
 <tr>
 <td><strong>Shortcuts</strong></td>
@@ -174,34 +174,116 @@
 <thead>
 <tr>
 <th>Mode</th>
-<th>Key cycle</th>
+<th>Selection</th>
 <th>Content</th>
+<th>Apply on Enter</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Live Cognition</strong> (default)</td>
-<td><code>A</code></td>
+<td><strong>A — Live Cognition</strong> (default)</td>
+<td><code>↑↓</code></td>
 <td>Change · Health · Evolution streams</td>
+<td>Yes — persisted to MCP</td>
 </tr>
 <tr>
-<td><strong>Governance Overlay</strong></td>
-<td><code>B</code></td>
+<td><strong>B — Governance Overlay</strong></td>
+<td></td>
 <td>Policy snapshot · violations · decision</td>
+<td>Yes — persisted to MCP</td>
 </tr>
 <tr>
-<td><strong>Debug Trace</strong></td>
-<td><code>C</code></td>
-<td>Decision provenance · raw review (preview-only)</td>
+<td><strong>C — Debug Trace</strong></td>
+<td></td>
+<td>Decision provenance · raw review</td>
+<td>Preview only</td>
+</tr>
+<tr>
+<td><strong>D — Project History</strong></td>
+<td></td>
+<td>CIL cognitive event feed · last 7 days</td>
+<td>Preview only</td>
+</tr>
+<tr>
+<td><strong>E — LLM Config</strong></td>
+<td></td>
+<td>Provider setup · API key · auto test</td>
+<td>See <a href="#view-e--llm-config">View E — LLM Config</a></td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><strong><code>↑</code> / <code>↓</code></strong> — select view mode  </li>
-<li><strong><code>Enter</code></strong> — apply Live or Governance to MCP runtime (Debug is view-only)  </li>
+<li><strong><code>↑</code> / <code>↓</code></strong> — cycle view modes (A–E)  </li>
+<li><strong><code>Enter</code></strong> — apply <strong>A</strong> or <strong>B</strong> to MCP runtime; <strong>C</strong> / <strong>D</strong> show preview flash only  </li>
 </ul>
 <hr>
-<h2>Keyboard shortcuts</h2>
+<h2>View E — LLM Config</h2>
+<p>LLM configuration is <strong>View Mode E</strong> — the main streams region switches to the setup UI when E is selected (not a separate panel below View Mode).</p>
+<p><strong>Sequential flow:</strong></p>
+<pre><code class="language-text">Step 1: Select provider (←→ cycle · Enter confirm)
+   ↓
+Step 2: Enter API key (type or Ctrl+V · Enter save &amp; auto-test · Esc back)
+   ↓
+Auto connection test result shown in streams
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Key required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenAI · Anthropic · OpenRouter · Gemini · DeepSeek</td>
+<td>Yes — per-provider key in <code>.contora/config/.llm-keys.json</code></td>
+</tr>
+<tr>
+<td>Ollama (local)</td>
+<td>No — tests after provider confirm</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UI hints (English):</strong></p>
+<ul>
+<li>Configured providers show <strong><code>· configured</code></strong> in the provider list</li>
+<li>Unconfigured selection shows <strong><code>· key required</code></strong></li>
+<li>Switching provider never reuses another provider's API key</li>
+</ul>
+<p><strong>Keys in view E:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>↑</code> / <code>↓</code></td>
+<td>Cycle view modes</td>
+</tr>
+<tr>
+<td><code>←</code> / <code>→</code> or <code>h</code></td>
+<td>Cycle provider (step 1)</td>
+</tr>
+<tr>
+<td><code>Enter</code></td>
+<td>Confirm provider · save key and test (step 2)</td>
+</tr>
+<tr>
+<td><code>Ctrl+V</code></td>
+<td>Paste API key from clipboard (step 2)</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Back to provider list (step 2)</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md">AI Layer (GitHub)</a> for <code>llm.json</code>, CLI <code>contorium ai</code>, and IDE/MCP integration.</p>
+<hr>
+<h2>Keyboard shortcuts (global)</h2>
 <table>
 <thead>
 <tr>
@@ -228,11 +310,15 @@
 </tr>
 <tr>
 <td><strong><code>↑</code> / <code>↓</code></strong></td>
-<td>Cycle view mode</td>
+<td>Cycle view mode (A–E)</td>
+</tr>
+<tr>
+<td><strong><code>←</code> / <code>→</code></strong></td>
+<td>Cycle LLM provider (view E, step 1 only)</td>
 </tr>
 <tr>
 <td><strong><code>Enter</code></strong></td>
-<td>Apply selected view mode</td>
+<td>Apply view A/B · confirm provider or save key (view E)</td>
 </tr>
 </tbody>
 </table>

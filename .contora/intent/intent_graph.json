@@ -1,6 +1,6 @@
 {
   "schema": "intent.v1",
-  "updated_at": "2026-06-21T07:26:35.798Z",
+  "updated_at": "2026-06-25T12:27:50.023Z",
   "nodes": [
     {
       "intent_id": "intent_mpuomn4w_ms6zcz",
@@ -30,8 +30,8 @@
         "scripts"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T07:26:35.798Z",
-      "updated_at": "2026-06-21T07:26:35.798Z",
+      "created_at": "2026-06-25T12:27:50.023Z",
+      "updated_at": "2026-06-25T12:27:50.023Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -66,8 +66,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T07:26:35.798Z",
-      "updated_at": "2026-06-21T07:26:35.798Z",
+      "created_at": "2026-06-25T12:27:50.023Z",
+      "updated_at": "2026-06-25T12:27:50.023Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -101,8 +101,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T07:23:38.874Z",
-      "updated_at": "2026-06-21T07:23:38.874Z",
+      "created_at": "2026-06-25T11:48:36.189Z",
+      "updated_at": "2026-06-25T11:48:36.189Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -135,8 +135,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T07:26:35.798Z",
-      "updated_at": "2026-06-21T07:26:35.798Z",
+      "created_at": "2026-06-25T12:27:50.023Z",
+      "updated_at": "2026-06-25T12:27:50.023Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -212,13 +212,13 @@
     },
     {
       "intent_id": "intent_mpw9npi0_qygppg",
-      "title": "develop documentation and MCP integration",
-      "name": "develop documentation and MCP integration",
-      "description": "develop documentation and MCP integration",
-      "why": "develop documentation and MCP integration",
+      "title": "develop documentation, AI integration and MCP integration",
+      "name": "develop documentation, AI integration and MCP integration",
+      "description": "develop documentation, AI integration and MCP integration",
+      "why": "develop documentation, AI integration and MCP integration",
       "design_principles": [],
       "constraints": [
-        "scoped to 10 path(s)"
+        "scoped to 12 path(s)"
       ],
       "related_modules": [
         "architecture",
@@ -228,13 +228,14 @@
         "index.html",
         "README.md",
         "styles.css",
-        "修改方案.md"
+        "修改方案.md",
+        "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-20T10:49:39.331Z",
-      "updated_at": "2026-06-20T10:49:39.331Z",
+      "created_at": "2026-06-21T07:27:37.096Z",
+      "updated_at": "2026-06-21T07:27:37.096Z",
       "cognition": {
-        "confidence": 0.68,
+        "confidence": 0.66,
         "category": "evolving",
         "freshness": "recent"
       }
@@ -369,8 +370,8 @@
         "mcp"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T07:26:35.798Z",
-      "updated_at": "2026-06-21T07:26:35.798Z",
+      "created_at": "2026-06-25T11:48:36.189Z",
+      "updated_at": "2026-06-25T11:48:36.189Z",
       "cognition": {
         "confidence": 0.71,
         "category": "evolving",
@@ -396,8 +397,8 @@
         "styles.css"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T07:26:35.798Z",
-      "updated_at": "2026-06-21T07:26:35.798Z",
+      "created_at": "2026-06-25T12:27:50.023Z",
+      "updated_at": "2026-06-25T12:27:50.023Z",
       "cognition": {
         "confidence": 0.73,
         "category": "evolving",
@@ -1510,6 +1511,16 @@
       "from": "intent_mqndoym2_6ly78z",
       "to": "intent_mqndq65z_rg26ig",
       "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": 1782026795689,
+  "generatedAt": 1782390469875,
   "project_intent": "develop documentation, AI integration and state engine",
-  "current_focus": "work in project root",
+  "current_focus": "work in blog",
   "active_domains": [
     "docs",
     "ai",
@@ -14,22 +14,22 @@
   "active_problem_area": "uncommitted changes in documentation module",
   "activity_clusters": [
     {
-      "cluster": "project root",
-      "files": [
-        "index.html",
-        "styles.css",
-        "README.md",
-        "优化.md",
-        "修改方案.md"
-      ],
-      "weight": 0.48
-    },
-    {
       "cluster": "blog",
       "files": [
         "blog/index.html"
       ],
       "weight": 0.42
+    },
+    {
+      "cluster": "project root",
+      "files": [
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "styles.css"
+      ],
+      "weight": 0.4
     },
     {
       "cluster": "mcp",
@@ -72,7 +72,7 @@
     "update documentation for recent changes",
     "refine ai module changes",
     "iterate on index.html",
-    "iterate on styles.css"
+    "iterate on IDE_EXTENSION.md"
   ],
-  "confidence": 0.73
+  "confidence": 0.6
 }

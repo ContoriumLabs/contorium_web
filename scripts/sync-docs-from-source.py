@@ -25,6 +25,10 @@ OFFSITE_DOCS = {
 }
 
 SYNC_FILES = [
+    "OVERVIEW.md",
+    "CIL.md",
+    "SURFACES.md",
+    "AI_LAYER.md",
     "PIL_RUNTIME.md",
     "INSTALL.md",
     "PROJECT_INTELLIGENCE_LAYER.md",
@@ -113,7 +117,19 @@ def adapt_mcp_readme(text: str) -> str:
         ),
         (
             r"\[docs/PIL_RUNTIME\.md\]\(\.\./docs/PIL_RUNTIME\.md\)",
-            "[PIL Runtime](../docs/pil-runtime.html)",
+            f"[PIL Runtime]({GITHUB_BASE}/PIL_RUNTIME.md)",
+        ),
+        (
+            r"\[docs/OVERVIEW\.md\]\(\.\./docs/OVERVIEW\.md\)",
+            "[Overview](../docs/getting-started.html)",
+        ),
+        (
+            r"\[Overview\]\(\.\./docs/OVERVIEW\.md\)",
+            "[Overview](../docs/getting-started.html)",
+        ),
+        (
+            r"\[docs/AI_LAYER\.md\]\(\.\./docs/AI_LAYER\.md\)",
+            f"[AI Layer]({GITHUB_BASE}/AI_LAYER.md)",
         ),
         (
             r"\[Install \(three adapters\)\]\(\.\./docs/INSTALL\.md\)",

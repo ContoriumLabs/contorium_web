@@ -2,9 +2,42 @@
 
 > [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)
 
-stdio MCP server — **PIL Runtime** for Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI, and other MCP hosts.
+stdio MCP server — **CIL for AI agents** on top of a local **Project Intelligence Layer (PIL)**.
 
-- [Quick start](getting-started.html) · [Package README](../mcp/) · [Dashboard](./DASHBOARD.md) · [CLI](./CLI.md) · [Install](./INSTALL.md)
+Connect once to Claude Code, Cursor Agent, Codex, Gemini CLI, or VS Code MCP. Agents can **`ask_project`**, inspect state, capture decisions, and transfer context — without you re-explaining architecture every session.
+
+**Normal use:** configure once, open your AI tool in the project folder — the host starts MCP automatically.
+
+---
+
+## CIL tools (questions and narratives)
+
+Natural-language and narrative queries route through **Cognitive Kernel**:
+
+```text
+ask_project · get_next_actions · get_cognitive_health · get_entity_knowledge
+get_project_essence · get_handoff_replay · get_snapshot · get_decision_graph
+get_project_history · transfer_story · transfer_project · get_suggested_questions
+```
+
+CLI mirror: `contorium ask` · `contorium health` · `contorium transfer --mode=…`
+
+See [CIL v3 spec (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/CIL_V3.md) · [Surfaces (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md).
+
+---
+
+## AI Layer tools (optional — default off)
+
+Explanation-layer LLM status and connectivity. Fact/PIL tools do not require LLM.
+
+| Tool | Purpose |
+|------|---------|
+| `get_ai_status` | Enabled modules, provider, router mode (no secrets) |
+| `test_ai_connection` | Test using `.contora/config/llm.json` + per-provider keys or env |
+
+Configure via `contorium ai setup`, CLI dashboard **View E (LLM Config)**, or IDE `contora.cilAiEnabled`. Keys: `.contora/config/.llm-keys.json` (per provider).
+
+See [AI Layer (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md).
 
 ---
 
@@ -18,9 +51,29 @@ stdio MCP server — **PIL Runtime** for Claude Code, Cursor Agent, OpenAI Codex
 
 ## Main MCP tools
 
+### Ask (CIL — recommended first)
+
+Natural-language queries route through the **Cognitive Kernel**. CIL suggests and explains — it never executes tasks.
+
+| Tool | Purpose |
+|------|---------|
+| `ask_project` | Ask anything — history, decisions, impact, next steps |
+| `get_suggested_questions` | Onboarding prompts when `.contora/` is new |
+| `get_project_history` | Event feed for a time range |
+| `get_decisions` | Decision Center (ADR-style records) |
+| `get_next_actions` | Suggested next focus (suggestions only) |
+| `get_cognitive_health` | Missing WHY, stale decisions, conflicts |
+| `get_entity_knowledge` | Knowledge Graph for a module or topic |
+| `get_snapshot` | Time travel — state nearest a date |
+| `transfer_project` | Unified export — `context` · `intelligence` · `story` · `essence` · `handoff` |
+
+CLI mirror: `contorium ask "…"` · `contorium health` · `contorium transfer --mode=story`
+
+### PIL (Inspect · Transfer · Capture)
+
 | Group | What it does | Examples |
 |-------|--------------|----------|
-| **Inspect** | Read project intelligence | `inspect_state`, `inspect_health`, `inspect_graph` |
+| **Inspect** | Read structured project facts | `inspect_state`, `inspect_health`, `inspect_decision` |
 | **Transfer** | Export context for AI chats | `transfer_context`, `transfer_handoff`, `transfer_intelligence` |
 | **Capture** | Save focus, notes, decisions | `capture_focus`, `capture_note`, `capture_decision` |
 
@@ -225,7 +278,7 @@ When MCP starts, it schedules (via CLI adapter, detached):
 - MCP light sync — 5s poll + watch on `.contora/events` and `.git/HEAD`
 - Dashboard wake on file/git changes
 
-See [DASHBOARD.md](./DASHBOARD.md). No manual `contorium attach` in normal use.
+See [Runtime dashboard](dashboard.html). No manual `contorium attach` in normal use.
 
 ---
 
@@ -269,6 +322,6 @@ Does not remove `state.json`, `handoff.json`, or other shared artifacts.
 | Wrong project | `CONTORIUM_WORKSPACE` must be the **application** root, not contorium repo |
 | Stale state | Save files; wait for MCP sync; or `npx contorium sync .` |
 | Agent shows Canceled | Usually host init cancel — retry opening the AI tool |
-| Dashboard not visible | Press **Space** in Contorium terminal tab, or enable IDE status bar — debug: `handoff --show` — see [DASHBOARD.md](./DASHBOARD.md) |
+| Dashboard not visible | Press **Space** in Contorium terminal tab, or enable IDE status bar — debug: `handoff --show` — see [Runtime dashboard](dashboard.html) |
 
 ---

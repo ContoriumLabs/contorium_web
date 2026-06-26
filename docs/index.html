@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -52,8 +52,8 @@
 <div class="docs-hub-hero">
   <h1>User guide</h1>
   <p>
-    Install and use Contorium — keep project understanding across AI coding sessions.
-    Pick <strong>IDE</strong>, <strong>MCP</strong>, or <strong>CLI</strong>; all share the same
+    <strong>Ask your project</strong> — Contorium is a local Cognitive Interaction Layer (CIL) on a Project Intelligence Layer (PIL).
+    Install <strong>IDE</strong>, <strong>MCP</strong>, or <strong>CLI</strong>; all share the same
     <code>.contora/</code> folder in your project.
   </p>
 </div>
@@ -64,7 +64,7 @@
     <a class="docs-card" href="getting-started.html">
       <span class="docs-card-tag">New user</span>
       <h3>Quick start</h3>
-      <p>Choose an entry point, daily workflow, and the three things to remember.</p>
+      <p>Ask via CLI, MCP, or IDE — choose an entry point and daily workflow.</p>
     </a>
     <a class="docs-card" href="install.html">
       <span class="docs-card-tag">Setup</span>
@@ -85,24 +85,39 @@
     <a class="docs-card" href="ide-extension.html">
       <span class="docs-card-tag">IDE</span>
       <h3>IDE extension</h3>
-      <p>VSIX install, sidebar, focus, Transfer Context, status bar.</p>
+      <p>Ask Contorium, Cortex panels, focus, Transfer Context.</p>
     </a>
     <a class="docs-card" href="mcp.html">
       <span class="docs-card-tag">MCP</span>
       <h3>MCP server</h3>
-      <p>One-line setup, handoff injection, main agent tools.</p>
+      <p><code>ask_project</code>, one-line setup, Inspect · Transfer · Capture.</p>
     </a>
     <a class="docs-card" href="cli.html">
       <span class="docs-card-tag">CLI</span>
       <h3>CLI</h3>
-      <p><code>inspect</code>, <code>transfer</code>, <code>capture</code> from the terminal.</p>
+      <p><code>contorium ask</code>, <code>health</code>, <code>transfer</code>, <code>capture</code>.</p>
     </a>
     <a class="docs-card" href="dashboard.html">
       <span class="docs-card-tag">Dashboard</span>
       <h3>Runtime dashboard</h3>
-      <p>Terminal status UI, keyboard shortcuts — starts automatically.</p>
+      <p>Terminal status UI, Project History view — starts automatically.</p>
     </a>
   </div>
+</section>
+
+<section style="margin-top:40px">
+  <h2>CIL — Ask your project</h2>
+  <table>
+    <thead>
+      <tr><th>Question</th><th>CLI</th><th>MCP</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Natural language</td><td><code>contorium ask "…"</code></td><td><code>ask_project</code></td></tr>
+      <tr><td>Project history</td><td><code>contorium history</code></td><td><code>get_project_history</code></td></tr>
+      <tr><td>Decisions</td><td><code>contorium decisions</code></td><td><code>get_decisions</code></td></tr>
+      <tr><td>Health</td><td><code>contorium health</code></td><td><code>get_cognitive_health</code></td></tr>
+    </tbody>
+  </table>
 </section>
 
 <section style="margin-top:40px">
@@ -111,13 +126,13 @@
     <li>MCP spawns when you open Codex / Claude / Cursor (after one-time setup)</li>
     <li><code>.contora/</code> is created or merged on first use</li>
     <li>New AI chats can prompt to inject project context (Y/n)</li>
-    <li>Dashboard shows a compact status line in the terminal</li>
+    <li>Dashboard shows Cognitive State in the terminal</li>
   </ul>
 </section>
 
 <p class="docs-footer-note">
-  Developer / architecture docs:
-  <a href="https://github.com/ContoriumLabs/contorium/tree/main/docs" target="_blank" rel="noopener noreferrer">GitHub</a>
+  Architecture / CIL spec:
+  <a href="https://github.com/ContoriumLabs/contorium/tree/main/docs" target="_blank" rel="noopener noreferrer">GitHub docs</a>
 </p>
 
         </article>

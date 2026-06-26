@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1782026795798,
+  "updatedAt": 1782390470023,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -33,7 +33,7 @@
         "docs/dashboard.html",
         "docs/ide-extension.html"
       ],
-      "lastUpdated": 1782026795798,
+      "lastUpdated": 1782390470023,
       "learnedAt": 1780286520992
     },
     {
@@ -67,7 +67,7 @@
         "docs/dashboard.html",
         "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1782026795798,
+      "lastUpdated": 1782390470023,
       "learnedAt": 1780286520992
     },
     {
@@ -100,7 +100,7 @@
         "docs/dashboard.html",
         "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1782026618874,
+      "lastUpdated": 1782388116189,
       "learnedAt": 1780286520992
     },
     {
@@ -127,7 +127,7 @@
         "docs/DASHBOARD.md",
         "优化.md"
       ],
-      "lastUpdated": 1782026795798,
+      "lastUpdated": 1782390470023,
       "learnedAt": 1780286520992
     },
     {
@@ -188,9 +188,9 @@
     },
     {
       "id": "intent_mpw9npi0_qygppg",
-      "text": "develop documentation and MCP integration",
+      "text": "develop documentation, AI integration and MCP integration",
       "status": "ARCHIVED",
-      "confidence": 0.55,
+      "confidence": 0.6,
       "relatedFiles": [
         "architecture/index.html",
         "blog/index.html",
@@ -201,9 +201,11 @@
         "README.md",
         "styles.css",
         "docs/DASHBOARD.md",
-        "修改方案.md"
+        "修改方案.md",
+        "优化.md",
+        "mcp/README.md"
       ],
-      "lastUpdated": 1781952579331,
+      "lastUpdated": 1782026857096,
       "learnedAt": 1780382308824
     },
     {
@@ -288,8 +290,8 @@
     {
       "id": "intent_mqndoym2_6ly78z",
       "text": "develop documentation, MCP integration and test coverage",
-      "status": "ACTIVE",
-      "confidence": 1,
+      "status": "ARCHIVED",
+      "confidence": 0.55,
       "relatedFiles": [
         "blog/index.html",
         "index.html",
@@ -300,14 +302,14 @@
         "mcp/index.html",
         "mcp/README.md"
       ],
-      "lastUpdated": 1782026795798,
+      "lastUpdated": 1782388116189,
       "learnedAt": 1782021672506
     },
     {
       "id": "intent_mqndq65z_rg26ig",
       "text": "refine ai module changes",
-      "status": "ACTIVE",
-      "confidence": 1,
+      "status": "ARCHIVED",
+      "confidence": 0.5,
       "relatedFiles": [
         "blog/index.html",
         "index.html",
@@ -316,7 +318,7 @@
         "修改方案.md",
         "styles.css"
       ],
-      "lastUpdated": 1782026795798,
+      "lastUpdated": 1782390470023,
       "learnedAt": 1782021728950
     }
   ],
@@ -1425,6 +1427,16 @@
       "from": "intent_mqndoym2_6ly78z",
       "to": "intent_mqndq65z_rg26ig",
       "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpw9npi0_qygppg",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
     }
   ]
 }

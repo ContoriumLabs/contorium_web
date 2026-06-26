@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contorium terminal commands for inspect, transfer, and capture." />
+    <meta name="description" content="contorium ask, health, transfer, and capture from the terminal." />
     <title>CLI — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -54,8 +54,59 @@
 </blockquote>
 <p>The CLI is a <strong>peer PIL Runtime</strong> with IDE and MCP, sharing <code>@contora/state-core</code> and <code>.contora/</code>.</p>
 <ul>
-<li><a href="getting-started.html">Quick start</a> · <a href="install.html">INSTALL</a> · <a href="../index.html">Home</a> · <a href="dashboard.html">Dashboard</a></li>
+<li><a href="getting-started.html">Quick start</a> · <a href="install.html">INSTALL</a> · <a href="../index.html">Home</a> · <a href="getting-started.html">Quick start</a> · <a href="dashboard.html">Dashboard</a></li>
 </ul>
+<hr>
+<h2>Ask your project (CIL)</h2>
+<p>Primary user-facing commands — mirror MCP <code>ask_project</code> and related CIL tools:</p>
+<pre><code class="language-bash">contorium ask &quot;Why was MCP added?&quot;
+contorium ask &quot;What happened this week?&quot;
+contorium health .
+contorium questions
+contorium entity mcp
+contorium transfer --mode=story --copy
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>CLI</th>
+<th>MCP equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ask</td>
+<td><code>contorium ask "…"</code></td>
+<td><code>ask_project</code></td>
+</tr>
+<tr>
+<td>History</td>
+<td><code>contorium history</code></td>
+<td><code>get_project_history</code></td>
+</tr>
+<tr>
+<td>Decisions</td>
+<td><code>contorium decisions</code></td>
+<td><code>get_decisions</code></td>
+</tr>
+<tr>
+<td>Next actions</td>
+<td><code>contorium next</code></td>
+<td><code>get_next_actions</code></td>
+</tr>
+<tr>
+<td>Health</td>
+<td><code>contorium health</code></td>
+<td><code>get_cognitive_health</code></td>
+</tr>
+<tr>
+<td>Unified transfer</td>
+<td><code>contorium transfer --mode=story\|essence\|…</code></td>
+<td><code>transfer_project</code></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2>PIL commands (v3.0 — primary)</h2>
 <p>Three capability groups mirror MCP and IDE:</p>
@@ -117,7 +168,7 @@ contorium capture decision [path] --selected &quot;&lt;choice&gt;&quot; [--reaso
 </tr>
 <tr>
 <td><strong>Dashboard</strong></td>
-<td>Automatic after bootstrap — Cognitive State TUI (see <a href="dashboard.html">DASHBOARD.md</a>)</td>
+<td>Automatic after bootstrap — Cognitive State TUI (see <a href="dashboard.html">Runtime dashboard</a>)</td>
 </tr>
 <tr>
 <td><strong>Decision derive</strong></td>
@@ -219,15 +270,28 @@ contorium status E:\path\to\your-project
 </tr>
 <tr>
 <td>View mode</td>
-<td><strong><code>↑</code> / <code>↓</code></strong> — Live · Governance Overlay · Debug Trace</td>
+<td><strong><code>↑</code> / <code>↓</code></strong> — Live · Governance · Debug · History · <strong>LLM Config</strong></td>
 </tr>
 <tr>
-<td>Apply mode</td>
-<td><strong>Enter</strong></td>
+<td>LLM provider (view E)</td>
+<td><strong><code>←</code> / <code>→</code></strong> or <strong><code>h</code></strong> — cycle provider · <strong>Enter</strong> confirm</td>
+</tr>
+<tr>
+<td>LLM API key (view E step 2)</td>
+<td>Type or <strong>Ctrl+V</strong> · <strong>Enter</strong> save &amp; test · <strong>Esc</strong> back</td>
+</tr>
+<tr>
+<td>Apply cognitive mode</td>
+<td><strong>Enter</strong> — A/B persist · C/D/E preview (E uses provider/key flow)</td>
 </tr>
 </tbody>
 </table>
-<p>See <a href="dashboard.html">DASHBOARD.md</a>.</p>
+<p>See <a href="dashboard.html">Runtime dashboard</a> and <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md">AI Layer (GitHub)</a>.</p>
+<h3>AI Layer (CLI)</h3>
+<pre><code class="language-bash">contorium ai setup [path] [--provider openai|anthropic|open_router|gemini|deepseek|ollama] [--model MODEL] [--enable]
+contorium ai status [path] [--json]
+contorium ai test [path] [--json]
+</code></pre>
 <h3>Runtime dashboard commands (debug / dev only)</h3>
 <table>
 <thead>

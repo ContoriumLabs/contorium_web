@@ -12,7 +12,9 @@ TARGET = ROOT / "docs"
 USER_NAV = "> [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)"
 
 MCP_INTRO = """
-stdio MCP server for **Claude Code, Cursor Agent, Codex, Gemini CLI**, and other MCP hosts.
+stdio MCP server — **CIL for AI agents** on top of a local **Project Intelligence Layer (PIL)**.
+
+Connect once to Claude Code, Cursor Agent, Codex, Gemini CLI, or VS Code MCP. Agents can **`ask_project`**, inspect state, capture decisions, and transfer context — without you re-explaining architecture every session.
 
 **Normal use:** configure once, open your AI tool in the project folder — the host starts MCP automatically.
 """
@@ -30,9 +32,29 @@ MCP_BEFORE_START = """
 MCP_MAIN_TOOLS = """
 ## Main MCP tools
 
+### Ask (CIL — recommended first)
+
+Natural-language queries route through the **Cognitive Kernel**. CIL suggests and explains — it never executes tasks.
+
+| Tool | Purpose |
+|------|---------|
+| `ask_project` | Ask anything — history, decisions, impact, next steps |
+| `get_suggested_questions` | Onboarding prompts when `.contora/` is new |
+| `get_project_history` | Event feed for a time range |
+| `get_decisions` | Decision Center (ADR-style records) |
+| `get_next_actions` | Suggested next focus (suggestions only) |
+| `get_cognitive_health` | Missing WHY, stale decisions, conflicts |
+| `get_entity_knowledge` | Knowledge Graph for a module or topic |
+| `get_snapshot` | Time travel — state nearest a date |
+| `transfer_project` | Unified export — `context` · `intelligence` · `story` · `essence` · `handoff` |
+
+CLI mirror: `contorium ask "…"` · `contorium health` · `contorium transfer --mode=story`
+
+### PIL (Inspect · Transfer · Capture)
+
 | Group | What it does | Examples |
 |-------|--------------|----------|
-| **Inspect** | Read project intelligence | `inspect_state`, `inspect_health`, `inspect_graph` |
+| **Inspect** | Read structured project facts | `inspect_state`, `inspect_health`, `inspect_decision` |
 | **Transfer** | Export context for AI chats | `transfer_context`, `transfer_handoff`, `transfer_intelligence` |
 | **Capture** | Save focus, notes, decisions | `capture_focus`, `capture_note`, `capture_decision` |
 
@@ -125,9 +147,31 @@ GETTING_STARTED = """# Quick start
 
 {nav}
 
-Contorium is an **AI Project Intelligence Layer**. It keeps project understanding in your workspace so AI tools can **continue where you left off** — without re-explaining architecture every session.
+**Contorium lets you ask your project.**
 
-**You use it by:** installing one entry point (IDE, MCP, or CLI), opening a **folder** workspace, then using **Inspect · Transfer · Capture** as you work with AI.
+It is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence Layer (PIL)**. Ask what happened, why a decision was made, or what comes next — then switch between Cursor, Claude Code, Codex, Gemini CLI, and VS Code without re-explaining your architecture.
+
+**You use it by:** installing one entry point (IDE, MCP, or CLI), opening a **folder** workspace, then **Ask · Capture · Transfer** as you work with AI.
+
+---
+
+## Ask your project (CIL)
+
+| Question | Where it routes |
+|----------|-----------------|
+| What happened this week? | Project History |
+| Why was MCP added? | Decision Center |
+| What should I do next? | Action Engine (suggestions only) |
+| Tell me everything about auth | Knowledge Graph |
+| What was state last Friday? | Time Travel (Snapshot) |
+
+| Surface | How to ask |
+|---------|------------|
+| **CLI** | `contorium ask "Why was MCP added?"` |
+| **MCP** | Agent calls `ask_project` |
+| **IDE** | Command palette → **Ask Contorium…** · Cortex panel |
+
+CIL suggests and explains. It **never executes tasks** for you.
 
 ---
 
@@ -149,20 +193,21 @@ All three share the same `.contora/` folder in your project. You can add more la
 
 1. Install the extension → open a **folder** (not a single file).
 2. Set **Current focus** in the Contorium sidebar.
-3. Code as usual — Contorium updates `.contora/` automatically.
+3. Use **Ask Contorium…** or Cortex (**History · Decisions · Ask**) to explore project understanding.
 4. Starting a new AI chat? Confirm the **handoff prompt** (Y/n) or use **Transfer Context** from the sidebar.
 
 ### MCP + AI agent
 
 1. Run the [one-line MCP setup](mcp.html#connect-your-ai-tool) for your host.
 2. Open Codex / Claude / Cursor in your project — MCP starts automatically.
-3. The agent reads project state via `inspect_*` tools and exports context via `transfer_*` when needed.
+3. Ask via `ask_project` or use `inspect_*` / `transfer_*` when the agent needs structured facts.
 
 ### Terminal
 
 ```bash
 contorium init .
-contorium inspect health .
+contorium ask "What is this project about?"
+contorium health .
 contorium transfer context --copy
 ```
 
@@ -173,8 +218,8 @@ See the [CLI guide](cli.html) for the full command list.
 ## Three things to remember
 
 1. **Open a folder** — Contorium needs a project root, not a lone file.
-2. **Local-first** — everything lives in `.contora/` inside your repo. No cloud account.
-3. **Transfer, don't re-prompt** — use Transfer Context / Handoff instead of pasting long explanations again.
+2. **Ask, don't re-prompt** — use `contorium ask` or `ask_project` instead of pasting long explanations.
+3. **Local-first** — everything lives in `.contora/` inside your repo. No cloud account.
 
 ---
 
@@ -184,15 +229,42 @@ See the [CLI guide](cli.html) for the full command list.
 - Not a project manager or task runner
 - Not a cloud service
 
-It **records and preserves** project intelligence. It does **not** make decisions for you.
+CIL suggests. PIL records. **Neither executes work for you.**
 
 ---
 
 ## Next steps
 
 - [Install all adapters](install.html)
+- [MCP setup wizard](../mcp/)
 - [Runtime dashboard](dashboard.html) — terminal status UI (starts automatically)
-- [Interactive MCP setup](../mcp/)
+"""
+
+CLI_CIL_SECTION = """
+## Ask your project (CIL)
+
+Primary user-facing commands — mirror MCP `ask_project` and related CIL tools:
+
+```bash
+contorium ask "Why was MCP added?"
+contorium ask "What happened this week?"
+contorium health .
+contorium questions
+contorium entity mcp
+contorium transfer --mode=story --copy
+```
+
+| Capability | CLI | MCP equivalent |
+|------------|-----|----------------|
+| Ask | `contorium ask "…"` | `ask_project` |
+| History | `contorium history` | `get_project_history` |
+| Decisions | `contorium decisions` | `get_decisions` |
+| Next actions | `contorium next` | `get_next_actions` |
+| Health | `contorium health` | `get_cognitive_health` |
+| Unified transfer | `contorium transfer --mode=story\|essence\|…` | `transfer_project` |
+
+---
+
 """
 
 SKIP_SECTIONS: dict[str, list[str]] = {
@@ -201,6 +273,7 @@ SKIP_SECTIONS: dict[str, list[str]] = {
         "Architecture (three adapters)",
         "Build scripts (maintainers)",
         "Related docs",
+        "What Contorium does",
     ],
     "MCP.md": [
         "PIL Runtime Contract (v3.0)",
@@ -268,6 +341,17 @@ def clean_user_md(md: str, title: str) -> str:
     md = re.sub(r"\[PIL Runtime Guide\]\([^)]+\)", "[Quick start](getting-started.html)", md)
     md = re.sub(r"\[Project Intelligence Layer[^\]]*\]\([^)]+\)", "[GitHub PIL spec](https://github.com/ContoriumLabs/contorium/blob/main/docs/PROJECT_INTELLIGENCE_LAYER.md)", md)
     md = re.sub(r"\[Documentation index\]\([^)]+\)", "[Docs](index.html)", md)
+    md = re.sub(r"\[Project Overview\]\(\./OVERVIEW\.md\)", "[Quick start](getting-started.html)", md)
+    md = re.sub(r"\[Overview\]\(\./OVERVIEW\.md\)", "[Quick start](getting-started.html)", md)
+    md = re.sub(r"\[AI Layer\]\(\./AI_LAYER\.md\)", "[AI Layer (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md)", md)
+    md = re.sub(r"\[AI_LAYER\.md\]\(\./AI_LAYER\.md\)", "[AI Layer (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md)", md)
+    md = re.sub(r"\[CIL_V3\.md\]\(\./CIL_V3\.md\)", "[CIL v3 spec (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/CIL_V3.md)", md)
+    md = re.sub(r"\[SURFACES\.md\]\(\./SURFACES\.md\)", "[Surfaces (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md)", md)
+    md = re.sub(r"\[DASHBOARD\.md\]\(\./DASHBOARD\.md\)", "[Runtime dashboard](dashboard.html)", md)
+    md = re.sub(r"\[CLI\.md\]\(\./CLI\.md\)", "[CLI](cli.html)", md)
+    md = re.sub(r"\[INSTALL\.md\]\(\./INSTALL\.md\)", "[Install](install.html)", md)
+    md = re.sub(r"\[MCP\.md\]\(\./MCP\.md\)", "[MCP](mcp.html)", md)
+    md = re.sub(r"\[IDE_EXTENSION\.md\]\(\./IDE_EXTENSION\.md\)", "[IDE extension](ide-extension.html)", md)
     md = re.sub(r"\n{3,}", "\n\n", md)
     return md.strip() + "\n"
 
@@ -295,19 +379,32 @@ def trim_install_matrix(md: str) -> str:
 
 def prepare_mcp(md: str) -> str:
     md = strip_sections(md, SKIP_SECTIONS["MCP.md"])
-    # Replace dev-focused intro block
-    md = re.sub(
-        r"^stdio MCP server.*?\n---\n",
-        MCP_INTRO.strip() + "\n\n---\n",
-        md,
-        count=1,
-        flags=re.DOTALL,
-    )
     md = clean_user_md(md, "MCP server — User guide")
     md = md.replace("../mcp/README.md", "../mcp/")
+    if "CIL for AI agents" not in md:
+        md = re.sub(
+            r"stdio MCP server[^\n]+\n\n(?:- \[[^\n]+\n\n)?",
+            MCP_INTRO.strip() + "\n\n",
+            md,
+            count=1,
+        )
+    md = re.sub(
+        r"- \[Quick start\]\([^\)]+\) · \[Quick start\]\([^\)]+\)",
+        "- [Quick start](getting-started.html)",
+        md,
+    )
+    md = md.replace("[Dashboard](./DASHBOARD.md)", "[Runtime dashboard](dashboard.html)")
+    md = md.replace("[CLI](./CLI.md)", "[CLI](cli.html)")
+    md = md.replace("[Install](./INSTALL.md)", "[Install](install.html)")
     if "## Connect your AI tool" not in md:
         anchor = "## How MCP runs (important)"
-        insert = MCP_BEFORE_START.strip() + "\n\n" + MCP_MAIN_TOOLS.strip() + "\n\n---\n\n" + MCP_HOST_SETUP.strip()
+        insert = (
+            MCP_BEFORE_START.strip()
+            + "\n\n"
+            + MCP_MAIN_TOOLS.strip()
+            + "\n\n---\n\n"
+            + MCP_HOST_SETUP.strip()
+        )
         if anchor in md:
             md = md.replace(anchor, insert + "\n\n---\n\n" + anchor)
         else:
@@ -341,8 +438,27 @@ def prepare_install(md: str) -> str:
     md = trim_install_matrix(md)
     md = clean_user_md(md, "Install & use")
     md = md.replace("@contora/state-core", "shared local state")
+    intro = """Contorium is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence Layer (PIL)**. Install **IDE**, **MCP**, or **CLI** — all share `.contora/` in your project folder.
+
+**Responsibility chain:** Capture → Structure → Preserve → Ask → Transfer
+
+| Adapter | Typical user | Primary loop |
+|---------|--------------|--------------|
+| **IDE** | VS Code / Cursor | Ask · Capture · Transfer |
+| **MCP** | Claude / Codex / Cursor Agent | Ask · Inspect · Transfer |
+| **CLI** | Terminal / CI | Ask · Inspect · Transfer |
+
+"""
+    if "Cognitive Interaction Layer (CIL)" not in md:
+        md = re.sub(
+            r"Contorium is an \*\*AI Project Intelligence Layer.*?(?=\n## Prerequisites)",
+            intro,
+            md,
+            count=1,
+            flags=re.DOTALL,
+        )
     md = re.sub(
-        r"Single npm package — `@contora/state-core`[^\n]+\n",
+        r"Single npm package — `shared local state`[^\n]+\n",
         "Optional: `npm install -g @contorium/mcp` for faster cold start.\n",
         md,
     )
@@ -351,7 +467,11 @@ def prepare_install(md: str) -> str:
 
 def prepare_cli(md: str) -> str:
     md = strip_sections(md, SKIP_SECTIONS["CLI.md"])
-    return clean_user_md(md, "CLI — User guide")
+    md = clean_user_md(md, "CLI — User guide")
+    anchor = "## PIL commands (v3.0 — primary)"
+    if anchor in md and "## Ask your project (CIL)" not in md:
+        md = md.replace(anchor, CLI_CIL_SECTION.strip() + "\n\n" + anchor)
+    return md
 
 
 def prepare_ide(md: str) -> str:
@@ -398,6 +518,10 @@ def main() -> None:
         "PROJECT_INTELLIGENCE_LAYER.md",
         "COGNITIVE_DIMENSIONS.md",
         "CONTORIUM_LANGUAGE_SPEC.md",
+        "OVERVIEW.md",
+        "CIL.md",
+        "SURFACES.md",
+        "AI_LAYER.md",
     ]:
         path = TARGET / orphan
         if path.exists():

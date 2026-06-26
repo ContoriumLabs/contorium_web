@@ -1,6 +1,6 @@
 {
   "schema": "why.v1",
-  "updated_at": "2026-06-21T07:26:35.886Z",
+  "updated_at": "2026-06-25T12:27:50.119Z",
   "features": [
     {
       "feature": "contora_web",
@@ -59,8 +59,8 @@
       "linked_intent": "intent_mpuoon5s_46m7m6"
     },
     {
-      "feature": "develop documentation and MCP integration",
-      "why": "develop documentation and MCP integration",
+      "feature": "develop documentation, AI integration and MCP integration",
+      "why": "develop documentation, AI integration and MCP integration",
       "problem": "Intent is lost when switching AI tools or starting new chats",
       "value": "Cross-session project cognition",
       "origin_decision": "",

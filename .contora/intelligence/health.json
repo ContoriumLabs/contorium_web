@@ -1,6 +1,6 @@
 {
   "schema": "project_intelligence_health.v1",
-  "updated_at": "2026-06-21T07:26:35.934Z",
+  "updated_at": "2026-06-25T12:27:50.200Z",
   "metrics": {
     "intelligence_completeness": 0.89,
     "decision_coverage": 0,
@@ -12,8 +12,8 @@
   },
   "coverage_detail": {
     "covered_modules": [
-      "index.html",
       "styles.css",
+      "index.html",
       "docs",
       "mcp",
       "修改方案.md",
@@ -34,12 +34,12 @@
       "iterate on index.html",
       "review state persistence and lifecycle logic",
       "iterate on 修改方案2.md",
-      "develop documentation and MCP integration",
+      "develop documentation, AI integration and MCP integration",
       "iterate on IDE_EXTENSION.md"
     ],
     "total_modules": [
-      "index.html",
       "styles.css",
+      "index.html",
       "docs",
       "mcp",
       "修改方案.md",
@@ -60,7 +60,7 @@
       "iterate on index.html",
       "review state persistence and lifecycle logic",
       "iterate on 修改方案2.md",
-      "develop documentation and MCP integration",
+      "develop documentation, AI integration and MCP integration",
       "iterate on IDE_EXTENSION.md"
     ]
   }

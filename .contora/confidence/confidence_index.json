@@ -1,6 +1,6 @@
 {
   "schema": "confidence_index.v1",
-  "updated_at": "2026-06-21T07:26:35.911Z",
+  "updated_at": "2026-06-25T12:27:50.154Z",
   "entities": [
     {
       "entity_id": "project",
@@ -8,11 +8,11 @@
       "category": "experimental",
       "freshness": "recent",
       "signal_sources": {
-        "change_frequency": 21.5,
+        "change_frequency": 20.5,
         "decision_volatility": 0,
         "intent_changes": 13
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpuomn4w_ms6zcz",
@@ -24,7 +24,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpuomn4x_0bqur2",
@@ -36,7 +36,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpuomn4x_95gdjs",
@@ -48,7 +48,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpuomn4x_4lkrpf",
@@ -60,7 +60,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpuomx9j_yw4kyz",
@@ -72,7 +72,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpuoon5s_46m7m6",
@@ -84,19 +84,19 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpw9npi0_qygppg",
-      "confidence_score": 0.68,
+      "confidence_score": 0.66,
       "category": "evolving",
       "freshness": "recent",
       "signal_sources": {
-        "change_frequency": 3.2,
+        "change_frequency": 3.6,
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mpz0c7tp_4eyp79",
@@ -108,7 +108,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mqjn4atx_n9wbv6",
@@ -120,7 +120,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mqk9gu88_p3isgf",
@@ -132,7 +132,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mqm2re8p_h4y519",
@@ -144,7 +144,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mqndoym2_6ly78z",
@@ -156,7 +156,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     },
     {
       "entity_id": "intent_mqndq65z_rg26ig",
@@ -168,7 +168,7 @@
         "decision_volatility": 0,
         "intent_changes": 1
       },
-      "updated_at": "2026-06-21T07:26:35.911Z"
+      "updated_at": "2026-06-25T12:27:50.154Z"
     }
   ]
 }

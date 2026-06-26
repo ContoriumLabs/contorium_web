@@ -2,34 +2,16 @@
 
 > [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)
 
-Contorium is an **AI Project Intelligence Layer (PIL)**. IDE, MCP, and CLI are **peer PIL runtimes** sharing `shared local state` and the project-local `.contora/` directory.
+Contorium is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence Layer (PIL)**. Install **IDE**, **MCP**, or **CLI** — all share `.contora/` in your project folder.
 
-**Responsibility chain:** Capture → Structure → Preserve → Retrieve → Transfer
+**Responsibility chain:** Capture → Structure → Preserve → Ask → Transfer
 
-| Adapter | Typical user | Primary PIL loop |
-|---------|--------------|------------------|
-| **IDE** | VS Code / Cursor developers | Capture → Visualize → Transfer |
-| **MCP** | Claude Code / Cursor Agent / Codex / Gemini | Retrieve → Inspect → Transfer |
-| **CLI** | Terminal / CI / headless | Inspect → Audit → Transfer |
+| Adapter | Typical user | Primary loop |
+|---------|--------------|--------------|
+| **IDE** | VS Code / Cursor | Ask · Capture · Transfer |
+| **MCP** | Claude / Codex / Cursor Agent | Ask · Inspect · Transfer |
+| **CLI** | Terminal / CI | Ask · Inspect · Transfer |
 
----
-
-## What Contorium does
-
-Contorium is the **AI Project Intelligence Layer** for AI-assisted development. It maintains a continuously updated record of project intelligence and exposes it through IDE, MCP, CLI, and the Cognitive State dashboard.
-
-| Capability | Description |
-|------------|-------------|
-| **PIL Core** | Capture → Structure → Preserve → Retrieve → Transfer |
-| **Inspect / Transfer / Capture** | Aligned capability groups across IDE, MCP, CLI (v3.0) |
-| **Persistent project memory** | Task, focus, graphs, decisions survive sessions and tool switches |
-| **Transfer Context / Intelligence / Handoff** | Tiered exports for AI continuity |
-| **Semi-auto injection** | New AI chats prompt to inject runtime handoff (user confirm) |
-| **Cognitive State dashboard** | Full-screen terminal UI — core, dimensions, streams |
-| **Governance Engine (V4)** | Change review, scope, decision, trace pipeline |
-| **Cross-tool continuity** | Claude Code, Codex, Cursor, Gemini CLI, VS Code share `.contora/` |
-
----
 
 ## Prerequisites (all adapters)
 
@@ -59,6 +41,10 @@ Artifact layout:
 ├── mcp.handoff-injection.json # injection state per runtime_id
 ├── state-builder/           # L4 snapshot (scan or IDE cognition pipeline)
 ├── graph/                   # V3.1 cognitive graph (knowledge.json, snapshot.json, …)
+├── config/                  # LLM settings (no secrets in llm.json)
+│   ├── llm.json             # provider, model, modules, intent_router
+│   └── .llm-keys.json       # per-provider API keys (gitignored)
+├── cache/llm/               # optional LLM response cache
 ├── events/                  # IDE events (CLI/MCP read; IDE writes)
 ├── dashboard.*.json         # dashboard view/signals (not business state source)
 └── mcp/                     # MCP store_memory (optional)
@@ -76,7 +62,7 @@ Artifact layout:
 | Marketplace | Search **Contorium** (`franklee-dev`) |
 | Development | `npm run compile` → F5 Extension Development Host |
 
-See [IDE_EXTENSION.md](./IDE_EXTENSION.md).
+See [IDE extension](ide-extension.html).
 
 ### MCP server (`@contorium/mcp`)
 
@@ -128,7 +114,7 @@ npm run compile          # or npm run build:mcp
 | Codex | `codex mcp add contorium -- npx @contorium/mcp` |
 | Gemini CLI | `~/.gemini/settings.json` → `mcpServers.contorium` |
 
-See [MCP.md](./MCP.md) for step-by-step host guides.
+See [MCP](mcp.html) for step-by-step host guides.
 
 ### CLI
 
@@ -143,7 +129,7 @@ npx contorium init .
 
 Optional global link (repo root): `npm link` → `contorium status .`
 
-See [CLI.md](./CLI.md).
+See [CLI](cli.html).
 
 ---
 
@@ -161,7 +147,7 @@ No MCP or CLI required.
 
 1. `npm install -g @contorium/mcp` **or** `npm run compile` from source  
 2. `contorium-mcp bootstrap --workspace /path/to/project` (optional)  
-3. Configure MCP with `CONTORIUM_WORKSPACE` (see [MCP.md](./MCP.md))  
+3. Configure MCP with `CONTORIUM_WORKSPACE` (see [MCP](mcp.html))  
 4. **Open Codex / Claude / Cursor** — host starts MCP and bootstraps `.contora/`  
 5. **New chat:** injection prompt appears automatically — Agent asks Y/n, or use terminal **Enter/i** / IDE **[?]**
 6. Agent calls **`inspect_state`** / **`transfer_context`** / **`transfer_handoff`** as needed (legacy: `get_project_handoff`, `get_understanding_graph`, …)

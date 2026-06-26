@@ -6,9 +6,9 @@
     <meta name="google-site-verification" content="fba835fbf32479b7" />
     <meta
       name="description"
-      content="Contorium — AI Project Intelligence Layer for coding agents. Preserve project understanding across Cursor, Claude Code, Codex, Gemini CLI, and VS Code. Like Git for project cognition."
+      content="Contorium lets you ask your project — what happened, why it changed, and what comes next. Cognitive Interaction Layer (CIL) for Cursor, Claude Code, Codex, Gemini CLI, and VS Code."
     />
-    <title>Contorium — AI Project Intelligence Layer</title>
+    <title>Contorium — Ask Your Project</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,447 +27,429 @@
             src="logo.png"
             width="36"
             height="36"
-            alt="Contorium logo: letter C with blue-to-magenta arc on cyan-to-purple circle"
+            alt="Contorium logo"
           />
           Contorium
         </a>
         <div class="nav-links">
+          <a href="#ask">Ask</a>
+          <a href="#why">Why</a>
+          <a href="#how">How</a>
           <a href="#pil">PIL</a>
-          <a href="#problem">Problem</a>
-          <a href="#solution">Solution</a>
-          <a href="#architecture">Architecture</a>
-          <a href="#install">Install</a>
           <a href="docs/">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="#install" class="btn btn-primary btn-sm">Install</a>
+          <a href="#cta" class="btn btn-primary btn-sm">Get Started</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero hero--full hero-v2">
+      <!-- §1 Hero -->
+      <section class="hero hero--full hero-cil">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="hero-eyebrow">Project Intelligence Layer</p>
-            <h1 class="hero-headline">
-              AI Project Intelligence Layer 
-            </h1>
+            <h1 class="hero-headline">Ask Your Project.</h1>
             <p class="hero-subtext">
-              A shared intelligence layer that preserves project understanding across AI coding tools.
-              Cursor, Claude Code, Codex, Gemini CLI, and VS Code continue from the same project state —
-              instead of restarting context every time.
+              Understand what happened, why it changed, and what comes next — across every AI coding tool.
             </p>
-            <p class="hero-flow">Capture → Structure → Preserve → Retrieve → Transfer</p>
-            <blockquote class="hero-quote">Like Git for project cognition.</blockquote>
+            <p class="hero-powered">
+              Powered by the <strong>Cognitive Interaction Layer (CIL)</strong>, backed by a deterministic
+              <strong>Project Intelligence Layer (PIL)</strong>.
+            </p>
             <div class="hero-ctas">
-              <a href="#install" class="btn btn-primary">Get Started</a>
-              <a href="docs/" class="btn btn-ghost">View Docs</a>
-              <a href="mcp/" class="btn btn-ghost">Install MCP</a>
+              <a href="#cta" class="btn btn-primary">Get Started</a>
+              <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <p class="hero-tools">
-              Works with Cursor · Claude Code · Codex · Gemini CLI · VS Code · MCP agents
-            </p>
-            <a href="#problem" class="hero-scroll">Scroll ↓</a>
+            <a href="#why" class="hero-scroll">Scroll ↓</a>
           </div>
 
-          <div class="compare-panel" aria-label="Before and after Contorium">
-            <div class="compare-panel-header">
-              <span>Without PIL</span>
-              <span>With Contorium</span>
+          <div class="hero-flow-panel" aria-label="Ask flow demo">
+            <div class="hero-flow-step hero-flow-step--user">
+              <span class="hero-flow-label">You</span>
             </div>
-            <div class="compare-split">
-              <div class="compare-side compare-side--before">
-                <span class="compare-tag">Stateless session</span>
-                <p class="compare-bubble">Re-explain your architecture…</p>
-                <p class="compare-bubble">Re-describe project intent…</p>
-                <p class="compare-bubble">Context reset — starting over.</p>
-              </div>
-              <div class="compare-side compare-side--after">
-                <span class="compare-tag">Persistent intelligence</span>
-                <p class="compare-bubble">.contora/ loaded — state reconstructed</p>
-                <p class="compare-bubble">Intent, decisions, and impact preserved</p>
-                <p class="compare-bubble compare-bubble--highlight">Continue without re-explaining ✓</p>
-              </div>
+            <span class="hero-flow-arrow" aria-hidden="true">↓</span>
+            <div class="hero-flow-step hero-flow-step--query">
+              <span class="hero-flow-query">"What happened this week?"</span>
+            </div>
+            <span class="hero-flow-arrow" aria-hidden="true">↓</span>
+            <div class="hero-flow-step hero-flow-step--brand">
+              <span class="hero-flow-label">Contorium</span>
+            </div>
+            <span class="hero-flow-arrow" aria-hidden="true">↓</span>
+            <div class="hero-flow-engines">
+              <span class="hero-flow-engine">History</span>
+              <span class="hero-flow-engine">Decision</span>
+              <span class="hero-flow-engine">Timeline</span>
+              <span class="hero-flow-engine">Story</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-muted" id="problem">
+      <!-- §2 Why -->
+      <section class="section section-muted" id="why">
         <div class="container">
-          <h2 class="section-title section-title--center">AI coding tools forget your project</h2>
-          <p class="section-lead section-lead--center">
-            Modern AI coding tools are powerful — but stateless. Every new session resets your context.
+          <h2 class="section-title section-title--center">Why Contorium</h2>
+          <p class="section-lead section-lead--center why-lead">
+            AI can generate code.<br />
+            <strong>But software development is about understanding.</strong>
           </p>
-          <div class="problem-cards">
-            <article class="problem-card">
-              <div class="problem-card-icon" aria-hidden="true">↺</div>
-              <h3>Re-explain architecture</h3>
-              <p>You describe structure, modules, and conventions again — every session, every tool switch.</p>
+          <div class="why-cards">
+            <article class="why-card">
+              <h3>AI forgets architecture</h3>
+              <p>Structure, modules, and conventions vanish when the chat ends.</p>
             </article>
-            <article class="problem-card">
-              <div class="problem-card-icon" aria-hidden="true">⇄</div>
-              <h3>Re-state intent</h3>
-              <p>Project goals, decisions, and reasoning history don't carry over between Cursor, Claude, or Codex.</p>
+            <article class="why-card">
+              <h3>AI forgets decisions</h3>
+              <p>Why JWT, why MCP, what tradeoffs you accepted — gone every session.</p>
             </article>
-            <article class="problem-card">
-              <div class="problem-card-icon" aria-hidden="true">◎</div>
-              <h3>Broken continuity</h3>
-              <p>Switching tools breaks understanding. You lose the thread — not intelligence, but persistence.</p>
+            <article class="why-card">
+              <h3>AI forgets project evolution</h3>
+              <p>How the codebase grew and changed is never carried forward.</p>
+            </article>
+            <article class="why-card">
+              <h3>AI forgets why things changed</h3>
+              <p>Reasoning history disappears. You re-explain instead of continuing.</p>
             </article>
           </div>
-          <p class="problem-closer">
-            You are not missing intelligence. You are missing <strong>persistence</strong>.
+          <p class="why-closer">
+            Contorium preserves project intelligence so AI can <strong>reconstruct understanding</strong>
+            instead of restarting from zero.
           </p>
         </div>
       </section>
 
-      <section class="section section-light" id="solution">
-        <div class="container solution-container">
-          <h2 class="section-title section-title--center">Contorium preserves project intelligence</h2>
+      <!-- §3 Ask Your Project (CIL) -->
+      <section class="section section-light section-ask" id="ask">
+        <div class="container ask-container">
+          <h2 class="section-title section-title--center">Ask Your Project</h2>
           <p class="section-lead section-lead--center">
-            A persistent <strong>Project Intelligence Layer (PIL)</strong> — structured understanding stored in your workspace,
-            not chat history in the cloud.
+            Natural language interface powered by CIL.
           </p>
 
-          <p class="solution-chain">Capture → Structure → Preserve → Retrieve → Transfer</p>
-
-          <div class="solution-layout">
-            <div class="solution-panel solution-panel--store">
-              <h3 class="solution-panel-title">What gets preserved</h3>
-              <ul class="solution-store-list">
-                <li>Current project state</li>
-                <li>Project intent</li>
-                <li>Architectural decisions</li>
-                <li>Decision reasoning</li>
-                <li>Evolution history</li>
-                <li>Impact relationships</li>
-                <li>Provenance &amp; confidence</li>
-              </ul>
+          <div class="ask-demo">
+            <div class="ask-search" role="presentation">
+              <span class="ask-search-icon" aria-hidden="true">›</span>
+              <span class="ask-search-text">Why was MCP added?</span>
             </div>
-            <div class="solution-panel solution-panel--local">
-              <h3 class="solution-panel-title">Where it lives</h3>
-              <div class="solution-contora">
-                <div class="solution-contora-header">.contora/</div>
-                <ul class="solution-contora-tree">
-                  <li>state.json · handoff.json</li>
-                  <li>intent/ · timeline/ · graph/</li>
-                  <li>intelligence/ · governance/</li>
-                  <li>events/</li>
-                </ul>
-                <p class="solution-contora-note">Local-first — no cloud account required.</p>
+
+            <article class="ask-featured">
+              <div class="ask-featured-meta">
+                <span class="ask-engine-tag">Decision Center</span>
               </div>
+              <div class="ask-featured-body">
+                <p>MCP was introduced because the team needed a standard interface for AI agents to inspect project state, transfer context, and capture structured decisions — without coupling to a single IDE or chat provider.</p>
+              </div>
+            </article>
+
+            <div class="ask-examples">
+              <article class="ask-example">
+                <p class="ask-example-q">What happened this week?</p>
+                <span class="ask-example-arrow" aria-hidden="true">↓</span>
+                <span class="ask-engine-tag ask-engine-tag--sm">History</span>
+              </article>
+              <article class="ask-example">
+                <p class="ask-example-q">Tell me everything about auth.</p>
+                <span class="ask-example-arrow" aria-hidden="true">↓</span>
+                <span class="ask-engine-tag ask-engine-tag--sm">Knowledge Graph</span>
+              </article>
+              <article class="ask-example">
+                <p class="ask-example-q">What should I do next?</p>
+                <span class="ask-example-arrow" aria-hidden="true">↓</span>
+                <span class="ask-engine-tag ask-engine-tag--sm">Action Engine</span>
+              </article>
+              <article class="ask-example">
+                <p class="ask-example-q">What was the project state last Friday?</p>
+                <span class="ask-example-arrow" aria-hidden="true">↓</span>
+                <span class="ask-engine-tag ask-engine-tag--sm">Time Travel</span>
+              </article>
+              <article class="ask-example">
+                <p class="ask-example-q">Explain this architecture.</p>
+                <span class="ask-example-arrow" aria-hidden="true">↓</span>
+                <span class="ask-engine-tag ask-engine-tag--sm">Story</span>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="pil">
+      <!-- §4 How It Works -->
+      <section class="section" id="how">
         <div class="container">
-          <h2 class="section-title section-title--center">Project Intelligence Layer (PIL)</h2>
-          <p class="section-lead section-lead--center">
-            Contorium is built around a simple cognitive model — four core objects and five intelligence dimensions.
+          <h2 class="section-title section-title--center">How It Works</h2>
+          <p class="section-lead section-lead--center how-lead-oneline">
+            Every interaction becomes structured project intelligence that can be queried later.
           </p>
-          <div class="pil-dual-grid">
-            <div class="pil-panel">
-              <h3 class="pil-panel-title">Core Objects</h3>
-              <ul class="pil-object-list">
-                <li><span class="pil-key">STATE</span> — what exists now</li>
-                <li><span class="pil-key">INTENT</span> — what the project is trying to achieve</li>
-                <li><span class="pil-key">DECISION</span> — what was decided</li>
-                <li><span class="pil-key">WHY</span> — why it was decided</li>
-              </ul>
+          <div class="how-pipeline" aria-label="User flow">
+            <div class="how-pipeline-step">
+              <span class="how-pipeline-label">Capture</span>
             </div>
-            <div class="pil-panel">
-              <h3 class="pil-panel-title">Intelligence Dimensions</h3>
-              <ul class="pil-object-list">
-                <li><span class="pil-key">TIMELINE</span> — how it evolved</li>
-                <li><span class="pil-key">IMPACT</span> — what it affects</li>
-                <li><span class="pil-key">CONFIDENCE</span> — reliability of understanding</li>
-                <li><span class="pil-key">EVOLUTION</span> — structural changes over time</li>
-                <li><span class="pil-key">PROVENANCE</span> — origin of knowledge</li>
-              </ul>
+            <span class="how-pipeline-arrow" aria-hidden="true">↓</span>
+            <div class="how-pipeline-step">
+              <span class="how-pipeline-label">Structure</span>
+            </div>
+            <span class="how-pipeline-arrow" aria-hidden="true">↓</span>
+            <div class="how-pipeline-step how-pipeline-step--accent">
+              <span class="how-pipeline-label">Cognitive Events</span>
+            </div>
+            <span class="how-pipeline-arrow" aria-hidden="true">↓</span>
+            <div class="how-pipeline-step">
+              <span class="how-pipeline-label">Ask</span>
+            </div>
+            <span class="how-pipeline-arrow" aria-hidden="true">↓</span>
+            <div class="how-pipeline-step how-pipeline-step--result">
+              <span class="how-pipeline-label">Answer</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-muted" id="architecture">
+      <!-- §5 Project Intelligence (PIL) -->
+      <section class="section section-muted" id="pil">
         <div class="container">
-          <h2 class="section-title section-title--center">Architecture</h2>
+          <h2 class="section-title section-title--center">The Intelligence Stack</h2>
           <p class="section-lead section-lead--center">
-            A shared intelligence layer across AI tools — one engine, three peer runtimes, one workspace store.
+            CIL on top. PIL underneath.
           </p>
-          <div class="arch-diagram" aria-label="Contorium architecture">
-            <div class="arch-diagram-core">
-              <span class="arch-diagram-label">PIL Core</span>
-              <p class="arch-diagram-flow">Capture · Structure · Preserve · Retrieve · Transfer</p>
-            </div>
-            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
-            <div class="arch-diagram-engine">state-core engine</div>
-            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
-            <div class="arch-diagram-runtimes">
-              <span>IDE</span>
-              <span>MCP</span>
-              <span>CLI</span>
-            </div>
-            <span class="memory-flow-arrow" aria-hidden="true">↓</span>
-            <div class="arch-diagram-store">.contora/</div>
+
+          <div class="stack-diagram" aria-label="CIL and PIL stack">
+            <div class="stack-layer stack-layer--you">You</div>
+            <span class="stack-arrow" aria-hidden="true">↓</span>
+            <div class="stack-layer stack-layer--cil">CIL</div>
+            <span class="stack-arrow" aria-hidden="true">↓</span>
+            <div class="stack-layer stack-layer--kernel">Kernel</div>
+            <span class="stack-arrow" aria-hidden="true">↓</span>
+            <div class="stack-layer stack-layer--pil">PIL</div>
+            <span class="stack-arrow" aria-hidden="true">↓</span>
+            <div class="stack-layer stack-layer--store">.contora</div>
           </div>
+
+          <p class="stack-tagline">
+            <strong>CIL understands.</strong> <strong>PIL remembers.</strong>
+          </p>
+
+          <h3 class="pil-stores-title">What Contorium Stores</h3>
+          <div class="pil-stores-grid">
+            <span class="pil-store-chip">Project State</span>
+            <span class="pil-store-chip">Architecture Decisions</span>
+            <span class="pil-store-chip">Project History</span>
+            <span class="pil-store-chip">Knowledge Graph</span>
+            <span class="pil-store-chip">Snapshots</span>
+            <span class="pil-store-chip">Impact</span>
+            <span class="pil-store-chip">Health</span>
+            <span class="pil-store-chip">Timeline</span>
+          </div>
+          <p class="pil-stores-note">Everything stays inside your repository.</p>
         </div>
       </section>
 
+      <!-- §6 Three Runtimes -->
       <section class="section" id="runtimes">
         <div class="container">
-          <h2 class="section-title section-title--center">Three peer runtimes</h2>
+          <h2 class="section-title section-title--center">Built for Humans and AI</h2>
           <p class="section-lead section-lead--center">
-            IDE, MCP, and CLI are independent entry points — all reading and writing the same project intelligence.
+            One Cognitive Kernel — three ways to ask, capture, and explore.
           </p>
-          <div class="runtime-cards">
+
+          <div class="runtime-bridge">
+            <div class="runtime-bridge-side runtime-bridge-side--human">
+              <span class="runtime-bridge-icon" aria-hidden="true">👤</span>
+              <span class="runtime-bridge-label">Developer</span>
+            </div>
+            <div class="runtime-bridge-center">
+              <span class="runtime-bridge-cil">CIL</span>
+            </div>
+            <div class="runtime-bridge-side runtime-bridge-side--ai">
+              <span class="runtime-bridge-icon" aria-hidden="true">◇</span>
+              <span class="runtime-bridge-label">AI Agent</span>
+            </div>
+          </div>
+
+          <div class="runtime-cards runtime-cards--cil">
             <article class="runtime-card">
-              <h3>IDE Runtime</h3>
-              <p class="runtime-card-lead">Capture project intelligence while you work.</p>
+              <h3>IDE</h3>
+              <p class="runtime-card-lead">Ask Contorium while you code.</p>
               <ul>
-                <li>Focus tracking</li>
-                <li>Decision recording</li>
+                <li>Ask · History · Decisions</li>
+                <li>Capture focus &amp; notes</li>
                 <li>Project visualization</li>
               </ul>
             </article>
             <article class="runtime-card runtime-card--accent">
-              <h3>MCP Runtime</h3>
-              <p class="runtime-card-lead">Expose intelligence to AI agents.</p>
+              <h3>MCP</h3>
+              <p class="runtime-card-lead">CIL for AI agents.</p>
               <ul>
-                <li>Inspect project state</li>
-                <li>Transfer context</li>
-                <li>Capture structured memory</li>
+                <li><code>ask_project</code></li>
+                <li>Transfer context &amp; story</li>
+                <li>Cognitive health</li>
               </ul>
             </article>
             <article class="runtime-card">
-              <h3>CLI Runtime</h3>
-              <p class="runtime-card-lead">Terminal-based project intelligence access.</p>
+              <h3>CLI</h3>
+              <p class="runtime-card-lead">Ask from the terminal.</p>
               <ul>
-                <li>Inspect project evolution</li>
-                <li>Audit decisions</li>
-                <li>Export context</li>
+                <li><code>contorium ask</code></li>
+                <li>History · DNA · health</li>
+                <li>Inspect &amp; transfer</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-light" id="how">
-        <div class="container how-container">
-          <h2 class="section-title section-title--center">How it works</h2>
+      <!-- §7 Examples -->
+      <section class="section section-light" id="examples">
+        <div class="container">
+          <h2 class="section-title section-title--center">Works Everywhere</h2>
           <p class="section-lead section-lead--center">
-            From connecting an AI tool to capturing new decisions — one continuous loop in your project folder.
+            One project. One intelligence layer. Every runtime.
           </p>
-          <div class="how-steps">
-            <article class="how-step">
-              <span class="how-step-num" aria-hidden="true">1</span>
-              <h3>AI agent connects</h3>
-              <p>IDE, MCP, or CLI attaches to your workspace folder.</p>
+          <div class="works-logos">
+            <span class="works-logo">Cursor</span>
+            <span class="works-logo">Claude Code</span>
+            <span class="works-logo">Codex</span>
+            <span class="works-logo">Gemini</span>
+            <span class="works-logo">VS Code</span>
+            <span class="works-logo works-logo--accent">MCP</span>
+          </div>
+
+          <div class="example-cards">
+            <article class="example-card">
+              <p class="example-card-q">"Why not Redux?"</p>
+              <p class="example-card-a">Decision Center returns the ADR, alternatives considered, and reasoning — not a guess from chat memory.</p>
             </article>
-            <article class="how-step">
-              <span class="how-step-num" aria-hidden="true">2</span>
-              <h3>Contorium loads <code>.contora/</code></h3>
-              <p>Existing project intelligence is read from local artifacts.</p>
+            <article class="example-card">
+              <p class="example-card-q">"What do we know about auth?"</p>
+              <p class="example-card-a">Knowledge Graph connects modules, decisions, and timeline events around a single entity.</p>
             </article>
-            <article class="how-step">
-              <span class="how-step-num" aria-hidden="true">3</span>
-              <h3>State is reconstructed</h3>
-              <p>Intent, decisions, and structure are rebuilt for the session.</p>
-            </article>
-            <article class="how-step">
-              <span class="how-step-num" aria-hidden="true">4</span>
-              <h3>AI inspects intelligence</h3>
-              <p>Agents read context instead of asking you to re-explain.</p>
-            </article>
-            <article class="how-step">
-              <span class="how-step-num" aria-hidden="true">5</span>
-              <h3>Work continues</h3>
-              <p>Development proceeds with full project understanding.</p>
-            </article>
-            <article class="how-step">
-              <span class="how-step-num" aria-hidden="true">6</span>
-              <h3>Decisions are captured</h3>
-              <p>New focus, notes, and changes flow back into <code>.contora/</code>.</p>
+            <article class="example-card">
+              <p class="example-card-q">Switch Cursor → Claude Code</p>
+              <p class="example-card-a">Transfer project story or context — continue without re-explaining architecture.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-muted" id="transfer">
+      <!-- §8 Features -->
+      <section class="section section-muted" id="features">
         <div class="container">
-          <h2 class="section-title section-title--center">AI continuity without re-explaining</h2>
+          <h2 class="section-title section-title--center">CIL Features</h2>
           <p class="section-lead section-lead--center">
-            Seamless context transfer across AI tools — switch without losing understanding.
+            Built for long-lived AI-assisted projects.
           </p>
-          <div class="transfer-modes">
-            <article class="transfer-mode">
-              <h3>Transfer Context</h3>
-              <p>Quick continuation</p>
-              <span class="transfer-mode-tokens">~300–800 tokens</span>
+          <div class="feature-grid">
+            <article class="feature-item">
+              <h3>Project History</h3>
+              <p>Unified timeline of cognitive events</p>
             </article>
-            <article class="transfer-mode transfer-mode--featured">
-              <h3>Transfer Intelligence</h3>
-              <p>Full project understanding</p>
-              <span class="transfer-mode-tokens">~8000 tokens</span>
+            <article class="feature-item">
+              <h3>Decision Center</h3>
+              <p>ADR-style records with Why and alternatives</p>
             </article>
-            <article class="transfer-mode">
-              <h3>Transfer Handoff</h3>
-              <p>Runtime continuation</p>
-              <span class="transfer-mode-tokens">~100–300 tokens</span>
+            <article class="feature-item">
+              <h3>Time Travel</h3>
+              <p>Snapshot replay for any date</p>
+            </article>
+            <article class="feature-item">
+              <h3>Knowledge Graph</h3>
+              <p>Everything related to an entity</p>
+            </article>
+            <article class="feature-item">
+              <h3>Cognitive Health</h3>
+              <p>Missing WHY, stale decisions, conflicts</p>
+            </article>
+            <article class="feature-item">
+              <h3>Project Story</h3>
+              <p>Goal + journey narrative for onboarding</p>
+            </article>
+            <article class="feature-item">
+              <h3>Project DNA</h3>
+              <p>Identity fingerprint for agent handoff</p>
+            </article>
+            <article class="feature-item">
+              <h3>Evolution Journey</h3>
+              <p>How the project grew over time</p>
             </article>
           </div>
-          <p class="continuity-tagline">Cursor → Claude Code → Codex → Gemini CLI</p>
-        </div>
-      </section>
 
-      <section class="section" id="value">
-        <div class="container">
-          <h2 class="section-title section-title--center">Why developers use Contorium</h2>
-          <div class="value-grid">
-            <div class="value-item">Stop re-explaining projects to AI</div>
-            <div class="value-item">Maintain continuity across tools</div>
-            <div class="value-item">Preserve architectural reasoning</div>
-            <div class="value-item">Share one consistent project understanding</div>
-            <div class="value-item value-item--full">Build long-lived AI-assisted projects</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-light not-a-section" id="not-a">
-        <div class="container">
-          <h2 class="section-title section-title--center">Contorium is not</h2>
-          <ul class="not-a-list">
-            <li>Not an AI agent</li>
-            <li>Not a task automation system</li>
-            <li>Not a project manager</li>
-            <li>Not a code generator</li>
-          </ul>
-          <p class="not-a-closer">
-            It does not make decisions. It preserves the <strong>intelligence behind decisions</strong>.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="tools">
-        <div class="container">
-          <h2 class="section-title section-title--center">Works with</h2>
-          <div class="tool-pills">
-            <span class="tool-pill">Cursor</span>
-            <span class="tool-pill">Claude Code</span>
-            <span class="tool-pill">OpenAI Codex</span>
-            <span class="tool-pill">Gemini CLI</span>
-            <span class="tool-pill">VS Code</span>
-            <span class="tool-pill">Any MCP-compatible agent</span>
+          <h3 class="local-title">Local First</h3>
+          <div class="local-principles">
+            <span class="local-principle">No Cloud</span>
+            <span class="local-principle">No Vendor Lock-in</span>
+            <span class="local-principle">Deterministic</span>
+            <span class="local-principle">Git Friendly</span>
+            <span class="local-principle local-principle--accent">Own Your Intelligence</span>
           </div>
         </div>
       </section>
 
-      <section class="section section-muted" id="trust">
+      <!-- §9 Architecture -->
+      <section class="section" id="architecture">
         <div class="container">
-          <h2 class="section-title section-title--center">Local-first by design</h2>
+          <h2 class="section-title section-title--center">Open Architecture</h2>
           <p class="section-lead section-lead--center">
-            Contorium runs entirely inside your workspace. No cloud. No external dependency. No vendor lock-in.
+            Everything routes through one Cognitive Kernel.
           </p>
-          <div class="code-block local-first-block">
-            <div class="code-block-header">.contora/</div>
-            <pre><code>├── state.json
-├── handoff.json
-├── intent/
-├── timeline/
-├── graph/
-├── intelligence/
-└── events/</code></pre>
+          <div class="arch-stack" aria-label="Architecture">
+            <div class="arch-stack-layer arch-stack-layer--cil">CIL</div>
+            <span class="arch-stack-arrow" aria-hidden="true">↓</span>
+            <div class="arch-stack-layer arch-stack-layer--kernel">Kernel</div>
+            <span class="arch-stack-arrow" aria-hidden="true">↓</span>
+            <div class="arch-stack-layer arch-stack-layer--pil">PIL</div>
+            <span class="arch-stack-arrow" aria-hidden="true">↓</span>
+            <div class="arch-stack-layer arch-stack-layer--store">.contora</div>
           </div>
-          <div class="trust-grid">
-            <div class="trust-item">Local-first · MIT License</div>
-            <div class="trust-item">No cloud dependency</div>
-            <div class="trust-item">No vendor lock-in</div>
-            <div class="trust-item">MCP-compatible ecosystem</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-install" id="install">
-        <div class="container install-container">
-          <div class="install-header">
-            <h2 class="section-title section-title--center">Install MCP Runtime</h2>
-            <p class="section-lead section-lead--center">
-              Run one command for your AI host, then open the tool in your project folder. Node.js 18+ required.
-            </p>
-          </div>
-
-          <div class="install-optional">
-            <span class="install-optional-label">Optional</span>
-            <code class="install-optional-cmd">npm install -g @contorium/mcp</code>
-            <span class="install-optional-hint">Faster cold start — or use <code>npx @contorium/mcp</code> directly</span>
-          </div>
-
-          <div class="install-host-grid">
-            <article class="install-host-card">
-              <div class="install-host-card-head">
-                <span class="install-host-name">Codex</span>
-                <a href="mcp/#codex" class="install-host-link">Setup guide →</a>
-              </div>
-              <pre class="install-host-code"><code>codex mcp add contorium -- npx @contorium/mcp</code></pre>
-            </article>
-            <article class="install-host-card">
-              <div class="install-host-card-head">
-                <span class="install-host-name">Claude Code</span>
-                <a href="mcp/#claude-code" class="install-host-link">Setup guide →</a>
-              </div>
-              <pre class="install-host-code"><code>claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
-            </article>
-            <article class="install-host-card">
-              <div class="install-host-card-head">
-                <span class="install-host-name">Cursor</span>
-                <a href="mcp/#cursor" class="install-host-link">Setup guide →</a>
-              </div>
-              <ul class="install-host-steps">
-                <li>Settings → MCP → Add server</li>
-                <li>Command: <code>npx</code> · Args: <code>@contorium/mcp</code></li>
-                <li>Reload Window</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="install-more">
-            <p class="install-more-title">Also available</p>
-            <div class="install-more-grid">
-              <a class="install-more-card" href="docs/ide-extension.html">
-                <span class="install-more-label">IDE extension</span>
-                <span class="install-more-desc">VS Code / Cursor · VSIX or Marketplace</span>
-              </a>
-              <a class="install-more-card" href="docs/cli.html">
-                <span class="install-more-label">CLI</span>
-                <span class="install-more-desc">Terminal · inspect, transfer, capture</span>
-              </a>
-              <a class="install-more-card" href="docs/install.html">
-                <span class="install-more-label">Full install guide</span>
-                <span class="install-more-desc">All adapters · uninstall · scenarios</span>
-              </a>
-            </div>
+          <div class="arch-runtimes">
+            <span>IDE</span>
+            <span>MCP</span>
+            <span>CLI</span>
+            <span>Dashboard</span>
           </div>
         </div>
       </section>
 
+      <!-- §10 Open Source -->
+      <section class="section section-muted" id="opensource">
+        <div class="container">
+          <h2 class="section-title section-title--center">Open Source</h2>
+          <p class="section-lead section-lead--center">
+            MIT License — inspect, fork, and run entirely on your machine.
+          </p>
+          <div class="opensource-grid">
+            <a class="opensource-card" href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">
+              <span class="opensource-label">GitHub</span>
+              <span class="opensource-desc">ContoriumLabs/contorium</span>
+            </a>
+            <a class="opensource-card" href="https://www.npmjs.com/package/@contorium/mcp" target="_blank" rel="noopener noreferrer">
+              <span class="opensource-label">npm</span>
+              <span class="opensource-desc">@contorium/mcp</span>
+            </a>
+            <a class="opensource-card" href="mcp/">
+              <span class="opensource-label">MCP</span>
+              <span class="opensource-desc">Setup for Cursor, Claude, Codex</span>
+            </a>
+            <a class="opensource-card" href="docs/ide-extension.html">
+              <span class="opensource-label">VS Code</span>
+              <span class="opensource-desc">IDE extension · Marketplace</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- §11 CTA -->
       <section class="cta-final" id="cta">
         <div class="container">
           <div class="cta-final-inner">
-            <p class="cta-final-eyebrow">Ready to start</p>
-            <h2>A new layer for AI-native development</h2>
+            <h2>Build AI that understands projects.</h2>
             <p class="cta-final-lead">
-              Persistent project intelligence across AI systems — not a tool, not an assistant,
-              a shared cognitive layer for building software with AI.
+              Contorium lets you ask your project what happened, why it changed, and what comes next.
             </p>
             <div class="cta-final-actions">
-              <a href="#install" class="btn btn-primary btn-lg">Get Started</a>
-              <a href="docs/" class="btn btn-ghost btn-lg">View Docs</a>
-              <a href="mcp/" class="btn btn-ghost btn-lg">Install MCP</a>
+              <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="docs/install.html" class="btn btn-ghost btn-lg">Install</a>
+              <a href="docs/" class="btn btn-ghost btn-lg">Documentation</a>
             </div>
-            <p class="cta-final-footnote">Local-first · MIT License · Works with Cursor, Claude, Codex, Gemini CLI</p>
+            <p class="cta-final-footnote">Local-first · MIT License · CIL v3</p>
           </div>
         </div>
       </section>
@@ -477,22 +459,16 @@
       <div class="container">
         <div class="footer-minimal">
           <a href="#" class="logo">
-            <img
-              class="logo-img"
-              src="logo.png"
-              width="36"
-              height="36"
-              alt="Contorium logo: letter C with blue-to-magenta arc on cyan-to-purple circle"
-            />
+            <img class="logo-img" src="logo.png" width="36" height="36" alt="Contorium logo" />
             Contorium
           </a>
           <p class="footer-oneliner">
-            A Project Intelligence Layer that preserves structured understanding across AI coding tools and evolving software systems.
+            Ask your project — Cognitive Interaction Layer on a local Project Intelligence Layer.
           </p>
           <ul class="footer-trust">
             <li>Local-first</li>
             <li>No telemetry</li>
-            <li>MCP-compatible ecosystem</li>
+            <li>MCP-compatible</li>
           </ul>
           <div class="footer-minimal-links">
             <a href="docs/">Docs</a>

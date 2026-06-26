@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Get started with Contorium — choose IDE, MCP, or CLI." />
+    <meta name="description" content="Ask your project with Contorium — CIL, IDE, MCP, or CLI." />
     <title>Quick start — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -52,8 +52,64 @@
 <blockquote>
 <p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
 </blockquote>
-<p>Contorium is an <strong>AI Project Intelligence Layer</strong>. It keeps project understanding in your workspace so AI tools can <strong>continue where you left off</strong> — without re-explaining architecture every session.</p>
-<p><strong>You use it by:</strong> installing one entry point (IDE, MCP, or CLI), opening a <strong>folder</strong> workspace, then using <strong>Inspect · Transfer · Capture</strong> as you work with AI.</p>
+<p><strong>Contorium lets you ask your project.</strong></p>
+<p>It is a local <strong>Cognitive Interaction Layer (CIL)</strong> on a <strong>Project Intelligence Layer (PIL)</strong>. Ask what happened, why a decision was made, or what comes next — then switch between Cursor, Claude Code, Codex, Gemini CLI, and VS Code without re-explaining your architecture.</p>
+<p><strong>You use it by:</strong> installing one entry point (IDE, MCP, or CLI), opening a <strong>folder</strong> workspace, then <strong>Ask · Capture · Transfer</strong> as you work with AI.</p>
+<hr>
+<h2>Ask your project (CIL)</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Where it routes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What happened this week?</td>
+<td>Project History</td>
+</tr>
+<tr>
+<td>Why was MCP added?</td>
+<td>Decision Center</td>
+</tr>
+<tr>
+<td>What should I do next?</td>
+<td>Action Engine (suggestions only)</td>
+</tr>
+<tr>
+<td>Tell me everything about auth</td>
+<td>Knowledge Graph</td>
+</tr>
+<tr>
+<td>What was state last Friday?</td>
+<td>Time Travel (Snapshot)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>How to ask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CLI</strong></td>
+<td><code>contorium ask "Why was MCP added?"</code></td>
+</tr>
+<tr>
+<td><strong>MCP</strong></td>
+<td>Agent calls <code>ask_project</code></td>
+</tr>
+<tr>
+<td><strong>IDE</strong></td>
+<td>Command palette → <strong>Ask Contorium…</strong> · Cortex panel</td>
+</tr>
+</tbody>
+</table>
+<p>CIL suggests and explains. It <strong>never executes tasks</strong> for you.</p>
 <hr>
 <h2>Choose your entry point</h2>
 <table>
@@ -85,18 +141,19 @@
 <ol>
 <li>Install the extension → open a <strong>folder</strong> (not a single file).</li>
 <li>Set <strong>Current focus</strong> in the Contorium sidebar.</li>
-<li>Code as usual — Contorium updates <code>.contora/</code> automatically.</li>
+<li>Use <strong>Ask Contorium…</strong> or Cortex (<strong>History · Decisions · Ask</strong>) to explore project understanding.</li>
 <li>Starting a new AI chat? Confirm the <strong>handoff prompt</strong> (Y/n) or use <strong>Transfer Context</strong> from the sidebar.</li>
 </ol>
 <h3>MCP + AI agent</h3>
 <ol>
 <li>Run the <a href="mcp.html#connect-your-ai-tool">one-line MCP setup</a> for your host.</li>
 <li>Open Codex / Claude / Cursor in your project — MCP starts automatically.</li>
-<li>The agent reads project state via <code>inspect_*</code> tools and exports context via <code>transfer_*</code> when needed.</li>
+<li>Ask via <code>ask_project</code> or use <code>inspect_*</code> / <code>transfer_*</code> when the agent needs structured facts.</li>
 </ol>
 <h3>Terminal</h3>
 <pre><code class="language-bash">contorium init .
-contorium inspect health .
+contorium ask &quot;What is this project about?&quot;
+contorium health .
 contorium transfer context --copy
 </code></pre>
 <p>See the <a href="cli.html">CLI guide</a> for the full command list.</p>
@@ -104,8 +161,8 @@ contorium transfer context --copy
 <h2>Three things to remember</h2>
 <ol>
 <li><strong>Open a folder</strong> — Contorium needs a project root, not a lone file.</li>
+<li><strong>Ask, don't re-prompt</strong> — use <code>contorium ask</code> or <code>ask_project</code> instead of pasting long explanations.</li>
 <li><strong>Local-first</strong> — everything lives in <code>.contora/</code> inside your repo. No cloud account.</li>
-<li><strong>Transfer, don't re-prompt</strong> — use Transfer Context / Handoff instead of pasting long explanations again.</li>
 </ol>
 <hr>
 <h2>What Contorium is not</h2>
@@ -114,13 +171,13 @@ contorium transfer context --copy
 <li>Not a project manager or task runner</li>
 <li>Not a cloud service</li>
 </ul>
-<p>It <strong>records and preserves</strong> project intelligence. It does <strong>not</strong> make decisions for you.</p>
+<p>CIL suggests. PIL records. <strong>Neither executes work for you.</strong></p>
 <hr>
 <h2>Next steps</h2>
 <ul>
 <li><a href="install.html">Install all adapters</a></li>
+<li><a href="../mcp/">MCP setup wizard</a></li>
 <li><a href="dashboard.html">Runtime dashboard</a> — terminal status UI (starts automatically)</li>
-<li><a href="../mcp/">Interactive MCP setup</a></li>
 </ul>
         </article>
       </main>

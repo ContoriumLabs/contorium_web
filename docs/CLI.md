@@ -4,7 +4,31 @@
 
 The CLI is a **peer PIL Runtime** with IDE and MCP, sharing `@contora/state-core` and `.contora/`.
 
-- [Quick start](getting-started.html) · [INSTALL](./INSTALL.md) · [Home](../index.html) · [Dashboard](./DASHBOARD.md)
+- [Quick start](getting-started.html) · [INSTALL](./INSTALL.md) · [Home](../index.html) · [Quick start](getting-started.html) · [Dashboard](./DASHBOARD.md)
+
+---
+
+## Ask your project (CIL)
+
+Primary user-facing commands — mirror MCP `ask_project` and related CIL tools:
+
+```bash
+contorium ask "Why was MCP added?"
+contorium ask "What happened this week?"
+contorium health .
+contorium questions
+contorium entity mcp
+contorium transfer --mode=story --copy
+```
+
+| Capability | CLI | MCP equivalent |
+|------------|-----|----------------|
+| Ask | `contorium ask "…"` | `ask_project` |
+| History | `contorium history` | `get_project_history` |
+| Decisions | `contorium decisions` | `get_decisions` |
+| Next actions | `contorium next` | `get_next_actions` |
+| Health | `contorium health` | `get_cognitive_health` |
+| Unified transfer | `contorium transfer --mode=story\|essence\|…` | `transfer_project` |
 
 ---
 
@@ -50,7 +74,7 @@ Legacy aliases: `snapshot copy` → `transfer context` · `export intelligence` 
 | **Init** | `npx contorium init [path]` |
 | **Refresh** | `npx contorium sync [path]` |
 | **Bootstrap** | `npx contorium bootstrap [path] [--source ide\|mcp\|cli]` |
-| **Dashboard** | Automatic after bootstrap — Cognitive State TUI (see [DASHBOARD.md](./DASHBOARD.md)) |
+| **Dashboard** | Automatic after bootstrap — Cognitive State TUI (see [Runtime dashboard](dashboard.html)) |
 | **Decision derive** | `npx contorium decision derive [path]` |
 | **Governance** | `npx contorium governance review\|cycle\|export [path]` |
 | **Legacy export** | `npx contorium export [path]` · `npx contorium handoff --copy-to-ai` |
@@ -110,10 +134,20 @@ When MCP or IDE bootstraps the workspace, a **Cognitive State** dashboard worker
 | Copy context | **`c`** |
 | Inject handoff | **`i`** or **Enter** (when injection pending) |
 | Quit | **`q`** |
-| View mode | **`↑` / `↓`** — Live · Governance Overlay · Debug Trace |
-| Apply mode | **Enter** |
+| View mode | **`↑` / `↓`** — Live · Governance · Debug · History · **LLM Config** |
+| LLM provider (view E) | **`←` / `→`** or **`h`** — cycle provider · **Enter** confirm |
+| LLM API key (view E step 2) | Type or **Ctrl+V** · **Enter** save & test · **Esc** back |
+| Apply cognitive mode | **Enter** — A/B persist · C/D/E preview (E uses provider/key flow) |
 
-See [DASHBOARD.md](./DASHBOARD.md).
+See [Runtime dashboard](dashboard.html) and [AI Layer (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md).
+
+### AI Layer (CLI)
+
+```bash
+contorium ai setup [path] [--provider openai|anthropic|open_router|gemini|deepseek|ollama] [--model MODEL] [--enable]
+contorium ai status [path] [--json]
+contorium ai test [path] [--json]
+```
 
 ### Runtime dashboard commands (debug / dev only)
 

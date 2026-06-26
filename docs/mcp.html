@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Connect @contorium/mcp to your AI coding agent." />
+    <meta name="description" content="Connect @contorium/mcp — ask_project and CIL tools for AI agents." />
     <title>MCP server — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -52,10 +52,41 @@
 <blockquote>
 <p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
 </blockquote>
-<p>stdio MCP server — <strong>PIL Runtime</strong> for Claude Code, Cursor Agent, OpenAI Codex, Gemini CLI, and other MCP hosts.</p>
-<ul>
-<li><a href="getting-started.html">Quick start</a> · <a href="../mcp/">Package README</a> · <a href="dashboard.html">Dashboard</a> · <a href="cli.html">CLI</a> · <a href="install.html">Install</a></li>
-</ul>
+<p>stdio MCP server — <strong>CIL for AI agents</strong> on top of a local <strong>Project Intelligence Layer (PIL)</strong>.</p>
+<p>Connect once to Claude Code, Cursor Agent, Codex, Gemini CLI, or VS Code MCP. Agents can <strong><code>ask_project</code></strong>, inspect state, capture decisions, and transfer context — without you re-explaining architecture every session.</p>
+<p><strong>Normal use:</strong> configure once, open your AI tool in the project folder — the host starts MCP automatically.</p>
+<hr>
+<h2>CIL tools (questions and narratives)</h2>
+<p>Natural-language and narrative queries route through <strong>Cognitive Kernel</strong>:</p>
+<pre><code class="language-text">ask_project · get_next_actions · get_cognitive_health · get_entity_knowledge
+get_project_essence · get_handoff_replay · get_snapshot · get_decision_graph
+get_project_history · transfer_story · transfer_project · get_suggested_questions
+</code></pre>
+<p>CLI mirror: <code>contorium ask</code> · <code>contorium health</code> · <code>contorium transfer --mode=…</code></p>
+<p>See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/CIL_V3.md">CIL v3 spec (GitHub)</a> · <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md">Surfaces (GitHub)</a>.</p>
+<hr>
+<h2>AI Layer tools (optional — default off)</h2>
+<p>Explanation-layer LLM status and connectivity. Fact/PIL tools do not require LLM.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_ai_status</code></td>
+<td>Enabled modules, provider, router mode (no secrets)</td>
+</tr>
+<tr>
+<td><code>test_ai_connection</code></td>
+<td>Test using <code>.contora/config/llm.json</code> + per-provider keys or env</td>
+</tr>
+</tbody>
+</table>
+<p>Configure via <code>contorium ai setup</code>, CLI dashboard <strong>View E (LLM Config)</strong>, or IDE <code>contora.cilAiEnabled</code>. Keys: <code>.contora/config/.llm-keys.json</code> (per provider).</p>
+<p>See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md">AI Layer (GitHub)</a>.</p>
 <hr>
 <h2>Before you start</h2>
 <table>
@@ -81,6 +112,56 @@
 </tbody>
 </table>
 <h2>Main MCP tools</h2>
+<h3>Ask (CIL — recommended first)</h3>
+<p>Natural-language queries route through the <strong>Cognitive Kernel</strong>. CIL suggests and explains — it never executes tasks.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ask_project</code></td>
+<td>Ask anything — history, decisions, impact, next steps</td>
+</tr>
+<tr>
+<td><code>get_suggested_questions</code></td>
+<td>Onboarding prompts when <code>.contora/</code> is new</td>
+</tr>
+<tr>
+<td><code>get_project_history</code></td>
+<td>Event feed for a time range</td>
+</tr>
+<tr>
+<td><code>get_decisions</code></td>
+<td>Decision Center (ADR-style records)</td>
+</tr>
+<tr>
+<td><code>get_next_actions</code></td>
+<td>Suggested next focus (suggestions only)</td>
+</tr>
+<tr>
+<td><code>get_cognitive_health</code></td>
+<td>Missing WHY, stale decisions, conflicts</td>
+</tr>
+<tr>
+<td><code>get_entity_knowledge</code></td>
+<td>Knowledge Graph for a module or topic</td>
+</tr>
+<tr>
+<td><code>get_snapshot</code></td>
+<td>Time travel — state nearest a date</td>
+</tr>
+<tr>
+<td><code>transfer_project</code></td>
+<td>Unified export — <code>context</code> · <code>intelligence</code> · <code>story</code> · <code>essence</code> · <code>handoff</code></td>
+</tr>
+</tbody>
+</table>
+<p>CLI mirror: <code>contorium ask "…"</code> · <code>contorium health</code> · <code>contorium transfer --mode=story</code></p>
+<h3>PIL (Inspect · Transfer · Capture)</h3>
 <table>
 <thead>
 <tr>
@@ -92,8 +173,8 @@
 <tbody>
 <tr>
 <td><strong>Inspect</strong></td>
-<td>Read project intelligence</td>
-<td><code>inspect_state</code>, <code>inspect_health</code>, <code>inspect_graph</code></td>
+<td>Read structured project facts</td>
+<td><code>inspect_state</code>, <code>inspect_health</code>, <code>inspect_decision</code></td>
 </tr>
 <tr>
 <td><strong>Transfer</strong></td>
@@ -401,7 +482,7 @@ See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM
 <li>MCP light sync — 5s poll + watch on <code>.contora/events</code> and <code>.git/HEAD</code></li>
 <li>Dashboard wake on file/git changes</li>
 </ul>
-<p>See <a href="dashboard.html">DASHBOARD.md</a>. No manual <code>contorium attach</code> in normal use.</p>
+<p>See <a href="dashboard.html">Runtime dashboard</a>. No manual <code>contorium attach</code> in normal use.</p>
 <hr>
 <h2>Environment variables</h2>
 <table>
@@ -498,7 +579,7 @@ See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM
 </tr>
 <tr>
 <td>Dashboard not visible</td>
-<td>Press <strong>Space</strong> in Contorium terminal tab, or enable IDE status bar — debug: <code>handoff --show</code> — see <a href="dashboard.html">DASHBOARD.md</a></td>
+<td>Press <strong>Space</strong> in Contorium terminal tab, or enable IDE status bar — debug: <code>handoff --show</code> — see <a href="dashboard.html">Runtime dashboard</a></td>
 </tr>
 </tbody>
 </table>

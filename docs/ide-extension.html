@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contorium VS Code / Cursor extension guide." />
+    <meta name="description" content="Ask Contorium, Cortex panels, and IDE workflow." />
     <title>IDE extension — Contorium Docs</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,8 +23,8 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#pil">Product</a>
-          <a href="../index.html#install">Install</a>
+          <a href="../index.html#ask">Product</a>
+          <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -200,8 +200,8 @@ npm run compile
 <td>Status bar CHP line + auto Cognitive State TUI</td>
 </tr>
 <tr>
-<td><strong>AI Cortex</strong> (collapsible)</td>
-<td>Knowledge graph, hotspots, function graph, impact</td>
+<td><strong>Cortex</strong> (collapsible)</td>
+<td><strong>History · Decisions · Ask</strong> (CIL v3) + knowledge graph, hotspots, impact</td>
 </tr>
 <tr>
 <td><strong>Governance</strong></td>
@@ -264,6 +264,22 @@ npm run compile
 <td>Restore editors</td>
 </tr>
 <tr>
+<td>Ask Contorium…</td>
+<td>CIL natural-language query (opens markdown preview)</td>
+</tr>
+<tr>
+<td>Test CIL AI connection</td>
+<td>Test explanation-layer LLM using workspace config</td>
+</tr>
+<tr>
+<td>Project History…</td>
+<td>CIL event feed overlay (last 7 days)</td>
+</tr>
+<tr>
+<td>Decision Center…</td>
+<td>CIL ADR / decision overlay</td>
+</tr>
+<tr>
 <td>Configure API key… (BYOK)</td>
 <td>Optional cloud model keys</td>
 </tr>
@@ -300,11 +316,40 @@ npm run compile
 <li>Opening a folder → <strong>bootstrap</strong> runs automatically.</li>
 <li><strong>Passive line</strong> on status bar (from <code>handoff.json</code> + mini-graph).</li>
 <li><strong>New AI chat</strong> → auto notification: <em>Inject context?</em> + status bar <strong><code>[?]</code></strong> (no command).</li>
-<li><strong>Expanded dashboard</strong> → <strong>Space</strong> in Contorium terminal tab (not <code>--show</code>).</li>
-<li>Terminal keys: <strong>Space</strong> toggle · <strong>c</strong> copy · <strong>Enter/i</strong> inject · <strong>n</strong> skip · <strong>q</strong> quit.</li>
+<li><strong>Expanded dashboard</strong> — full-screen Cognitive State TUI in the Contorium terminal tab (automatic after bootstrap).</li>
+<li>Terminal keys: <strong><code>c</code></strong> copy · <strong><code>i</code></strong> / Enter inject · <strong><code>↑↓</code></strong> view modes (including <strong>LLM Config</strong>) · <strong><code>←→</code></strong> LLM provider in view E · <strong><code>q</code></strong> quit.</li>
 </ol>
 <p>Optional: <strong>Ctrl+Shift+C</strong> opens IDE Webview panel (secondary view).</p>
-<p>See <a href="dashboard.html">DASHBOARD.md</a>.</p>
+<h3>CIL AI Layer (optional)</h3>
+<p>Enable explanation-layer LLM (Why / Story / Essence / DNA / Ask polish):</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contora.cilAiEnabled</code></td>
+<td>Sync <code>enabled</code> to <code>.contora/config/llm.json</code></td>
+</tr>
+<tr>
+<td><code>contora.aiProvider</code></td>
+<td>Provider (openai · anthropic · google/gemini · deepseek · off)</td>
+</tr>
+<tr>
+<td><code>contora.cilIntentRouter</code></td>
+<td><code>rule</code> · <code>hybrid</code> · <code>llm</code></td>
+</tr>
+<tr>
+<td>Configure API key…</td>
+<td>BYOK via SecretStorage (not written to repo)</td>
+</tr>
+</tbody>
+</table>
+<p>Sidebar <strong>Developer → CIL AI Layer</strong> shows status and test. CLI dashboard <strong>View E</strong> configures per-provider keys in <code>.llm-keys.json</code>.</p>
+<p>See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/AI_LAYER.md">AI Layer (GitHub)</a> · <a href="dashboard.html">Runtime dashboard</a>.</p>
 <h3>Governance (V4)</h3>
 <p>The IDE participates in the unified governance pipeline shared with MCP and CLI:</p>
 <table>
@@ -400,6 +445,9 @@ GOVERNANCE:                  (when governance artifacts exist)
 │   ├── snapshot.json
 │   ├── hotspots.json
 │   └── metadata.json
+├── config/                    # LLM (no secrets in llm.json)
+│   ├── llm.json
+│   └── .llm-keys.json       # per-provider keys (gitignored)
 └── mcp/                       # MCP store_memory (if used)
 </code></pre>
 <p>Add <code>.contora/</code> to <code>.gitignore</code> (example provided in repo).</p>
@@ -427,7 +475,7 @@ GOVERNANCE:                  (when governance artifacts exist)
 </tr>
 </tbody>
 </table>
-<p>Same <code>.contora/</code> directory. See <a href="install.html">INSTALL.md</a>.</p>
+<p>Same <code>.contora/</code> directory. See <a href="install.html">Install</a>.</p>
 <hr>
 <h2>Uninstall</h2>
 <h3>Remove extension (keep project data)</h3>

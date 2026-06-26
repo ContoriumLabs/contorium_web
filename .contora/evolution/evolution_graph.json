@@ -1,6 +1,6 @@
 {
   "schema": "evolution_graph.v1",
-  "updated_at": "2026-06-21T07:26:35.925Z",
+  "updated_at": "2026-06-25T12:27:50.187Z",
   "chains": [
     {
       "chain_id": "evo_architecture",
@@ -38,12 +38,12 @@
         },
         {
           "node_id": "intent_mpw9npi0_qygppg",
-          "label": "develop documentation and MCP integration",
+          "label": "develop documentation, AI integration and MCP integration",
           "stage": "intent",
           "linked_intent": "intent_mpw9npi0_qygppg"
         }
       ],
-      "updated_at": "2026-06-21T07:26:35.925Z"
+      "updated_at": "2026-06-25T12:27:50.187Z"
     },
     {
       "chain_id": "evo_blog",
@@ -68,7 +68,7 @@
           "linked_intent": "intent_mqndq65z_rg26ig"
         }
       ],
-      "updated_at": "2026-06-21T07:26:35.925Z"
+      "updated_at": "2026-06-25T12:27:50.187Z"
     },
     {
       "chain_id": "evo_scripts_build_docs_py",
@@ -85,7 +85,7 @@
           "stage": "milestone"
         }
       ],
-      "updated_at": "2026-06-21T07:26:35.925Z"
+      "updated_at": "2026-06-25T12:27:50.187Z"
     }
   ]
 }
