@@ -4,7 +4,7 @@
 
 **Cognitive State** terminal UI — shared across **IDE**, **CLI**, and **MCP** via the same `.contora/` artifacts.
 
-- [Quick start](getting-started.html) · [INSTALL](./INSTALL.md) · [CLI](./CLI.md) · [MCP](./MCP.md)
+- [Quick start](getting-started.html) · [INSTALL](install.html) · [CLI](cli.html) · [MCP](mcp.html)
 
 ---
 

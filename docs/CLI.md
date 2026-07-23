@@ -4,20 +4,18 @@
 
 The CLI is a **peer PIL Runtime** with IDE and MCP, sharing `@contora/state-core` and `.contora/`.
 
-- [Quick start](getting-started.html) · [INSTALL](./INSTALL.md) · [Home](../index.html) · [Quick start](getting-started.html) · [Dashboard](./DASHBOARD.md)
+- [Quick start](getting-started.html) · [INSTALL](install.html) · [Home](../index.html) · [Overview](getting-started.html) · [Dashboard](dashboard.html)
 
 ---
 
 ## Ask your project (CIL)
 
-Primary user-facing commands — mirror MCP `ask_project` and related CIL tools:
-
 ```bash
 contorium ask "Why was MCP added?"
 contorium ask "What happened this week?"
 contorium health .
-contorium questions
-contorium entity mcp
+contorium lifecycle          # knowledge health dashboard
+contorium review             # review queue only
 contorium transfer --mode=story --copy
 ```
 
@@ -26,9 +24,11 @@ contorium transfer --mode=story --copy
 | Ask | `contorium ask "…"` | `ask_project` |
 | History | `contorium history` | `get_project_history` |
 | Decisions | `contorium decisions` | `get_decisions` |
-| Next actions | `contorium next` | `get_next_actions` |
+| Lifecycle | `contorium lifecycle` · `review` | `get_knowledge_health` · `get_review_queue` |
 | Health | `contorium health` | `get_cognitive_health` |
-| Unified transfer | `contorium transfer --mode=story\|essence\|…` | `transfer_project` |
+| Transfer | `contorium transfer --mode=…` | `transfer_project` |
+
+See [Knowledge Lifecycle](lifecycle.html).
 
 ---
 
@@ -73,6 +73,7 @@ Legacy aliases: `snapshot copy` → `transfer context` · `export intelligence` 
 | **Verify** | `npx contorium status .` or `npx contorium --help` |
 | **Init** | `npx contorium init [path]` |
 | **Refresh** | `npx contorium sync [path]` |
+| **Knowledge Lifecycle** | `contorium lifecycle` · `contorium review` · `contorium lifecycle owner\|verify <id>` |
 | **Bootstrap** | `npx contorium bootstrap [path] [--source ide\|mcp\|cli]` |
 | **Dashboard** | Automatic after bootstrap — Cognitive State TUI (see [Runtime dashboard](dashboard.html)) |
 | **Decision derive** | `npx contorium decision derive [path]` |
@@ -184,9 +185,9 @@ contorium ai test [path] [--json]
 | `contorium timeline [path]` | `timeline.json` | `get_project_timeline` |
 | `contorium export [path] [--format json\|markdown]` | Unified export (handoff + governance appendix) | combined tools |
 
-### Decision Provenance (preferred — [GitHub language spec](https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM_LANGUAGE_SPEC.md))
+### Decision Provenance (advanced)
 
-Unified artifacts under `.contora/governance/` — see [INSTALL.md](./INSTALL.md#architecture-three-adapters).
+Unified artifacts under `.contora/governance/` — see [INSTALL.md](install.html#architecture-three-adapters).
 
 | Command | Purpose | Writes |
 |---------|---------|--------|

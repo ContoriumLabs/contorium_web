@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-21_evt_evt_intent_mqjn4atx_n9wb",
+  "timestamp": "2026-06-21T05:42:32.299Z",
+  "title": "develop documentation, MCP integration and build tooling",
+  "summary": "develop documentation, MCP integration and build tooling",
+  "files": [],
+  "impact": [
+    "intent_mqjn4atx_n9wbv6"
+  ],
+  "linked_intent": "intent_mqjn4atx_n9wbv6",
+  "freshness": "stale",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v3",
+  "previous": "2026-06-20_evt_evt_intent_mqm2re8p_h4y5",
+  "next": "2026-06-21_evt_evt_intent_mpuomx9j_yw4k"
+}

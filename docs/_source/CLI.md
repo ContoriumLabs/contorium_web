@@ -2,7 +2,7 @@
 
 The CLI is a **peer PIL Runtime** with IDE and MCP, sharing `@contora/state-core` and `.contora/`.
 
-- [PIL Runtime Guide](./PIL_RUNTIME.md) · [INSTALL](./INSTALL.md) · [Home](../index.html) · [Overview](./OVERVIEW.md) · [Dashboard](./DASHBOARD.md)
+- [PIL Runtime Guide](https://github.com/ContoriumLabs/contorium/blob/main/docs/PIL_RUNTIME.md) · [INSTALL](./INSTALL.md) · [Home](../index.html) · [Overview](getting-started.html) · [Dashboard](./DASHBOARD.md)
 
 ---
 
@@ -47,6 +47,7 @@ Legacy aliases: `snapshot copy` → `transfer context` · `export intelligence` 
 | **Verify** | `npx contorium status .` or `npx contorium --help` |
 | **Init** | `npx contorium init [path]` |
 | **Refresh** | `npx contorium sync [path]` |
+| **Knowledge Lifecycle** | `contorium lifecycle` · `contorium review` · `contorium lifecycle owner\|verify <id>` |
 | **Bootstrap** | `npx contorium bootstrap [path] [--source ide\|mcp\|cli]` |
 | **Dashboard** | Automatic after bootstrap — Cognitive State TUI (see [DASHBOARD.md](./DASHBOARD.md)) |
 | **Decision derive** | `npx contorium decision derive [path]` |
@@ -158,7 +159,7 @@ contorium ai test [path] [--json]
 | `contorium timeline [path]` | `timeline.json` | `get_project_timeline` |
 | `contorium export [path] [--format json\|markdown]` | Unified export (handoff + governance appendix) | combined tools |
 
-### Decision Provenance (preferred — [Language Spec](./CONTORIUM_LANGUAGE_SPEC.md))
+### Decision Provenance (advanced)
 
 Unified artifacts under `.contora/governance/` — see [INSTALL.md](./INSTALL.md#architecture-three-adapters).
 
@@ -342,7 +343,5 @@ Remove-Item -Recurse -Force .contora
 - [Install overview](./INSTALL.md)
 - [IDE Extension](./IDE_EXTENSION.md)
 - [MCP Server](./MCP.md)
-- [Runtime Dashboard (CRBP)](./DASHBOARD.md)
-- [Architecture V3.1](https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md)
-- [Engineering Closure](https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md)
-- [State Engine](https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md)
+- [Runtime Dashboard](./DASHBOARD.md)
+- [Knowledge Lifecycle](lifecycle.html)

@@ -1,6 +1,581 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1782390470096,
-  "graphBuildId": "graph_mqth9knk",
-  "edges": []
+  "generatedAt": 1784792736091,
+  "graphBuildId": "graph_mrx7igyj",
+  "edges": [
+    {
+      "source": "mod::scripts",
+      "target": "file::scripts/prepare-user-docs.py",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "file::scripts/prepare-user-docs.py",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "contains",
+      "weight": 1,
+      "confidence": 0.95
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::main",
+      "target": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::strip_sections",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_install",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    },
+    {
+      "source": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "target": "scripts/prepare-user-docs.py::function::main",
+      "type": "calls",
+      "weight": 0.8,
+      "confidence": 0.8
+    }
+  ]
 }

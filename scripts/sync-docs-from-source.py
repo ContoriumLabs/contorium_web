@@ -12,7 +12,7 @@ TARGET_MCP_README = Path(__file__).resolve().parent.parent / "mcp" / "README.md"
 
 GITHUB_BASE = "https://github.com/ContoriumLabs/contorium/blob/main/docs"
 
-# Architecture / historical docs — link to GitHub, not built as site pages
+# Not published as site HTML — rewrite links to GitHub
 OFFSITE_DOCS = {
     "ARCHITECTURE_V3.md",
     "ARCHITECTURE_V3_CORE.md",
@@ -22,22 +22,30 @@ OFFSITE_DOCS = {
     "RUNTIME.md",
     "STATE_ENGINE.md",
     "UPGRADE_PLAN_2.x.md",
+    "MCP_TOOL_CALLABILITY.md",
+    "PIL_RUNTIME.md",
+    "SURFACES.md",
+    "PROJECT_INTELLIGENCE_LAYER.md",
+    "CONTORIUM_LANGUAGE_SPEC.md",
+    "COGNITIVE_DIMENSIONS.md",
+    "CIL_V3.md",
+    "CIL_FREEZE.md",
 }
 
 SYNC_FILES = [
+    "README.md",
     "OVERVIEW.md",
     "CIL.md",
+    "LIFECYCLE.md",
     "SURFACES.md",
     "AI_LAYER.md",
     "PIL_RUNTIME.md",
     "INSTALL.md",
-    "PROJECT_INTELLIGENCE_LAYER.md",
     "IDE_EXTENSION.md",
     "MCP.md",
+    "MCP_TOOL_CALLABILITY.md",
     "CLI.md",
     "DASHBOARD.md",
-    "CONTORIUM_LANGUAGE_SPEC.md",
-    "COGNITIVE_DIMENSIONS.md",
 ]
 
 
@@ -61,6 +69,12 @@ def adapt_links(text: str) -> str:
         if name in OFFSITE_DOCS:
             anchor = path[len(name) :] if "#" in path else ""
             return f"[{label}]({GITHUB_BASE}/{name}{anchor})"
+        if name == "LIFECYCLE.md":
+            return f"[{label}](lifecycle.html)"
+        if name == "OVERVIEW.md":
+            return f"[{label}](getting-started.html)"
+        if name == "CIL.md":
+            return f"[{label}](getting-started.html#ask-your-project-cil)"
         return m.group(0)
 
     text = re.sub(r"\[([^\]]+)\]\(\./([^)]+\.md[^)]*)\)", offsite, text)
@@ -111,6 +125,7 @@ def adapt_mcp_readme(text: str) -> str:
         (r"\[docs/MCP\.md\]\(\.\./docs/MCP\.md\)", "[docs/mcp.html](../docs/mcp.html)"),
         (r"\[docs/INSTALL\.md\]\(\.\./docs/INSTALL\.md\)", "[docs/install.html](../docs/install.html)"),
         (r"\[docs/CLI\.md\]\(\.\./docs/CLI\.md\)", "[docs/cli.html](../docs/cli.html)"),
+        (r"\[docs/LIFECYCLE\.md\]\(\.\./docs/LIFECYCLE\.md\)", "[docs/lifecycle.html](../docs/lifecycle.html)"),
         (
             r"\[docs/ARCHITECTURE_V3\.md\]\(\.\./docs/ARCHITECTURE_V3\.md\)",
             f"[Architecture V3]({GITHUB_BASE}/ARCHITECTURE_V3.md)",
@@ -149,6 +164,7 @@ def adapt_mcp_readme(text: str) -> str:
 
 def main() -> None:
     TARGET_DOCS.mkdir(parents=True, exist_ok=True)
+    synced = set()
     for name in SYNC_FILES:
         src = SOURCE_DOCS / name
         if not src.exists():
@@ -156,7 +172,13 @@ def main() -> None:
             continue
         out = adapt_links(src.read_text(encoding="utf-8"))
         (TARGET_DOCS / name).write_text(out, encoding="utf-8")
+        synced.add(name)
         print(f"synced {name}")
+
+    for stale in TARGET_DOCS.glob("*.md"):
+        if stale.name not in synced:
+            stale.unlink()
+            print(f"removed stale _source/{stale.name}")
 
     if SOURCE_MCP_README.exists():
         mcp = adapt_mcp_readme(SOURCE_MCP_README.read_text(encoding="utf-8"))

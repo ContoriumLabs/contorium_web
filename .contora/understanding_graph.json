@@ -1,26 +1,24 @@
 {
   "version": 1,
-  "generatedAt": 1782021672562,
+  "generatedAt": 1784792736106,
   "recent_change": {
-    "name": "scripts/build-docs.py::slug_for_href()",
+    "name": "scripts/prepare-user-docs.py::strip_sections()",
     "change_type": "modified"
   },
   "call_chain": [
-    "scripts/build-docs.py::slug_for_href()"
+    "scripts/prepare-user-docs.py::strip_sections()"
   ],
   "affected": [
-    "scripts/build-docs.py::rewrite_links",
-    "scripts/build-docs.py::repl_md",
-    "scripts/build-docs.py::render_sidebar",
-    "scripts/build-docs.py::breadcrumb",
-    "scripts/build-docs.py::md_to_html",
-    "scripts/build-docs.py::page",
-    "scripts/build-docs.py::main",
-    "scripts/build-docs.py::slug_for_href",
-    "scripts/sync-docs-from-source.py::offsite",
-    "scripts/sync-docs-from-source.py::adapt_mcp_readme",
-    "scripts/sync-docs-from-source.py::main",
-    "scripts/sync-docs-from-source.py::adapt_links"
+    "scripts/prepare-user-docs.py::clean_user_md",
+    "scripts/prepare-user-docs.py::trim_install_matrix",
+    "scripts/prepare-user-docs.py::prepare_mcp",
+    "scripts/prepare-user-docs.py::prepare_install",
+    "scripts/prepare-user-docs.py::prepare_cli",
+    "scripts/prepare-user-docs.py::prepare_ide",
+    "scripts/prepare-user-docs.py::prepare_dashboard",
+    "scripts/prepare-user-docs.py::main",
+    "scripts/prepare-user-docs.py::strip_sections",
+    "scripts/prepare-user-docs.py::strip_sections()"
   ],
   "agent": "ide"
 }

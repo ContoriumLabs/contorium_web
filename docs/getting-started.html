@@ -23,7 +23,7 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#ask">Product</a>
+          <a href="../index.html#demo">Product</a>
           <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
@@ -42,6 +42,7 @@
 <li><a href="ide-extension.html">IDE extension</a></li>
 <li><a href="mcp.html">MCP server</a></li>
 <li><a href="cli.html">CLI</a></li>
+<li><a href="lifecycle.html">Knowledge Lifecycle</a></li>
 <li><a href="dashboard.html">Runtime dashboard</a></li>
 </ul></div>
       </aside>
@@ -52,9 +53,9 @@
 <blockquote>
 <p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
 </blockquote>
-<p><strong>Contorium lets you ask your project.</strong></p>
-<p>It is a local <strong>Cognitive Interaction Layer (CIL)</strong> on a <strong>Project Intelligence Layer (PIL)</strong>. Ask what happened, why a decision was made, or what comes next — then switch between Cursor, Claude Code, Codex, Gemini CLI, and VS Code without re-explaining your architecture.</p>
-<p><strong>You use it by:</strong> installing one entry point (IDE, MCP, or CLI), opening a <strong>folder</strong> workspace, then <strong>Ask · Capture · Transfer</strong> as you work with AI.</p>
+<p><strong>Give AI a memory of your project.</strong></p>
+<p>Contorium preserves decisions, architecture context, and evolution history — so AI can understand your codebase without starting from zero every session.</p>
+<p>Install <strong>IDE</strong>, <strong>MCP</strong>, or <strong>CLI</strong>; all share <code>.contora/</code> in your project folder.</p>
 <hr>
 <h2>Ask your project (CIL)</h2>
 <table>
@@ -78,12 +79,12 @@
 <td>Action Engine (suggestions only)</td>
 </tr>
 <tr>
-<td>Tell me everything about auth</td>
-<td>Knowledge Graph</td>
+<td>What needs review?</td>
+<td><a href="lifecycle.html">Knowledge Lifecycle</a> · Review Queue</td>
 </tr>
 <tr>
-<td>What was state last Friday?</td>
-<td>Time Travel (Snapshot)</td>
+<td>Is this decision still valid?</td>
+<td>Lifecycle · Knowledge Health</td>
 </tr>
 </tbody>
 </table>
@@ -97,15 +98,15 @@
 <tbody>
 <tr>
 <td><strong>CLI</strong></td>
-<td><code>contorium ask "Why was MCP added?"</code></td>
+<td><code>contorium ask "Why was MCP added?"</code> · <code>contorium lifecycle</code></td>
 </tr>
 <tr>
 <td><strong>MCP</strong></td>
-<td>Agent calls <code>ask_project</code></td>
+<td><code>ask_project</code> · <code>get_knowledge_health</code> · <code>get_review_queue</code></td>
 </tr>
 <tr>
 <td><strong>IDE</strong></td>
-<td>Command palette → <strong>Ask Contorium…</strong> · Cortex panel</td>
+<td><strong>Ask Contorium…</strong> · Explore → Review Queue</td>
 </tr>
 </tbody>
 </table>
@@ -134,50 +135,43 @@
 </tr>
 </tbody>
 </table>
-<p>All three share the same <code>.contora/</code> folder in your project. You can add more later.</p>
 <hr>
 <h2>Daily workflow</h2>
 <h3>IDE + AI chat</h3>
 <ol>
 <li>Install the extension → open a <strong>folder</strong> (not a single file).</li>
-<li>Set <strong>Current focus</strong> in the Contorium sidebar.</li>
-<li>Use <strong>Ask Contorium…</strong> or Cortex (<strong>History · Decisions · Ask</strong>) to explore project understanding.</li>
-<li>Starting a new AI chat? Confirm the <strong>handoff prompt</strong> (Y/n) or use <strong>Transfer Context</strong> from the sidebar.</li>
+<li>Set <strong>Current focus</strong> in the sidebar.</li>
+<li>Use <strong>Ask Contorium…</strong> or Explore (<strong>Review Queue · Knowledge Health</strong>).</li>
+<li>New AI chat? Confirm the <strong>handoff prompt</strong> (Y/n) or <strong>Transfer Context</strong>.</li>
 </ol>
 <h3>MCP + AI agent</h3>
 <ol>
-<li>Run the <a href="mcp.html#connect-your-ai-tool">one-line MCP setup</a> for your host.</li>
-<li>Open Codex / Claude / Cursor in your project — MCP starts automatically.</li>
-<li>Ask via <code>ask_project</code> or use <code>inspect_*</code> / <code>transfer_*</code> when the agent needs structured facts.</li>
+<li><a href="mcp.html#connect-your-ai-tool">One-line MCP setup</a> for your host.</li>
+<li>Open Codex / Claude / Cursor in your project.</li>
+<li>Agent uses <code>ask_project</code>, <code>get_knowledge_health</code>, or <code>transfer_project</code> as needed.</li>
 </ol>
 <h3>Terminal</h3>
 <pre><code class="language-bash">contorium init .
 contorium ask &quot;What is this project about?&quot;
-contorium health .
+contorium lifecycle
+contorium review
 contorium transfer context --copy
 </code></pre>
-<p>See the <a href="cli.html">CLI guide</a> for the full command list.</p>
+<p>See <a href="cli.html">CLI guide</a> · <a href="lifecycle.html">Lifecycle guide</a>.</p>
 <hr>
 <h2>Three things to remember</h2>
 <ol>
-<li><strong>Open a folder</strong> — Contorium needs a project root, not a lone file.</li>
-<li><strong>Ask, don't re-prompt</strong> — use <code>contorium ask</code> or <code>ask_project</code> instead of pasting long explanations.</li>
-<li><strong>Local-first</strong> — everything lives in <code>.contora/</code> inside your repo. No cloud account.</li>
+<li><strong>Open a folder</strong> — not a single file.</li>
+<li><strong>Git remembers changes. Contorium remembers why.</strong></li>
+<li><strong>Local-first</strong> — everything in <code>.contora/</code> inside your repo.</li>
 </ol>
-<hr>
-<h2>What Contorium is not</h2>
-<ul>
-<li>Not an AI agent or code generator</li>
-<li>Not a project manager or task runner</li>
-<li>Not a cloud service</li>
-</ul>
-<p>CIL suggests. PIL records. <strong>Neither executes work for you.</strong></p>
 <hr>
 <h2>Next steps</h2>
 <ul>
 <li><a href="install.html">Install all adapters</a></li>
+<li><a href="lifecycle.html">Knowledge Lifecycle</a></li>
 <li><a href="../mcp/">MCP setup wizard</a></li>
-<li><a href="dashboard.html">Runtime dashboard</a> — terminal status UI (starts automatically)</li>
+<li><a href="dashboard.html">Runtime dashboard</a></li>
 </ul>
         </article>
       </main>

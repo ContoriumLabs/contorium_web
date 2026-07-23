@@ -1,0 +1,7 @@
+{
+  "schema": "decision_graph.v1",
+  "updated_at": "2026-07-23T07:45:36.366Z",
+  "nodes": [],
+  "projection_of": "cognitive_events",
+  "derived_from": []
+}

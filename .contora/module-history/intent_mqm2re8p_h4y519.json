@@ -1,0 +1,13 @@
+{
+  "schema": "module_history.v1",
+  "module": "intent_mqm2re8p_h4y519",
+  "updated_at": "2026-07-23T07:45:36.362Z",
+  "projection_of": "cognitive_events",
+  "events": [
+    {
+      "date": "2026-06-20",
+      "title": "iterate on settings.json",
+      "event_id": "2026-06-20_evt_evt_intent_mqm2re8p_h4y5"
+    }
+  ]
+}

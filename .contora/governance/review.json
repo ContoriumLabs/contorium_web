@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": 1782390472922,
+  "generatedAt": 1784791772896,
   "file": ".contora/governance/review.json",
   "status": "block",
   "risk": "critical",
@@ -13,15 +13,15 @@
   "reason_chain": [
     "Forbidden pattern detected in change",
     "Final risk: CRITICAL",
-    "git commit: 39 file(s) reviewed"
+    "git commit: 68 file(s) reviewed"
   ],
   "allow": false,
   "protectedPath": false,
   "truthImpact": false,
-  "lines_added": 7,
-  "lines_removed": 7,
+  "lines_added": 9,
+  "lines_removed": 10,
   "display_score": 27,
   "review_source": "git_commit",
-  "review_timestamp": "2026-06-25T12:27:52.922Z",
+  "review_timestamp": "2026-07-23T07:29:32.896Z",
   "review_scope": "git_commit"
 }

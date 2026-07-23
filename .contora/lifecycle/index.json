@@ -1,0 +1,52 @@
+{
+  "schema": "contorium.lifecycle.v3",
+  "updated_at": "2026-07-23T07:45:38.433Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [],
+  "decisions": [],
+  "health": {
+    "schema": "contorium.knowledge_health.v1",
+    "updated_at": "2026-07-23T07:45:38.433Z",
+    "projection_of": "cognitive_events",
+    "derived_from": [],
+    "score": 24,
+    "dimensions": {
+      "completeness": 20,
+      "freshness": 0,
+      "ownership": 0,
+      "verification": 0,
+      "conflict": 100,
+      "drift": 100,
+      "review_debt": 100,
+      "overall": 47
+    },
+    "expired_decisions": 0,
+    "stale_decisions": 0,
+    "conflict_count": 0,
+    "missing_owner_count": 0,
+    "unverified_count": 0,
+    "decision_validity_health": {
+      "active_decisions": 0,
+      "valid_decisions": 0,
+      "warning_decisions": 0,
+      "decaying_decisions": 0,
+      "suspected_invalid_decisions": 0,
+      "needs_revalidation_decisions": 0,
+      "invalidated_decisions": 0,
+      "unresolved_impacts": 0
+    },
+    "formatted": [
+      "Knowledge Health (Lifecycle)",
+      "Score: 24%",
+      "Freshness 0% | Verification 0% | Conflict 100%",
+      "Ownership 0% | Drift 100% | Review debt 100%",
+      "No expired decisions",
+      "Review queue clear",
+      "Decision validity health:",
+      "Valid 0 | Warning 0 | Decaying 0",
+      "Suspected invalid 0 | Needs revalidation 0 | Invalidated 0",
+      "No unresolved impacts"
+    ]
+  },
+  "review_queue": []
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-29_evt_workspace_change",
+  "timestamp": "2026-06-29T15:29:21.192Z",
+  "title": "Modified 32 file(s)",
+  "summary": "32 key symbol change(s)",
+  "files": [
+    ".contora/change.json",
+    ".contora/cognitive/graph.json",
+    ".contora/cognitive/intent.json",
+    ".contora/cognitive/risk.json",
+    ".contora/cognitive/state.json",
+    ".contora/confidence/confidence_index.json",
+    ".contora/config/llm.json",
+    ".contora/dashboard.activity.json",
+    ".contora/evolution/evolution_graph.json",
+    ".contora/graph.json",
+    ".contora/graph/edges.json",
+    ".contora/graph/functions.json",
+    ".contora/graph/hotspots.json",
+    ".contora/graph/impact_graph.json",
+    ".contora/graph/intents.json",
+    ".contora/graph/knowledge.json",
+    ".contora/graph/metadata.json",
+    ".contora/graph/nodes.json",
+    ".contora/graph/snapshot.json",
+    ".contora/handoff.json",
+    ".contora/identity/project_identity.json",
+    ".contora/intelligence/health.json",
+    ".contora/intelligence/repository_state.json",
+    ".contora/intelligence/snapshot.json",
+    ".contora/intelligence/state-summary.json",
+    ".contora/intelligence/validation.json",
+    ".contora/intent-graph/graph.json",
+    ".contora/intent/intent_graph.json",
+    ".contora/intent/intent_nodes.json",
+    ".contora/intent/why.json",
+    ".contora/provenance/provenance_chain.json",
+    ".contora/state-builder/project-snapshot.md"
+  ],
+  "impact": [
+    ".contora/change.json",
+    ".contora/cognitive/graph.json",
+    ".contora/cognitive/intent.json",
+    ".contora/cognitive/risk.json",
+    ".contora/cognitive/state.json",
+    ".contora/confidence/confidence_index.json",
+    ".contora/config/llm.json",
+    ".contora/dashboard.activity.json"
+  ],
+  "freshness": "fresh",
+  "source": [
+    "ide",
+    "git"
+  ],
+  "provenance": [
+    "git",
+    "scan"
+  ],
+  "version": "snapshot_v15",
+  "previous": "2026-06-29_evt_evt_intent_mpuomn4x_4lkr"
+}

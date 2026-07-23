@@ -1,0 +1,13 @@
+{
+  "schema": "module_history.v1",
+  "module": "intent_mpuomx9j_yw4kyz",
+  "updated_at": "2026-07-23T07:45:36.360Z",
+  "projection_of": "cognitive_events",
+  "events": [
+    {
+      "date": "2026-06-21",
+      "title": "review state persistence and lifecycle logic",
+      "event_id": "2026-06-21_evt_evt_intent_mpuomx9j_yw4k"
+    }
+  ]
+}

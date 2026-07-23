@@ -1,0 +1,42 @@
+{
+  "schema": "cil_index.v1",
+  "updated_at": "2026-07-23T07:45:38.452Z",
+  "event_ids": [
+    "2026-07-23_evt_workspace_change",
+    "2026-07-23_evt_evt_contora_web_17847918",
+    "2026-07-23_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-23_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-23_evt_evt_intent_mqndq65z_rg26",
+    "2026-07-23_evt_evt_intent_mrracunp_zmd1",
+    "2026-07-19_evt_evt_contora_web_17844347",
+    "2026-07-19_evt_evt_intent_mqjn4atx_n9wb",
+    "2026-07-19_evt_evt_intent_mrracunp_zmd1",
+    "2026-07-19_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-19_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-19_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-19_evt_evt_intent_mqndq65z_rg26",
+    "2026-07-19_evt_evt_intent_mpuomn4x_95gd",
+    "2026-07-19_evt_evt_intent_mqndoym2_6ly7",
+    "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+    "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp",
+    "2026-06-21_evt_evt_intent_mpuomx9j_yw4k",
+    "2026-06-21_evt_evt_intent_mqjn4atx_n9wb",
+    "2026-06-20_evt_evt_intent_mqm2re8p_h4y5",
+    "2026-06-20_evt_evt_intent_mqk9gu88_p3is"
+  ],
+  "adr_ids": [],
+  "projections": {
+    "lifecycle": {
+      "path": ".contora/lifecycle/index.json",
+      "updated_at": "2026-07-23T07:45:38.433Z",
+      "score": 24,
+      "review_count": 0
+    },
+    "cognitive_health": {
+      "path": ".contora/cognitive/health.json",
+      "updated_at": "2026-07-23T07:45:38.449Z",
+      "score": 94
+    }
+  }
+}

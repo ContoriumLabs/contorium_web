@@ -17,6 +17,7 @@ SLUG_MAP = {
     "MCP.md": "mcp.html",
     "CLI.md": "cli.html",
     "DASHBOARD.md": "dashboard.html",
+    "LIFECYCLE.md": "lifecycle.html",
 }
 
 NAV = [
@@ -29,6 +30,7 @@ NAV = [
         ("IDE extension", "ide-extension.html"),
         ("MCP server", "mcp.html"),
         ("CLI", "cli.html"),
+        ("Knowledge Lifecycle", "lifecycle.html"),
         ("Runtime dashboard", "dashboard.html"),
     ]),
 ]
@@ -58,7 +60,7 @@ HEADER = """<!DOCTYPE html>
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#ask">Product</a>
+          <a href="../index.html#demo">Product</a>
           <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
@@ -85,9 +87,8 @@ HUB_CONTENT = """
 <div class="docs-hub-hero">
   <h1>User guide</h1>
   <p>
-    <strong>Ask your project</strong> — Contorium is a local Cognitive Interaction Layer (CIL) on a Project Intelligence Layer (PIL).
-    Install <strong>IDE</strong>, <strong>MCP</strong>, or <strong>CLI</strong>; all share the same
-    <code>.contora/</code> folder in your project.
+    <strong>Give AI a memory of your project.</strong> Contorium preserves decisions, architecture context,
+    and evolution history in <code>.contora/</code> — across IDE, MCP, and CLI.
   </p>
 </div>
 
@@ -97,17 +98,17 @@ HUB_CONTENT = """
     <a class="docs-card" href="getting-started.html">
       <span class="docs-card-tag">New user</span>
       <h3>Quick start</h3>
-      <p>Ask via CLI, MCP, or IDE — choose an entry point and daily workflow.</p>
+      <p>Choose IDE, MCP, or CLI — ask, capture, and transfer project memory.</p>
     </a>
     <a class="docs-card" href="install.html">
       <span class="docs-card-tag">Setup</span>
       <h3>Install &amp; use</h3>
-      <p>Install IDE, MCP, or CLI · usage scenarios · uninstall.</p>
+      <p>Install adapters · usage scenarios · uninstall.</p>
     </a>
     <a class="docs-card" href="../mcp/">
       <span class="docs-card-tag">Interactive</span>
       <h3>MCP setup wizard</h3>
-      <p>Step-by-step wiring for Codex, Claude Code, and Cursor.</p>
+      <p>Codex, Claude Code, and Cursor one-line setup.</p>
     </a>
   </div>
 </section>
@@ -118,53 +119,48 @@ HUB_CONTENT = """
     <a class="docs-card" href="ide-extension.html">
       <span class="docs-card-tag">IDE</span>
       <h3>IDE extension</h3>
-      <p>Ask Contorium, Cortex panels, focus, Transfer Context.</p>
+      <p>Ask Contorium, Review Queue, Transfer Context.</p>
     </a>
     <a class="docs-card" href="mcp.html">
       <span class="docs-card-tag">MCP</span>
       <h3>MCP server</h3>
-      <p><code>ask_project</code>, one-line setup, Inspect · Transfer · Capture.</p>
+      <p><code>ask_project</code> · <code>transfer_project</code> · lifecycle tools.</p>
     </a>
     <a class="docs-card" href="cli.html">
       <span class="docs-card-tag">CLI</span>
       <h3>CLI</h3>
-      <p><code>contorium ask</code>, <code>health</code>, <code>transfer</code>, <code>capture</code>.</p>
+      <p><code>contorium ask</code> · <code>lifecycle</code> · <code>review</code>.</p>
+    </a>
+    <a class="docs-card" href="lifecycle.html">
+      <span class="docs-card-tag">Lifecycle</span>
+      <h3>Knowledge Lifecycle</h3>
+      <p>Decision validity · review queue · trust scores.</p>
     </a>
     <a class="docs-card" href="dashboard.html">
       <span class="docs-card-tag">Dashboard</span>
       <h3>Runtime dashboard</h3>
-      <p>Terminal status UI, Project History view — starts automatically.</p>
+      <p>Cognitive State terminal UI — starts automatically.</p>
     </a>
   </div>
 </section>
 
 <section style="margin-top:40px">
-  <h2>CIL — Ask your project</h2>
+  <h2>Common tasks</h2>
   <table>
     <thead>
-      <tr><th>Question</th><th>CLI</th><th>MCP</th></tr>
+      <tr><th>Task</th><th>CLI</th><th>MCP</th></tr>
     </thead>
     <tbody>
-      <tr><td>Natural language</td><td><code>contorium ask "…"</code></td><td><code>ask_project</code></td></tr>
-      <tr><td>Project history</td><td><code>contorium history</code></td><td><code>get_project_history</code></td></tr>
-      <tr><td>Decisions</td><td><code>contorium decisions</code></td><td><code>get_decisions</code></td></tr>
-      <tr><td>Health</td><td><code>contorium health</code></td><td><code>get_cognitive_health</code></td></tr>
+      <tr><td>Ask a question</td><td><code>contorium ask "…"</code></td><td><code>ask_project</code></td></tr>
+      <tr><td>What needs review?</td><td><code>contorium review</code></td><td><code>get_review_queue</code></td></tr>
+      <tr><td>Knowledge health</td><td><code>contorium lifecycle</code></td><td><code>get_knowledge_health</code></td></tr>
+      <tr><td>Transfer to new chat</td><td><code>contorium transfer context --copy</code></td><td><code>transfer_project</code></td></tr>
     </tbody>
   </table>
 </section>
 
-<section style="margin-top:40px">
-  <h2>What happens automatically</h2>
-  <ul>
-    <li>MCP spawns when you open Codex / Claude / Cursor (after one-time setup)</li>
-    <li><code>.contora/</code> is created or merged on first use</li>
-    <li>New AI chats can prompt to inject project context (Y/n)</li>
-    <li>Dashboard shows Cognitive State in the terminal</li>
-  </ul>
-</section>
-
 <p class="docs-footer-note">
-  Architecture / CIL spec:
+  Maintainer docs:
   <a href="https://github.com/ContoriumLabs/contorium/tree/main/docs" target="_blank" rel="noopener noreferrer">GitHub docs</a>
 </p>
 """
@@ -236,6 +232,7 @@ def main() -> None:
         "mcp.html": ("MCP server", "Connect @contorium/mcp — ask_project and CIL tools for AI agents."),
         "cli.html": ("CLI", "contorium ask, health, transfer, and capture from the terminal."),
         "dashboard.html": ("Runtime dashboard", "Cognitive State terminal UI — shortcuts and daily use."),
+        "lifecycle.html": ("Knowledge Lifecycle", "Decision validity, review queue, and trust scores."),
     }
 
     for md_name, html_name in SLUG_MAP.items():

@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-18_evt_evt_intent_mpuomn4x_95gd",
+  "timestamp": "2026-07-18T16:44:06.329Z",
+  "title": "verify MCP tools against workspace state",
+  "summary": "verify MCP tools against workspace state",
+  "files": [],
+  "impact": [
+    "intent_mpuomn4x_95gdjs"
+  ],
+  "linked_intent": "intent_mpuomn4x_95gdjs",
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v8",
+  "previous": "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+  "next": "2026-07-18_evt_evt_intent_mpuomn4x_4lkr"
+}

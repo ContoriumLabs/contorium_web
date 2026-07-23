@@ -1,99 +1,245 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1782390470096,
-  "graphBuildId": "graph_mqth9knk",
+  "generatedAt": 1784792736091,
+  "graphBuildId": "graph_mrx7igyj",
   "nodes": [
     {
       "id": "intent_0_develop_documentation_A",
       "type": "intent",
       "name": "develop documentation, AI integration and state engine",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "intent_1_index_html_from_IDE_in",
       "type": "intent",
       "name": "index.html (from IDE) integration",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "intent_2_IDE_EXTENSION_from_IDE_",
       "type": "intent",
       "name": "IDE_EXTENSION (from IDE) integration",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "intent_3_README_from_IDE_integr",
       "type": "intent",
       "name": "README (from IDE) integration",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "intent_4__from_IDE_integratio",
       "type": "intent",
       "name": "优化 (from IDE) integration",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "intent_5__from_IDE_integrat",
       "type": "intent",
       "name": "修改方案 (from IDE) integration",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
-      "id": "mod::.contora",
+      "id": "mod::scripts",
       "type": "module",
-      "name": ".contora",
-      "path": ".contora",
-      "updatedAt": 1782390470096
+      "name": "scripts",
+      "path": "scripts",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::docs",
+      "type": "module",
+      "name": "docs",
+      "path": "docs",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::mcp",
+      "type": "module",
+      "name": "mcp",
+      "path": "mcp",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::blog",
+      "type": "module",
+      "name": "blog",
+      "path": "blog",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::index.html",
+      "type": "module",
+      "name": "index.html",
+      "path": "index.html",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::README.md",
+      "type": "module",
+      "name": "README.md",
+      "path": "README.md",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::优化.md",
+      "type": "module",
+      "name": "优化.md",
+      "path": "优化.md",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "mod::修改方案.md",
+      "type": "module",
+      "name": "修改方案.md",
+      "path": "修改方案.md",
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::index.html (from IDE)",
       "type": "module",
       "name": "index.html (from IDE)",
       "path": "index.html (from IDE)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::IDE_EXTENSION (from IDE)",
       "type": "module",
       "name": "IDE_EXTENSION (from IDE)",
       "path": "IDE_EXTENSION (from IDE)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::README (from IDE)",
       "type": "module",
       "name": "README (from IDE)",
       "path": "README (from IDE)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::优化 (from IDE)",
       "type": "module",
       "name": "优化 (from IDE)",
       "path": "优化 (from IDE)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::修改方案 (from IDE)",
       "type": "module",
       "name": "修改方案 (from IDE)",
       "path": "修改方案 (from IDE)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::CLI (from IDE)",
       "type": "module",
       "name": "CLI (from IDE)",
       "path": "CLI (from IDE)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
     },
     {
       "id": "mod::index.html (from events)",
       "type": "module",
       "name": "index.html (from events)",
       "path": "index.html (from events)",
-      "updatedAt": 1782390470096
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "file::scripts/prepare-user-docs.py",
+      "type": "file",
+      "name": "prepare-user-docs.py",
+      "path": "scripts/prepare-user-docs.py",
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "function",
+      "name": "strip_sections",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 310
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "function",
+      "name": "clean_user_md",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 328
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "function",
+      "name": "trim_install_matrix",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 359
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "function",
+      "name": "prepare_mcp",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 380
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "function",
+      "name": "prepare_install",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 436
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "function",
+      "name": "prepare_cli",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 468
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "function",
+      "name": "prepare_ide",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 477
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "function",
+      "name": "prepare_dashboard",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 482
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::main",
+      "type": "function",
+      "name": "main",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 487
+      },
+      "updatedAt": 1784792736091
     }
   ]
 }

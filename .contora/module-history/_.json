@@ -1,0 +1,13 @@
+{
+  "schema": "module_history.v1",
+  "module": "修改方案",
+  "updated_at": "2026-07-23T07:45:36.337Z",
+  "projection_of": "cognitive_events",
+  "events": [
+    {
+      "date": "2026-07-23",
+      "title": "Modified 26 file(s)",
+      "event_id": "2026-07-23_evt_workspace_change"
+    }
+  ]
+}

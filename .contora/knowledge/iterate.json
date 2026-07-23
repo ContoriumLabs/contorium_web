@@ -1,0 +1,25 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "iterate",
+  "updated_at": "2026-07-23T07:45:38.025Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-23_evt_evt_intent_mrracunp_zmd1",
+    "2026-07-19_evt_evt_intent_mrracunp_zmd1",
+    "2026-07-19_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp",
+    "2026-06-20_evt_evt_intent_mqm2re8p_h4y5"
+  ],
+  "events": [
+    "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-23_evt_evt_intent_mrracunp_zmd1",
+    "2026-07-19_evt_evt_intent_mrracunp_zmd1",
+    "2026-07-19_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp",
+    "2026-06-20_evt_evt_intent_mqm2re8p_h4y5"
+  ],
+  "decisions": [],
+  "modules": [],
+  "snapshots": []
+}

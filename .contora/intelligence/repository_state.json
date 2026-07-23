@@ -1,24 +1,24 @@
 {
   "schema": "project_intelligence_repository.v1",
-  "updated_at": "2026-06-25T12:27:50.214Z",
+  "updated_at": "2026-07-23T07:45:36.215Z",
   "last_signal_source": "ide",
   "repository_version": "1.1.3",
   "schema_version": "1.1.3",
   "pipeline_version": 2,
   "dimensions": {
-    "timeline_events": 256,
-    "impact_entries": 9,
-    "confidence_entities": 14,
-    "provenance_entries": 15,
-    "evolution_chains": 3
+    "timeline_events": 210,
+    "impact_entries": 1,
+    "confidence_entities": 9,
+    "provenance_entries": 10,
+    "evolution_chains": 2
   },
   "health": {
     "intelligence_completeness": 0.89,
     "decision_coverage": 0,
     "intent_linkage": 0,
-    "provenance_coverage": 0.93,
+    "provenance_coverage": 0.9,
     "knowledge_coverage": 1,
-    "health_score": 0.5,
-    "health_category": "Incomplete"
+    "health_score": 0.49,
+    "health_category": "Fragmented"
   }
 }

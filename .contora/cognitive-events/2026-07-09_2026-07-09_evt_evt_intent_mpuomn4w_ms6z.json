@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-09_evt_evt_intent_mpuomn4w_ms6z",
+  "timestamp": "2026-07-09T23:59:38.639Z",
+  "title": "develop documentation, MCP integration and state engine",
+  "summary": "develop documentation, MCP integration and state engine",
+  "files": [],
+  "impact": [
+    "intent_mpuomn4w_ms6zcz"
+  ],
+  "linked_intent": "intent_mpuomn4w_ms6zcz",
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v12",
+  "previous": "2026-07-09_evt_evt_intent_mqndq65z_rg26",
+  "next": "2026-07-09_evt_evt_intent_mpuomn4x_0bqu"
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "lastCheckAt": 1782390473142,
-  "lastAction": "warn",
+  "lastCheckAt": 1784791773160,
+  "lastAction": "allow",
   "lastAllow": true,
   "source": "ide:control",
-  "target_path": "styles.css"
+  "target_path": "docs/_source/DASHBOARD.md"
 }

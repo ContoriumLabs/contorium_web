@@ -1,21 +1,21 @@
 {
   "schema": "project_intelligence_health.v1",
-  "updated_at": "2026-06-25T12:27:50.200Z",
+  "updated_at": "2026-07-23T07:45:36.203Z",
   "metrics": {
     "intelligence_completeness": 0.89,
     "decision_coverage": 0,
     "intent_linkage": 0,
-    "provenance_coverage": 0.93,
+    "provenance_coverage": 0.9,
     "knowledge_coverage": 1,
-    "health_score": 0.5,
-    "health_category": "Incomplete"
+    "health_score": 0.49,
+    "health_category": "Fragmented"
   },
   "coverage_detail": {
     "covered_modules": [
-      "styles.css",
-      "index.html",
       "docs",
+      "scripts",
       "mcp",
+      "index.html",
       "修改方案.md",
       "README.md",
       "优化.md",
@@ -23,25 +23,25 @@
       "architecture",
       "修改方案2.md",
       "修",
+      "styles.css",
       "contorium.mp4",
       "googlefba835fbf32479b7.html",
       ".vscode",
-      "scripts",
       "contora_web",
       "develop documentation, MCP integration and state engine",
       "update documentation for recent changes",
       "verify MCP tools against workspace state",
       "iterate on index.html",
-      "review state persistence and lifecycle logic",
-      "iterate on 修改方案2.md",
-      "develop documentation, AI integration and MCP integration",
-      "iterate on IDE_EXTENSION.md"
+      "develop documentation, MCP integration and build tooling",
+      "develop documentation, MCP integration and test coverage",
+      "refine ai module changes",
+      "iterate on CLI.md"
     ],
     "total_modules": [
-      "styles.css",
-      "index.html",
       "docs",
+      "scripts",
       "mcp",
+      "index.html",
       "修改方案.md",
       "README.md",
       "优化.md",
@@ -49,19 +49,19 @@
       "architecture",
       "修改方案2.md",
       "修",
+      "styles.css",
       "contorium.mp4",
       "googlefba835fbf32479b7.html",
       ".vscode",
-      "scripts",
       "contora_web",
       "develop documentation, MCP integration and state engine",
       "update documentation for recent changes",
       "verify MCP tools against workspace state",
       "iterate on index.html",
-      "review state persistence and lifecycle logic",
-      "iterate on 修改方案2.md",
-      "develop documentation, AI integration and MCP integration",
-      "iterate on IDE_EXTENSION.md"
+      "develop documentation, MCP integration and build tooling",
+      "develop documentation, MCP integration and test coverage",
+      "refine ai module changes",
+      "iterate on CLI.md"
     ]
   }
 }

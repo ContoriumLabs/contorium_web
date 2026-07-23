@@ -1,0 +1,17 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "intent_mpuomn4x_4lkrpf",
+  "updated_at": "2026-07-23T07:45:38.025Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-19_evt_evt_intent_mpuomn4x_4lkr"
+  ],
+  "events": [
+    "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-19_evt_evt_intent_mpuomn4x_4lkr"
+  ],
+  "decisions": [],
+  "modules": [],
+  "snapshots": []
+}

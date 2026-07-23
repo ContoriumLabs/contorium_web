@@ -28,8 +28,8 @@
         "scripts"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-25T12:27:50.023Z",
-      "updated_at": "2026-06-25T12:27:50.023Z"
+      "created_at": "2026-07-23T07:45:35.978Z",
+      "updated_at": "2026-07-23T07:45:35.978Z"
     },
     {
       "intent_id": "intent_mpuomn4x_0bqur2",
@@ -59,8 +59,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-25T12:27:50.023Z",
-      "updated_at": "2026-06-25T12:27:50.023Z"
+      "created_at": "2026-07-23T07:45:35.978Z",
+      "updated_at": "2026-07-23T07:45:35.978Z"
     },
     {
       "intent_id": "intent_mpuomn4x_95gdjs",
@@ -70,7 +70,7 @@
       "why": "verify MCP tools against workspace state",
       "design_principles": [],
       "constraints": [
-        "scoped to 23 path(s)"
+        "scoped to 24 path(s)"
       ],
       "related_modules": [
         "architecture",
@@ -89,8 +89,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-25T11:48:36.189Z",
-      "updated_at": "2026-06-25T11:48:36.189Z"
+      "created_at": "2026-07-19T04:18:35.699Z",
+      "updated_at": "2026-07-19T04:18:35.699Z"
     },
     {
       "intent_id": "intent_mpuomn4x_4lkrpf",
@@ -118,119 +118,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-25T12:27:50.023Z",
-      "updated_at": "2026-06-25T12:27:50.023Z"
-    },
-    {
-      "intent_id": "intent_mpuomx9j_yw4kyz",
-      "title": "review state persistence and lifecycle logic",
-      "name": "review state persistence and lifecycle logic",
-      "description": "review state persistence and lifecycle logic",
-      "why": "review state persistence and lifecycle logic",
-      "design_principles": [],
-      "constraints": [
-        "scoped to 24 path(s)"
-      ],
-      "related_modules": [
-        "architecture",
-        "blog",
-        "docs",
-        "index.html",
-        "README.md",
-        "修改方案.md",
-        "修改方案2.md",
-        "修",
-        "styles.css",
-        "mcp",
-        "contorium.mp4",
-        ".vscode",
-        "优化.md",
-        "scripts"
-      ],
-      "linked_decisions": [],
-      "created_at": "2026-06-21T05:58:04.422Z",
-      "updated_at": "2026-06-21T05:58:04.422Z"
-    },
-    {
-      "intent_id": "intent_mpuoon5s_46m7m6",
-      "title": "iterate on 修改方案2.md",
-      "name": "iterate on 修改方案2.md",
-      "description": "iterate on 修改方案2.md",
-      "why": "iterate on 修改方案2.md",
-      "design_principles": [],
-      "constraints": [
-        "scoped to 12 path(s)"
-      ],
-      "related_modules": [
-        "修改方案2.md",
-        "index.html",
-        "README.md",
-        "修改方案.md",
-        "architecture",
-        "blog",
-        "修",
-        "styles.css",
-        "contorium.mp4",
-        "googlefba835fbf32479b7.html",
-        "mcp"
-      ],
-      "linked_decisions": [],
-      "created_at": "2026-06-19T00:22:37.328Z",
-      "updated_at": "2026-06-19T00:22:37.328Z"
-    },
-    {
-      "intent_id": "intent_mpw9npi0_qygppg",
-      "title": "develop documentation, AI integration and MCP integration",
-      "name": "develop documentation, AI integration and MCP integration",
-      "description": "develop documentation, AI integration and MCP integration",
-      "why": "develop documentation, AI integration and MCP integration",
-      "design_principles": [],
-      "constraints": [
-        "scoped to 12 path(s)"
-      ],
-      "related_modules": [
-        "architecture",
-        "blog",
-        "docs",
-        "mcp",
-        "index.html",
-        "README.md",
-        "styles.css",
-        "修改方案.md",
-        "优化.md"
-      ],
-      "linked_decisions": [],
-      "created_at": "2026-06-21T07:27:37.096Z",
-      "updated_at": "2026-06-21T07:27:37.096Z"
-    },
-    {
-      "intent_id": "intent_mpz0c7tp_4eyp79",
-      "title": "iterate on IDE_EXTENSION.md",
-      "name": "iterate on IDE_EXTENSION.md",
-      "description": "iterate on IDE_EXTENSION.md",
-      "why": "iterate on IDE_EXTENSION.md",
-      "design_principles": [],
-      "constraints": [
-        "scoped to 22 path(s)"
-      ],
-      "related_modules": [
-        "docs",
-        "architecture",
-        "blog",
-        "mcp",
-        "index.html",
-        "README.md",
-        "修改方案.md",
-        "修",
-        "修改方案2.md",
-        "contorium.mp4",
-        "scripts",
-        "styles.css",
-        "优化.md"
-      ],
-      "linked_decisions": [],
-      "created_at": "2026-06-21T06:00:09.519Z",
-      "updated_at": "2026-06-21T06:00:09.519Z"
+      "created_at": "2026-07-23T07:45:35.978Z",
+      "updated_at": "2026-07-23T07:45:35.978Z"
     },
     {
       "intent_id": "intent_mqjn4atx_n9wbv6",
@@ -240,7 +129,7 @@
       "why": "develop documentation, MCP integration and build tooling",
       "design_principles": [],
       "constraints": [
-        "scoped to 12 path(s)"
+        "scoped to 18 path(s)"
       ],
       "related_modules": [
         "blog",
@@ -253,45 +142,12 @@
         "styles.css",
         "修",
         "scripts",
-        "优化.md"
+        "优化.md",
+        "docs"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-21T05:42:32.299Z",
-      "updated_at": "2026-06-21T05:42:32.299Z"
-    },
-    {
-      "intent_id": "intent_mqk9gu88_p3isgf",
-      "title": "ongoing workspace development",
-      "name": "ongoing workspace development",
-      "description": "ongoing workspace development",
-      "why": "ongoing workspace development",
-      "design_principles": [],
-      "constraints": [],
-      "related_modules": [],
-      "linked_decisions": [],
-      "created_at": "2026-06-20T07:57:43.527Z",
-      "updated_at": "2026-06-20T07:57:43.527Z"
-    },
-    {
-      "intent_id": "intent_mqm2re8p_h4y519",
-      "title": "iterate on settings.json",
-      "name": "iterate on settings.json",
-      "description": "iterate on settings.json",
-      "why": "iterate on settings.json",
-      "design_principles": [],
-      "constraints": [
-        "scoped to 6 path(s)"
-      ],
-      "related_modules": [
-        ".vscode",
-        "blog",
-        "mcp",
-        "index.html",
-        "README.md"
-      ],
-      "linked_decisions": [],
-      "created_at": "2026-06-20T09:01:35.361Z",
-      "updated_at": "2026-06-20T09:01:35.361Z"
+      "created_at": "2026-07-19T04:18:35.699Z",
+      "updated_at": "2026-07-19T04:18:35.699Z"
     },
     {
       "intent_id": "intent_mqndoym2_6ly78z",
@@ -301,7 +157,31 @@
       "why": "develop documentation, MCP integration and test coverage",
       "design_principles": [],
       "constraints": [
-        "scoped to 8 path(s)"
+        "scoped to 9 path(s)"
+      ],
+      "related_modules": [
+        "blog",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "styles.css",
+        "mcp",
+        "docs"
+      ],
+      "linked_decisions": [],
+      "created_at": "2026-07-19T02:15:44.133Z",
+      "updated_at": "2026-07-19T02:15:44.133Z"
+    },
+    {
+      "intent_id": "intent_mqndq65z_rg26ig",
+      "title": "refine ai module changes",
+      "name": "refine ai module changes",
+      "description": "refine ai module changes",
+      "why": "refine ai module changes",
+      "design_principles": [],
+      "constraints": [
+        "scoped to 7 path(s)"
       ],
       "related_modules": [
         "blog",
@@ -313,30 +193,27 @@
         "mcp"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-25T11:48:36.189Z",
-      "updated_at": "2026-06-25T11:48:36.189Z"
+      "created_at": "2026-07-23T07:45:35.978Z",
+      "updated_at": "2026-07-23T07:45:35.978Z"
     },
     {
-      "intent_id": "intent_mqndq65z_rg26ig",
-      "title": "refine ai module changes",
-      "name": "refine ai module changes",
-      "description": "refine ai module changes",
-      "why": "refine ai module changes",
+      "intent_id": "intent_mrracunp_zmd1fq",
+      "title": "iterate on CLI.md",
+      "name": "iterate on CLI.md",
+      "description": "iterate on CLI.md",
+      "why": "iterate on CLI.md",
       "design_principles": [],
       "constraints": [
         "scoped to 6 path(s)"
       ],
       "related_modules": [
-        "blog",
-        "index.html",
-        "README.md",
-        "优化.md",
-        "修改方案.md",
-        "styles.css"
+        "mcp",
+        "scripts",
+        "docs"
       ],
       "linked_decisions": [],
-      "created_at": "2026-06-25T12:27:50.023Z",
-      "updated_at": "2026-06-25T12:27:50.023Z"
+      "created_at": "2026-07-23T07:45:35.978Z",
+      "updated_at": "2026-07-23T07:45:35.978Z"
     }
   ]
 }

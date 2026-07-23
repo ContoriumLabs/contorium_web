@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-07_evt_evt_intent_mpuomn4x_4lkr",
+  "timestamp": "2026-07-07T05:23:52.157Z",
+  "title": "iterate on index.html",
+  "summary": "iterate on index.html",
+  "files": [],
+  "impact": [
+    "intent_mpuomn4x_4lkrpf"
+  ],
+  "linked_intent": "intent_mpuomn4x_4lkrpf",
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v12",
+  "previous": "2026-07-07_evt_evt_intent_mpuomn4x_0bqu",
+  "next": "2026-07-09_evt_evt_contora_web_17835709"
+}

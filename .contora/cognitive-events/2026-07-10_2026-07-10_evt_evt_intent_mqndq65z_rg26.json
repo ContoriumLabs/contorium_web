@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-10_evt_evt_intent_mqndq65z_rg26",
+  "timestamp": "2026-07-10T06:03:44.398Z",
+  "title": "refine ai module changes",
+  "summary": "refine ai module changes",
+  "files": [],
+  "impact": [
+    "intent_mqndq65z_rg26ig"
+  ],
+  "linked_intent": "intent_mqndq65z_rg26ig",
+  "freshness": "verified",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v11",
+  "previous": "2026-07-10_evt_evt_intent_mpuomn4x_4lkr",
+  "next": "2026-07-18_evt_evt_contora_web_17843929"
+}

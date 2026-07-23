@@ -1,0 +1,15 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "iterate_on_2",
+  "updated_at": "2026-07-19T02:56:41.954Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-06-19_evt_evt_intent_mpuoon5s_46m7"
+  ],
+  "events": [
+    "2026-06-19_evt_evt_intent_mpuoon5s_46m7"
+  ],
+  "decisions": [],
+  "modules": [],
+  "snapshots": []
+}

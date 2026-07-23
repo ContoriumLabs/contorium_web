@@ -10,7 +10,7 @@ Contorium is **not** an autonomous coding agent. It records, structures, preserv
 
 > **Contorium records and preserves project intelligence. It does not decide for the project.**
 
-- [Documentation index](index.html) · [Install / Uninstall](./INSTALL.md) · [Three-surface architecture](./SURFACES.md)
+- [Documentation index](index.html) · [Install / Uninstall](./INSTALL.md) · [Three-surface architecture](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md)
 
 ---
 
@@ -49,8 +49,10 @@ Answers **how users and agents ask and explore**. Routes through **Cognitive Ker
 | State on a past date? | Time Travel (Snapshot) |
 | Everything about X? | Knowledge Graph / Entity |
 | Is cognition healthy? | Cognitive Health |
+| Is knowledge still valid? | Knowledge Lifecycle + Review Queue + impact chains |
+| What needs review? | Review Queue (invalidation triggers) · IDE top banner |
 
-CLI: `contorium ask` · MCP: `ask_project` · IDE: **Ask Contorium** / Cortex panels
+CLI: `contorium ask` · `contorium lifecycle` · `contorium review` · MCP: `ask_project` · `get_knowledge_health` · `get_review_queue` · IDE: **Ask Contorium** / Explore panels
 
 ### AI Layer — explanation (optional, default off)
 
@@ -76,8 +78,8 @@ Auto-attached terminal UI shared by IDE, MCP, and CLI bootstrap.
 |------|-----|---------|
 | A Live Cognition | default | Change · Health · Evolution streams |
 | B Governance Overlay | | Policy snapshot · violations |
-| C Debug Trace | | Decision provenance (preview-only) |
-| D Project History | | CIL feed · last 7 days (preview-only) |
+| C Debug Trace | Enter | Decision provenance (local lens) |
+| D Project History | Enter | CIL feed · last 7 days (local lens) |
 | E LLM Config | | Provider → API key → auto test |
 
 See [DASHBOARD.md](./DASHBOARD.md).
@@ -261,7 +263,17 @@ Legacy tool and command names remain supported — see [MCP.md](./MCP.md) and [C
 ├── handoff.json            # CHP v1 AI handoff
 ├── change.json / graph.json / timeline.json
 ├── graph/knowledge.json    # Cognitive graph
-├── governance/             # V4 review, decision, scope, trace
+├── cognitive-events/       # CIL event store
+├── decisions/              # ADR records
+├── lifecycle/              # Validity projection (schema v3)
+│   ├── index.json
+│   ├── review-queue.json
+│   └── decisions/          # owner / verify / evidence meta
+├── governance/             # V4 review + Validity graphs
+│   ├── assumption_graph.json
+│   ├── decision_dependency_graph.json
+│   ├── dependency_baseline.json
+│   └── dismissed_impact_alerts.json
 ├── config/
 │   ├── llm.json            # LLM settings (no secrets)
 │   └── .llm-keys.json      # Per-provider API keys (gitignored)
@@ -288,8 +300,9 @@ Legacy tool and command names remain supported — see [MCP.md](./MCP.md) and [C
 | Topic | Document |
 |-------|----------|
 | Full install / uninstall | [INSTALL.md](./INSTALL.md) |
-| IDE / CLI / MCP roles | [SURFACES.md](./SURFACES.md) |
+| IDE / CLI / MCP roles | [SURFACES.md](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md) |
 | LLM explanation layer | [AI_LAYER.md](./AI_LAYER.md) |
 | Dashboard TUI | [DASHBOARD.md](./DASHBOARD.md) |
-| Operations guide | [PIL_RUNTIME.md](./PIL_RUNTIME.md) |
-| CIL spec | [CIL_V3.md](./CIL_V3.md) |
+| Operations guide | [PIL_RUNTIME.md](https://github.com/ContoriumLabs/contorium/blob/main/docs/PIL_RUNTIME.md) |
+| CIL | [CIL.md](getting-started.html#ask-your-project-cil) |
+| Knowledge Lifecycle | [LIFECYCLE.md](lifecycle.html) |

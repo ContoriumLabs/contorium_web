@@ -1,0 +1,21 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-20_evt_evt_intent_mqk9gu88_p3is",
+  "timestamp": "2026-06-20T07:57:43.527Z",
+  "title": "ongoing workspace development",
+  "summary": "ongoing workspace development",
+  "files": [],
+  "impact": [
+    "intent_mqk9gu88_p3isgf"
+  ],
+  "linked_intent": "intent_mqk9gu88_p3isgf",
+  "freshness": "stale",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v1",
+  "next": "2026-06-20_evt_evt_intent_mqm2re8p_h4y5"
+}

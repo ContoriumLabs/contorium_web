@@ -1,6 +1,6 @@
 {
   "schema": "why.v1",
-  "updated_at": "2026-06-25T12:27:50.119Z",
+  "updated_at": "2026-07-23T07:45:36.133Z",
   "features": [
     {
       "feature": "contora_web",
@@ -43,60 +43,12 @@
       "linked_intent": "intent_mpuomn4x_4lkrpf"
     },
     {
-      "feature": "review state persistence and lifecycle logic",
-      "why": "review state persistence and lifecycle logic",
-      "problem": "Intent is lost when switching AI tools or starting new chats",
-      "value": "Cross-session project cognition",
-      "origin_decision": "",
-      "linked_intent": "intent_mpuomx9j_yw4kyz"
-    },
-    {
-      "feature": "iterate on 修改方案2.md",
-      "why": "iterate on 修改方案2.md",
-      "problem": "Intent is lost when switching AI tools or starting new chats",
-      "value": "Cross-session project cognition",
-      "origin_decision": "",
-      "linked_intent": "intent_mpuoon5s_46m7m6"
-    },
-    {
-      "feature": "develop documentation, AI integration and MCP integration",
-      "why": "develop documentation, AI integration and MCP integration",
-      "problem": "Intent is lost when switching AI tools or starting new chats",
-      "value": "Cross-session project cognition",
-      "origin_decision": "",
-      "linked_intent": "intent_mpw9npi0_qygppg"
-    },
-    {
-      "feature": "iterate on IDE_EXTENSION.md",
-      "why": "iterate on IDE_EXTENSION.md",
-      "problem": "Intent is lost when switching AI tools or starting new chats",
-      "value": "Cross-session project cognition",
-      "origin_decision": "",
-      "linked_intent": "intent_mpz0c7tp_4eyp79"
-    },
-    {
       "feature": "develop documentation, MCP integration and build tooling",
       "why": "develop documentation, MCP integration and build tooling",
       "problem": "Intent is lost when switching AI tools or starting new chats",
       "value": "Cross-session project cognition",
       "origin_decision": "",
       "linked_intent": "intent_mqjn4atx_n9wbv6"
-    },
-    {
-      "feature": "ongoing workspace development",
-      "why": "ongoing workspace development",
-      "problem": "Intent is lost when switching AI tools or starting new chats",
-      "value": "Cross-session project cognition",
-      "origin_decision": "",
-      "linked_intent": "intent_mqk9gu88_p3isgf"
-    },
-    {
-      "feature": "iterate on settings.json",
-      "why": "iterate on settings.json",
-      "problem": "Intent is lost when switching AI tools or starting new chats",
-      "value": "Cross-session project cognition",
-      "origin_decision": "",
-      "linked_intent": "intent_mqm2re8p_h4y519"
     },
     {
       "feature": "develop documentation, MCP integration and test coverage",
@@ -115,8 +67,16 @@
       "linked_intent": "intent_mqndq65z_rg26ig"
     },
     {
-      "feature": "develop documentation, AI integration and state engine — focus: shared state engine",
-      "why": "develop documentation, AI integration and state engine — focus: shared state engine",
+      "feature": "iterate on CLI.md",
+      "why": "iterate on CLI.md",
+      "problem": "Intent is lost when switching AI tools or starting new chats",
+      "value": "Cross-session project cognition",
+      "origin_decision": "",
+      "linked_intent": "intent_mrracunp_zmd1fq"
+    },
+    {
+      "feature": "develop documentation, AI integration and state engine — focus: landing page / static UI, documentation, IDE extension UI",
+      "why": "develop documentation, AI integration and state engine — focus: landing page / static UI, documentation, IDE extension UI",
       "problem": "Active work context is invisible to AI without handoff",
       "value": "Continuity for current task and focus",
       "origin_decision": "",

@@ -1,0 +1,48 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "dashboard.activity.json",
+  "updated_at": "2026-07-07T05:23:52.512Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-07_evt_workspace_change"
+  ],
+  "events": [
+    "2026-07-07_evt_workspace_change"
+  ],
+  "decisions": [],
+  "modules": [
+    ".contora/change.json",
+    "cognitive/graph.json",
+    "cognitive/intent.json",
+    "cognitive/risk.json",
+    "cognitive/state.json",
+    "confidence/confidence_index.json",
+    "config/llm.json",
+    ".contora/dashboard.activity.json",
+    "evolution/evolution_graph.json",
+    ".contora/graph.json",
+    "graph/edges.json",
+    "graph/functions.json",
+    "graph/hotspots.json",
+    "graph/impact_graph.json",
+    "graph/intents.json",
+    "graph/knowledge.json",
+    "graph/metadata.json",
+    "graph/nodes.json",
+    "graph/snapshot.json",
+    ".contora/handoff.json",
+    "identity/project_identity.json",
+    "intelligence/health.json",
+    "intelligence/repository_state.json",
+    "intelligence/snapshot.json",
+    "intelligence/state-summary.json",
+    "intelligence/validation.json",
+    "intent-graph/graph.json",
+    "intent/intent_graph.json",
+    "intent/intent_nodes.json",
+    "intent/why.json",
+    "provenance/provenance_chain.json",
+    "state-builder/project-snapshot.md"
+  ],
+  "snapshots": []
+}

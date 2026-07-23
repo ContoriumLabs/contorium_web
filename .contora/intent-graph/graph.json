@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1782390470023,
+  "updatedAt": 1784792735978,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -33,7 +33,7 @@
         "docs/dashboard.html",
         "docs/ide-extension.html"
       ],
-      "lastUpdated": 1782390470023,
+      "lastUpdated": 1784792735978,
       "learnedAt": 1780286520992
     },
     {
@@ -67,7 +67,7 @@
         "docs/dashboard.html",
         "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1782390470023,
+      "lastUpdated": 1784792735978,
       "learnedAt": 1780286520992
     },
     {
@@ -98,9 +98,10 @@
         "docs/cli.html",
         "docs/CLI.md",
         "docs/dashboard.html",
-        "docs/COGNITIVE_DIMENSIONS.md"
+        "docs/COGNITIVE_DIMENSIONS.md",
+        "scripts/prepare-user-docs.py"
       ],
-      "lastUpdated": 1782388116189,
+      "lastUpdated": 1784434715699,
       "learnedAt": 1780286520992
     },
     {
@@ -127,118 +128,8 @@
         "docs/DASHBOARD.md",
         "优化.md"
       ],
-      "lastUpdated": 1782390470023,
+      "lastUpdated": 1784792735978,
       "learnedAt": 1780286520992
-    },
-    {
-      "id": "intent_mpuomx9j_yw4kyz",
-      "text": "review state persistence and lifecycle logic",
-      "status": "ARCHIVED",
-      "confidence": 0.5,
-      "relatedFiles": [
-        "architecture/index.html",
-        "blog/index.html",
-        "docs/index.html",
-        "index.html",
-        "README.md",
-        "修改方案.md",
-        "修改方案2.md",
-        "修",
-        "styles.css",
-        "docs/IDE_EXTENSION.md",
-        "mcp/index.html",
-        "docs/STATE_ENGINE.md",
-        "mcp/README.md",
-        "contorium.mp4",
-        ".vscode/settings.json",
-        "docs/DASHBOARD.md",
-        "优化.md",
-        "scripts/build-docs.py",
-        "scripts/sync-docs-from-source.py",
-        "docs/cli.html",
-        "docs/CLI.md",
-        "docs/COGNITIVE_DIMENSIONS.md",
-        "docs/cognitive-dimensions.html",
-        "docs/CONTORIUM_LANGUAGE_SPEC.md"
-      ],
-      "lastUpdated": 1782021484422,
-      "learnedAt": 1780286534119
-    },
-    {
-      "id": "intent_mpuoon5s_46m7m6",
-      "text": "iterate on 修改方案2.md",
-      "status": "ARCHIVED",
-      "confidence": 0.5,
-      "relatedFiles": [
-        "修改方案2.md",
-        "index.html",
-        "README.md",
-        "修改方案.md",
-        "architecture/index.html",
-        "blog/index.html",
-        "修",
-        "styles.css",
-        "contorium.mp4",
-        "googlefba835fbf32479b7.html",
-        "mcp/index.html",
-        "mcp/README.md"
-      ],
-      "lastUpdated": 1781828557328,
-      "learnedAt": 1780286614336
-    },
-    {
-      "id": "intent_mpw9npi0_qygppg",
-      "text": "develop documentation, AI integration and MCP integration",
-      "status": "ARCHIVED",
-      "confidence": 0.6,
-      "relatedFiles": [
-        "architecture/index.html",
-        "blog/index.html",
-        "docs/IDE_EXTENSION.md",
-        "docs/index.html",
-        "mcp/index.html",
-        "index.html",
-        "README.md",
-        "styles.css",
-        "docs/DASHBOARD.md",
-        "修改方案.md",
-        "优化.md",
-        "mcp/README.md"
-      ],
-      "lastUpdated": 1782026857096,
-      "learnedAt": 1780382308824
-    },
-    {
-      "id": "intent_mpz0c7tp_4eyp79",
-      "text": "iterate on IDE_EXTENSION.md",
-      "status": "ARCHIVED",
-      "confidence": 0.5,
-      "relatedFiles": [
-        "docs/IDE_EXTENSION.md",
-        "architecture/index.html",
-        "blog/index.html",
-        "mcp/index.html",
-        "index.html",
-        "README.md",
-        "修改方案.md",
-        "修",
-        "修改方案2.md",
-        "docs/STATE_ENGINE.md",
-        "mcp/README.md",
-        "contorium.mp4",
-        "scripts/build-docs.py",
-        "scripts/sync-docs-from-source.py",
-        "styles.css",
-        "docs/cli.html",
-        "docs/CLI.md",
-        "docs/dashboard.html",
-        "docs/COGNITIVE_DIMENSIONS.md",
-        "docs/cognitive-dimensions.html",
-        "docs/CONTORIUM_LANGUAGE_SPEC.md",
-        "优化.md"
-      ],
-      "lastUpdated": 1782021609519,
-      "learnedAt": 1780548054684
     },
     {
       "id": "intent_mqjn4atx_n9wbv6",
@@ -257,35 +148,16 @@
         "styles.css",
         "修",
         "scripts/build-docs.py",
-        "优化.md"
+        "优化.md",
+        "scripts/prepare-user-docs.py",
+        "docs/_source/CLI.md",
+        "docs/_source/COGNITIVE_DIMENSIONS.md",
+        "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+        "docs/_source/DASHBOARD.md",
+        "docs/_source/IDE_EXTENSION.md"
       ],
-      "lastUpdated": 1782020552299,
+      "lastUpdated": 1784434715699,
       "learnedAt": 1781795640020
-    },
-    {
-      "id": "intent_mqk9gu88_p3isgf",
-      "text": "ongoing workspace development",
-      "status": "ARCHIVED",
-      "confidence": 0.1,
-      "relatedFiles": [],
-      "lastUpdated": 1781942263527,
-      "learnedAt": 1781833176584
-    },
-    {
-      "id": "intent_mqm2re8p_h4y519",
-      "text": "iterate on settings.json",
-      "status": "ARCHIVED",
-      "confidence": 0.05,
-      "relatedFiles": [
-        ".vscode/settings.json",
-        "blog/index.html",
-        "mcp/index.html",
-        "mcp/README.md",
-        "index.html",
-        "README.md"
-      ],
-      "lastUpdated": 1781946095361,
-      "learnedAt": 1781942844121
     },
     {
       "id": "intent_mqndoym2_6ly78z",
@@ -300,9 +172,10 @@
         "修改方案.md",
         "styles.css",
         "mcp/index.html",
-        "mcp/README.md"
+        "mcp/README.md",
+        "docs/IDE_EXTENSION.md"
       ],
-      "lastUpdated": 1782388116189,
+      "lastUpdated": 1784427344133,
       "learnedAt": 1782021672506
     },
     {
@@ -316,10 +189,27 @@
         "README.md",
         "优化.md",
         "修改方案.md",
-        "styles.css"
+        "styles.css",
+        "mcp/index.html"
       ],
-      "lastUpdated": 1782390470023,
+      "lastUpdated": 1784792735978,
       "learnedAt": 1782021728950
+    },
+    {
+      "id": "intent_mrracunp_zmd1fq",
+      "text": "iterate on CLI.md",
+      "status": "ACTIVE",
+      "confidence": 1,
+      "relatedFiles": [
+        "mcp/index.html",
+        "mcp/README.md",
+        "scripts/prepare-user-docs.py",
+        "docs/_source/CLI.md",
+        "docs/_source/COGNITIVE_DIMENSIONS.md",
+        "docs/_source/CONTORIUM_LANGUAGE_SPEC.md"
+      ],
+      "lastUpdated": 1784792735978,
+      "learnedAt": 1784434715699
     }
   ],
   "edges": [
@@ -1437,6 +1327,126 @@
       "from": "intent_mpw9npi0_qygppg",
       "to": "file:mcp/README.md",
       "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndq65z_rg26ig",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqndoym2_6ly78z",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:scripts/prepare-user-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:docs/_source/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:docs/_source/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:docs/_source/DASHBOARD.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mqjn4atx_n9wbv6",
+      "to": "file:docs/_source/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:scripts/prepare-user-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/_source/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/_source/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "file:docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:scripts/prepare-user-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/_source/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/_source/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4x_95gdjs",
+      "to": "file:docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "file:scripts/prepare-user-docs.py",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "file:docs/_source/CLI.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "file:docs/_source/COGNITIVE_DIMENSIONS.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "file:docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mrracunp_zmd1fq",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mrracunp_zmd1fq",
+      "type": "RELATED_TO"
     }
   ]
 }

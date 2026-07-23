@@ -6,7 +6,7 @@ Requires: VS Code / Cursor **1.85+**, **folder workspace**
 
 The IDE is a **peer PIL Runtime** with MCP and CLI: sidebar UI, workspace scanning, `.contora/` artifacts, **Capture / Transfer**, governance UI, and runtime dashboard bootstrap.
 
-- [PIL Runtime Guide](./PIL_RUNTIME.md) · [MCP](./MCP.md) · [CLI](./CLI.md) · [Install](./INSTALL.md)
+- [PIL Runtime Guide](https://github.com/ContoriumLabs/contorium/blob/main/docs/PIL_RUNTIME.md) · [MCP](./MCP.md) · [CLI](./CLI.md) · [Install](./INSTALL.md)
 
 ---
 
@@ -298,10 +298,7 @@ API keys use VS Code **SecretStorage**; may persist after uninstall depending on
 
 - [Home](../index.html)
 - [Install / use / uninstall](./INSTALL.md)
-- [Runtime Dashboard (CRBP)](./DASHBOARD.md)
+- [Runtime Dashboard](./DASHBOARD.md)
 - [MCP](./MCP.md)
 - [CLI](./CLI.md)
-- [State Engine](https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md)
-- [Architecture V3.1](https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md)
-- [Engineering Closure](https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md)
-- [Runtime package](https://github.com/ContoriumLabs/contorium/blob/main/docs/RUNTIME.md)
+- [Knowledge Lifecycle](lifecycle.html)

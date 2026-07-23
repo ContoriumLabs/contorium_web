@@ -1,0 +1,391 @@
+{
+  "schema": "project_snapshot.v2",
+  "id": "snapshot_v833",
+  "version": "snapshot_v833",
+  "timestamp": "2026-07-10T02:08:42.139Z",
+  "state": {
+    "state_hash": "34869b7de0b2ba3f"
+  },
+  "events": [
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-10_evt_workspace_change",
+      "timestamp": "2026-07-10T02:08:41.931Z",
+      "title": "Modified 26 file(s)",
+      "summary": "35 key symbol change(s)",
+      "files": [
+        "docs/index.html",
+        "docs/dashboard.html",
+        "docs/cli.html",
+        "docs/mcp.html",
+        "docs/ide-extension.html",
+        "docs/install.html",
+        "docs/getting-started.html",
+        "docs/DASHBOARD.md",
+        "docs/IDE_EXTENSION.md",
+        "docs/CLI.md",
+        "docs/MCP.md",
+        "docs/INSTALL.md",
+        "docs/GETTING_STARTED.md",
+        "scripts/prepare-user-docs.py",
+        "mcp/index.html",
+        "mcp/README.md",
+        "blog/index.html",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "docs/_source/CLI.md",
+        "docs/_source/COGNITIVE_DIMENSIONS.md",
+        "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+        "docs/_source/DASHBOARD.md",
+        "docs/_source/IDE_EXTENSION.md"
+      ],
+      "impact": [
+        "docs/index.html",
+        "docs/dashboard.html",
+        "docs/cli.html",
+        "docs/mcp.html",
+        "docs/ide-extension.html",
+        "docs/install.html",
+        "docs/getting-started.html",
+        "docs/DASHBOARD.md"
+      ],
+      "freshness": "fresh",
+      "source": [
+        "ide",
+        "git"
+      ],
+      "provenance": [
+        "git",
+        "scan"
+      ],
+      "version": "snapshot_v15",
+      "previous": "2026-07-10_evt_evt_intent_mpuomn4x_4lkr"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-10_evt_evt_intent_mpuomn4w_ms6z",
+      "timestamp": "2026-07-10T01:08:39.578Z",
+      "title": "develop documentation, MCP integration and state engine",
+      "summary": "develop documentation, MCP integration and state engine",
+      "files": [],
+      "impact": [
+        "intent_mpuomn4w_ms6zcz"
+      ],
+      "linked_intent": "intent_mpuomn4w_ms6zcz",
+      "freshness": "fresh",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v12",
+      "previous": "2026-07-10_evt_evt_intent_mqndq65z_rg26",
+      "next": "2026-07-10_evt_evt_intent_mpuomn4x_0bqu"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-10_evt_evt_intent_mpuomn4x_0bqu",
+      "timestamp": "2026-07-10T01:08:39.578Z",
+      "title": "update documentation for recent changes",
+      "summary": "update documentation for recent changes",
+      "files": [],
+      "impact": [
+        "intent_mpuomn4x_0bqur2"
+      ],
+      "linked_intent": "intent_mpuomn4x_0bqur2",
+      "freshness": "fresh",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v13",
+      "previous": "2026-07-10_evt_evt_intent_mpuomn4w_ms6z",
+      "next": "2026-07-10_evt_evt_intent_mpuomn4x_4lkr"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-10_evt_evt_intent_mpuomn4x_4lkr",
+      "timestamp": "2026-07-10T01:08:39.578Z",
+      "title": "iterate on index.html",
+      "summary": "iterate on index.html",
+      "files": [],
+      "impact": [
+        "intent_mpuomn4x_4lkrpf"
+      ],
+      "linked_intent": "intent_mpuomn4x_4lkrpf",
+      "freshness": "fresh",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v14",
+      "previous": "2026-07-10_evt_evt_intent_mpuomn4x_0bqu",
+      "next": "2026-07-10_evt_workspace_change"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-10_evt_evt_intent_mqndq65z_rg26",
+      "timestamp": "2026-07-10T01:07:39.683Z",
+      "title": "refine ai module changes",
+      "summary": "refine ai module changes",
+      "files": [],
+      "impact": [
+        "intent_mqndq65z_rg26ig"
+      ],
+      "linked_intent": "intent_mqndq65z_rg26ig",
+      "freshness": "fresh",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v11",
+      "previous": "2026-07-09_evt_evt_intent_mqndoym2_6ly7",
+      "next": "2026-07-10_evt_evt_intent_mpuomn4w_ms6z"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-09_evt_evt_intent_mpuomn4x_95gd",
+      "timestamp": "2026-07-09T04:23:01.076Z",
+      "title": "verify MCP tools against workspace state",
+      "summary": "verify MCP tools against workspace state",
+      "files": [],
+      "impact": [
+        "intent_mpuomn4x_95gdjs"
+      ],
+      "linked_intent": "intent_mpuomn4x_95gdjs",
+      "freshness": "fresh",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v9",
+      "previous": "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+      "next": "2026-07-09_evt_evt_intent_mqndoym2_6ly7"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-07-09_evt_evt_intent_mqndoym2_6ly7",
+      "timestamp": "2026-07-09T04:23:01.076Z",
+      "title": "develop documentation, MCP integration and test coverage",
+      "summary": "develop documentation, MCP integration and test coverage",
+      "files": [],
+      "impact": [
+        "intent_mqndoym2_6ly78z"
+      ],
+      "linked_intent": "intent_mqndoym2_6ly78z",
+      "freshness": "fresh",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v10",
+      "previous": "2026-07-09_evt_evt_intent_mpuomn4x_95gd",
+      "next": "2026-07-10_evt_evt_intent_mqndq65z_rg26"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+      "timestamp": "2026-06-21T07:27:37.096Z",
+      "title": "develop documentation, AI integration and MCP integration",
+      "summary": "develop documentation, AI integration and MCP integration",
+      "files": [],
+      "impact": [
+        "intent_mpw9npi0_qygppg"
+      ],
+      "linked_intent": "intent_mpw9npi0_qygppg",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v8",
+      "previous": "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp",
+      "next": "2026-07-09_evt_evt_intent_mpuomn4x_95gd"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp",
+      "timestamp": "2026-06-21T06:00:09.519Z",
+      "title": "iterate on IDE_EXTENSION.md",
+      "summary": "iterate on IDE_EXTENSION.md",
+      "files": [],
+      "impact": [
+        "intent_mpz0c7tp_4eyp79"
+      ],
+      "linked_intent": "intent_mpz0c7tp_4eyp79",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v7",
+      "previous": "2026-06-21_evt_evt_intent_mpuomx9j_yw4k",
+      "next": "2026-06-21_evt_evt_intent_mpw9npi0_qygp"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-21_evt_evt_intent_mpuomx9j_yw4k",
+      "timestamp": "2026-06-21T05:58:04.422Z",
+      "title": "review state persistence and lifecycle logic",
+      "summary": "review state persistence and lifecycle logic",
+      "files": [],
+      "impact": [
+        "intent_mpuomx9j_yw4kyz"
+      ],
+      "linked_intent": "intent_mpuomx9j_yw4kyz",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v6",
+      "previous": "2026-06-21_evt_evt_intent_mqjn4atx_n9wb",
+      "next": "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-21_evt_evt_intent_mqjn4atx_n9wb",
+      "timestamp": "2026-06-21T05:42:32.299Z",
+      "title": "develop documentation, MCP integration and build tooling",
+      "summary": "develop documentation, MCP integration and build tooling",
+      "files": [],
+      "impact": [
+        "intent_mqjn4atx_n9wbv6"
+      ],
+      "linked_intent": "intent_mqjn4atx_n9wbv6",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v5",
+      "previous": "2026-06-20_evt_evt_intent_mqm2re8p_h4y5",
+      "next": "2026-06-21_evt_evt_intent_mpuomx9j_yw4k"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-20_evt_evt_intent_mqm2re8p_h4y5",
+      "timestamp": "2026-06-20T09:01:35.361Z",
+      "title": "iterate on settings.json",
+      "summary": "iterate on settings.json",
+      "files": [],
+      "impact": [
+        "intent_mqm2re8p_h4y519"
+      ],
+      "linked_intent": "intent_mqm2re8p_h4y519",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v4",
+      "previous": "2026-06-20_evt_evt_intent_mqk9gu88_p3is",
+      "next": "2026-06-21_evt_evt_intent_mqjn4atx_n9wb"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-20_evt_evt_intent_mqk9gu88_p3is",
+      "timestamp": "2026-06-20T07:57:43.527Z",
+      "title": "ongoing workspace development",
+      "summary": "ongoing workspace development",
+      "files": [],
+      "impact": [
+        "intent_mqk9gu88_p3isgf"
+      ],
+      "linked_intent": "intent_mqk9gu88_p3isgf",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v3",
+      "previous": "2026-06-19_evt_evt_intent_mpuoon5s_46m7",
+      "next": "2026-06-20_evt_evt_intent_mqm2re8p_h4y5"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "2026-06-19_evt_evt_intent_mpuoon5s_46m7",
+      "timestamp": "2026-06-19T00:22:37.328Z",
+      "title": "iterate on 修改方案2.md",
+      "summary": "iterate on 修改方案2.md",
+      "files": [],
+      "impact": [
+        "intent_mpuoon5s_46m7m6"
+      ],
+      "linked_intent": "intent_mpuoon5s_46m7m6",
+      "freshness": "verified",
+      "source": [
+        "ide"
+      ],
+      "provenance": [
+        "IDE"
+      ],
+      "version": "snapshot_v2",
+      "previous": "+058402-08_evt_evt_scripts_build_docs_p",
+      "next": "2026-06-20_evt_evt_intent_mqk9gu88_p3is"
+    },
+    {
+      "schema": "cognitive_event.v1",
+      "id": "+058402-08_evt_evt_scripts_build_docs_p",
+      "timestamp": "+058402-08-19T00:00:00.000Z",
+      "title": "modify scripts/build-docs.py",
+      "summary": "modify scripts/build-docs.py",
+      "files": [],
+      "impact": [],
+      "freshness": "fresh",
+      "source": [
+        "git"
+      ],
+      "provenance": [
+        "Git"
+      ],
+      "version": "snapshot_v1",
+      "next": "2026-06-19_evt_evt_intent_mpuoon5s_46m7"
+    }
+  ],
+  "decisions": [],
+  "summary": "modify scripts/build-docs.py",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-10_evt_workspace_change",
+    "2026-07-10_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-10_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-10_evt_evt_intent_mpuomn4x_4lkr",
+    "2026-07-10_evt_evt_intent_mqndq65z_rg26",
+    "2026-07-09_evt_evt_intent_mpuomn4x_95gd",
+    "2026-07-09_evt_evt_intent_mqndoym2_6ly7",
+    "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+    "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp",
+    "2026-06-21_evt_evt_intent_mpuomx9j_yw4k",
+    "2026-06-21_evt_evt_intent_mqjn4atx_n9wb",
+    "2026-06-20_evt_evt_intent_mqm2re8p_h4y5",
+    "2026-06-20_evt_evt_intent_mqk9gu88_p3is",
+    "2026-06-19_evt_evt_intent_mpuoon5s_46m7",
+    "+058402-08_evt_evt_scripts_build_docs_p"
+  ]
+}

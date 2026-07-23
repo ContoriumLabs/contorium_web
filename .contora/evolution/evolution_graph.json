@@ -1,6 +1,6 @@
 {
   "schema": "evolution_graph.v1",
-  "updated_at": "2026-06-25T12:27:50.187Z",
+  "updated_at": "2026-07-23T07:45:36.189Z",
   "chains": [
     {
       "chain_id": "evo_architecture",
@@ -29,21 +29,9 @@
           "label": "iterate on index.html",
           "stage": "intent",
           "linked_intent": "intent_mpuomn4x_4lkrpf"
-        },
-        {
-          "node_id": "intent_mpuomx9j_yw4kyz",
-          "label": "review state persistence and lifecycle logic",
-          "stage": "intent",
-          "linked_intent": "intent_mpuomx9j_yw4kyz"
-        },
-        {
-          "node_id": "intent_mpw9npi0_qygppg",
-          "label": "develop documentation, AI integration and MCP integration",
-          "stage": "intent",
-          "linked_intent": "intent_mpw9npi0_qygppg"
         }
       ],
-      "updated_at": "2026-06-25T12:27:50.187Z"
+      "updated_at": "2026-07-23T07:45:36.189Z"
     },
     {
       "chain_id": "evo_blog",
@@ -68,24 +56,7 @@
           "linked_intent": "intent_mqndq65z_rg26ig"
         }
       ],
-      "updated_at": "2026-06-25T12:27:50.187Z"
-    },
-    {
-      "chain_id": "evo_scripts_build_docs_py",
-      "topic": "scripts/build-docs.py",
-      "nodes": [
-        {
-          "node_id": "evt_scripts/build-docs.py_1780841808000000",
-          "label": "modify scripts/build-docs.py",
-          "stage": "milestone"
-        },
-        {
-          "node_id": "evt_scripts/build-docs.py_1780841441000000",
-          "label": "add scripts/build-docs.py",
-          "stage": "milestone"
-        }
-      ],
-      "updated_at": "2026-06-25T12:27:50.187Z"
+      "updated_at": "2026-07-23T07:45:36.189Z"
     }
   ]
 }

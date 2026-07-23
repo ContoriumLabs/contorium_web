@@ -2,7 +2,7 @@
 
 **Cognitive State** terminal UI — shared across **IDE**, **CLI**, and **MCP** via the same `.contora/` artifacts.
 
-- [PIL Runtime Guide](./PIL_RUNTIME.md) · [INSTALL](./INSTALL.md) · [CLI](./CLI.md) · [MCP](./MCP.md)
+- [PIL Runtime Guide](https://github.com/ContoriumLabs/contorium/blob/main/docs/PIL_RUNTIME.md) · [INSTALL](./INSTALL.md) · [CLI](./CLI.md) · [MCP](./MCP.md)
 
 ---
 

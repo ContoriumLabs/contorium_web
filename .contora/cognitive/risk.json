@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": 1782388087222,
+  "generatedAt": 1784791646631,
   "risks": [
     {
       "type": "impact_summary",
-      "level": "low",
-      "description": "Impact from recent changes"
+      "level": "high",
+      "description": "Changed functions: scripts/prepare-user-docs.py::strip_sections, scripts/prepare-user-docs.py::clean_user_md, scripts/prepare-user-docs.py::trim_install_matrix, scripts/prepare-user-docs.py::prepare_mcp, scripts/prepare-user-docs.py::prepare_install, scripts/prepare-user-docs.py::prepare_cli, scripts/prepare-user-docs.py::prepare_ide, scripts/prepare-user-docs.py::prepare_dashboard; Direct callers: scripts/prepare-user-docs.py::clean_user_md, scripts/prepare-user-docs.py::trim_install_matrix, scripts/prepare-user-docs.py::prepare_mcp, scripts/prepare-user-docs.py::prepare_install, scripts/prepare-user-docs.py::prepare_cli, scripts/prepare-user-docs.py::prepare_ide, scripts/prepare-user-docs.py::prepare_dashboard, scripts/prepare-user-docs.py::main"
     },
     {
       "type": "affected_modules",
-      "level": "low",
-      "description": "Modules: .contora/change.json, .contora/cognitive/graph.json, .contora/cognitive/intent.json, .contora/cognitive/risk.json, .contora/cognitive/state.json, .contora/confidence/confidence_index.json"
+      "level": "high",
+      "description": "Modules: docs/index.html, docs/dashboard.html, docs/cli.html, docs/mcp.html, docs/ide-extension.html, docs/install.html"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-10_evt_evt_intent_mpuomn4x_0bqu",
+  "timestamp": "2026-07-10T06:03:44.398Z",
+  "title": "update documentation for recent changes",
+  "summary": "update documentation for recent changes",
+  "files": [],
+  "impact": [
+    "intent_mpuomn4x_0bqur2"
+  ],
+  "linked_intent": "intent_mpuomn4x_0bqur2",
+  "freshness": "verified",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v9",
+  "previous": "2026-07-10_evt_evt_intent_mpuomn4w_ms6z",
+  "next": "2026-07-10_evt_evt_intent_mpuomn4x_4lkr"
+}

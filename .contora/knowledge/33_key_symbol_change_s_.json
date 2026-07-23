@@ -1,0 +1,40 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "33_key_symbol_change_s_",
+  "updated_at": "2026-07-19T04:18:37.696Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-19_evt_workspace_change"
+  ],
+  "events": [
+    "2026-07-19_evt_workspace_change"
+  ],
+  "decisions": [],
+  "modules": [
+    "docs/index.html",
+    "docs/dashboard.html",
+    "docs/cli.html",
+    "docs/mcp.html",
+    "docs/ide-extension.html",
+    "docs/install.html",
+    "docs/getting-started.html",
+    "docs/DASHBOARD.md",
+    "docs/IDE_EXTENSION.md",
+    "docs/CLI.md",
+    "docs/MCP.md",
+    "docs/INSTALL.md",
+    "docs/GETTING_STARTED.md",
+    "scripts/prepare-user-docs.py",
+    "mcp/index.html",
+    "mcp/README.md",
+    "_source/CLI.md",
+    "_source/COGNITIVE_DIMENSIONS.md",
+    "_source/CONTORIUM_LANGUAGE_SPEC.md",
+    "_source/DASHBOARD.md",
+    "_source/IDE_EXTENSION.md",
+    "_source/INSTALL.md",
+    "_source/MCP.md",
+    "_source/PROJECT_INTELLIGENCE_LAYER.md"
+  ],
+  "snapshots": []
+}

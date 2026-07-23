@@ -1,6 +1,97 @@
 {
   "schemaVersion": "1",
-  "generatedAt": 1782390470096,
-  "graphBuildId": "graph_mqth9knk",
-  "nodes": []
+  "generatedAt": 1784792736091,
+  "graphBuildId": "graph_mrx7igyj",
+  "nodes": [
+    {
+      "id": "scripts/prepare-user-docs.py::function::strip_sections",
+      "type": "function",
+      "name": "strip_sections",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 310
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::clean_user_md",
+      "type": "function",
+      "name": "clean_user_md",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 328
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::trim_install_matrix",
+      "type": "function",
+      "name": "trim_install_matrix",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 359
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_mcp",
+      "type": "function",
+      "name": "prepare_mcp",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 380
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_install",
+      "type": "function",
+      "name": "prepare_install",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 436
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_cli",
+      "type": "function",
+      "name": "prepare_cli",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 468
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_ide",
+      "type": "function",
+      "name": "prepare_ide",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 477
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::prepare_dashboard",
+      "type": "function",
+      "name": "prepare_dashboard",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 482
+      },
+      "updatedAt": 1784792736091
+    },
+    {
+      "id": "scripts/prepare-user-docs.py::function::main",
+      "type": "function",
+      "name": "main",
+      "path": "scripts/prepare-user-docs.py",
+      "metadata": {
+        "line": 487
+      },
+      "updatedAt": 1784792736091
+    }
+  ]
 }

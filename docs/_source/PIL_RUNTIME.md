@@ -4,7 +4,7 @@
 > It captures, structures, preserves, retrieves, and transfers project intelligence across tools and sessions.  
 > It does **not** execute work, orchestrate agents, or make project decisions.
 
-Related: [Project Intelligence Layer](./PROJECT_INTELLIGENCE_LAYER.md) · [Language Spec](./CONTORIUM_LANGUAGE_SPEC.md) · [Install](./INSTALL.md)
+Related: [Overview](getting-started.html) · [Install](./INSTALL.md) · [Surfaces](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md)
 
 ---
 

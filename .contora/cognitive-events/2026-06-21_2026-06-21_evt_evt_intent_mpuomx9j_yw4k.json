@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-21_evt_evt_intent_mpuomx9j_yw4k",
+  "timestamp": "2026-06-21T05:58:04.422Z",
+  "title": "review state persistence and lifecycle logic",
+  "summary": "review state persistence and lifecycle logic",
+  "files": [],
+  "impact": [
+    "intent_mpuomx9j_yw4kyz"
+  ],
+  "linked_intent": "intent_mpuomx9j_yw4kyz",
+  "freshness": "stale",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v4",
+  "previous": "2026-06-21_evt_evt_intent_mqjn4atx_n9wb",
+  "next": "2026-06-21_evt_evt_intent_mpz0c7tp_4eyp"
+}

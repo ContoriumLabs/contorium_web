@@ -23,7 +23,7 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#ask">Product</a>
+          <a href="../index.html#demo">Product</a>
           <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
@@ -42,6 +42,7 @@
 <li><a href="ide-extension.html">IDE extension</a></li>
 <li><a href="mcp.html">MCP server</a></li>
 <li><a href="cli.html" class="is-active">CLI</a></li>
+<li><a href="lifecycle.html">Knowledge Lifecycle</a></li>
 <li><a href="dashboard.html">Runtime dashboard</a></li>
 </ul></div>
       </aside>
@@ -54,16 +55,15 @@
 </blockquote>
 <p>The CLI is a <strong>peer PIL Runtime</strong> with IDE and MCP, sharing <code>@contora/state-core</code> and <code>.contora/</code>.</p>
 <ul>
-<li><a href="getting-started.html">Quick start</a> · <a href="install.html">INSTALL</a> · <a href="../index.html">Home</a> · <a href="getting-started.html">Quick start</a> · <a href="dashboard.html">Dashboard</a></li>
+<li><a href="getting-started.html">Quick start</a> · <a href="install.html">INSTALL</a> · <a href="../index.html">Home</a> · <a href="getting-started.html">Overview</a> · <a href="dashboard.html">Dashboard</a></li>
 </ul>
 <hr>
 <h2>Ask your project (CIL)</h2>
-<p>Primary user-facing commands — mirror MCP <code>ask_project</code> and related CIL tools:</p>
 <pre><code class="language-bash">contorium ask &quot;Why was MCP added?&quot;
 contorium ask &quot;What happened this week?&quot;
 contorium health .
-contorium questions
-contorium entity mcp
+contorium lifecycle          # knowledge health dashboard
+contorium review             # review queue only
 contorium transfer --mode=story --copy
 </code></pre>
 <table>
@@ -91,9 +91,9 @@ contorium transfer --mode=story --copy
 <td><code>get_decisions</code></td>
 </tr>
 <tr>
-<td>Next actions</td>
-<td><code>contorium next</code></td>
-<td><code>get_next_actions</code></td>
+<td>Lifecycle</td>
+<td><code>contorium lifecycle</code> · <code>review</code></td>
+<td><code>get_knowledge_health</code> · <code>get_review_queue</code></td>
 </tr>
 <tr>
 <td>Health</td>
@@ -101,12 +101,13 @@ contorium transfer --mode=story --copy
 <td><code>get_cognitive_health</code></td>
 </tr>
 <tr>
-<td>Unified transfer</td>
-<td><code>contorium transfer --mode=story\|essence\|…</code></td>
+<td>Transfer</td>
+<td><code>contorium transfer --mode=…</code></td>
 <td><code>transfer_project</code></td>
 </tr>
 </tbody>
 </table>
+<p>See <a href="lifecycle.html">Knowledge Lifecycle</a>.</p>
 <hr>
 <h2>PIL commands (v3.0 — primary)</h2>
 <p>Three capability groups mirror MCP and IDE:</p>
@@ -161,6 +162,10 @@ contorium capture decision [path] --selected &quot;&lt;choice&gt;&quot; [--reaso
 <tr>
 <td><strong>Refresh</strong></td>
 <td><code>npx contorium sync [path]</code></td>
+</tr>
+<tr>
+<td><strong>Knowledge Lifecycle</strong></td>
+<td><code>contorium lifecycle</code> · <code>contorium review</code> · <code>contorium lifecycle owner\|verify &lt;id&gt;</code></td>
 </tr>
 <tr>
 <td><strong>Bootstrap</strong></td>
@@ -415,7 +420,7 @@ contorium ai test [path] [--json]
 </tr>
 </tbody>
 </table>
-<h3>Decision Provenance (preferred — <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM_LANGUAGE_SPEC.md">GitHub language spec</a>)</h3>
+<h3>Decision Provenance (advanced)</h3>
 <p>Unified artifacts under <code>.contora/governance/</code> — see <a href="install.html#architecture-three-adapters">INSTALL.md</a>.</p>
 <table>
 <thead>

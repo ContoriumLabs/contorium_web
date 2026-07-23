@@ -20,7 +20,7 @@ Recent Decisions:
 
 Open Problems:
 - uncommitted changes in documentation module (from events)
-- 37 paths with uncommitted changes — integration risk (from Git)
+- 53 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)

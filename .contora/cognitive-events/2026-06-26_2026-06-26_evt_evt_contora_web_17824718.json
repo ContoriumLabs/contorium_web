@@ -1,0 +1,19 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-26_evt_evt_contora_web_17824718",
+  "timestamp": "2026-06-26T11:04:06.941Z",
+  "title": "workspace state hash changed",
+  "summary": "workspace state hash changed",
+  "files": [],
+  "impact": [],
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v13",
+  "previous": "2026-06-26_evt_evt_intent_mpuomn4x_4lkr",
+  "next": "2026-06-26_evt_evt_contora_web_17824719"
+}

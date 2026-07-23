@@ -1,0 +1,53 @@
+{
+  "schema": "contorium.pik.v1",
+  "updated_at": "2026-07-19T04:19:35.163Z",
+  "source": "derived",
+  "project_identity": {
+    "name": "contora_web",
+    "type": "Project Cognitive Runtime"
+  },
+  "primary_intent": {
+    "statement": "develop documentation, AI integration and state engine",
+    "confidence": 0.85
+  },
+  "goal_hierarchy": [
+    {
+      "goal": "develop documentation, AI integration and state engine",
+      "weight": 0.28125000000000006
+    },
+    {
+      "goal": "develop documentation, MCP integration and state engine",
+      "weight": 0.15625
+    },
+    {
+      "goal": "update documentation for recent changes",
+      "weight": 0.15625
+    },
+    {
+      "goal": "verify MCP tools against workspace state",
+      "weight": 0.15625
+    },
+    {
+      "goal": "iterate on index.html",
+      "weight": 0.15625
+    },
+    {
+      "goal": "review",
+      "weight": 0.09375
+    }
+  ],
+  "non_goals": [
+    "not an autonomous agent",
+    "not a task executor"
+  ],
+  "constraints": [
+    "local-first",
+    "git-compatible",
+    "scoped to 24 path(s)"
+  ],
+  "semantic_bias": {
+    "memory": 0.35,
+    "reasoning": 0.35,
+    "execution": 0.2
+  }
+}

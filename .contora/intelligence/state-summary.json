@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1782390469875,
+  "generatedAt": 1784792735860,
   "project_intent": "develop documentation, AI integration and state engine",
   "current_focus": "work in blog",
   "active_domains": [
@@ -26,10 +26,9 @@
         "index.html",
         "README.md",
         "优化.md",
-        "修改方案.md",
-        "styles.css"
+        "修改方案.md"
       ],
-      "weight": 0.4
+      "weight": 0.42
     },
     {
       "cluster": "mcp",
@@ -54,16 +53,9 @@
       "weight": 0.33
     },
     {
-      "cluster": "docs / _source",
+      "cluster": "scripts",
       "files": [
-        "docs/_source/CLI.md",
-        "docs/_source/COGNITIVE_DIMENSIONS.md",
-        "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
-        "docs/_source/DASHBOARD.md",
-        "docs/_source/IDE_EXTENSION.md",
-        "docs/_source/INSTALL.md",
-        "docs/_source/MCP.md",
-        "docs/_source/PROJECT_INTELLIGENCE_LAYER.md"
+        "scripts/prepare-user-docs.py"
       ],
       "weight": 0.32
     }

@@ -1,0 +1,5 @@
+{
+  "text": "The project's knowledge health is 24%, indicating significant issues across multiple lifecycle metrics. Freshness, verification, and ownership are all at 0%, while conflict, drift, and review debt are each at 100%. There are no expired decisions and the review queue is clear.",
+  "created_at": "2026-07-07T05:23:29.411Z",
+  "module": "ask_enhance"
+}

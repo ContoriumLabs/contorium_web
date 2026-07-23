@@ -1,5 +1,5 @@
 {
-  "sessionId": "sess_mqm7hxo7_bcb9c722",
+  "sessionId": "sess_mrracmzy_467ad8a3",
   "currentTask": "",
   "openFiles": [
     "index.html",
@@ -11,8 +11,6 @@
     "blog/index.html"
   ],
   "recentFiles": [
-    "styles.css",
-    "index.html",
     "docs/index.html",
     "docs/dashboard.html",
     "docs/cli.html",
@@ -26,10 +24,12 @@
     "docs/MCP.md",
     "docs/INSTALL.md",
     "docs/GETTING_STARTED.md",
+    "scripts/prepare-user-docs.py",
+    "mcp/index.html",
     "mcp/README.md",
     "docs/_source/COGNITIVE_DIMENSIONS.md",
-    "docs/_source/CLI.md",
     "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
+    "docs/_source/CLI.md",
     "docs/_source/DASHBOARD.md",
     "docs/_source/MCP.md",
     "docs/_source/IDE_EXTENSION.md",
@@ -44,6 +44,8 @@
     ".contora/cognitive/risk.json",
     ".contora/cognitive/state.json",
     ".contora/confidence/confidence_index.json",
+    ".contora/config/llm.json",
+    ".contora/dashboard.activity.json",
     ".contora/events/sess_mqm7hxo7_bcb9c722.jsonl",
     ".contora/evolution/evolution_graph.json",
     ".contora/governance/review.json",
@@ -73,15 +75,29 @@
     ".contora/state-builder/project-snapshot.md",
     ".contora/state-builder/project-state.json",
     ".contora/state.json",
+    ".contora/timeline.json",
     ".contora/timeline/project_timeline.json",
-    ".contora/config/"
+    ".contora/understanding_graph.json",
+    ".contora/cache/",
+    ".contora/cil_index.json",
+    ".contora/cognitive-events/",
+    ".contora/cognitive-health.json",
+    ".contora/decisions/",
+    ".contora/events/sess_mrracmzy_467ad8a3.jsonl",
+    ".contora/governance/assumption_graph.json",
+    ".contora/governance/decision_dependency_graph.json",
+    ".contora/intent/kernel.json",
+    ".contora/knowledge/",
+    ".contora/lifecycle/",
+    ".contora/module-history/",
+    ".contora/snapshots/"
   ],
   "notes": "",
-  "lastUpdated": 1782390462678,
+  "lastUpdated": 1784792728699,
   "source": {
     "mode": "event-driven",
     "lastWriter": "ide",
-    "lastUpdated": "2026-06-25T12:27:42.678Z"
+    "lastUpdated": "2026-07-23T07:45:28.699Z"
   },
   "cognition": {
     "confidence": 0.35,

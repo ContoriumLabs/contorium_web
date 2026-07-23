@@ -1,0 +1,29 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "documentation",
+  "updated_at": "2026-07-23T07:45:38.025Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-23_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-23_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-19_evt_evt_intent_mqjn4atx_n9wb",
+    "2026-07-19_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-19_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-19_evt_evt_intent_mqndoym2_6ly7",
+    "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+    "2026-06-21_evt_evt_intent_mqjn4atx_n9wb"
+  ],
+  "events": [
+    "2026-07-23_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-23_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-19_evt_evt_intent_mqjn4atx_n9wb",
+    "2026-07-19_evt_evt_intent_mpuomn4w_ms6z",
+    "2026-07-19_evt_evt_intent_mpuomn4x_0bqu",
+    "2026-07-19_evt_evt_intent_mqndoym2_6ly7",
+    "2026-06-21_evt_evt_intent_mpw9npi0_qygp",
+    "2026-06-21_evt_evt_intent_mqjn4atx_n9wb"
+  ],
+  "decisions": [],
+  "modules": [],
+  "snapshots": []
+}

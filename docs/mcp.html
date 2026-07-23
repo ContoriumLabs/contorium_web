@@ -23,7 +23,7 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#ask">Product</a>
+          <a href="../index.html#demo">Product</a>
           <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>
@@ -42,6 +42,7 @@
 <li><a href="ide-extension.html">IDE extension</a></li>
 <li><a href="mcp.html" class="is-active">MCP server</a></li>
 <li><a href="cli.html">CLI</a></li>
+<li><a href="lifecycle.html">Knowledge Lifecycle</a></li>
 <li><a href="dashboard.html">Runtime dashboard</a></li>
 </ul></div>
       </aside>
@@ -58,12 +59,14 @@
 <hr>
 <h2>CIL tools (questions and narratives)</h2>
 <p>Natural-language and narrative queries route through <strong>Cognitive Kernel</strong>:</p>
-<pre><code class="language-text">ask_project · get_next_actions · get_cognitive_health · get_entity_knowledge
+<pre><code class="language-text">ask_project · get_next_actions · get_cognitive_health · get_knowledge_health · get_review_queue
+set_decision_lifecycle_meta · get_entity_knowledge
 get_project_essence · get_handoff_replay · get_snapshot · get_decision_graph
 get_project_history · transfer_story · transfer_project · get_suggested_questions
 </code></pre>
-<p>CLI mirror: <code>contorium ask</code> · <code>contorium health</code> · <code>contorium transfer --mode=…</code></p>
-<p>See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/CIL_V3.md">CIL v3 spec (GitHub)</a> · <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md">Surfaces (GitHub)</a>.</p>
+<p><strong>Decision validity (Lifecycle v3):</strong> <code>get_knowledge_health</code> and <code>get_review_queue</code> expose trust scores and invalidation triggers. <code>ask_project</code> attaches a validity overlay on decision answers. <code>set_decision_lifecycle_meta</code> records owner and verification (owner changes feed <code>OWNER_CHANGE</code> signals).</p>
+<p>CLI mirror: <code>contorium ask</code> · <code>contorium lifecycle</code> · <code>contorium review</code> · <code>contorium health</code></p>
+<p>See <a href="getting-started.html#ask-your-project-cil">CIL.md</a> · <a href="lifecycle.html">LIFECYCLE.md</a> · <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md">SURFACES.md</a>.</p>
 <hr>
 <h2>AI Layer tools (optional — default off)</h2>
 <p>Explanation-layer LLM status and connectivity. Fact/PIL tools do not require LLM.</p>
@@ -158,9 +161,21 @@ get_project_history · transfer_story · transfer_project · get_suggested_quest
 <td><code>transfer_project</code></td>
 <td>Unified export — <code>context</code> · <code>intelligence</code> · <code>story</code> · <code>essence</code> · <code>handoff</code></td>
 </tr>
+<tr>
+<td><code>get_knowledge_health</code></td>
+<td>Decision trust scores and lifecycle dashboard</td>
+</tr>
+<tr>
+<td><code>get_review_queue</code></td>
+<td>What needs review — invalidation triggers</td>
+</tr>
+<tr>
+<td><code>set_decision_lifecycle_meta</code></td>
+<td>Record owner, verification, expiry</td>
+</tr>
 </tbody>
 </table>
-<p>CLI mirror: <code>contorium ask "…"</code> · <code>contorium health</code> · <code>contorium transfer --mode=story</code></p>
+<p>CLI mirror: <code>contorium ask "…"</code> · <code>contorium lifecycle</code> · <code>contorium review</code> · <code>contorium health</code></p>
 <h3>PIL (Inspect · Transfer · Capture)</h3>
 <table>
 <thead>
@@ -313,9 +328,9 @@ AI calls tools (get_project_handoff, …) when needed
 <li>Walk up from cwd to find <code>.contora/state.json</code></li>
 </ol>
 <hr>
-<h2>Decision Provenance tools (preferred)</h2>
+<h2>Decision Provenance tools (advanced / slow)</h2>
 <p>Single decision pipeline shared with IDE and CLI. Artifacts persist under <code>.contora/governance/</code>.<br>
-See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM_LANGUAGE_SPEC.md">GitHub language spec</a>.</p>
+These tools can take <strong>1–3 minutes</strong> on large workspaces — prefer <code>ask_project</code> / <code>inspect_*</code> / <code>get_knowledge_health</code> for ordinary questions. Call <strong>at most one</strong> derive cycle per turn (aliases share the same handler). See <a href="https://github.com/ContoriumLabs/contorium/blob/main/docs/MCP_TOOL_CALLABILITY.md">MCP_TOOL_CALLABILITY.md</a>.</p>
 <table>
 <thead>
 <tr>

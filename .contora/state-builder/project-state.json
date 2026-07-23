@@ -1,7 +1,7 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1782390470059,
+  "generatedAt": 1784792736051,
   "project_goal": "develop documentation, AI integration and state engine",
   "current_stage": "documentation + AI layer development",
   "active_modules": [
@@ -16,7 +16,7 @@
   "recent_decisions": [],
   "open_problems": [
     "uncommitted changes in documentation module (from events)",
-    "37 paths with uncommitted changes — integration risk (from Git)"
+    "53 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [

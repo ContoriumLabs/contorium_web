@@ -1,12 +1,12 @@
 {
-  "enabled": false,
-  "provider": "openai",
+  "enabled": true,
+  "provider": "deepseek",
   "model": "deepseek-chat",
   "api_key_env": "CONTORIUM_IDE_LLM_API_KEY",
   "temperature": 0.2,
   "max_tokens": 4000,
   "intent_router": {
-    "enabled": false,
+    "enabled": true,
     "mode": "hybrid"
   },
   "enabled_modules": [

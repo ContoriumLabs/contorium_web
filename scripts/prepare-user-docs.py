@@ -47,8 +47,11 @@ Natural-language queries route through the **Cognitive Kernel**. CIL suggests an
 | `get_entity_knowledge` | Knowledge Graph for a module or topic |
 | `get_snapshot` | Time travel — state nearest a date |
 | `transfer_project` | Unified export — `context` · `intelligence` · `story` · `essence` · `handoff` |
+| `get_knowledge_health` | Decision trust scores and lifecycle dashboard |
+| `get_review_queue` | What needs review — invalidation triggers |
+| `set_decision_lifecycle_meta` | Record owner, verification, expiry |
 
-CLI mirror: `contorium ask "…"` · `contorium health` · `contorium transfer --mode=story`
+CLI mirror: `contorium ask "…"` · `contorium lifecycle` · `contorium review` · `contorium health`
 
 ### PIL (Inspect · Transfer · Capture)
 
@@ -147,11 +150,11 @@ GETTING_STARTED = """# Quick start
 
 {nav}
 
-**Contorium lets you ask your project.**
+**Give AI a memory of your project.**
 
-It is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence Layer (PIL)**. Ask what happened, why a decision was made, or what comes next — then switch between Cursor, Claude Code, Codex, Gemini CLI, and VS Code without re-explaining your architecture.
+Contorium preserves decisions, architecture context, and evolution history — so AI can understand your codebase without starting from zero every session.
 
-**You use it by:** installing one entry point (IDE, MCP, or CLI), opening a **folder** workspace, then **Ask · Capture · Transfer** as you work with AI.
+Install **IDE**, **MCP**, or **CLI**; all share `.contora/` in your project folder.
 
 ---
 
@@ -162,14 +165,14 @@ It is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence 
 | What happened this week? | Project History |
 | Why was MCP added? | Decision Center |
 | What should I do next? | Action Engine (suggestions only) |
-| Tell me everything about auth | Knowledge Graph |
-| What was state last Friday? | Time Travel (Snapshot) |
+| What needs review? | [Knowledge Lifecycle](lifecycle.html) · Review Queue |
+| Is this decision still valid? | Lifecycle · Knowledge Health |
 
 | Surface | How to ask |
 |---------|------------|
-| **CLI** | `contorium ask "Why was MCP added?"` |
-| **MCP** | Agent calls `ask_project` |
-| **IDE** | Command palette → **Ask Contorium…** · Cortex panel |
+| **CLI** | `contorium ask "Why was MCP added?"` · `contorium lifecycle` |
+| **MCP** | `ask_project` · `get_knowledge_health` · `get_review_queue` |
+| **IDE** | **Ask Contorium…** · Explore → Review Queue |
 
 CIL suggests and explains. It **never executes tasks** for you.
 
@@ -183,8 +186,6 @@ CIL suggests and explains. It **never executes tasks** for you.
 | Use Claude Code, Codex, or Cursor Agent | [MCP server](mcp.html) |
 | Work in the terminal or CI | [CLI](cli.html) |
 
-All three share the same `.contora/` folder in your project. You can add more later.
-
 ---
 
 ## Daily workflow
@@ -192,65 +193,55 @@ All three share the same `.contora/` folder in your project. You can add more la
 ### IDE + AI chat
 
 1. Install the extension → open a **folder** (not a single file).
-2. Set **Current focus** in the Contorium sidebar.
-3. Use **Ask Contorium…** or Cortex (**History · Decisions · Ask**) to explore project understanding.
-4. Starting a new AI chat? Confirm the **handoff prompt** (Y/n) or use **Transfer Context** from the sidebar.
+2. Set **Current focus** in the sidebar.
+3. Use **Ask Contorium…** or Explore (**Review Queue · Knowledge Health**).
+4. New AI chat? Confirm the **handoff prompt** (Y/n) or **Transfer Context**.
 
 ### MCP + AI agent
 
-1. Run the [one-line MCP setup](mcp.html#connect-your-ai-tool) for your host.
-2. Open Codex / Claude / Cursor in your project — MCP starts automatically.
-3. Ask via `ask_project` or use `inspect_*` / `transfer_*` when the agent needs structured facts.
+1. [One-line MCP setup](mcp.html#connect-your-ai-tool) for your host.
+2. Open Codex / Claude / Cursor in your project.
+3. Agent uses `ask_project`, `get_knowledge_health`, or `transfer_project` as needed.
 
 ### Terminal
 
 ```bash
 contorium init .
 contorium ask "What is this project about?"
-contorium health .
+contorium lifecycle
+contorium review
 contorium transfer context --copy
 ```
 
-See the [CLI guide](cli.html) for the full command list.
+See [CLI guide](cli.html) · [Lifecycle guide](lifecycle.html).
 
 ---
 
 ## Three things to remember
 
-1. **Open a folder** — Contorium needs a project root, not a lone file.
-2. **Ask, don't re-prompt** — use `contorium ask` or `ask_project` instead of pasting long explanations.
-3. **Local-first** — everything lives in `.contora/` inside your repo. No cloud account.
-
----
-
-## What Contorium is not
-
-- Not an AI agent or code generator
-- Not a project manager or task runner
-- Not a cloud service
-
-CIL suggests. PIL records. **Neither executes work for you.**
+1. **Open a folder** — not a single file.
+2. **Git remembers changes. Contorium remembers why.**
+3. **Local-first** — everything in `.contora/` inside your repo.
 
 ---
 
 ## Next steps
 
 - [Install all adapters](install.html)
+- [Knowledge Lifecycle](lifecycle.html)
 - [MCP setup wizard](../mcp/)
-- [Runtime dashboard](dashboard.html) — terminal status UI (starts automatically)
+- [Runtime dashboard](dashboard.html)
 """
 
 CLI_CIL_SECTION = """
 ## Ask your project (CIL)
 
-Primary user-facing commands — mirror MCP `ask_project` and related CIL tools:
-
 ```bash
 contorium ask "Why was MCP added?"
 contorium ask "What happened this week?"
 contorium health .
-contorium questions
-contorium entity mcp
+contorium lifecycle          # knowledge health dashboard
+contorium review             # review queue only
 contorium transfer --mode=story --copy
 ```
 
@@ -259,9 +250,11 @@ contorium transfer --mode=story --copy
 | Ask | `contorium ask "…"` | `ask_project` |
 | History | `contorium history` | `get_project_history` |
 | Decisions | `contorium decisions` | `get_decisions` |
-| Next actions | `contorium next` | `get_next_actions` |
+| Lifecycle | `contorium lifecycle` · `review` | `get_knowledge_health` · `get_review_queue` |
 | Health | `contorium health` | `get_cognitive_health` |
-| Unified transfer | `contorium transfer --mode=story\|essence\|…` | `transfer_project` |
+| Transfer | `contorium transfer --mode=…` | `transfer_project` |
+
+See [Knowledge Lifecycle](lifecycle.html).
 
 ---
 
@@ -303,6 +296,10 @@ SKIP_SECTIONS: dict[str, list[str]] = {
         "Debug commands",
         "Worker internals (maintainers)",
         "Related docs",
+    ],
+    "LIFECYCLE.md": [
+        "Related",
+        "Pipeline",
     ],
 }
 
@@ -352,6 +349,32 @@ def clean_user_md(md: str, title: str) -> str:
     md = re.sub(r"\[INSTALL\.md\]\(\./INSTALL\.md\)", "[Install](install.html)", md)
     md = re.sub(r"\[MCP\.md\]\(\./MCP\.md\)", "[MCP](mcp.html)", md)
     md = re.sub(r"\[IDE_EXTENSION\.md\]\(\./IDE_EXTENSION\.md\)", "[IDE extension](ide-extension.html)", md)
+    md = re.sub(r"\[LIFECYCLE\.md\]\(\./LIFECYCLE\.md\)", "[Knowledge Lifecycle](lifecycle.html)", md)
+    md = re.sub(r"\[CIL\.md\]\(\./CIL\.md\)", "[Quick start — CIL](getting-started.html)", md)
+    md = re.sub(
+        r"\[MCP_TOOL_CALLABILITY\.md\]\(\./MCP_TOOL_CALLABILITY\.md\)",
+        "[MCP tool callability (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/MCP_TOOL_CALLABILITY.md)",
+        md,
+    )
+    md = re.sub(
+        r"\[MCP tools\]\(\./MCP\.md\)",
+        "[MCP server](mcp.html)",
+        md,
+    )
+    # Internal doc cross-links → HTML slugs
+    internal = {
+        "INSTALL.md": "install.html",
+        "MCP.md": "mcp.html",
+        "CLI.md": "cli.html",
+        "DASHBOARD.md": "dashboard.html",
+        "IDE_EXTENSION.md": "ide-extension.html",
+        "LIFECYCLE.md": "lifecycle.html",
+        "OVERVIEW.md": "getting-started.html",
+        "CIL.md": "getting-started.html",
+    }
+    for src, dst in internal.items():
+        md = re.sub(rf"\]\(\./{re.escape(src)}\)", f"]({dst})", md)
+        md = re.sub(rf"\]\(\./{re.escape(src)}#([^)]+)\)", rf"]({dst}#\1)", md)
     md = re.sub(r"\n{3,}", "\n\n", md)
     return md.strip() + "\n"
 
@@ -479,6 +502,30 @@ def prepare_ide(md: str) -> str:
     return clean_user_md(md, "IDE extension — User guide")
 
 
+def prepare_lifecycle(md: str) -> str:
+    md = strip_sections(md, SKIP_SECTIONS["LIFECYCLE.md"])
+    md = clean_user_md(md, "Knowledge Lifecycle — User guide")
+    intro = """Contorium tracks whether project knowledge is still trustworthy — **how stale** decisions are and **why** they may need review.
+
+**Git remembers changes. Contorium remembers why — and whether that reasoning still holds.**
+
+"""
+    if "Git remembers changes" not in md:
+        md = re.sub(
+            r"Contorium v3\+ tracks[^\n]+\n\n\*\*Schema:\*\*[^\n]+\n\n",
+            intro,
+            md,
+            count=1,
+        )
+    md = re.sub(
+        r"Lifecycle is rebuilt on \*\*Sync\*\* via `persistKnowledgeLifecycle\(\)`[^\n]+\n",
+        "Lifecycle updates when you sync the workspace — it is a projection of decisions and events, not a separate source of truth.\n",
+        md,
+    )
+    md = re.sub(r"Implementation:.*", "", md)
+    return md
+
+
 def prepare_dashboard(md: str) -> str:
     md = strip_sections(md, SKIP_SECTIONS["DASHBOARD.md"])
     return clean_user_md(md, "Runtime dashboard — User guide")
@@ -502,6 +549,7 @@ def main() -> None:
         "CLI.md": prepare_cli,
         "IDE_EXTENSION.md": prepare_ide,
         "DASHBOARD.md": prepare_dashboard,
+        "LIFECYCLE.md": prepare_lifecycle,
     }
 
     for name, handler in handlers.items():
@@ -522,6 +570,8 @@ def main() -> None:
         "CIL.md",
         "SURFACES.md",
         "AI_LAYER.md",
+        "README.md",
+        "MCP_TOOL_CALLABILITY.md",
     ]:
         path = TARGET / orphan
         if path.exists():

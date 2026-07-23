@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-26_evt_evt_intent_mqndoym2_6ly7",
+  "timestamp": "2026-06-26T11:02:57.039Z",
+  "title": "develop documentation, MCP integration and test coverage",
+  "summary": "develop documentation, MCP integration and test coverage",
+  "files": [],
+  "impact": [
+    "intent_mqndoym2_6ly78z"
+  ],
+  "linked_intent": "intent_mqndoym2_6ly78z",
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v12",
+  "previous": "2026-06-26_evt_evt_intent_mpuomn4x_4lkr",
+  "next": "2026-06-26_evt_evt_intent_mqndq65z_rg26"
+}

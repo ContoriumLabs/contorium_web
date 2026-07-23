@@ -15,14 +15,17 @@ Connect once to Claude Code, Cursor Agent, Codex, Gemini CLI, or VS Code MCP. Ag
 Natural-language and narrative queries route through **Cognitive Kernel**:
 
 ```text
-ask_project · get_next_actions · get_cognitive_health · get_entity_knowledge
+ask_project · get_next_actions · get_cognitive_health · get_knowledge_health · get_review_queue
+set_decision_lifecycle_meta · get_entity_knowledge
 get_project_essence · get_handoff_replay · get_snapshot · get_decision_graph
 get_project_history · transfer_story · transfer_project · get_suggested_questions
 ```
 
-CLI mirror: `contorium ask` · `contorium health` · `contorium transfer --mode=…`
+**Decision validity (Lifecycle v3):** `get_knowledge_health` and `get_review_queue` expose trust scores and invalidation triggers. `ask_project` attaches a validity overlay on decision answers. `set_decision_lifecycle_meta` records owner and verification (owner changes feed `OWNER_CHANGE` signals).
 
-See [CIL v3 spec (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/CIL_V3.md) · [Surfaces (GitHub)](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md).
+CLI mirror: `contorium ask` · `contorium lifecycle` · `contorium review` · `contorium health`
+
+See [CIL.md](getting-started.html#ask-your-project-cil) · [LIFECYCLE.md](lifecycle.html) · [SURFACES.md](https://github.com/ContoriumLabs/contorium/blob/main/docs/SURFACES.md).
 
 ---
 
@@ -66,8 +69,11 @@ Natural-language queries route through the **Cognitive Kernel**. CIL suggests an
 | `get_entity_knowledge` | Knowledge Graph for a module or topic |
 | `get_snapshot` | Time travel — state nearest a date |
 | `transfer_project` | Unified export — `context` · `intelligence` · `story` · `essence` · `handoff` |
+| `get_knowledge_health` | Decision trust scores and lifecycle dashboard |
+| `get_review_queue` | What needs review — invalidation triggers |
+| `set_decision_lifecycle_meta` | Record owner, verification, expiry |
 
-CLI mirror: `contorium ask "…"` · `contorium health` · `contorium transfer --mode=story`
+CLI mirror: `contorium ask "…"` · `contorium lifecycle` · `contorium review` · `contorium health`
 
 ### PIL (Inspect · Transfer · Capture)
 
@@ -198,10 +204,10 @@ The server resolves the project root in this order:
 
 ---
 
-## Decision Provenance tools (preferred)
+## Decision Provenance tools (advanced / slow)
 
 Single decision pipeline shared with IDE and CLI. Artifacts persist under `.contora/governance/`.  
-See [GitHub language spec](https://github.com/ContoriumLabs/contorium/blob/main/docs/CONTORIUM_LANGUAGE_SPEC.md).
+These tools can take **1–3 minutes** on large workspaces — prefer `ask_project` / `inspect_*` / `get_knowledge_health` for ordinary questions. Call **at most one** derive cycle per turn (aliases share the same handler). See [MCP_TOOL_CALLABILITY.md](https://github.com/ContoriumLabs/contorium/blob/main/docs/MCP_TOOL_CALLABILITY.md).
 
 | Tool | Purpose | IDE equivalent | CLI equivalent |
 |------|---------|----------------|----------------|

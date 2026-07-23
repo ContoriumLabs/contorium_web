@@ -1,6 +1,6 @@
 # Contorium — Install, Use, and Uninstall (Three Adapters)
 
-> Back to [Home](../index.html) · [Documentation index](index.html) · [PIL Runtime Guide](./PIL_RUNTIME.md) · [Project Intelligence Layer v1.1.3](./PROJECT_INTELLIGENCE_LAYER.md) · Per adapter: [IDE](./IDE_EXTENSION.md) · [MCP](./MCP.md) · [CLI](./CLI.md)
+> Back to [Home](../index.html) · [Documentation index](index.html) · [PIL Runtime Guide](https://github.com/ContoriumLabs/contorium/blob/main/docs/PIL_RUNTIME.md) · Per adapter: [IDE](./IDE_EXTENSION.md) · [MCP](./MCP.md) · [CLI](./CLI.md)
 
 Contorium is an **AI Project Intelligence Layer (PIL)**. IDE, MCP, and CLI are **peer PIL runtimes** sharing `@contora/state-core` and the project-local `.contora/` directory.
 
@@ -91,7 +91,7 @@ IDE events / Git scan
   → IDE sidebar / MCP tools / CLI export / Dashboard [c] copy
 ```
 
-**Decision Provenance pipeline** (see [Language Spec](./CONTORIUM_LANGUAGE_SPEC.md)):
+**Decision Provenance pipeline** (advanced — see [MCP.md](./MCP.md)):
 
 | Step | MCP tool (preferred) | IDE | CLI (preferred) |
 |------|----------------------|-----|-----------------|
@@ -110,7 +110,7 @@ IDE events / Git scan
 
 Legacy aliases (`ensure_control_ready`, `run_governance_cycle`, `contorium governance cycle`, `contorium control …`) remain supported.
 
-See [ARCHITECTURE_V3.md](https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md) for the understanding layer design.
+See [OVERVIEW.md](getting-started.html) and [PIL_RUNTIME.md](https://github.com/ContoriumLabs/contorium/blob/main/docs/PIL_RUNTIME.md) for the intelligence model.
 
 ---
 
@@ -429,11 +429,9 @@ After changing CLI or dashboard code: run `npm run build:cli` and **restart the 
 ## Related docs
 
 - [Home](../index.html)
-- [Project Overview](./OVERVIEW.md)
+- [Project Overview](getting-started.html)
 - [IDE Extension](./IDE_EXTENSION.md)
 - [MCP Server](./MCP.md)
 - [CLI](./CLI.md)
-- [Architecture V3.1](https://github.com/ContoriumLabs/contorium/blob/main/docs/ARCHITECTURE_V3.md)
-- [Engineering Closure (frozen)](https://github.com/ContoriumLabs/contorium/blob/main/docs/ENGINEERING_CLOSURE.md)
-- [Runtime Dashboard (CRBP)](./DASHBOARD.md)
-- [State Engine](https://github.com/ContoriumLabs/contorium/blob/main/docs/STATE_ENGINE.md)
+- [Runtime Dashboard](./DASHBOARD.md)
+- [Knowledge Lifecycle](lifecycle.html)

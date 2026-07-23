@@ -154,7 +154,7 @@ No MCP or CLI required.
 
 No manual MCP terminal. No IDE required; scan/merged mode is less precise without IDE events.
 
-See also [Runtime Dashboard](./DASHBOARD.md) — full-screen **Cognitive State** TUI (auto-attached after bootstrap).
+See also [Runtime Dashboard](dashboard.html) — full-screen **Cognitive State** TUI (auto-attached after bootstrap).
 
 ### CLI only
 

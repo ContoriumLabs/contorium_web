@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-06-19_evt_evt_intent_mpuoon5s_46m7",
+  "timestamp": "2026-06-19T00:22:37.328Z",
+  "title": "iterate on 修改方案2.md",
+  "summary": "iterate on 修改方案2.md",
+  "files": [],
+  "impact": [
+    "intent_mpuoon5s_46m7m6"
+  ],
+  "linked_intent": "intent_mpuoon5s_46m7m6",
+  "freshness": "stale",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v2",
+  "previous": "+058402-08_evt_evt_scripts_build_docs_p",
+  "next": "2026-06-20_evt_evt_intent_mqk9gu88_p3is"
+}

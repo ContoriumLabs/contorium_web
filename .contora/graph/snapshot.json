@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1782390470096,
+  "generatedAt": 1784792736091,
   "topIntents": [],
   "topHotspots": [],
   "topFunctions": [],
@@ -10,8 +10,8 @@
     "review state persistence paths"
   ],
   "graphSummary": {
-    "nodeCount": 14,
-    "edgeCount": 0,
+    "nodeCount": 31,
+    "edgeCount": 82,
     "mappingCount": 0,
     "avgConfidence": 0
   }
