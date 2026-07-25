@@ -1,42 +1,43 @@
 {
   "schema": "knowledge_entity.v1",
   "entity": "install.html",
-  "updated_at": "2026-07-23T07:45:38.025Z",
+  "updated_at": "2026-07-24T08:04:55.024Z",
   "projection_of": "cognitive_events",
   "derived_from": [
-    "2026-07-23_evt_workspace_change"
+    "2026-07-24_evt_workspace_change"
   ],
   "events": [
-    "2026-07-23_evt_workspace_change"
+    "2026-07-24_evt_workspace_change"
   ],
   "decisions": [],
   "modules": [
     "docs/index.html",
+    "docs/lifecycle.html",
     "docs/dashboard.html",
     "docs/cli.html",
     "docs/mcp.html",
     "docs/ide-extension.html",
     "docs/install.html",
     "docs/getting-started.html",
+    "docs/LIFECYCLE.md",
     "docs/DASHBOARD.md",
     "docs/IDE_EXTENSION.md",
     "docs/CLI.md",
     "docs/MCP.md",
     "docs/INSTALL.md",
     "docs/GETTING_STARTED.md",
-    "scripts/prepare-user-docs.py",
-    "mcp/index.html",
     "mcp/README.md",
     "blog/index.html",
     "index.html",
+    "mcp/index.html",
     "README.md",
     "优化.md",
     "修改方案.md",
+    "_source/AI_LAYER.md",
     "_source/CLI.md",
-    "_source/COGNITIVE_DIMENSIONS.md",
-    "_source/CONTORIUM_LANGUAGE_SPEC.md",
     "_source/DASHBOARD.md",
-    "_source/IDE_EXTENSION.md"
+    "_source/IDE_EXTENSION.md",
+    "_source/INSTALL.md"
   ],
   "snapshots": []
 }

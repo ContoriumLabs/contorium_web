@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-23_evt_evt_intent_mrxh4djz_bulq",
+  "timestamp": "2026-07-23T23:49:11.541Z",
+  "title": "develop AI integration, documentation and MCP integration",
+  "summary": "develop AI integration, documentation and MCP integration",
+  "files": [],
+  "impact": [
+    "intent_mrxh4djz_bulqc2"
+  ],
+  "linked_intent": "intent_mrxh4djz_bulqc2",
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v3",
+  "previous": "2026-07-23_evt_evt_intent_mqndoym2_6ly7",
+  "next": "2026-07-23_evt_evt_intent_mpuomn4w_ms6z"
+}

@@ -1,7 +1,7 @@
 {
   "schema": "cognitive_event.v1",
   "id": "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
-  "timestamp": "2026-07-23T07:27:30.601Z",
+  "timestamp": "2026-07-23T23:50:11.414Z",
   "title": "iterate on index.html",
   "summary": "iterate on index.html",
   "files": [],
@@ -16,7 +16,7 @@
   "provenance": [
     "IDE"
   ],
-  "version": "snapshot_v18",
+  "version": "snapshot_v6",
   "previous": "2026-07-23_evt_evt_intent_mpuomn4x_0bqu",
   "next": "2026-07-23_evt_evt_intent_mqndq65z_rg26"
 }

@@ -1,7 +1,7 @@
 {
   "schema": "cognitive_event.v1",
   "id": "2026-07-23_evt_evt_intent_mrracunp_zmd1",
-  "timestamp": "2026-07-23T07:27:30.601Z",
+  "timestamp": "2026-07-23T23:50:11.414Z",
   "title": "iterate on CLI.md",
   "summary": "iterate on CLI.md",
   "files": [],
@@ -16,7 +16,7 @@
   "provenance": [
     "IDE"
   ],
-  "version": "snapshot_v20",
+  "version": "snapshot_v8",
   "previous": "2026-07-23_evt_evt_intent_mqndq65z_rg26",
-  "next": "2026-07-23_evt_evt_contora_web_17847918"
+  "next": "2026-07-23_evt_evt_contora_web_17848506"
 }

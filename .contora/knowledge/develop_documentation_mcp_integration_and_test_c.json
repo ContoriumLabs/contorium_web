@@ -1,13 +1,13 @@
 {
   "schema": "knowledge_entity.v1",
   "entity": "develop_documentation_mcp_integration_and_test_c",
-  "updated_at": "2026-07-23T07:45:38.025Z",
+  "updated_at": "2026-07-24T08:04:55.024Z",
   "projection_of": "cognitive_events",
   "derived_from": [
-    "2026-07-19_evt_evt_intent_mqndoym2_6ly7"
+    "2026-07-23_evt_evt_intent_mqndoym2_6ly7"
   ],
   "events": [
-    "2026-07-19_evt_evt_intent_mqndoym2_6ly7"
+    "2026-07-23_evt_evt_intent_mqndoym2_6ly7"
   ],
   "decisions": [],
   "modules": [],

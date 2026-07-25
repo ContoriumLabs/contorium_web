@@ -1,6 +1,6 @@
 {
   "schema": "intent.v1",
-  "updated_at": "2026-07-23T07:45:35.978Z",
+  "updated_at": "2026-07-24T08:06:01.228Z",
   "nodes": [
     {
       "intent_id": "intent_mpuomn4w_ms6zcz",
@@ -30,8 +30,8 @@
         "scripts"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z",
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -66,8 +66,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z",
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -101,8 +101,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-19T04:18:35.699Z",
-      "updated_at": "2026-07-19T04:18:35.699Z",
+      "created_at": "2026-07-24T08:03:16.438Z",
+      "updated_at": "2026-07-24T08:03:16.438Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -135,8 +135,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z",
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z",
       "cognition": {
         "confidence": 0.62,
         "category": "evolving",
@@ -197,8 +197,8 @@
         "docs"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-19T02:15:44.133Z",
-      "updated_at": "2026-07-19T02:15:44.133Z",
+      "created_at": "2026-07-23T12:13:38.645Z",
+      "updated_at": "2026-07-23T12:13:38.645Z",
       "cognition": {
         "confidence": 0.68,
         "category": "evolving",
@@ -225,8 +225,8 @@
         "mcp"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z",
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z",
       "cognition": {
         "confidence": 0.71,
         "category": "evolving",
@@ -249,11 +249,39 @@
         "docs"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z",
+      "created_at": "2026-07-24T00:02:11.551Z",
+      "updated_at": "2026-07-24T00:02:11.551Z",
       "cognition": {
         "confidence": 0.82,
         "category": "stable",
+        "freshness": "recent"
+      }
+    },
+    {
+      "intent_id": "intent_mrxh4djz_bulqc2",
+      "title": "develop AI integration, documentation and MCP integration",
+      "name": "develop AI integration, documentation and MCP integration",
+      "description": "develop AI integration, documentation and MCP integration",
+      "why": "develop AI integration, documentation and MCP integration",
+      "design_principles": [],
+      "constraints": [
+        "scoped to 8 path(s)"
+      ],
+      "related_modules": [
+        "blog",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "mcp",
+        "docs"
+      ],
+      "linked_decisions": [],
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z",
+      "cognition": {
+        "confidence": 0.71,
+        "category": "evolving",
         "freshness": "recent"
       }
     }
@@ -1492,6 +1520,61 @@
     {
       "from": "intent_mpuomn4x_0bqur2",
       "to": "intent_mrracunp_zmd1fq",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mrxh4djz_bulqc2",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mrxh4djz_bulqc2",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "intent_mrxh4djz_bulqc2",
       "type": "RELATED_TO"
     }
   ]

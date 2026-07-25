@@ -1,7 +1,7 @@
 {
   "schema": "knowledge_entity.v1",
   "entity": "develop_documentation_ai_integration_and_mcp_int",
-  "updated_at": "2026-07-23T07:45:38.025Z",
+  "updated_at": "2026-07-23T23:50:12.281Z",
   "projection_of": "cognitive_events",
   "derived_from": [
     "2026-06-21_evt_evt_intent_mpw9npi0_qygp"

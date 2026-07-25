@@ -60,7 +60,7 @@ HEADER = """<!DOCTYPE html>
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#demo">Product</a>
+          <a href="../index.html#define">Product</a>
           <a href="install.html">Install</a>
           <a href="../mcp/">MCP setup</a>
           <a href="index.html" class="nav-active">Docs</a>

@@ -1,10 +1,10 @@
 PROJECT SNAPSHOT
 
 Goal:
-develop documentation, AI integration and state engine
+develop AI integration, documentation and state engine
 
 Current Stage:
-documentation + AI layer development
+AI layer + documentation development
 
 Active Modules:
 - index.html (from IDE)
@@ -12,21 +12,21 @@ Active Modules:
 - README (from IDE)
 - 优化 (from IDE)
 - 修改方案 (from IDE)
-- CLI (from IDE)
+- AI_LAYER (from IDE)
 - index.html (from events)
 
 Recent Decisions:
 (none yet)
 
 Open Problems:
-- uncommitted changes in documentation module (from events)
-- 53 paths with uncommitted changes — integration risk (from Git)
+- uncommitted changes in AI integration module (from events)
+- 286 paths with uncommitted changes — integration risk (from Git)
 
 Completed Milestones:
 (none yet)
 
 Next Actions:
 - review and commit pending changes
-- continue documentation updates
 - review AI integration changes
+- continue documentation updates
 - review state persistence paths

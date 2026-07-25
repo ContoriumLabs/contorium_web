@@ -1,0 +1,17 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "develop_ai_integration_documentation_and_mcp_int",
+  "updated_at": "2026-07-24T08:04:55.024Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-24_evt_evt_intent_mrxh4djz_bulq",
+    "2026-07-23_evt_evt_intent_mrxh4djz_bulq"
+  ],
+  "events": [
+    "2026-07-24_evt_evt_intent_mrxh4djz_bulq",
+    "2026-07-23_evt_evt_intent_mrxh4djz_bulq"
+  ],
+  "decisions": [],
+  "modules": [],
+  "snapshots": []
+}

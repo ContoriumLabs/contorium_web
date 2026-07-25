@@ -1,6 +1,6 @@
 {
   "schema": "impact_graph.v1",
-  "updated_at": "2026-07-23T07:45:36.166Z",
+  "updated_at": "2026-07-24T08:06:06.302Z",
   "entries": [
     {
       "source_entity": "docs/index.html",
@@ -8,10 +8,6 @@
       "impacted_nodes": [
         {
           "module": "docs",
-          "impact_level": 1
-        },
-        {
-          "module": "scripts",
           "impact_level": 1
         },
         {
@@ -41,9 +37,9 @@
       ],
       "impact_radius": 1,
       "blast_radius": 1,
-      "dependency_depth": 1,
-      "risk_score": 0.88,
-      "updated_at": "2026-07-23T07:45:36.165Z"
+      "dependency_depth": 0,
+      "risk_score": 0.68,
+      "updated_at": "2026-07-24T08:06:06.301Z"
     }
   ]
 }

@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "generatedAt": 1784792735860,
-  "project_intent": "develop documentation, AI integration and state engine",
+  "generatedAt": 1784880359787,
+  "project_intent": "develop AI integration, documentation and state engine",
   "current_focus": "work in blog",
   "active_domains": [
-    "docs",
     "ai",
+    "docs",
     "state-engine",
     "mcp",
     "ui",
-    "auth"
+    "tests"
   ],
-  "active_problem_area": "uncommitted changes in documentation module",
+  "active_problem_area": "uncommitted changes in AI integration module",
   "activity_clusters": [
     {
       "cluster": "blog",
@@ -50,19 +50,26 @@
         "docs/getting-started.html",
         "docs/ide-extension.html"
       ],
-      "weight": 0.33
+      "weight": 0.32
     },
     {
-      "cluster": "scripts",
+      "cluster": "docs / _source",
       "files": [
-        "scripts/prepare-user-docs.py"
+        "docs/_source/AI_LAYER.md",
+        "docs/_source/CLI.md",
+        "docs/_source/DASHBOARD.md",
+        "docs/_source/IDE_EXTENSION.md",
+        "docs/_source/INSTALL.md",
+        "docs/_source/MCP_TOOL_CALLABILITY.md",
+        "docs/_source/MCP.md",
+        "docs/_source/PIL_RUNTIME.md"
       ],
       "weight": 0.32
     }
   ],
   "next_likely_actions": [
-    "update documentation for recent changes",
     "refine ai module changes",
+    "update documentation for recent changes",
     "iterate on index.html",
     "iterate on IDE_EXTENSION.md"
   ],

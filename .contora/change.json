@@ -1,37 +1,43 @@
 {
   "version": 2,
-  "generatedAt": 1784792736091,
+  "generatedAt": 1784880362392,
   "changed_files": [
     "docs/index.html",
+    "docs/lifecycle.html",
     "docs/dashboard.html",
     "docs/cli.html",
     "docs/mcp.html",
     "docs/ide-extension.html",
     "docs/install.html",
     "docs/getting-started.html",
+    "docs/LIFECYCLE.md",
     "docs/DASHBOARD.md",
     "docs/IDE_EXTENSION.md",
     "docs/CLI.md",
     "docs/MCP.md",
     "docs/INSTALL.md",
     "docs/GETTING_STARTED.md",
-    "scripts/prepare-user-docs.py",
-    "mcp/index.html",
     "mcp/README.md",
     "blog/index.html",
     "index.html",
+    "mcp/index.html",
     "README.md",
     "优化.md",
     "修改方案.md",
+    "docs/_source/AI_LAYER.md",
     "docs/_source/CLI.md",
-    "docs/_source/COGNITIVE_DIMENSIONS.md",
-    "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
     "docs/_source/DASHBOARD.md",
-    "docs/_source/IDE_EXTENSION.md"
+    "docs/_source/IDE_EXTENSION.md",
+    "docs/_source/INSTALL.md"
   ],
   "key_changes": [
     {
       "symbol": "docs/index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/lifecycle.html",
       "kind": "file",
       "change_type": "modified"
     },
@@ -66,6 +72,11 @@
       "change_type": "modified"
     },
     {
+      "symbol": "docs/LIFECYCLE.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
       "symbol": "docs/DASHBOARD.md",
       "kind": "file",
       "change_type": "modified"
@@ -96,61 +107,6 @@
       "change_type": "modified"
     },
     {
-      "symbol": "scripts/prepare-user-docs.py",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::strip_sections",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::clean_user_md",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::trim_install_matrix",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::prepare_mcp",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::prepare_install",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::prepare_cli",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::prepare_ide",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::prepare_dashboard",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "scripts/prepare-user-docs.py::main",
-      "kind": "function",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "mcp/index.html",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
       "symbol": "mcp/README.md",
       "kind": "file",
       "change_type": "modified"
@@ -162,6 +118,11 @@
     },
     {
       "symbol": "index.html",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "mcp/index.html",
       "kind": "file",
       "change_type": "modified"
     },
@@ -181,17 +142,12 @@
       "change_type": "modified"
     },
     {
+      "symbol": "docs/_source/AI_LAYER.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
       "symbol": "docs/_source/CLI.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/_source/COGNITIVE_DIMENSIONS.md",
-      "kind": "file",
-      "change_type": "modified"
-    },
-    {
-      "symbol": "docs/_source/CONTORIUM_LANGUAGE_SPEC.md",
       "kind": "file",
       "change_type": "modified"
     },
@@ -202,6 +158,11 @@
     },
     {
       "symbol": "docs/_source/IDE_EXTENSION.md",
+      "kind": "file",
+      "change_type": "modified"
+    },
+    {
+      "symbol": "docs/_source/INSTALL.md",
       "kind": "file",
       "change_type": "modified"
     }

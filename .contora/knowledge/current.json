@@ -1,0 +1,15 @@
+{
+  "schema": "knowledge_entity.v1",
+  "entity": "current",
+  "updated_at": "2026-07-24T07:58:17.287Z",
+  "projection_of": "cognitive_events",
+  "derived_from": [
+    "2026-07-24_evt_current_focus"
+  ],
+  "events": [
+    "2026-07-24_evt_current_focus"
+  ],
+  "decisions": [],
+  "modules": [],
+  "snapshots": []
+}

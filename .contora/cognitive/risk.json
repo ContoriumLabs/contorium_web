@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generatedAt": 1784791646631,
+  "generatedAt": 1784879882613,
   "risks": [
     {
       "type": "impact_summary",
-      "level": "high",
-      "description": "Changed functions: scripts/prepare-user-docs.py::strip_sections, scripts/prepare-user-docs.py::clean_user_md, scripts/prepare-user-docs.py::trim_install_matrix, scripts/prepare-user-docs.py::prepare_mcp, scripts/prepare-user-docs.py::prepare_install, scripts/prepare-user-docs.py::prepare_cli, scripts/prepare-user-docs.py::prepare_ide, scripts/prepare-user-docs.py::prepare_dashboard; Direct callers: scripts/prepare-user-docs.py::clean_user_md, scripts/prepare-user-docs.py::trim_install_matrix, scripts/prepare-user-docs.py::prepare_mcp, scripts/prepare-user-docs.py::prepare_install, scripts/prepare-user-docs.py::prepare_cli, scripts/prepare-user-docs.py::prepare_ide, scripts/prepare-user-docs.py::prepare_dashboard, scripts/prepare-user-docs.py::main"
+      "level": "low",
+      "description": "Impact from recent changes"
     },
     {
       "type": "affected_modules",
-      "level": "high",
-      "description": "Modules: docs/index.html, docs/dashboard.html, docs/cli.html, docs/mcp.html, docs/ide-extension.html, docs/install.html"
+      "level": "low",
+      "description": "Modules: docs/index.html, docs/lifecycle.html, docs/dashboard.html, docs/cli.html, docs/mcp.html, docs/ide-extension.html"
     }
   ]
 }

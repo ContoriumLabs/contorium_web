@@ -1,0 +1,20 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-24_evt_current_focus",
+  "timestamp": "2026-07-24T07:58:02.330Z",
+  "title": "修改首页主题",
+  "summary": "Current project focus",
+  "files": [],
+  "impact": [],
+  "freshness": "fresh",
+  "source": [
+    "ide",
+    "manual"
+  ],
+  "provenance": [
+    "focus_note"
+  ],
+  "version": "snapshot_v38",
+  "previous": "2026-07-24_evt_evt_contora_web_17848523",
+  "next": "2026-07-24_evt_evt_intent_mpuomn4x_95gd"
+}

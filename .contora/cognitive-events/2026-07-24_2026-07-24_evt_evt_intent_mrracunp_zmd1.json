@@ -1,0 +1,22 @@
+{
+  "schema": "cognitive_event.v1",
+  "id": "2026-07-24_evt_evt_intent_mrracunp_zmd1",
+  "timestamp": "2026-07-24T00:00:11.527Z",
+  "title": "iterate on CLI.md",
+  "summary": "iterate on CLI.md",
+  "files": [],
+  "impact": [
+    "intent_mrracunp_zmd1fq"
+  ],
+  "linked_intent": "intent_mrracunp_zmd1fq",
+  "freshness": "fresh",
+  "source": [
+    "ide"
+  ],
+  "provenance": [
+    "IDE"
+  ],
+  "version": "snapshot_v19",
+  "previous": "2026-07-24_evt_evt_intent_mqndq65z_rg26",
+  "next": "2026-07-24_evt_evt_intent_mrxh4djz_bulq"
+}

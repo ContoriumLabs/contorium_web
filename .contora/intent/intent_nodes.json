@@ -28,8 +28,8 @@
         "scripts"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z"
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z"
     },
     {
       "intent_id": "intent_mpuomn4x_0bqur2",
@@ -59,8 +59,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z"
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z"
     },
     {
       "intent_id": "intent_mpuomn4x_95gdjs",
@@ -89,8 +89,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-19T04:18:35.699Z",
-      "updated_at": "2026-07-19T04:18:35.699Z"
+      "created_at": "2026-07-24T08:03:16.438Z",
+      "updated_at": "2026-07-24T08:03:16.438Z"
     },
     {
       "intent_id": "intent_mpuomn4x_4lkrpf",
@@ -118,8 +118,8 @@
         "优化.md"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z"
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z"
     },
     {
       "intent_id": "intent_mqjn4atx_n9wbv6",
@@ -170,8 +170,8 @@
         "docs"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-19T02:15:44.133Z",
-      "updated_at": "2026-07-19T02:15:44.133Z"
+      "created_at": "2026-07-23T12:13:38.645Z",
+      "updated_at": "2026-07-23T12:13:38.645Z"
     },
     {
       "intent_id": "intent_mqndq65z_rg26ig",
@@ -193,8 +193,8 @@
         "mcp"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z"
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z"
     },
     {
       "intent_id": "intent_mrracunp_zmd1fq",
@@ -212,8 +212,31 @@
         "docs"
       ],
       "linked_decisions": [],
-      "created_at": "2026-07-23T07:45:35.978Z",
-      "updated_at": "2026-07-23T07:45:35.978Z"
+      "created_at": "2026-07-24T00:02:11.551Z",
+      "updated_at": "2026-07-24T00:02:11.551Z"
+    },
+    {
+      "intent_id": "intent_mrxh4djz_bulqc2",
+      "title": "develop AI integration, documentation and MCP integration",
+      "name": "develop AI integration, documentation and MCP integration",
+      "description": "develop AI integration, documentation and MCP integration",
+      "why": "develop AI integration, documentation and MCP integration",
+      "design_principles": [],
+      "constraints": [
+        "scoped to 8 path(s)"
+      ],
+      "related_modules": [
+        "blog",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "mcp",
+        "docs"
+      ],
+      "linked_decisions": [],
+      "created_at": "2026-07-24T08:06:01.228Z",
+      "updated_at": "2026-07-24T08:06:01.228Z"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": 1784791646631,
-  "phase": "risk_mitigation",
-  "progress": 0.4,
-  "current_focus": "develop documentation, AI integration and state engine — focus: landing page / static UI, documentation, IDE extension UI",
+  "generatedAt": 1784879882613,
+  "phase": "active_development",
+  "progress": 0.55,
+  "current_focus": "develop AI integration, documentation and state engine — focus: landing page / static UI, documentation, IDE extension UI",
   "active_tasks": [
     "review:review and commit pending changes",
-    "continue:continue documentation updates",
     "review:review AI integration changes",
+    "continue:continue documentation updates",
     "review:review state persistence paths"
   ]
 }

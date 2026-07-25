@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1784792736106,
+  "generatedAt": 1784808819260,
   "recent_change": {
     "name": "scripts/prepare-user-docs.py::strip_sections()",
     "change_type": "modified"
@@ -15,6 +15,7 @@
     "scripts/prepare-user-docs.py::prepare_install",
     "scripts/prepare-user-docs.py::prepare_cli",
     "scripts/prepare-user-docs.py::prepare_ide",
+    "scripts/prepare-user-docs.py::prepare_lifecycle",
     "scripts/prepare-user-docs.py::prepare_dashboard",
     "scripts/prepare-user-docs.py::main",
     "scripts/prepare-user-docs.py::strip_sections",

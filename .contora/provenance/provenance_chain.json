@@ -1,6 +1,6 @@
 {
   "schema": "provenance_chain.v1",
-  "updated_at": "2026-07-23T07:45:36.185Z",
+  "updated_at": "2026-07-24T08:06:06.832Z",
   "entries": [
     {
       "query_anchor": "contora_web",
@@ -14,16 +14,16 @@
           "layer": "intent",
           "entity_id": "intent_mpuomn4w_ms6zcz",
           "label": "develop documentation, MCP integration and state engine",
-          "timestamp": "2026-07-23T07:45:35.978Z"
+          "timestamp": "2026-07-24T08:06:01.228Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mpuomn4w_ms6zcz_1784434363756",
+          "entity_id": "evt_intent_mpuomn4w_ms6zcz_1784850611414",
           "label": "develop documentation, MCP integration and state engine",
-          "timestamp": "2026-07-19T04:12:43.756Z"
+          "timestamp": "2026-07-23T23:50:11.414Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "develop documentation, MCP integration and state engine",
@@ -37,16 +37,16 @@
           "layer": "intent",
           "entity_id": "intent_mpuomn4w_ms6zcz",
           "label": "develop documentation, MCP integration and state engine",
-          "timestamp": "2026-07-23T07:45:35.978Z"
+          "timestamp": "2026-07-24T08:06:01.228Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mpuomn4w_ms6zcz_1784434363756",
+          "entity_id": "evt_intent_mpuomn4w_ms6zcz_1784850611414",
           "label": "develop documentation, MCP integration and state engine",
-          "timestamp": "2026-07-19T04:12:43.756Z"
+          "timestamp": "2026-07-23T23:50:11.414Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "update documentation for recent changes",
@@ -60,16 +60,16 @@
           "layer": "intent",
           "entity_id": "intent_mpuomn4x_0bqur2",
           "label": "update documentation for recent changes",
-          "timestamp": "2026-07-23T07:45:35.978Z"
+          "timestamp": "2026-07-24T08:06:01.228Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mpuomn4x_0bqur2_1784434363756",
+          "entity_id": "evt_intent_mpuomn4x_0bqur2_1784850611414",
           "label": "update documentation for recent changes",
-          "timestamp": "2026-07-19T04:12:43.756Z"
+          "timestamp": "2026-07-23T23:50:11.414Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "verify MCP tools against workspace state",
@@ -83,16 +83,16 @@
           "layer": "intent",
           "entity_id": "intent_mpuomn4x_95gdjs",
           "label": "verify MCP tools against workspace state",
-          "timestamp": "2026-07-19T04:18:35.699Z"
+          "timestamp": "2026-07-24T08:03:16.438Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mpuomn4x_95gdjs_1784427344133",
+          "entity_id": "evt_intent_mpuomn4x_95gdjs_1784879882476",
           "label": "verify MCP tools against workspace state",
-          "timestamp": "2026-07-19T02:15:44.133Z"
+          "timestamp": "2026-07-24T07:58:02.476Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "iterate on index.html",
@@ -106,16 +106,16 @@
           "layer": "intent",
           "entity_id": "intent_mpuomn4x_4lkrpf",
           "label": "iterate on index.html",
-          "timestamp": "2026-07-23T07:45:35.978Z"
+          "timestamp": "2026-07-24T08:06:01.228Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mpuomn4x_4lkrpf_1784434363756",
+          "entity_id": "evt_intent_mpuomn4x_4lkrpf_1784850611414",
           "label": "iterate on index.html",
-          "timestamp": "2026-07-19T04:12:43.756Z"
+          "timestamp": "2026-07-23T23:50:11.414Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "develop documentation, MCP integration and build tooling",
@@ -133,12 +133,12 @@
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mqjn4atx_n9wbv6_1782020552299",
+          "entity_id": "evt_intent_mqjn4atx_n9wbv6_1784434715699",
           "label": "develop documentation, MCP integration and build tooling",
-          "timestamp": "2026-06-21T05:42:32.299Z"
+          "timestamp": "2026-07-19T04:18:35.699Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "develop documentation, MCP integration and test coverage",
@@ -152,16 +152,16 @@
           "layer": "intent",
           "entity_id": "intent_mqndoym2_6ly78z",
           "label": "develop documentation, MCP integration and test coverage",
-          "timestamp": "2026-07-19T02:15:44.133Z"
+          "timestamp": "2026-07-23T12:13:38.645Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mqndoym2_6ly78z_1784427344133",
+          "entity_id": "evt_intent_mqndoym2_6ly78z_1784808818645",
           "label": "develop documentation, MCP integration and test coverage",
-          "timestamp": "2026-07-19T02:15:44.133Z"
+          "timestamp": "2026-07-23T12:13:38.645Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "refine ai module changes",
@@ -175,16 +175,16 @@
           "layer": "intent",
           "entity_id": "intent_mqndq65z_rg26ig",
           "label": "refine ai module changes",
-          "timestamp": "2026-07-23T07:45:35.978Z"
+          "timestamp": "2026-07-24T08:06:01.228Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mqndq65z_rg26ig_1784434363756",
+          "entity_id": "evt_intent_mqndq65z_rg26ig_1784850611414",
           "label": "refine ai module changes",
-          "timestamp": "2026-07-19T04:12:43.756Z"
+          "timestamp": "2026-07-23T23:50:11.414Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.184Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
       "query_anchor": "iterate on CLI.md",
@@ -198,27 +198,50 @@
           "layer": "intent",
           "entity_id": "intent_mrracunp_zmd1fq",
           "label": "iterate on CLI.md",
-          "timestamp": "2026-07-23T07:45:35.978Z"
+          "timestamp": "2026-07-24T00:02:11.551Z"
         },
         {
           "layer": "timeline",
-          "entity_id": "evt_intent_mrracunp_zmd1fq_1784434715699",
+          "entity_id": "evt_intent_mrracunp_zmd1fq_1784850611414",
           "label": "iterate on CLI.md",
-          "timestamp": "2026-07-19T04:18:35.699Z"
+          "timestamp": "2026-07-23T23:50:11.414Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.185Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
     },
     {
-      "query_anchor": "develop documentation, AI integration and state engine — focus: landing page / static UI, documentation, IDE extension UI",
+      "query_anchor": "develop AI integration, documentation and MCP integration",
       "chain": [
         {
           "layer": "why",
-          "entity_id": "develop documentation, AI integration and state engine — focus: landing page / static UI, documentation, IDE extension UI",
-          "label": "develop documentation, AI integration and state engine — focus: landing page / static UI, documentation, IDE extension UI"
+          "entity_id": "develop AI integration, documentation and MCP integration",
+          "label": "develop AI integration, documentation and MCP integration"
+        },
+        {
+          "layer": "intent",
+          "entity_id": "intent_mrxh4djz_bulqc2",
+          "label": "develop AI integration, documentation and MCP integration",
+          "timestamp": "2026-07-24T08:06:01.228Z"
+        },
+        {
+          "layer": "timeline",
+          "entity_id": "evt_intent_mrxh4djz_bulqc2_1784850551541",
+          "label": "develop AI integration, documentation and MCP integration",
+          "timestamp": "2026-07-23T23:49:11.541Z"
         }
       ],
-      "updated_at": "2026-07-23T07:45:36.185Z"
+      "updated_at": "2026-07-24T08:06:06.832Z"
+    },
+    {
+      "query_anchor": "develop AI integration, documentation and state engine — focus: landing page / static UI, documentation, IDE extension UI",
+      "chain": [
+        {
+          "layer": "why",
+          "entity_id": "develop AI integration, documentation and state engine — focus: landing page / static UI, documentation, IDE extension UI",
+          "label": "develop AI integration, documentation and state engine — focus: landing page / static UI, documentation, IDE extension UI"
+        }
+      ],
+      "updated_at": "2026-07-24T08:06:06.832Z"
     }
   ]
 }

@@ -1,28 +1,28 @@
 {
   "version": 1,
   "engine_version": 2,
-  "generatedAt": 1784792736051,
-  "project_goal": "develop documentation, AI integration and state engine",
-  "current_stage": "documentation + AI layer development",
+  "generatedAt": 1784880361854,
+  "project_goal": "develop AI integration, documentation and state engine",
+  "current_stage": "AI layer + documentation development",
   "active_modules": [
     "index.html (from IDE)",
     "IDE_EXTENSION (from IDE)",
     "README (from IDE)",
     "优化 (from IDE)",
     "修改方案 (from IDE)",
-    "CLI (from IDE)",
+    "AI_LAYER (from IDE)",
     "index.html (from events)"
   ],
   "recent_decisions": [],
   "open_problems": [
-    "uncommitted changes in documentation module (from events)",
-    "53 paths with uncommitted changes — integration risk (from Git)"
+    "uncommitted changes in AI integration module (from events)",
+    "286 paths with uncommitted changes — integration risk (from Git)"
   ],
   "completed_milestones": [],
   "next_actions": [
     "review and commit pending changes",
-    "continue documentation updates",
     "review AI integration changes",
+    "continue documentation updates",
     "review state persistence paths"
   ],
   "confidence": 0.88

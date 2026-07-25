@@ -6,9 +6,9 @@
     <meta name="google-site-verification" content="fba835fbf32479b7" />
     <meta
       name="description"
-      content="Contorium gives AI a memory of your project — decisions, architecture context, and evolution history across Cursor, Claude Code, Codex, and MCP."
+      content="Contorium — Project Intelligence Layer for AI-assisted development. Preserve decisions, reasoning, and evolution so AI understands why your project became what it is."
     />
-    <title>Contorium — Give AI a memory of your project</title>
+    <title>Contorium — Project Intelligence Layer</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +26,10 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="#demo">Demo</a>
-          <a href="#problem">Problem</a>
-          <a href="#decisions">Decisions</a>
-          <a href="#architecture">Architecture</a>
+          <a href="#define">Product</a>
+          <a href="#problem">Why</a>
+          <a href="#ask">Ask</a>
+          <a href="#how">How</a>
           <a href="docs/">Docs</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#cta" class="btn btn-primary btn-sm">Get Started</a>
@@ -38,19 +38,25 @@
     </header>
 
     <main>
-      <!-- Hero -->
-      <section class="hero hero--full hero-v2-home">
+      <!-- §1 Hero -->
+      <section class="hero hero--full hero-pil">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <h1 class="hero-headline">Give AI a memory of your project.</h1>
+            <p class="hero-brand-name">Contorium</p>
+            <h1 class="hero-headline">Project Intelligence Layer<br />for AI-assisted development.</h1>
+            <p class="hero-lead-line">
+              AI can read your code.<br />
+              Contorium helps it understand <strong>why your project became what it is.</strong>
+            </p>
             <p class="hero-subtext">
-              Contorium preserves project decisions, architecture context, and evolution history —
-              so AI can understand your codebase without starting from zero every session.
+              Preserve project decisions, reasoning, constraints, history, and evolving state —
+              across AI tools, models, and sessions.
             </p>
             <div class="hero-ctas">
               <a href="#cta" class="btn btn-primary">Get Started</a>
-              <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">View GitHub</a>
+              <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
+            <p class="hero-trust">Local-first · Open Source · MCP-compatible</p>
             <a href="#problem" class="hero-scroll">Scroll ↓</a>
           </div>
 
@@ -68,57 +74,125 @@
         </div>
       </section>
 
-      <!-- Problem -->
+      <!-- §2 Why -->
       <section class="section section-muted" id="problem">
         <div class="container">
-          <h2 class="section-title section-title--center problem-title">
-            AI can read your code.<br />
-            <span class="problem-title-accent">But it doesn't know your story.</span>
+          <h2 class="section-title section-title--center">
+            AI can generate code.<br />
+            <span class="problem-title-accent">But it doesn't know the history behind it.</span>
           </h2>
-          <div class="problem-v2-grid">
-            <article class="problem-v2-card">
-              <h3>Architecture disappears</h3>
-              <blockquote>Why is this module designed this way?</blockquote>
-              <p>AI sees code. Not intention.</p>
+          <p class="section-lead section-lead--center problem-intro">
+            A codebase is more than its current files. It also contains:
+          </p>
+          <div class="intelligence-pillars">
+            <article class="pillar-card">
+              <h3>Decisions</h3>
+              <p>Why was this architecture chosen?</p>
             </article>
-            <article class="problem-v2-card">
-              <h3>Decisions disappear</h3>
-              <blockquote>Why JWT? Why MCP? Why this database?</blockquote>
-              <p>The reasoning is lost.</p>
+            <article class="pillar-card">
+              <h3>Reasoning</h3>
+              <p>What trade-offs led here?</p>
             </article>
-            <article class="problem-v2-card">
-              <h3>Context resets</h3>
-              <blockquote>New chat. New AI. Same explanation again.</blockquote>
-              <p>Every session starts from zero.</p>
+            <article class="pillar-card">
+              <h3>Constraints</h3>
+              <p>What must not be changed — and why?</p>
             </article>
-            <article class="problem-v2-card">
-              <h3>Projects evolve</h3>
-              <blockquote>Old decisions become outdated. Nobody knows when.</blockquote>
-              <p>Assumptions change. Records don't.</p>
+            <article class="pillar-card">
+              <h3>Evolution</h3>
+              <p>How did the project become what it is today?</p>
             </article>
+            <article class="pillar-card pillar-card--accent">
+              <h3>Current State</h3>
+              <p>What is happening now, and what comes next?</p>
+            </article>
+          </div>
+          <p class="problem-closer">
+            AI coding tools can inspect the repository.<br />
+            <strong>But the repository alone doesn't contain all of its intelligence.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- §3 Define Contorium -->
+      <section class="section" id="define">
+        <div class="container">
+          <h2 class="section-title section-title--center">Give your project a persistent intelligence layer.</h2>
+          <p class="section-lead section-lead--center define-lead">
+            Contorium preserves the knowledge that normally disappears between AI sessions —
+            not just chat history, not just prompts, not just a snapshot of your codebase.
+          </p>
+          <p class="define-chain-label">Contorium captures the project's:</p>
+          <div class="define-chain">
+            <span>State</span>
+            <span class="define-chain-arrow" aria-hidden="true">→</span>
+            <span>Intent</span>
+            <span class="define-chain-arrow" aria-hidden="true">→</span>
+            <span>Decisions</span>
+            <span class="define-chain-arrow" aria-hidden="true">→</span>
+            <span>Reasoning</span>
+            <span class="define-chain-arrow" aria-hidden="true">→</span>
+            <span>Outcomes</span>
+            <span class="define-chain-arrow" aria-hidden="true">→</span>
+            <span>Evolution</span>
+          </div>
+          <p class="define-tagline">
+            So AI can continue from what the project already knows — instead of reconstructing everything from scratch.
+          </p>
+          <p class="define-oneliner"><strong>One project.</strong> <strong>One intelligence layer.</strong> <strong>Every AI tool.</strong></p>
+
+          <div class="pil-diagram" aria-label="One project, one intelligence layer">
+            <div class="pil-diagram-node pil-diagram-node--project">Your Project</div>
+            <span class="pil-diagram-arrow" aria-hidden="true">↓</span>
+            <div class="pil-diagram-core">
+              <span class="pil-diagram-core-name">Contorium</span>
+              <span class="pil-diagram-core-label">Project Intelligence Layer</span>
+            </div>
+            <span class="pil-diagram-arrow" aria-hidden="true">↓</span>
+            <div class="pil-diagram-tools">
+              <span>Cursor</span>
+              <span>Claude Code</span>
+              <span>Codex</span>
+            </div>
+            <span class="pil-diagram-arrow" aria-hidden="true">↓</span>
+            <div class="pil-diagram-result">Same Understanding</div>
           </div>
         </div>
       </section>
 
-      <!-- Core Demo -->
-      <section class="section section-light section-demo" id="demo">
+      <!-- §4 Ask your project -->
+      <section class="section section-light section-ask-v3" id="ask">
         <div class="container">
           <h2 class="section-title section-title--center">Ask your project.</h2>
-          <p class="section-lead section-lead--center">A natural language interface — not another chatbot.</p>
+          <p class="section-lead section-lead--center">
+            Instead of asking an AI to reconstruct your project from scratch:
+          </p>
 
-          <div class="demo-split" aria-label="Ask demo">
+          <div class="ask-examples-v3">
+            <article class="ask-example-v3">
+              <blockquote class="ask-example-v3-q">Why was MCP added?</blockquote>
+              <p>Contorium can trace the decision, alternatives, and reasoning behind it.</p>
+            </article>
+            <article class="ask-example-v3">
+              <blockquote class="ask-example-v3-q">What changed this week?</blockquote>
+              <p>See the project's evolution instead of reading through commits and chats.</p>
+            </article>
+            <article class="ask-example-v3">
+              <blockquote class="ask-example-v3-q">What do we know about authentication?</blockquote>
+              <p>Connect decisions, modules, constraints, and history around one topic.</p>
+            </article>
+            <article class="ask-example-v3">
+              <blockquote class="ask-example-v3-q">What should I know before changing this?</blockquote>
+              <p>Surface the project knowledge that matters before the next change.</p>
+            </article>
+          </div>
+
+          <div class="demo-split demo-split--compact" aria-label="Ask demo">
             <div class="demo-pane demo-pane--user">
-              <div class="demo-pane-header">
-                <span class="demo-pane-dot"></span>
-                <span>You</span>
-              </div>
+              <div class="demo-pane-header"><span class="demo-pane-dot"></span><span>You</span></div>
               <p class="demo-user-query">Why was MCP added?</p>
             </div>
             <div class="demo-pane demo-pane--contorium">
-              <div class="demo-pane-header">
-                <span class="demo-pane-dot demo-pane-dot--accent"></span>
-                <span>Contorium</span>
-              </div>
+              <div class="demo-pane-header"><span class="demo-pane-dot demo-pane-dot--accent"></span><span>Contorium</span></div>
               <div class="demo-decision">
                 <div class="demo-decision-head">
                   <span class="demo-decision-id">Decision #024</span>
@@ -129,210 +203,152 @@
                   <li>Multiple AI tools needed shared context</li>
                   <li>Vendor lock-in was avoided</li>
                 </ul>
-                <dl class="demo-decision-meta">
-                  <div><dt>Original assumption</dt><dd>AI tools will adopt MCP</dd></div>
-                  <div><dt>Related</dt><dd>Architecture · IDE Extension · MCP Server</dd></div>
-                </dl>
               </div>
             </div>
           </div>
-
-          <div class="demo-routes">
-            <div class="demo-route">
-              <span class="demo-route-q">What happened this week?</span>
-              <span class="demo-route-arrow" aria-hidden="true">↓</span>
-              <span class="demo-route-engine">Timeline</span>
-            </div>
-            <div class="demo-route">
-              <span class="demo-route-q">What should I review?</span>
-              <span class="demo-route-arrow" aria-hidden="true">↓</span>
-              <span class="demo-route-engine">Decision Health</span>
-            </div>
-            <div class="demo-route">
-              <span class="demo-route-q">Explain authentication design.</span>
-              <span class="demo-route-arrow" aria-hidden="true">↓</span>
-              <span class="demo-route-engine">Knowledge Graph</span>
-            </div>
-          </div>
         </div>
       </section>
 
-      <!-- Git vs Contorium -->
-      <section class="section" id="positioning">
-        <div class="container">
-          <h2 class="section-title section-title--center brand-core">
-            Git remembers changes.<br />
-            <span class="brand-core-accent">Contorium remembers why.</span>
-          </h2>
-          <div class="compare-git-contora">
-            <div class="compare-git-col">
-              <h3 class="compare-git-label">Git</h3>
-              <ul class="compare-git-list">
-                <li>commit</li>
-                <li>diff</li>
-                <li>merge</li>
-                <li>branch</li>
-              </ul>
-            </div>
-            <div class="compare-git-divider" aria-hidden="true"></div>
-            <div class="compare-git-col compare-git-col--contora">
-              <h3 class="compare-git-label">Contorium</h3>
-              <ul class="compare-git-list">
-                <li>Decision</li>
-                <li>WHY</li>
-                <li>Assumption</li>
-                <li>Impact</li>
-                <li>Validity</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- How It Works -->
+      <!-- §5 How it works (CIL here, not in hero) -->
       <section class="section section-muted" id="how">
         <div class="container">
           <h2 class="section-title section-title--center">How it works</h2>
-          <p class="section-lead section-lead--center how-lead-oneline">
-            Every interaction becomes structured intelligence you can query later.
-          </p>
-          <div class="how-pipeline how-pipeline--compact" aria-label="Flow">
-            <span class="how-pipeline-chip">Capture</span>
-            <span class="how-pipeline-arrow-h" aria-hidden="true">→</span>
-            <span class="how-pipeline-chip">Structure</span>
-            <span class="how-pipeline-arrow-h" aria-hidden="true">→</span>
-            <span class="how-pipeline-chip how-pipeline-chip--accent">Ask</span>
-            <span class="how-pipeline-arrow-h" aria-hidden="true">→</span>
-            <span class="how-pipeline-chip how-pipeline-chip--result">Answer</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Decision Intelligence -->
-      <section class="section" id="decisions">
-        <div class="container">
-          <h2 class="section-title section-title--center">Decisions have a lifecycle.</h2>
-          <p class="section-lead section-lead--center decision-lead">
-            Software decisions are not permanent. They are based on assumptions.
-            When assumptions change, decisions need to be reviewed.
+          <p class="section-lead section-lead--center">
+            Contorium separates project intelligence from the AI tool using a local, structured architecture.
           </p>
 
-          <div class="decision-lifecycle" aria-label="Decision lifecycle">
-            <div class="decision-lifecycle-step">Decision created</div>
-            <span class="decision-lifecycle-arrow" aria-hidden="true">↓</span>
-            <div class="decision-lifecycle-step">Assumption</div>
-            <span class="decision-lifecycle-arrow" aria-hidden="true">↓</span>
-            <div class="decision-lifecycle-step">Project changes</div>
-            <span class="decision-lifecycle-arrow" aria-hidden="true">↓</span>
-            <div class="decision-lifecycle-step">Impact detected</div>
-            <span class="decision-lifecycle-arrow" aria-hidden="true">↓</span>
-            <div class="decision-lifecycle-step decision-lifecycle-step--warn">Review needed</div>
+          <div class="how-stack" aria-label="Architecture stack">
+            <div class="how-stack-layer">AI Tools</div>
+            <span class="how-stack-arrow" aria-hidden="true">↓</span>
+            <div class="how-stack-layer how-stack-layer--cil">
+              <strong>CIL</strong>
+              <span>Cognitive Interaction Layer</span>
+            </div>
+            <span class="how-stack-arrow" aria-hidden="true">↓</span>
+            <div class="how-stack-layer how-stack-layer--pi">Project Intelligence</div>
+            <span class="how-stack-arrow" aria-hidden="true">↓</span>
+            <div class="how-stack-layer how-stack-layer--store">.contora/</div>
           </div>
 
-          <div class="decision-status-demo">
-            <span class="decision-status-label">Database Decision</span>
-            <div class="decision-status-track">
-              <span class="decision-status-pill decision-status-pill--valid">VALID</span>
-              <span class="decision-status-arrow" aria-hidden="true">↓</span>
-              <span class="decision-status-pill decision-status-pill--warn">WARNING</span>
-              <span class="decision-status-arrow" aria-hidden="true">↓</span>
-              <span class="decision-status-pill decision-status-pill--review">NEEDS REVIEW</span>
-            </div>
+          <div class="how-explainer-grid">
+            <article class="how-explainer">
+              <h3>CIL — Cognitive Interaction Layer</h3>
+              <p>The interaction layer that lets humans and AI agents query, capture, and transfer project intelligence.</p>
+            </article>
+            <article class="how-explainer">
+              <h3>Project Intelligence</h3>
+              <p>Decisions, reasoning, history, relationships, constraints, and evolution — structured and local.</p>
+            </article>
+            <article class="how-explainer">
+              <h3>.contora/</h3>
+              <p>The intelligence stays with the project — locally, inside the repository.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Architecture -->
-      <section class="section section-muted" id="architecture">
+      <!-- §6 Capabilities -->
+      <section class="section" id="capabilities">
         <div class="container">
-          <h2 class="section-title section-title--center">Built as a project intelligence runtime.</h2>
-          <div class="arch-v2-layout">
-            <div class="arch-v2-diagram" aria-label="Architecture">
-              <div class="arch-v2-tools">
-                <span>Cursor</span>
-                <span>Claude</span>
-                <span>MCP</span>
-              </div>
-              <span class="arch-v2-arrow" aria-hidden="true">↓</span>
-              <div class="arch-v2-layer arch-v2-layer--cil">
-                <strong>CIL</strong>
-                <span>Cognitive Interaction Layer</span>
-              </div>
-              <span class="arch-v2-arrow" aria-hidden="true">↓</span>
-              <div class="arch-v2-layer arch-v2-layer--pil">
-                <strong>PIL</strong>
-                <span>Project Intelligence Layer</span>
-              </div>
-              <span class="arch-v2-arrow" aria-hidden="true">↓</span>
-              <div class="arch-v2-store">.contora</div>
-            </div>
-            <div class="arch-v2-roles">
-              <div class="arch-v2-role">
-                <h3>CIL</h3>
-                <p>Understand · Explore · Explain</p>
-              </div>
-              <div class="arch-v2-role">
-                <h3>PIL</h3>
-                <p>Store · Preserve · Transfer</p>
-              </div>
-            </div>
+          <h2 class="section-title section-title--center">Project intelligence, made queryable.</h2>
+          <div class="capability-grid-v3">
+            <article class="capability-v3">
+              <h3>Project History</h3>
+              <p>Understand how your project evolved over time.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Decision Center</h3>
+              <p>Preserve decisions, alternatives, trade-offs, and reasoning.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Knowledge Graph</h3>
+              <p>Connect modules, decisions, people, constraints, and events.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Time Travel</h3>
+              <p>Reconstruct what the project knew at a specific point in time.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Cognitive Health</h3>
+              <p>Detect missing reasoning, stale decisions, and conflicting knowledge.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Project Story</h3>
+              <p>Turn project history into an understandable narrative for humans and agents.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Project DNA</h3>
+              <p>Create a compact identity of the project for AI handoffs.</p>
+            </article>
+            <article class="capability-v3">
+              <h3>Evolution Journey</h3>
+              <p>See how the project changed — and why.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Integrations -->
-      <section class="section" id="integrations">
-        <div class="container">
-          <h2 class="section-title section-title--center">One intelligence layer. Everywhere.</h2>
-          <div class="integration-cards">
-            <article class="integration-card">
-              <h3>IDE</h3>
-              <p>Ask while coding</p>
-            </article>
-            <article class="integration-card integration-card--accent">
-              <h3>MCP</h3>
-              <p>Give AI agents project memory</p>
-            </article>
-            <article class="integration-card">
-              <h3>CLI</h3>
-              <p>Inspect from terminal</p>
-            </article>
-          </div>
-          <div class="works-logos works-logos--compact">
+      <!-- §7 Cross-tool -->
+      <section class="section section-muted" id="integrations">
+        <div class="container integrations-v3">
+          <h2 class="section-title section-title--center">Your tools change. Your project doesn't.</h2>
+          <p class="section-lead section-lead--center">
+            Use the AI coding tool you prefer. Switch tools without losing the project's accumulated understanding.
+          </p>
+          <div class="works-logos">
             <span class="works-logo">Cursor</span>
             <span class="works-logo">Claude Code</span>
             <span class="works-logo">Codex</span>
             <span class="works-logo">Gemini</span>
             <span class="works-logo">VS Code</span>
+            <span class="works-logo works-logo--accent">MCP</span>
+          </div>
+          <div class="integrations-taglines">
+            <p><strong>One project.</strong></p>
+            <p><strong>One intelligence layer.</strong></p>
+            <p><strong>Every AI runtime.</strong></p>
           </div>
         </div>
       </section>
 
-      <!-- Local First -->
-      <section class="section section-muted" id="local">
-        <div class="container local-section">
-          <h2 class="section-title section-title--center">Your project intelligence belongs to you.</h2>
-          <div class="local-principles local-principles--row">
-            <span class="local-principle">Local storage</span>
-            <span class="local-principle">No cloud dependency</span>
-            <span class="local-principle">No vendor lock-in</span>
-            <span class="local-principle local-principle--accent">Open format</span>
+      <!-- §8 Not Memory -->
+      <section class="section" id="not-memory">
+        <div class="container">
+          <h2 class="section-title section-title--center">Not another AI memory system.</h2>
+          <div class="not-memory-grid">
+            <article class="not-memory-card">
+              <h3>Chat Memory</h3>
+              <p>Remembers conversations.</p>
+            </article>
+            <article class="not-memory-card">
+              <h3>RAG</h3>
+              <p>Retrieves relevant information.</p>
+            </article>
+            <article class="not-memory-card">
+              <h3>Git</h3>
+              <p>Tracks code changes.</p>
+            </article>
+            <article class="not-memory-card not-memory-card--contorium">
+              <h3>Contorium</h3>
+              <p>Preserves the intelligence behind the project.</p>
+            </article>
           </div>
-          <div class="local-tree">
-            <div class="local-tree-header">.contora/</div>
-            <pre class="local-tree-body"><code>├── decisions
-├── events
-├── graph
-├── lifecycle
-└── state</code></pre>
-          </div>
+          <p class="not-memory-chain">
+            What changed → Why it changed → What happened → What remains true → What comes next
+          </p>
         </div>
       </section>
 
-      <!-- Open Source -->
-      <section class="section" id="opensource">
+      <!-- §9 Open Source -->
+      <section class="section section-muted" id="opensource">
         <div class="container opensource-section">
-          <h2 class="section-title section-title--center">Open source. Built for the AI-native future.</h2>
+          <h2 class="section-title section-title--center">Open source</h2>
+          <div class="local-principles local-principles--row">
+            <span class="local-principle">Local-first</span>
+            <span class="local-principle">MIT License</span>
+            <span class="local-principle">No telemetry</span>
+            <span class="local-principle local-principle--accent">MCP-compatible</span>
+          </div>
           <div class="opensource-actions">
             <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Star on GitHub</a>
             <a href="docs/" class="btn btn-ghost">Read Documentation</a>
@@ -340,16 +356,20 @@
         </div>
       </section>
 
-      <!-- CTA -->
+      <!-- §10 CTA -->
       <section class="cta-final" id="cta">
         <div class="container">
-          <div class="cta-final-inner cta-final-inner--v2">
-            <h2>Stop explaining your project.<br /><span class="cta-accent">Let it remember.</span></h2>
+          <div class="cta-final-inner cta-final-inner--pil">
+            <h2>Your project shouldn't forget<br />what it has learned.</h2>
+            <p class="cta-final-lead">
+              Contorium gives AI coding tools a persistent intelligence layer —
+              so every session can build on what came before.
+            </p>
             <div class="cta-final-actions">
-              <a href="docs/getting-started.html" class="btn btn-primary btn-lg">Start with Contorium</a>
+              <a href="docs/getting-started.html" class="btn btn-primary btn-lg">Get Started</a>
               <a href="https://github.com/ContoriumLabs/contorium" class="btn btn-ghost btn-lg" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-            <p class="cta-final-footnote">Local-first · MIT License</p>
+            <p class="cta-final-footnote">Local-first · No telemetry · Open Source · MIT License</p>
           </div>
         </div>
       </section>
@@ -363,12 +383,12 @@
             Contorium
           </a>
           <p class="footer-oneliner">
-            Give AI a memory of your project — decisions, context, and evolution history in your repo.
+            Project Intelligence Layer for AI-assisted development — decisions, reasoning, and evolution in your repo.
           </p>
           <ul class="footer-trust">
             <li>Local-first</li>
             <li>No telemetry</li>
-            <li>MCP-compatible</li>
+            <li>Open Source</li>
           </ul>
           <div class="footer-minimal-links">
             <a href="docs/">Docs</a>

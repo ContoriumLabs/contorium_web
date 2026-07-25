@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1784792735978,
+  "updatedAt": 1784880361228,
   "nodes": [
     {
       "id": "intent_mpuomn4w_ms6zcz",
@@ -33,7 +33,7 @@
         "docs/dashboard.html",
         "docs/ide-extension.html"
       ],
-      "lastUpdated": 1784792735978,
+      "lastUpdated": 1784880361228,
       "learnedAt": 1780286520992
     },
     {
@@ -67,7 +67,7 @@
         "docs/dashboard.html",
         "docs/COGNITIVE_DIMENSIONS.md"
       ],
-      "lastUpdated": 1784792735978,
+      "lastUpdated": 1784880361228,
       "learnedAt": 1780286520992
     },
     {
@@ -101,7 +101,7 @@
         "docs/COGNITIVE_DIMENSIONS.md",
         "scripts/prepare-user-docs.py"
       ],
-      "lastUpdated": 1784434715699,
+      "lastUpdated": 1784880196438,
       "learnedAt": 1780286520992
     },
     {
@@ -128,7 +128,7 @@
         "docs/DASHBOARD.md",
         "优化.md"
       ],
-      "lastUpdated": 1784792735978,
+      "lastUpdated": 1784880361228,
       "learnedAt": 1780286520992
     },
     {
@@ -175,7 +175,7 @@
         "mcp/README.md",
         "docs/IDE_EXTENSION.md"
       ],
-      "lastUpdated": 1784427344133,
+      "lastUpdated": 1784808818645,
       "learnedAt": 1782021672506
     },
     {
@@ -192,14 +192,14 @@
         "styles.css",
         "mcp/index.html"
       ],
-      "lastUpdated": 1784792735978,
+      "lastUpdated": 1784880361228,
       "learnedAt": 1782021728950
     },
     {
       "id": "intent_mrracunp_zmd1fq",
       "text": "iterate on CLI.md",
-      "status": "ACTIVE",
-      "confidence": 1,
+      "status": "ARCHIVED",
+      "confidence": 0.1,
       "relatedFiles": [
         "mcp/index.html",
         "mcp/README.md",
@@ -208,8 +208,26 @@
         "docs/_source/COGNITIVE_DIMENSIONS.md",
         "docs/_source/CONTORIUM_LANGUAGE_SPEC.md"
       ],
-      "lastUpdated": 1784792735978,
+      "lastUpdated": 1784851331551,
       "learnedAt": 1784434715699
+    },
+    {
+      "id": "intent_mrxh4djz_bulqc2",
+      "text": "develop AI integration, documentation and MCP integration",
+      "status": "ACTIVE",
+      "confidence": 1,
+      "relatedFiles": [
+        "blog/index.html",
+        "index.html",
+        "README.md",
+        "优化.md",
+        "修改方案.md",
+        "mcp/index.html",
+        "mcp/README.md",
+        "docs/IDE_EXTENSION.md"
+      ],
+      "lastUpdated": 1784880361228,
+      "learnedAt": 1784808874655
     }
   ],
   "edges": [
@@ -1446,6 +1464,61 @@
     {
       "from": "intent_mpuomn4x_0bqur2",
       "to": "intent_mrracunp_zmd1fq",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:blog/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:优化.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:修改方案.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:mcp/index.html",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:mcp/README.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mrxh4djz_bulqc2",
+      "to": "file:docs/IDE_EXTENSION.md",
+      "type": "AFFECTS"
+    },
+    {
+      "from": "intent_mpuomn4w_ms6zcz",
+      "to": "intent_mrxh4djz_bulqc2",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mpuomn4x_0bqur2",
+      "to": "intent_mrxh4djz_bulqc2",
+      "type": "RELATED_TO"
+    },
+    {
+      "from": "intent_mrracunp_zmd1fq",
+      "to": "intent_mrxh4djz_bulqc2",
       "type": "RELATED_TO"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "schema": "cognitive_event.v1",
   "id": "2026-07-23_evt_evt_intent_mqndq65z_rg26",
-  "timestamp": "2026-07-23T07:27:30.601Z",
+  "timestamp": "2026-07-23T23:50:11.414Z",
   "title": "refine ai module changes",
   "summary": "refine ai module changes",
   "files": [],
@@ -16,7 +16,7 @@
   "provenance": [
     "IDE"
   ],
-  "version": "snapshot_v19",
+  "version": "snapshot_v7",
   "previous": "2026-07-23_evt_evt_intent_mpuomn4x_4lkr",
   "next": "2026-07-23_evt_evt_intent_mrracunp_zmd1"
 }

@@ -1,18 +1,18 @@
 {
   "schema": "contorium.pik.v1",
-  "updated_at": "2026-07-19T04:19:35.163Z",
+  "updated_at": "2026-07-24T08:03:59.000Z",
   "source": "derived",
   "project_identity": {
     "name": "contora_web",
     "type": "Project Cognitive Runtime"
   },
   "primary_intent": {
-    "statement": "develop documentation, AI integration and state engine",
+    "statement": "develop AI integration, documentation and state engine",
     "confidence": 0.85
   },
   "goal_hierarchy": [
     {
-      "goal": "develop documentation, AI integration and state engine",
+      "goal": "develop AI integration, documentation and state engine",
       "weight": 0.28125000000000006
     },
     {

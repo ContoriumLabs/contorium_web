@@ -1,17 +1,17 @@
 {
-  "generatedAt": 1784792736091,
+  "generatedAt": 1784880362392,
   "topIntents": [],
   "topHotspots": [],
   "topFunctions": [],
   "nextActions": [
     "review and commit pending changes",
-    "continue documentation updates",
     "review AI integration changes",
+    "continue documentation updates",
     "review state persistence paths"
   ],
   "graphSummary": {
-    "nodeCount": 31,
-    "edgeCount": 82,
+    "nodeCount": 20,
+    "edgeCount": 0,
     "mappingCount": 0,
     "avgConfidence": 0
   }
