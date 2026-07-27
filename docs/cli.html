@@ -53,7 +53,7 @@
 <blockquote>
 <p><a href="../index.html">Home</a> · <a href="index.html">Docs</a> · <a href="getting-started.html">Quick start</a> · <a href="install.html">Install</a></p>
 </blockquote>
-<p>The CLI is a <strong>peer PIL Runtime</strong> with IDE and MCP, sharing <code>@contora/state-core</code> and <code>.contora/</code>.</p>
+<p>The CLI is a <strong>peer runtime surface</strong> with IDE and MCP, sharing <code>@contora/state-core</code> and <code>.contora/</code>.</p>
 <ul>
 <li><a href="getting-started.html">Quick start</a> · <a href="install.html">INSTALL</a> · <a href="../index.html">Home</a> · <a href="getting-started.html">Overview</a> · <a href="dashboard.html">Dashboard</a></li>
 </ul>
@@ -421,7 +421,7 @@ contorium ai test [path] [--json]
 </tbody>
 </table>
 <h3>Decision Provenance (advanced)</h3>
-<p>Unified artifacts under <code>.contora/governance/</code> — see <a href="install.html#architecture-three-adapters">INSTALL.md</a>.</p>
+<p>Unified artifacts under <code>.contora/governance/</code> — see <a href="install.html">INSTALL.md</a>.</p>
 <table>
 <thead>
 <tr>
@@ -661,7 +661,7 @@ GOVERNANCE:
 <li>If you ran <code>npm link</code>: <code>npm unlink -g contorium</code>  </li>
 <li>Stop calling <code>contorium</code>; <code>.contora/</code> is <strong>not</strong> removed  </li>
 </ol>
-<p>Clear shared workspace data:</p>
+<p>Clear local project intelligence (<code>.contora/</code>):</p>
 <pre><code class="language-powershell">Remove-Item -Recurse -Force .contora
 </code></pre>
 <hr>

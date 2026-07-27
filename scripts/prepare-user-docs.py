@@ -150,9 +150,11 @@ GETTING_STARTED = """# Quick start
 
 {nav}
 
-**Give AI a memory of your project.**
+**Project Intelligence Layer for AI-assisted development.**
 
-Contorium preserves decisions, architecture context, and evolution history — so AI can understand your codebase without starting from zero every session.
+AI can read your code. Contorium helps it understand **why your project became what it is.**
+
+Contorium preserves decisions, reasoning, constraints, history, and evolving state — across AI tools, models, and sessions.
 
 Install **IDE**, **MCP**, or **CLI**; all share `.contora/` in your project folder.
 
@@ -375,6 +377,10 @@ def clean_user_md(md: str, title: str) -> str:
     for src, dst in internal.items():
         md = re.sub(rf"\]\(\./{re.escape(src)}\)", f"]({dst})", md)
         md = re.sub(rf"\]\(\./{re.escape(src)}#([^)]+)\)", rf"]({dst}#\1)", md)
+    md = md.replace("install.html#architecture-three-adapters", "install.html")
+    md = md.replace("Clear shared workspace data:", "Clear local project intelligence (`.contora/`):")
+    md = md.replace("peer PIL runtimes", "peer runtime surfaces")
+    md = md.replace("peer PIL Runtime", "peer runtime surface")
     md = re.sub(r"\n{3,}", "\n\n", md)
     return md.strip() + "\n"
 
@@ -461,7 +467,7 @@ def prepare_install(md: str) -> str:
     md = trim_install_matrix(md)
     md = clean_user_md(md, "Install & use")
     md = md.replace("@contora/state-core", "shared local state")
-    intro = """Contorium is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence Layer (PIL)**. Install **IDE**, **MCP**, or **CLI** — all share `.contora/` in your project folder.
+    intro = """Contorium is a local **Project Intelligence Layer** for AI-assisted development. A **Cognitive Interaction Layer (CIL)** lets you ask, capture, and transfer project knowledge. Install **IDE**, **MCP**, or **CLI** — all share `.contora/` in your project folder.
 
 **Responsibility chain:** Capture → Structure → Preserve → Ask → Transfer
 

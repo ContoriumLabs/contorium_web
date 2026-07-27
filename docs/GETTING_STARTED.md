@@ -2,9 +2,11 @@
 
 > [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)
 
-**Give AI a memory of your project.**
+**Project Intelligence Layer for AI-assisted development.**
 
-Contorium preserves decisions, architecture context, and evolution history — so AI can understand your codebase without starting from zero every session.
+AI can read your code. Contorium helps it understand **why your project became what it is.**
+
+Contorium preserves decisions, reasoning, constraints, history, and evolving state — across AI tools, models, and sessions.
 
 Install **IDE**, **MCP**, or **CLI**; all share `.contora/` in your project folder.
 

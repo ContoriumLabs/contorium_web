@@ -87,8 +87,8 @@ HUB_CONTENT = """
 <div class="docs-hub-hero">
   <h1>User guide</h1>
   <p>
-    <strong>Give AI a memory of your project.</strong> Contorium preserves decisions, architecture context,
-    and evolution history in <code>.contora/</code> — across IDE, MCP, and CLI.
+    <strong>Project Intelligence Layer for AI-assisted development.</strong> Preserve decisions, reasoning,
+    constraints, and evolution in <code>.contora/</code> — across IDE, MCP, and CLI.
   </p>
 </div>
 
@@ -98,7 +98,7 @@ HUB_CONTENT = """
     <a class="docs-card" href="getting-started.html">
       <span class="docs-card-tag">New user</span>
       <h3>Quick start</h3>
-      <p>Choose IDE, MCP, or CLI — ask, capture, and transfer project memory.</p>
+      <p>Choose IDE, MCP, or CLI — ask, capture, and transfer project intelligence.</p>
     </a>
     <a class="docs-card" href="install.html">
       <span class="docs-card-tag">Setup</span>
@@ -226,7 +226,7 @@ def page(title: str, description: str, active: str, content: str, crumb: str | N
 
 def main() -> None:
     titles = {
-        "getting-started.html": ("Quick start", "Ask your project with Contorium — CIL, IDE, MCP, or CLI."),
+        "getting-started.html": ("Quick start", "Project Intelligence Layer — ask your project via IDE, MCP, or CLI."),
         "install.html": ("Install & use", "Install, use, and uninstall Contorium."),
         "ide-extension.html": ("IDE extension", "Ask Contorium, Cortex panels, and IDE workflow."),
         "mcp.html": ("MCP server", "Connect @contorium/mcp — ask_project and CIL tools for AI agents."),
@@ -249,7 +249,7 @@ def main() -> None:
 
     hub = page(
         "User guide",
-        "Contorium user guide — install, MCP, CLI, IDE extension, and dashboard.",
+        "Contorium user guide — Project Intelligence Layer, install, MCP, CLI, and IDE extension.",
         "index.html",
         HUB_CONTENT,
     )

@@ -1,16 +1,16 @@
 # Contorium Web
 
-Static site for **Contorium** — persistent project memory for AI development. IDE, MCP, and CLI are peer adapters over `.contora/`.
+Static site for **Contorium** — Project Intelligence Layer for AI-assisted development. IDE, MCP, and CLI are peer runtime surfaces over `.contora/`.
 
 ## Site structure
 
 | Path | Page |
 | ---- | ---- |
-| `index.html` | Home — product story, before/after, install |
+| `index.html` | Home — product story, ask demo, architecture |
 | `docs/` | **Documentation hub** (sidebar navigation, readable HTML) |
 | `docs/install.html` | Install & use — three adapters, command matrix |
-| `docs/mcp.html` | MCP server — `@contorium/mcp`, CHP v1 tools |
-| `docs/cli.html` | CLI — handoff, dashboard, export |
+| `docs/mcp.html` | MCP server — `@contorium/mcp`, ask_project, CIL tools |
+| `docs/cli.html` | CLI — ask, lifecycle, transfer |
 | `docs/dashboard.html` | Runtime dashboard (CRBP) |
 | `docs/ide-extension.html` | IDE extension |
 | `mcp/` | Interactive MCP setup |
@@ -20,6 +20,7 @@ Static site for **Contorium** — persistent project memory for AI development. 
 Markdown sources live in `docs/*.md`. Regenerate HTML after edits:
 
 ```bash
+python scripts/prepare-user-docs.py
 python scripts/build-docs.py
 ```
 

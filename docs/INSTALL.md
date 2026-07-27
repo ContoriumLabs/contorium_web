@@ -2,7 +2,7 @@
 
 > [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)
 
-Contorium is a local **Cognitive Interaction Layer (CIL)** on a **Project Intelligence Layer (PIL)**. Install **IDE**, **MCP**, or **CLI** — all share `.contora/` in your project folder.
+Contorium is a local **Project Intelligence Layer** for AI-assisted development. A **Cognitive Interaction Layer (CIL)** lets you ask, capture, and transfer project knowledge. Install **IDE**, **MCP**, or **CLI** — all share `.contora/` in your project folder.
 
 **Responsibility chain:** Capture → Structure → Preserve → Ask → Transfer
 

@@ -2,7 +2,7 @@
 
 > [Home](../index.html) · [Docs](index.html) · [Quick start](getting-started.html) · [Install](install.html)
 
-The CLI is a **peer PIL Runtime** with IDE and MCP, sharing `@contora/state-core` and `.contora/`.
+The CLI is a **peer runtime surface** with IDE and MCP, sharing `@contora/state-core` and `.contora/`.
 
 - [Quick start](getting-started.html) · [INSTALL](install.html) · [Home](../index.html) · [Overview](getting-started.html) · [Dashboard](dashboard.html)
 
@@ -187,7 +187,7 @@ contorium ai test [path] [--json]
 
 ### Decision Provenance (advanced)
 
-Unified artifacts under `.contora/governance/` — see [INSTALL.md](install.html#architecture-three-adapters).
+Unified artifacts under `.contora/governance/` — see [INSTALL.md](install.html).
 
 | Command | Purpose | Writes |
 |---------|---------|--------|
@@ -333,7 +333,7 @@ JSON format includes `cognitiveSnapshot` when the knowledge graph exists, and `g
 1. If you ran `npm link`: `npm unlink -g contorium`  
 2. Stop calling `contorium`; `.contora/` is **not** removed  
 
-Clear shared workspace data:
+Clear local project intelligence (`.contora/`):
 
 ```powershell
 Remove-Item -Recurse -Force .contora

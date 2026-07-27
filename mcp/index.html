@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contorium MCP — session view over shared workspace state for Codex, Claude Code, Cursor Agent, and Gemini CLI."
+      content="Contorium MCP — connect AI agents to project intelligence. ask_project, CIL tools, Codex, Claude Code, Cursor, and Gemini CLI."
     />
-    <title>Contorium MCP — Session View Setup</title>
+    <title>Contorium MCP — Agent Setup</title>
     <link rel="icon" href="../logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,13 +25,13 @@
           Contorium
         </a>
         <div class="nav-links">
-          <a href="../index.html#ask">Product</a>
+          <a href="../index.html#define">Product</a>
+          <a href="../index.html#ask">Ask</a>
           <a href="../docs/install.html">Install</a>
           <a href="index.html" class="nav-active">MCP</a>
           <a href="../docs/">Docs</a>
-          <a href="../blog/">Blog</a>
           <a href="https://github.com/ContoriumLabs/contorium" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="../docs/" class="btn btn-primary btn-sm">Get started</a>
+          <a href="../docs/getting-started.html" class="btn btn-primary btn-sm">Get Started</a>
         </div>
       </nav>
     </header>
@@ -39,8 +39,8 @@
     <main class="page-main">
       <header class="page-hero">
         <div class="container">
-          <span class="section-badge">@contorium/mcp · CIL v3 · ask_project · auto-spawn</span>
-          <h1>Install CIL via MCP</h1>
+          <span class="section-badge">@contorium/mcp · ask_project · CIL v3 · auto-spawn</span>
+          <h1>Connect AI agents via MCP</h1>
           <p class="page-hero-lead">
             Configure once — <strong>Codex</strong>, <strong>Claude Code</strong>, <strong>Cursor</strong>, and
             <strong>Gemini CLI</strong> spawn MCP automatically. Agents can <code style="color: var(--accent)">ask_project</code>
@@ -351,7 +351,7 @@ claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
     "modified": ["src/payment.ts"]
   }
 }</code></pre>
-              <p class="example-desc">Live workspace snapshot: focus, files, Git—from extension scanners.</p>
+              <p class="example-desc">Live project state: focus, files, Git — from extension scanners.</p>
             </article>
           </div>
         </div>
@@ -409,29 +409,29 @@ claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
 
       <section class="page-section section-mcp">
         <div class="container">
-          <h2>Session views: IDE vs MCP</h2>
+          <h2>IDE and MCP: two views over the same intelligence</h2>
           <div class="demo-compare">
             <article class="demo-panel">
-              <div class="demo-panel-label">IDE session view</div>
+              <div class="demo-panel-label">IDE</div>
               <ul class="memory-bullets">
                 <li>Sidebar: focus, Git, active files</li>
-                <li>Event-driven workspace scanning</li>
-                <li>Session save / restore</li>
+                <li>Ask Contorium · Review Queue · Transfer</li>
+                <li>Capture decisions and project focus</li>
                 <li>Copy AI-ready context (clipboard export)</li>
               </ul>
             </article>
             <article class="demo-panel demo-panel--with">
-              <div class="demo-panel-label">MCP session view</div>
+              <div class="demo-panel-label">MCP</div>
               <ul class="memory-bullets">
                 <li>Agent-callable tools (Codex, Claude Code, Gemini)</li>
-                <li><code>get_project_snapshot</code> / <code>get_workspace_context</code></li>
-                <li><code>store_memory</code> / <code>search_memory</code> / <code>get_memory</code></li>
-                <li>Bootstrap + 5s sync — no sidebar required</li>
+                <li><code>ask_project</code> · <code>transfer_project</code></li>
+                <li><code>get_knowledge_health</code> · <code>get_review_queue</code></li>
+                <li>Bootstrap + sync — no sidebar required</li>
               </ul>
             </article>
           </div>
           <p style="color: var(--text-muted); font-size: 0.88rem; max-width: 640px; margin-top: 20px">
-            Both are peer views over the same <code>.contora/</code> state — not separate memory systems.
+            Both are peer runtime surfaces over the same <code>.contora/</code> project intelligence — not separate memory systems.
           </p>
           <p class="section-cta-inline" style="margin-top: 16px">
             <a href="../docs/mcp.html" class="btn btn-ghost btn-sm">docs/mcp.html</a>
@@ -448,7 +448,7 @@ claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
       </section>
 
       <section class="cta-band">
-        <h2>Connect agents to shared workspace state</h2>
+        <h2>Give AI agents access to project intelligence</h2>
         <p>Run one command for your AI tool, then open Codex or Claude Code in your project.</p>
         <div class="cta-buttons">
           <a href="../docs/" class="btn btn-primary">Installation guide</a>
@@ -465,7 +465,7 @@ claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
               <img class="logo-img" src="../logo.png" width="36" height="36" alt="Contorium" />
               Contorium
             </a>
-            <p>MCP session view — shared workspace state for Codex, Claude Code, and agents.</p>
+            <p>MCP adapter for Codex, Claude Code, and Cursor — shared project intelligence in <code>.contora/</code>.</p>
           </div>
           <div class="footer-links">
             <div class="footer-col">
@@ -489,7 +489,7 @@ claude mcp add --scope project contorium -- npx @contorium/mcp</code></pre>
         </div>
         <div class="footer-bottom">
           <span>© Contorium. MIT License.</span>
-          <span>store_memory · get_workspace_context · Codex · Claude Code</span>
+          <span>ask_project · transfer_project · Codex · Claude Code</span>
         </div>
       </div>
     </footer>

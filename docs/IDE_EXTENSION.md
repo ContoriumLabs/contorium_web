@@ -6,7 +6,7 @@ Extension ID: `franklee-dev.contorium`
 Display name: **Contorium — AI Project Intelligence Layer**  
 Requires: VS Code / Cursor **1.85+**, **folder workspace**
 
-The IDE is a **peer PIL Runtime** with MCP and CLI: sidebar UI, workspace scanning, `.contora/` artifacts, **Capture / Transfer**, governance UI, and runtime dashboard bootstrap.
+The IDE is a **peer runtime surface** with MCP and CLI: sidebar UI, workspace scanning, `.contora/` artifacts, **Capture / Transfer**, governance UI, and runtime dashboard bootstrap.
 
 - [Quick start](getting-started.html) · [MCP](mcp.html) · [CLI](cli.html) · [Install](install.html)
 
@@ -170,7 +170,7 @@ The IDE participates in the unified governance pipeline shared with MCP and CLI:
 
 IDE **Review Change** writes `review.json` only. Full decision provenance (decision / scope / trace / cycle artifacts) is derived via MCP `derive_decision_provenance` or CLI `contorium decision derive`.
 
-See [INSTALL.md](install.html#architecture-three-adapters) for the three-adapter governance matrix.
+See [INSTALL.md](install.html) for the three-adapter governance matrix.
 
 ### Copy AI-ready context structure (V3.1 canonical)
 
